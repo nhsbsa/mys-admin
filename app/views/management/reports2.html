@@ -31,7 +31,7 @@
                     <h3 class="heading-small">Reports</h3>
                 </li>
                 <div id="options" class="options">
-                  <li><a href="reports">Download monthly reports</a></li>
+                  <li><a class="active" href="reports">Download monthly reports</a></li>
                 </div>
                 <li>
                     <h3 class="heading-small">Prescription images</h3>
@@ -54,6 +54,7 @@
               </ul>
             </div>
 
+
       </div>
       <div class="main-content">
 
@@ -70,25 +71,39 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-              <h1 class="heading-xlarge">
-                Change email address
-              </h1>
-  
-                <h2 class="heading-small">Current email address</h2>
-                <p>joe.blogg@nhs.net</p>
-  
-                <form class="form" action="your-details" method="get" _lpchecked="1">
-                    <div class="form-group">
-                          <label class="form-label" for="full-name-f1"><span class="heading-small">New email address</span></label>
-                          <input class="form-control" id="full-name-f1" type="text">
-                    </div>
-                </form>
-  
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Reports</p>
+                    <h1 class="page-header--lede heading-large">Select report range</h1>
+                    <hr>
+                </header>
+
+              <h2 class="heading-medium">What report range would you like to download?</h2>
+
+              <form action="reportrange-handler" method="get" class="form">
+
+                  <div class="form-group">
+                      <fieldset>
+              
+                          <div class="multiple-choice">
+                              <input id="singlemonth" type="radio" name="reportrange" value="singlemonth">
+                              <label for="singlemonth" id="singlemonth" class=" block-label" style="line-height: 195%;">Single month</label>
+                          </div>
+              
+                          <div class="multiple-choice">
+                              <input id="monthrange" type="radio" name="reportrange" value="monthrange">
+                              <label for="monthrange" id="monthrange" class=" block-label" style="line-height: 195%;">Month range</label>
+                          </div>
+                          
+              
+                      </fieldset>
+                  </div>
+        
                 <div class="form-group">
-                  <a href="your-details">
-                    <input class="button" type="submit" value="Update">
-                  </a>
+                  <input class="button" type="submit" value="Next">
                 </div>
+        
+              </form>
+
 
 
 

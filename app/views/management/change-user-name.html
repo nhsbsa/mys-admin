@@ -49,10 +49,11 @@
                     <h3 class="heading-small">User management</h3>
                 </li>
                 <div id="options" class="options">
-                  <li><a href="list-users">Manage users</a></li>
+                  <li><a class="active" href="list-users">Manage users</a></li>
                 </div>
               </ul>
             </div>
+
 
       </div>
       <div class="main-content">
@@ -71,24 +72,24 @@
             <div class="column-two-thirds">
         
               <h1 class="heading-xlarge">
-                Change email address
+                Change full name
               </h1>
-  
-                <h2 class="heading-small">Current email address</h2>
-                <p>joe.blogg@nhs.net</p>
-  
-                <form class="form" action="your-details" method="get" _lpchecked="1">
-                    <div class="form-group">
-                          <label class="form-label" for="full-name-f1"><span class="heading-small">New email address</span></label>
-                          <input class="form-control" id="full-name-f1" type="text">
-                    </div>
-                </form>
-  
-                <div class="form-group">
-                  <a href="your-details">
-                    <input class="button" type="submit" value="Update">
-                  </a>
-                </div>
+
+              <h2 class="heading-small">Current full name</h2>
+
+              <p>Joe Bloggs</p>
+
+              <form class="form" action="user-summary" method="get">
+                  <div class="form-group">
+                        <label class="form-label" for="full-name-f1"><span class="heading-small">New full name</span></label>
+                        <input class="form-control" id="full-name-f1" type="text">
+                  </div>
+              </form>
+
+              <div class="form-group">
+                  <a href="user-summary"><input class="button" type="submit" value="Update"></a>
+              </div>
+
 
 
 

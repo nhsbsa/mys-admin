@@ -49,10 +49,11 @@
                     <h3 class="heading-small">User management</h3>
                 </li>
                 <div id="options" class="options">
-                  <li><a href="list-users">Manage users</a></li>
+                  <li><a class="active" href="list-users">Manage users</a></li>
                 </div>
               </ul>
             </div>
+
 
       </div>
       <div class="main-content">
@@ -71,40 +72,73 @@
             <div class="column-two-thirds">
         
               <h1 class="heading-xlarge">
-                Your details
+                User details
               </h1>
 
-              <dl class="govuk-check-your-answers cya-questions-short">
-                  <div>
-                    <dt class="cya-question">
-                      Full name
-                    </dt>
-                    <dd class="cya-answer">
+              <div class="form-group">
+                  <dl class="govuk-check-your-answers cya-questions-short">
+                    <div>
+                      <dt class="cya-question">
+                        Name
+                      </dt>
+                      <dd class="cya-answer">
                       Joe Bloggs
-                    </dd>
-                    <dd class="cya-change">
-                      <a href="change-name">
-                        Change<span class="visually-hidden"> name</span>
-                      </a>
-                    </dd>
-                  </div>
-          
-                  <div>
-                    <dt class="cya-question">
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-name">
+                          Change<span class="visually-hidden"> name</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
                       Email address
-                    </dt>
-                    <dd class="cya-answer">
-                      joe.bloggs@nhs.net
-                    </dd>
-                    <dd class="cya-change">
-                      <a href="change-email">
-                        Change
-                      </a>
-                    </dd>
-                  </div>
-          
-          
+                      </dt>
+                      <dd class="cya-answer">
+                       joe.bloggs27@nhs.net
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-email">
+                          Change<span class="visually-hidden"> email address</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                      FA Code
+                      </dt>
+                      <dd class="cya-answer">
+                        FA123
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-F-code">
+                          Change<span class="visually-hidden"> FA code</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                      Permissions
+                      </dt>
+                      <dd class="cya-answer">
+                      Pharmacy
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-permissions">
+                          Change<span class="visually-hidden"> permissions</span>
+                        </a>
+                      </dd>
+                    </div>
+            
                   </dl>
+            </div>
+
+            <div class="form-group">
+                <a href="remove-user" class="destructive-button-right">Remove user</a>
+              </div>
 
 
 
