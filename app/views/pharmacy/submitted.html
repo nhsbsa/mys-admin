@@ -1,0 +1,230 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+
+                      <!--
+                                  <aside class="part-navigation-container" role="complementary" style="padding: 0 20px 20px 20px;">
+                                          <nav role="navigation" class="grid-row part-navigation" aria-label="Pages in this guide">
+                                      <ol class="column-half">
+                                          <li>
+                                            <strong>eps Prescriptions</strong>
+                                          </li>
+                                          <li>
+                                            Eps Prescriptions
+                                          </li>
+                                      </ol>
+                                      <ol class="column-half" start="3">
+                                          <li>
+                                            Other activities
+                                          </li>
+                                          <li>
+                                            Summary and declaration
+                                          </li>
+                                      </ol>
+                                  </nav>
+                                  
+                                        </aside>
+                                          <hr>
+                                  -->
+                      <div class="done-panel">
+                        <h1 class="heading-xlarge" style="
+                                padding: 25px 0;
+                            "><span id="done-tick"></span>Submission sent</h1>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="grid-row">
+                      <div class="column-two-thirds">
+                        <h2 class="heading-large">Whats next?</h2>
+                        <dl class="govuk-check-your-answers cya-questions-short">
+                          <div>
+                            <dt class="cya-question">
+                              <h2 class="heading-small">Get your label</h2>
+                            </dt>
+                            <dd class="cya-answer">
+                              <a href="">Print a postage label</a>
+                  
+                  
+                            </dd>
+                  
+                          </div>
+                  
+                          <div>
+                            <dt class="cya-question">
+                              <h2 class="heading-small">Separate batch into groups</h2>
+                            </dt>
+                            <dd class="cya-answer">
+                  
+                  
+                              <div class="guidance">
+                                <!--<h2>Complete one submission document only.</h2>-->
+                  
+                                <div class="notice">
+                                  <i class="icon icon-important">
+                                    <span class="visually-hidden">Warning</span>
+                                  </i>
+                                  <strong class="bold-small">Remove any adhesive tape, pins or staples.</strong>
+                                </div>
+                  
+                                <p style="
+                            margin-top: 1.05263em;
+                        ">Use dividers to separate prescription forms into:</p>
+                                <ul>
+                                  <li>Exempt</li>
+                                  <li>Paid</li>
+                                  <li>Old rate</li>
+                                </ul>
+                                <table class="forms-table">
+                  
+                                </table>
+                                <p><strong>FP57 - </strong>If you are submitting any FP57 forms, please place these at the top of your
+                                  batch.
+                                </p>
+                              </div>
+                  
+                  
+                            </dd>
+                  
+                          </div>
+                  
+                          <div>
+                            <dt class="cya-question">
+                              <h2 class="heading-small">Order your groups</h2>
+                            </dt>
+                            <dd class="cya-answer">
+                              <p>Each group should be ordered like this:</p>
+                              <p><strong>Top to bottom</strong></p>
+                              <ul style="
+                            margin-bottom: 1.05263em;
+                        ">
+                                <li>Nurse prescriber</li>
+                                <li>Supplementary prescriber</li>
+                                <li>Hospital prescriber</li>
+                                <li>Prescribing Doctor</li>
+                              </ul>
+                  
+                            </dd>
+                  
+                          </div>
+                  
+                  
+                          <div>
+                            <dt class="cya-question" style="border-bottom: 0 !important;">
+                              <h2 class="heading-small">Send us your batch</h2>
+                            </dt>
+                            <dd class="cya-answer" style="border-bottom: 0 !important;">
+                              <p>Send batch by a secure, pre-paid postage method with track and trace.</p>
+                            </dd>
+                  
+                          </div>
+                  
+                  
+                  
+                  
+                  
+                        </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

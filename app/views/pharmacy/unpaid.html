@@ -1,0 +1,217 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a class="active" href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                Unpaid items
+              </h1>
+
+              <div class="grid-row">
+                  <div class="column-third">
+                      <h3 class="heading-medium">Incomplete (4)</h3>
+       </div>  
+                   <div class="column-two-thirds">
+                       <br>
+               <p class="lede" style="margin-top:0px;">We can't pay these items until you add missing information.</p>
+       </div>
+       <div class="column-full">
+           <br>
+                   <table class="data-table assets-summary check-your-answers">
+            <tbody><tr>
+               
+               <th width="10%">Type</th>
+                <th width="58%">Description</th>
+                <th width="15%">Returned</th>
+                <th width="22%"></th>
+            </tr>
+            <tr>
+                <td><strong>Eps</strong></td>
+               <td>Imodium 2mg capsules (Janssen-Cilag Ltd)</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td></td>
+               <td>Prednisolone 1mg gastro-resistant tablets</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         <tr>
+               <td><strong>Paper</strong></td>
+               <td>Paper prescription item</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td></td>
+               <td>Paper prescription item</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         </tbody></table>
+   
+                     </div>
+   </div>
+
+   <br>
+
+   <div class="grid-row">
+      <div class="column-third">
+          <h3 class="heading-medium">To be processed (1)</h3>
+</div>  
+       <div class="column-two-thirds">
+           <br>
+   <p class="lede" style="margin-top:0px;">You have successfully added information to these items.</p>
+</div>
+<div class="column-full">
+<br>
+       <table class="data-table assets-summary check-your-answers">
+<tbody><tr>
+   
+   <th width="10%">Type</th>
+    <th width="58%">Description</th>
+    <th width="15%">Updated</th>
+    <th width="22%"></th>
+</tr>
+<tr>
+    <td><strong>Eps</strong></td>
+   <td>Imodium 2mg capsules (Janssen-Cilag Ltd)</td>
+   <td>30/01/2017</td>
+   <td><a href="">View information</a></td>
+</tr>
+</tbody></table>
+
+         </div>
+</div>
+
+<br>
+
+<div class="grid-row">
+    <div class="column-third">
+        <h3 class="heading-medium">Processed (1)</h3>
+</div>  
+     <div class="column-two-thirds">
+         <br>
+ <p class="lede" style="margin-top:0px;">We have processed the information for these items.</p>
+</div>
+<div class="column-full">
+<br>
+     <table class="data-table assets-summary check-your-answers">
+<tbody><tr>
+ <th width="10%">Type</th>
+  <th width="58%">Description</th>
+  <th width="15%">Processed</th>
+  <th width="22%"></th>
+</tr>
+<tr>
+  <td><strong>Eps</strong></td>
+ <td>Imodium 2mg capsules (Janssen-Cilag Ltd)</td>
+ <td>01/02/2017</td>
+ <td><a href="">View information</a></td>
+</tr>
+</tbody></table>
+
+       </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

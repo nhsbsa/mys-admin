@@ -1,0 +1,177 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                  NHS Urgent Medicine Supply Advanced Service (NUMSAS)
+              </h1>
+
+              <div class="grid-row">
+
+
+                  <div class="column-third">
+                     <h3 class="heading-medium">Create a NUMSAS token</h3>
+                  </div>
+                  <div class="column-two-thirds">
+                     <div class="form-group">
+                        <p><br>Use this service to record your delivery of the NUMSAS service and print NUMSAS tokens.</p>
+                        <a class="button button-start" href="patient" role="button">Start</a>
+                     </div>
+                  </div>
+               </div>
+
+               <hr>
+
+               <div class="grid-row">
+                  <div class="column-third">
+                     <h3 class="heading-medium">Monthly claims</h3>
+                  </div>
+        
+                  <div class="column-two-thirds">
+        
+                     <div class="form-group>" <p=""><p></p>
+                     <h3 class="heading-medium">Submit a new claim</h3>
+                     <p>Which period is this claim for?</p>
+                     <div class="form-group">
+                        <div class="form-group">
+                           <label class="form-label" for="select-box"></label>
+                           <select class="form-control" id="select-box">
+                              <option>January 2019</option>
+                              <option>December 2018</option>
+                           </select>
+                        </div>
+                     </div>
+                     <a class="button button-start" href="monthly-claim" role="button">Start</a>
+                  </div>
+        
+                  <h3 class="heading-medium"><br>Previous claims</h3>
+        
+                  <table>
+                     <thead>
+                        <tr>
+                           <th scope="col">Period</th>
+                           <th class="numeric" scope="col"></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td scope="row">November 2018</td>
+                           <td class="numeric">Submitted</td>
+                        </tr>
+                        <tr>
+                           <td scope="row">October 2018</td>
+                           <td class="numeric"><a href="view-information">View</a></td>
+                        </tr>
+                        <tr>
+                           <td scope="row">September 2018</td>
+                           <td class="numeric"><a href="view-information">View</a></td>
+                        </tr>
+                        <tr>
+                           <td scope="row">August 2018</td>
+                           <td class="numeric"><a href="view-information">View</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+        
+               </div>
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

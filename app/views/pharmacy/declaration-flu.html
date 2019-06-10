@@ -1,0 +1,303 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .declaration li {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .declaration li {
+      list-style-type: decimal;
+    }
+  
+    .declaration {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #bfc1c3;
+      margin-top: 15px;
+      margin-bottom: 35px;
+      padding-top: 50px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+    }
+  
+    .declaration:before {
+      content: "DECLARATION";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+      line-height: 1.25;
+      background: #bfc1c3;
+      color: white;
+    }
+  </style>
+  
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Flu vaccination payments</p>
+                    <h1 class="page-header--lede heading-large">Summary</h1>
+                    <p class="lede">Check your answers and read the submission declaration</p>
+                    <hr>
+                </header>
+
+                <div class="grid-row">
+                    <div class="column-third">
+                       <h2 class="heading-medium" style="margin-top:0px;">September</h2>
+                    </div> 
+                    <div id="hideme" class="column-two-thirds">
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+                             
+                          </tbody>
+                       </table>
+                        
+                       <table>
+                          <thead>
+                             <tr>
+                                <th scope="col" width="50%">Category</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col"></th>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td width="50%">FluarixTM Tetra Split virion</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td>Influvac® Surface antigen</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td width="50%">Imuvac® Surface antigen</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td style="border-bottom:0px !important;" width="50%">Influenza vaccine Split virions</td>
+                                <td style="border-bottom:0px !important;"></td>
+                                <td style="border-bottom:0px !important;" class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                          </tbody>
+                       </table>
+                      
+                    </div>
+                 </div>
+
+                 <hr>
+
+                 <div class="grid-row">
+                    <div class="column-third">
+                       <h2 class="heading-medium" style="margin-top:0px;">October</h2>
+                    </div> 
+                    <div id="hideme" class="column-two-thirds">
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+                             
+                          </tbody>
+                       </table>
+                        
+                       <table>
+                          <thead>
+                             <tr>
+                                <th scope="col" width="50%">Category</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col"></th>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td width="50%">FluarixTM Tetra Split virion</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td>Influvac® Surface antigen</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td width="50%">Imuvac® Surface antigen</td>
+                                <td></td>
+                                <td class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                             <tr>
+                                <td style="border-bottom:0px !important;" width="50%">Influenza vaccine Split virions</td>
+                                <td style="border-bottom:0px !important;"></td>
+                                <td style="border-bottom:0px !important;" class="numeric"><a href="flu">Edit</a></td>
+                             </tr>
+                          </tbody>
+                       </table>
+                      
+                    </div>
+                 </div>
+
+                 <hr>
+
+                 <div class="grid-row">
+                    <div class="column-third">
+                       <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                    </div>
+                    <div class="column-two-thirds">
+                       <div class="declaration">
+                          <ol>
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have reviewed the summary above and that the information provided within this submission is correct and accurate. </li>
+                              
+                              <li style="margin-left:40px; padding-bottom:10px;">I confirm that my acceptance of the declaration below shall act as my electronic signature.</li>  
+                              
+                              <h3 class="heading-medium" style="margin-bottom:20px; margin-top:0px;">Flu vaccination</h3>
+                              <li style="margin-left:40px; padding-bottom:10px;">I am claiming payment in accordance with the terms of the Community Pharmacy Seasonal Influenza Vaccine Advanced Service, as set out in the 2017/18 service specification and the Pharmaceutical Services (Advanced and Enhanced Services) (England) (Amendment) Directions 2015. 
+                              </li>
+                              <!--
+                             <li style="margin-left:40px; padding-bottom:10px;">I confirm that my name below shall act as my electronic signature.</li>-->
+                          </ol>
+                       </div>
+                        
+                 <!--
+                       <div class="form-group">
+                          <label class="form-label" for="telephone-number">Full name</label>
+                          <input class="form-control form-control-1-2" id="telephone-number" name="telephone-number" type="text" value="Tom Smith" readonly>
+                       </div>
+                 -->
+                        
+                        <div class="form-group">
+                    <label class="form-label" for="full-name-f1">Your full name</label>
+                 <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
+                     </div>
+                        
+                        <div class="form-group">
+                    <label class="form-label" for="full-name-f1">Email address (optional)</label>
+                         <span class="form-hint">
+                             This address will only be used to send you a receipt of submission.
+                   </span>
+                 <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
+                     </div>
+                        
+
+                       <div class="multiple-choice multiple-radio">
+                          <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+                          <label for="benefits">I agree and accept the declaration above.</label>
+                        </div>
+                        <br>
+                        <br>
+                        <!--
+                        <hr>
+                        
+                        <div class="multiple-choice" style="margin-bottom:20px;">
+                          <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+                          <label for="checkbox-telephone-number">As user <strong>Tom Smith</strong>, I agree to the declaration above.</label>
+                       </div>
+                        
+                        <div class="panel panel-border-wide">
+                   <p>
+                    You will be prompted for your password to validate your identity and complete your submission.
+                   </p>
+                 </div>
+                 
+                 -->
+                     
+                       <div style="clear:both;"><a href="submitted"><input class="button" type="submit" value="Send submission"></a></div>
+                    </div>
+                 </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

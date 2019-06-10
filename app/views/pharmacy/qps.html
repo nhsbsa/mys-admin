@@ -1,0 +1,137 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                  Quality Payments Scheme
+              </h1>
+
+
+              <p>Use this service to complete your Quality Payments Scheme declaration.</p>
+
+              <p>Before completing this declaration contractors should have read the NHS England Quality Payments Guidance documents available <a href="">here</a>.</p>
+
+              <p>The window for declarations will close on <span class="strong">Friday 1 March 2019</span> at 23:59.</p>
+
+              <div class="form-group">
+                  <details role="group">
+                
+                    <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">What are the gateway criteria to be eligible for a Quality Payment?</span></summary>
+                
+                    <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true">
+                
+                      <p>
+                        </p><p>To be eligible to claim a Quality Payment, your pharmacy must
+                           meet all of the following gateway criteria:
+                        </p><ul class="list list-bullet">
+                           <li>provision of at least one specified Advanced Service</li>
+                           <li>have their NHS website (formerly known as NHS Choices) entry up to date</li>
+                           <li>have the results of their latest Community Pharmacy Patient Questionnaire available on their NHS website entry or the pharmacy's website</li>
+                           <li>have the ability for staff to send and receive NHSmail and have two live (active) linked accounts</li>
+                           <li>all of the operating systems and browser versions used in the pharmacy must comply with the NHS Digital Warranted Enviroment Specification (WES)</li>
+                        </ul>
+                      <p></p>
+                
+                    </div>
+                  </details>
+                  </div>
+
+                  <a class="button button-start" href="status" role="button">Start now</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

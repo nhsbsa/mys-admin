@@ -1,0 +1,212 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <h3 class="heading-small">Dashboard</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="index">View summary</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Prescriptions</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a class="active" href="fp34c">Prescription submissions (FP34C)</a></li>
+            <li><a href="unpaid">Unpaid items</a></li>
+            <li><a href="disallowed">Disallowed items</a></li>
+            <li><a href="pir">Prescription image request</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Advanced services</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+            <li><a href="flu">Flu submission</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Surveys</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="qps">Quality Payments Scheme</a></li>
+          </div>
+        </ul>
+      </div>
+
+    </div>
+    <div class="main-content">
+
+
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+        </p>
+      </div>
+
+      <a href="javascript:history.back()" class="link-back">Back</a>
+
+
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+
+          <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Add item information</p>
+            <h1 class="page-header--lede heading-large">Item from September submission</h1>
+            <hr>
+          </header>
+
+
+
+          <div class="grid-row">
+            <div class="column-third">
+              <h3 class="heading-small">Item 1 of 6</h3>
+            </div>
+            <div class="column-two-thirds">
+              <details role="group">
+                <summary style="margin-top:15px;" role="button" aria-controls="details-content-0" aria-expanded="false">
+                  <span class="summary"><strong>SHOW PRESCRIPTION INFORMATION</strong></span></summary>
+
+                <div class="panel panel-border-narrow" style="border-left:0px; margin-left;0px;" id="details-content-0"
+                  aria-hidden="true">
+                  <h3 class="heading-medium">Patient</h3>
+                  <img src="/public/images/bsa/rx-top.png" style="width:100%">
+                  <h3 class="heading-medium">Prescriber</h3>
+                  <img src="/public/images/bsa/rx-bottom.png" style="width:100%">
+                  <!--
+                        <div class="grid-row">
+                  <div class="column-half">
+                                    <h2 class="heading-medium">Patient</h2>
+                                    <table class="data-table assets-summary check-your-answers">
+                                       <tr>
+                                          <td style="color:#6f777b; width:50%;">Surname</td>
+                                          <td><strong>Smith</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">Date of birth</td>
+                                          <td><strong>24/01/1982</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">Postcode</td>
+                                          <td><strong>AB12 3CD</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">NHS number</td>
+                                          <td><strong>32432423234</strong>
+                                       </tr>
+                                    </table>
+                                 </div>
+                                 <div class="column-half">
+                                    <h2 class="heading-medium">Prescribed item</h2>
+                                    <table class="data-table assets-summary check-your-answers">
+                                       <tr>
+                                          <td style="color:#6f777b; width:50%;">Product name</td>
+                                          <td><strong>Clini gauze</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">Strength</td>
+                                          <td><strong>-</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">Presentation</td>
+                                          <td><strong>10cm x 10cm</strong></td>
+                                       </tr>
+                                       <tr>
+                                          <td style="color:#6f777b">Quantity</td>
+                                          <td><strong>12ply</strong></td>
+                                       </tr>
+                                    </table>
+                                 </div>
+                              </div>
+                  -->
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="grid-row">
+            <div class="column-third">
+              <h3 class="heading-small">Item information</h3>
+            </div>
+            <div class="column-two-thirds">
+              <img src="/public/images/bsa/rx-middle.png" style="width:100%">
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="grid-row">
+            <div class="column-third">
+              <h3 class="heading-small">Missing item information</h3>
+            </div>
+            <div class="column-two-thirds">
+              <h2 class="heading-medium">Please tell us the following</h2>
+              <hr>
+              <div class="form-group">
+                <label class="form-label" for="full-name-f1">Supplier/manufacturer</label>
+                <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
+              </div>
+              <div class="form-group">
+
+                <label class="form-label" for="first-name-2">Price</label>
+                £ <input class="form-control form-control-1-8" id="first-name-2" name="first-name-2" type="text"
+                  style="display:inline"> . <input class="form-control form-control-1-8" id="first-name-2"
+                  name="first-name-2" type="text" style="width:40px;">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="full-name-f1">Pack size</label>
+                <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
+              </div>
+              <hr>
+              <a href="#" class="button" style="margin-top:25px;">Submit</a>
+              <div style="margin-top:20px;"><a href="">Skip this item</a></div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+</main>
+
+{% endblock %}

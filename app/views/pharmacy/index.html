@@ -1,0 +1,172 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a class="active" href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                Summary
+              </h1>
+
+
+
+
+              <div class="grid-row">
+                  <div class="column-third">
+                      <h3 class="heading-xlarge" style="margin-top:25px; margin-bottom:0;">8</h3>
+                      <p style="margin-top:0;">unpaid items</p>
+                  </div>
+                  <div class="column-two-thirds">
+                      <p style="padding-bottom: 25px; border-bottom:1px solid #bfc1c3; margin-top:25px;"><strong>Items with
+                              missing information</strong></p>
+                      <div class="received-submission" style="margin-top:10px;">
+                          <a style="margin-top: 5px; float:right;" href="eps-item">Add information</a>
+                          <div
+                              style="text-align: center; background-color:#f7e6e8; color:#B10E1E; font-size: 25px; width: 70px; padding: 10px 5px 5px 5px; float:left; margin-right:10px;">
+                              <strong>5</strong></div>
+                          <p style="margin-bottom:5px; padding-top:12px;"> EPS items</p>
+                      </div>
+                      <hr>
+                      <div class="received-submission" style="margin-bottom:25px;">
+                          <a style="margin-top: 5px; float:right;" href="paper-item">Add information</a>
+                          <div
+                              style="text-align: center; background-color:#f7e6e8; color:#B10E1E; font-size: 25px; width: 70px; padding: 10px 5px 5px 5px; float:left; margin-right:10px;">
+                              <strong>3</strong></div>
+                          <p style="margin-bottom:5px; padding-top:12px;"> paper prescription items</p>
+                      </div>
+                      <hr>
+                  </div>
+              </div>
+              <hr>
+              <div class="grid-row">
+                  <div class="column-third">
+                      <h3 class="heading-medium">Pharmacy activity <br>summary</h3>
+                  </div>
+                  <div class="column-two-thirds">
+                      <table>
+                          <thead>
+                              <tr>
+                                  <th scope="col">Period</th>
+                                  <th class="numeric" scope="col"></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td scope="row">September</td>
+                                  <td class="numeric"><a href="paper" style="text-decoration: underline;">Start
+                                      submission</a></td>
+                              </tr>
+                              <tr>
+                                  <td scope="row">August</td>
+                                  <td class="numeric">Contact us</td>
+                              </tr>
+                              <tr>
+                                  <td scope="row">July</td>
+                                  <td class="numeric"><a href="view-information">View</a></td>
+                              </tr>
+                          </tbody>
+                      </table>
+
+                      <br>
+                      
+                      <p style="margin-bottom: 5px; font-weight: bold;">Missed a submission?</p>
+<div style="margin-top: 0; font-size: 16px;">Contact the helpdesk on 01924 334249 or via email at <a href="mailto:nhsbsa.mys@nhs.net">nhsbsa.mys@nhs.net</a> for help.</div>
+
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

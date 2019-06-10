@@ -32,33 +32,98 @@ body {
   color: #333333;
 }
 
+
 #global-header {
-  height :170px;
-  background: url('/public/images/bsa/header-bsa.svg') transparent;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  height: 170px;
+  background-color: #005eb8;
+  display:-webkit-flex;
+  display:flex;
+  -webkit-justify-content:space-between;
+  justify-content:space-between;
+  -webkit-align-items:center;
+  align-items:center;
+
+  .columns {
+    padding: 10px 20px;
+
+    .service-details {
+      display:-webkit-flex;
+      display:flex;
+      -webkit-align-items:center;
+      align-items:center;
+
+      .logo {
+        margin-right: 15px;
+      }
+      .service-name {
+        font-size: 19px !important;
+        text-decoration: none;
+        color:white;
+        font-weight: 600;
+      }
+    }
+
+    .signed-in {
+      display: inline;
+      margin-right: 20px;
+      color:white;
+
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
+    .links {
+      display: inline;
+      margin-right: 10px;
+      color:white;
+
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
+  }
+
   @media screen and (max-width: $break-small) {
-    height: auto;
-    background: transparent;
-    border-bottom: 1px solid grey;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    min-width: 400px;
   }
   .header-wrapper {
     background: transparent;
-  }
-  #bsa-logo {
-    width: 300px;
-    margin: 20px 15px 0 0;
+    padding: 15px;
     max-width: 100%;
-    float: right;
+  }
+
+}
+
+#content {
+  margin: 0;
+  max-width: 100%;
+  padding-bottom: 0;
+}
+
+.sidebar-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  @media screen and (max-width: $break-small) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar-content {
+    flex-basis: 300px;
+    min-width: 300px;
+    background-color: #E8EDEE;
     @media screen and (max-width: $break-small) {
-      width: 92%;
-      margin: 0;
-      max-width: 100%;
-      float: right;
-      padding: 5% 4% 0;
+      padding-bottom: 20px;
+    }
+  }
+  .main-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px 40px 40px 40px;
+
+    @media screen and (max-width: $break-small) {
+      padding: 20px;
     }
   }
 }
@@ -351,12 +416,12 @@ td.strong {
     position: inherit;
     float: left;
     margin-left: -38px;
-    margin-top :3px;
+    margin-top: 3px;
     width: 24px;
     height: 24px;
   }
   [type=radio] + label::after {
-    left: 17px;
+    left: 29px;
     top: 17px;
     border: 7px solid;
   }
@@ -386,6 +451,7 @@ td.strong {
   label {
     margin-top: 5px;
     margin-left: 52px;
+    margin-bottom: 5px;
   }
 }
 
@@ -1135,3 +1201,45 @@ border-bottom: 1px solid #bfc1c3;
 
 
 
+
+// side nav
+
+
+
+.side-nav {
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    display: block;
+    color: #005EB8;
+    padding: 8px 36px;
+    text-decoration: none;
+  }
+
+  li h3 {
+    display: block;
+    color: #005EB8;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  li a.active {
+    background-color:#005EB8;
+    color: white;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #005EB8;
+    color: white;
+  }
+
+  .options {
+    font-size: 16px;
+  }
+}

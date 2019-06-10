@@ -1,0 +1,181 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">September submission</p>
+                    <h1 class="page-header--lede heading-large">Advanced services</h1>
+                    <hr>
+                </header>
+
+                <h2 class="heading-medium">
+                    
+                    Did you carry out any of the following activities?
+         
+                 </h2>
+
+                 <form action="downloadreports-handler" method="get" class="form">
+
+
+                    <p>Select all options that are relevant to you.</p>
+            
+                    <div class="form-group">
+                      <fieldset>
+            
+        
+                        <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                            <input id="MS" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineservice" aria-expanded="false">
+                            <label for="MS">New Medicine Service</label>
+                          </div>
+                
+                          <div class="panel panel-border-narrow js-hidden" id="medicineservice" style="padding-top: 0; padding-bottom: 10px; margin: 10px 0px 30px 20px" aria-hidden="true">
+                            <h2 class="heading-small" style="padding-bottom: 5px;">How many did you carry out?</h2>
+                            <input class="form-control form-control-1-4" type="text" id="med-service" value="" name="medicineServices">
+                          </div>
+        
+                          <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                              <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                              <label for="MUR">Medicine Use Reviews</label>
+                            </div>
+                  
+                            <div class="panel panel-border-narrow js-hidden" id="medicineusereviews" style="padding-top: 0; padding-bottom: 10px; margin: 10px 0px 30px 20px" aria-hidden="true">
+                              <h2 class="heading-small" style="padding-bottom: 5px;">How many did you carry out?</h2>
+                              <input class="form-control form-control-1-4" type="text" id="med-use-reviews" value="" name="medicineUseReviews">
+                            </div>
+        
+                            <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">Appliance Use Reviews</label>
+                              </div>
+                    
+                              <div class="panel panel-border-narrow js-hidden" id="applianceusereviews" style="padding-top: 0; padding-bottom: 10px; margin: 10px 0px 30px 20px" aria-hidden="true">
+                                <h2 class="heading-small" style="padding-bottom: 5px;">How many did you carry out?</h2>
+                                <label class="form-label" for="nationalities-other-country">On your premises</label>
+                                <input class="form-control form-control-1-4" type="text" id="nationalities-other-country" name="nationalities-other-country">
+                                <div style="padding-top:15px;"></div>
+                                <label class="form-label" for="app">At patients home</label>
+                                <input class="form-control form-control-1-4" type="text" id="nationalities-other-country" name="nationalities-other-country">
+        
+                              </div>
+        
+                              <div class="multiple-choice multiple-radio" data-target="prescriptionchargerefunds">
+                                  <input id="PCR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="prescriptionchargerefunds" aria-expanded="false">
+                                  <label for="PCR">Prescription Charge Refunds (FP57)</label>
+                                </div>
+                      
+                                <div class="panel panel-border-narrow js-hidden" id="prescriptionchargerefunds" style="padding-top: 0; padding-bottom: 10px; margin: 10px 0px 30px 20px" aria-hidden="true">
+                                  <h2 class="heading-small" style="padding-bottom: 5px;">How many did you send?</h2>
+                                  <input class="form-control form-control-1-4" type="text" id="nationalities-other-country" name="nationalities-other-country">
+                                  <h2 class="heading-small" style="padding-bottom: 5px;">What was the total amount refunded?</h2>
+                                  £ <input class="form-control form-control-1-4" type="text" id="nationalities-other-country" name="nationalities-other-country">
+          
+                                </div>
+                        
+                      </fieldset>
+                    </div>
+        
+            
+                  </form>
+
+                  <div class="form-group">
+                      <a href="declaration"><input class="button" type="submit" value="Next"></a>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
