@@ -1,0 +1,247 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a class="active" href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                Disallowed items
+
+              <p class="lede">
+                    
+                Prescribed by <strong style="font-weight:  600;">Thomas Smith</strong> from <strong style="font-weight:  600;">Frankies GP (2355322)
+                
+                                </strong></p>
+
+              </h1>
+
+
+
+
+
+<hr>
+
+<div class="grid-row" style="margin-top: 20px;">
+  <div class="column-third">
+     <span class="contractor">Item 1 of 1</span>
+  </div>
+  <div class="column-two-thirds">
+
+
+
+
+     <div class="notice">
+      <i class="icon icon-important">
+        <span class="visually-hidden">Warning</span>
+      </i>
+      <strong class="bold-small">
+        This item was disallowed because it's not an approved appliance.
+      </strong>
+    </div>
+    <br>
+    <p>View the <a href="https://www.nhsbsa.nhs.uk/pharmacies-gp-practices-and-appliance-contractors/drug-tariff">Drug Tariff</a> for more information.</p>
+
+
+  </div>
+   </div>
+
+   <hr>
+
+   <div class="grid-row" style="margin-top: 20px;">
+    <div class="column-third">
+       <h2 class="heading-small" style="padding-top:0;">Prescription information</h2>
+    </div>
+     <div class="column-two-thirds">
+     <details role="group">
+
+<summary style="margin-top:15px;" role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">Patient information and prescribed item</span></summary>
+
+<div class="panel panel-border-narrow" style="border-left:0px; margin-left;0px;" id="details-content-0" aria-hidden="true">
+    <div class="grid-row">
+<div class="column-half">
+                <h2 class="heading-medium">Patient</h2>
+                <table class="data-table assets-summary check-your-answers">
+                   <tbody><tr>
+                      <td style="color:#6f777b; width:50%;">Surname</td>
+                      <td><strong>Smith</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">Date of birth</td>
+                      <td><strong>24 January 1982</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">Postcode</td>
+                      <td><strong>AB12 3CD</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">NHS number</td>
+                      <td><strong>32432423234</strong>
+                   </td></tr>
+                </tbody></table>
+             </div>
+             <div class="column-half">
+                <h2 class="heading-medium">Prescribed item</h2>
+                <table class="data-table assets-summary check-your-answers">
+                   <tbody><tr>
+                      <td style="color:#6f777b; width:50%;">Product name</td>
+                      <td><strong>Imodium</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">Strength</td>
+                      <td><strong>2mg</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">Presentation</td>
+                      <td><strong>-</strong></td>
+                   </tr>
+                   <tr>
+                      <td style="color:#6f777b">Quantity</td>
+                      <td><strong>4</strong></td>
+                   </tr>
+                </tbody></table>
+             </div>
+          </div>
+</div>
+</details>
+     </div>
+  </div>
+
+  <hr>
+
+  <div class="grid-row">
+    <div class="column-third">
+       <h2 class="heading-small" style="padding-top:0;">Item selected in EPS</h2>
+    </div>
+    <div class="column-two-thirds">
+       <h2 class="heading-medium" style="padding-top:0;">Imodium 2mg capsules (Janssen-Cilag Ltd)</h2>
+    </div>
+ </div>
+
+ <div class="grid-row">
+  <div class="column-third">
+     <br>
+  </div>
+  <div class="column-third">
+     <table class="data-table assets-summary check-your-answers">
+        <tbody><tr>
+           <td style="color:#6f777b; width:50%;">Quantity</td>
+           <td><strong>4</strong></td>
+        </tr>
+     </tbody></table>
+  </div>
+  <div class="column-third">
+     <table class="data-table assets-summary check-your-answers">
+        <tbody><tr>
+           <td style="color:#6f777b">Dispensed date</td>
+           <td><strong>12 January 2016</strong>
+        </td></tr>
+     </tbody></table>
+  </div>
+</div>
+
+<div class="grid-row">
+  <div class="column-third">
+     <br>
+  </div>
+  <div class="column-two-thirds">
+     <table class="data-table assets-summary check-your-answers">
+        <tbody><tr>
+           <td style="color:#6f777b; width:24%;">Additional</td>
+           <td><strong>BB</strong></td>
+        </tr>
+     </tbody></table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
