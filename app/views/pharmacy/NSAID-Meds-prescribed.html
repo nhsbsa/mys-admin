@@ -1,0 +1,227 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a  href="qps">Quality Payments Scheme</a></li>
+              <li><a class="active" href="nsaid-start">NSAID Audit</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                  Details of medicines prescribed
+              </h1>
+
+              <h2 class="heading-medium">Name of NSAID or COX2 inhibitor prescribed</h2>
+
+              <h2 class="heading-medium">Other NSAID or COX2 inhibitor prescribed</h2>
+              <div class="govuk-form-group">
+                
+          
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%"></textarea>
+                </div>
+
+                <h2 class="heading-medium">Total daily dose prescribed</h2>
+                <div class="govuk-form-group">
+                    <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+                    <label class="govuk-label" for="width-2">
+                        mg
+                      </label>
+                  </div>
+
+                  <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more then 2 months?</h2>
+
+                  <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                      
+                        <div class="govuk-radios govuk-radios--inline">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                              Yes
+                            </label> </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                              No
+                            </label> </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                  unkown
+                                </label> </div>
+                        </div>
+                        
+                      </fieldset>
+                    </div>
+                    <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more then 2 months?</h2>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        
+                          <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                                Yes
+                              </label> </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                No
+                              </label> </div>
+                              <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                    unkown
+                                  </label> </div>
+                          </div>
+                          
+                        </fieldset>
+                      </div>
+                      <h2 class="heading-medium">Is the patient taking any other medicines (listed) that might increase the risk of bleeding?</h2>
+                      <span id="changed-name-hint" class="govuk-hint">
+                          (Please select all that apply)
+                        </span>
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                            
+                            </br>
+                              <div class="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                    No
+                                  </label> </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Anticoagulant
+                                  </label> </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                    Antiplatelet (including asprin)
+                                  </label> </div>
+                              </div>
+                              <div class="govuk-checkboxes">
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                      Selective serotonin re-uptake inhibitor
+                                    </label> </div>
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                      Unknown
+                                    </label> </div>
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                      Other (please state below)
+                                    </label> </div>
+                                </div>
+                            </fieldset>
+                          </div>
+                          <h2 class="heading-medium">Other medicines prescribed that might increase the risk of GI bleeding</h2>
+                          <div class="govuk-form-group">
+                              
+                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                            </div>
+
+              
+
+                  <a class="button button-start" href="NSAID-Gastro-details" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
