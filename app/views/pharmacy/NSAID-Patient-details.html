@@ -69,51 +69,60 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-              <h1 class="heading-xlarge" style="margin-bottom: 10px">
-                  Patient Details
-              </h1>
-
-              <p style="color:grey">Patient 1</p>
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Patient 1</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Patient Details</h1>                    
+                    <hr>
+                </header>
               
 
-              <h2 class="heading-large">Patient age</h2>
+              <h2 class="heading-medium">Patient age</h2>
 
+                <div class="form-group">
               <div class="govuk-form-group">
                 
-                <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" style="margin-bottom: 40px">
+                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
                 <label class="govuk-label" for="width-3">
                   years
                 </label>
               </div>
 
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
 
-                      <h2 class="heading-large">Patient gender</h2>
+                  <h2 class="heading-medium">Patient gender</h2>
                     
-                  </legend>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                        Male
-                      </label> </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                        Female
-                      </label> </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                        Not confirmed
 
-                  </div>
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Male</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="counciltax" value="no">
+                        <label for="no">Female</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="no" type="radio" name="counciltax" value="no">
+                          <label for="no">Unknown</label>
+                        </div>
+  
+                    </div><br><br>
+
+
+                                                            
+
+
+          
+              
                   <br/>
                   <br/>
-                </fieldset>
-              </div>
+              
 
 
                   <a class="button button-start" href="NSAID-Meds-prescribed" role="button">Next</a>

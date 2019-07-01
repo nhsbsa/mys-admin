@@ -1,3 +1,4 @@
+
 {% extends "layout_bsa.html" %}
 
 {% block page_title %}
@@ -69,17 +70,154 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-              <h1 class="heading-xlarge">
-                  Gastro details
-              </h1>
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Patient 2</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Gastro details</h1>                    
+                <hr>
+            </header>
 
+              <h2 class="heading-medium">Proton pump inhibitor prescribed at licened daily dose for NSAID prophylaxis?</h2> 
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    
+                  </legend>
+                  <span id="waste-hint" class="govuk-hint">
+                    Select all that apply.
+                  </span>
+                  <div class="form-group" >
+              
+          
+                    <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="MS">Yes - Esomeprazole 20g or more</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="MUR">Yes - Lansoprazole 15g or more</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">Yes - Omeprazole 20g or more</label>
+                          </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                              <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                              <label for="AUR">Yes - Pantoprazole 20g or more</label>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">No</label>
+                              </div>
+                          </div>
+              
+              <h2 class="heading-medium">Any other gastro-protection prescribed?</h2> 
+
+              <div class="form-group" >
+              
+          
+                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                    <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                    <label for="MS">Yes - Proton pump inhibitor not listed above</label>
+                  </div>
+        
+                  <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                      <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                      <label for="MUR">Yes - H2 receptor antagonist</label>
+                    </div>
+                    
+                    <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                        <label for="AUR">Yes - Mistoprostol</label>
+                      </div>
+
+                      <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">No</label>
+                          </div>
+                      </div>
+         
+                <h2 class="heading-medium">Conversation with the patient about their NSAID/COX2 medicine?</h2> 
+
+                <div class="form-group" >
+              
+          
+                  <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                      <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                      <label for="MS">Yes - Conversation in the pharmacy</label>
+                    </div>
+          
+                    <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                        <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                        <label for="MUR">Yes - Conversation by telephone</label>
+                      </div>
+                      
+                      <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                          <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                          <label for="AUR">No - Representative attended pharmacy, patient not contacted</label>
+                        </div>
+
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">No - Medicine delivered by pharmacy, patient not contacted</label>
+                          </div>
+                          
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                              <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                              <label for="AUR">No - Other</label>
+                            </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                              <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                              <label for="AUR">Data not recorded (e.g. forgot, prescription not collected during the audit period)</label>
+                            </div>
+
+                        </div>
+
+                  <h2 class="heading-medium">Was the patient reffered to the prescriber about gastro-protection?</h2> 
+
+                  <div class="form-group" >
+              
+          
+                    <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="MS">Yes</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="MUR">No - Gastro-protection already prescribed</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">Yes - Referred for gastro-protection within the last 6 months</label>
+                          </div>
+    
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">No - Other reason (please state below)</label>
+                              </div>
+                          </div>
+    
+                    <h2 class="heading-medium">Other reason patient not referred about gastro-protection</h2>
 
               
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%"></textarea>
+                    </div>
 
-              <p>Content goes here</p>
+                    <h2 class="heading-medium">Please add any other comments in the box below</h2>
 
+                  
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px"></textarea>
+                
+                  </br>
 
-                  <a class="button button-start" href="NSAID-check-your-answers-p2" role="button">Next</a>
+                  <a class="button button-start" href="NSAID-check-your-answers2" role="button">Next</a>
 
 
 

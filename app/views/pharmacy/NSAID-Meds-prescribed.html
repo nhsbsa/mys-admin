@@ -13,7 +13,348 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+    .ui-autocomplete {
+      padding: 0;
+      list-style: none;
+      background-color: #fff;
+      border: 2px solid #6f777b;
+      max-height: 350px;
+      overflow-x: hidden;
+    }
+  
+    .ui-autocomplete .ui-menu-item {
+      border-top: 1px solid #bfc1c3;
+      display: block;
+      padding: 4px 6px;
+      color: #0b0c0c;
+      cursor: pointer;
+    }
+  
+    .ui-autocomplete .ui-menu-item:first-child {
+      border-top: none;
+    }
+  
+    .ui-autocomplete .ui-menu-item.ui-state-focus {
+      font-weight: bold;
+      background-color: #6f777b;
+      color: #fff;
+    }
+  
+    .ui-autocomplete {
+      width: 100%;
+    }
+  
+    @media (min-width: 641px) {
+      .ui-autocomplete {
+        width: 66.66%;
+      }
+    }
+  
+    .added-country .form-control {
+      padding: 0.5em;
+    }
+  
+    .typeahead,
+    .tt-query,
+    .tt-hint {
+      font-size: 19px;
+      font-weight: 300;
+      text-transform: none;
+      margin: 0;
+      /* padding: 0.5em; */
+    }
+  
+    .tt-hint {
+      display: none;
+    }
+  
+    .tt-dropdown-menu {
+      padding: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+  
+    .tt-suggestion {
+      padding: 0.5em;
+      font-size: 19px;
+      line-height: 24px;
+    }
+  
+    .tt-suggestion p {
+      margin: 0;
+    }
+  
+    .tt-suggestion.tt-is-under-cursor {
+      color: #fff;
+      background-color: #0097cf;
+    }
+  
+    .twitter-typeahead {
+      width: 100%;
+    }
+  
+    .validation-wrapper .optional-section .twitter-typeahead input {
+      margin-bottom: 0;
+    }
+  
+    .test-case {
+      overflow: visible;
+    }
+  
+    .visually-hidden,
+    .visuallyhidden,
+    .hidden-hint .screenreader-punctuation,
+    .hidden-hint .form-hint {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+    }
+  
+    .added-country .form-control {
+      padding: 0.5em;
+    }
+  
+    .tt-menu {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      width: 65%;
+      max-height: 220px;
+      overflow-y: scroll;
+    }
+  
+    .tt-suggestion {
+      padding: 0.5em;
+    }
+  
+    .tt-suggestion:hover,
+    .tt-suggestion.tt-cursor {
+      color: #fff;
+      background-color: #0097cf;
+    }
+  
+    .tt-suggestion:hover {
+      cursor: pointer;
+    }
+  
+    .twitter-typeahead {
+      width: 100%;
+    }
+  
+    .test-case {
+      overflow: visible;
+    }
+  
+    dialog {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width: fit-content;
+      height: -moz-fit-content;
+      height: -webkit-fit-content;
+      height: fit-content;
+      margin: auto;
+      border: solid;
+      padding: 1em;
+      background: white;
+      color: black;
+      display: none;
+    }
+  
+    dialog[open] {
+      display: block;
+    }
+  
+    dialog+.backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  
+    /* for small devices, modal dialogs go full-screen */
+    @media screen and (max-width: 540px) {
+      dialog[_polyfill_modal] {
+        /* TODO: implement */
+        top: 0;
+        width: auto;
+        margin: 1em;
+      }
+    }
+  
+    ._dialog_overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  
+    dialog {
+      display: block;
+      position: inherit;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+  
+    dialog h1 {
+      font-family: "nta", Arial, sans-serif;
+      font-weight: 700;
+      text-transform: none;
+      font-size: 24px;
+      line-height: 1.0416666667;
+    }
+  
+    @media (min-width: 641px) {
+      dialog h1 {
+        font-size: 36px;
+        line-height: 1.1111111111;
+      }
+    }
+  
+    dialog[open] {
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 15px;
+      width: 90%;
+      border: 5px solid black;
+    }
+  
+    @media (min-width: 641px) {
+      dialog[open] {
+        padding: 30px;
+        margin: 30px auto;
+        max-width: 500px;
+      }
+    }
+  
+    dialog[open]+.backdrop {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    dialog[open]::backdrop {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  
+    .dialog-button {
+      display: none;
+    }
+  
+    .js-enabled .dialog-button {
+      display: block;
+    }
+  
+    .js-enabled dialog {
+      display: none;
+    }
+  
+    .js-enabled dialog[open] {
+      display: block;
+      position: absolute;
+    }
+  
+    .dialog-is-open {
+      overflow: hidden;
+    }
+  
+    .disclosure-control {
+      font-family: "nta", Arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+      line-height: 1.25;
+      color: #005ea5;
+      background: none;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      text-decoration: underline;
+      padding-left: 20px;
+      position: relative;
+    }
+  
+    @media (min-width: 641px) {
+      .disclosure-control {
+        font-size: 19px;
+        line-height: 1.3157894737;
+      }
+    }
+  
+    .disclosure-control__icon {
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url("/public/images/disclosure/icon-closed.png") no-repeat;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+  
+    .disclosure-control[aria-expanded="true"] .disclosure-control__icon {
+      background: url("/public/images/disclosure/icon-open.png") no-repeat;
+    }
+  
+    .js-enabled div[aria-hidden="true"] {
+      display: none;
+    }
+  
+    .js-enabled div[aria-hidden="false"] {
+      display: block;
+    }
+  
+    .grid-row:after,
+    #content:after,
+    .notice:after,
+    .panel:after,
+    fieldset:after,
+    .form-section:after,
+    .form-group:after,
+    .form-block:after,
+    .breadcrumbs ol:after,
+    .accordion-with-descriptions-01 .subsection-controls:after,
+    .accordion-with-descriptions-02 .subsection-controls:after,
+    .accordion-with-descriptions-03 .subsection-controls:after,
+    .question:after,
+    .question-first:after,
+    div.test-case-overflow-allowed:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  
+    .hint-underneath,
+    .hint {
+      display: block;
+      font-family: "nta", Arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+      line-height: 1.25;
+      margin: 0 0 5px 0;
+      color: #6f777b;
+      clear: both;
+    }
+  
+    @media (min-width: 641px) {
+  
+      .hint-underneath,
+      .hint {
+        font-size: 19px;
+        line-height: 1.3157894737;
+      }
+    }
+  </style>
 <main id="content" role="main">
 
   <div class="sidebar-layout">
@@ -69,11 +410,53 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-              <h1 class="heading-xlarge">
-                  Details of medicines prescribed
-              </h1>
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Patient 1</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Details of medicines prescribed</h1>                    
+                    <hr>
+                </header>
 
               <h2 class="heading-medium">Name of NSAID or COX2 inhibitor prescribed</h2>
+              <form action="downloadreports-handler" method="get" class="form">
+                  <div class="form-group">
+      
+      
+
+      
+                    <p class="form-hint">Enter name of drug</p>
+      
+      
+                    <div class="test-case" style="overflow: visible">
+                      <div>
+                        <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
+                          <option value=""></option>
+                          <option value="Aceclofenac">Aceclofenac</option>
+                          <option value="Acemetacin">Acemetacin</option>
+                          <option value="Celecoxib">Celecoxib</option>
+                          <option value="Dexketoprofen">Dexketoprofen</option>
+                          <option value="Diclofenac Potassium">Diclofenac Potassium</option>
+                          <option value="Diclofenac Sodium">Diclofenac Sodium</option>
+                          <option value="Etodolac">Etodolac</option>
+                          <option value="Etoricoxib">Etoricoxib</option>
+                          <option value="Flurbiprofen">Flurbiprofen</option>
+                          <option value="Ibuprofen">Ibuprofen</option>
+                          <option value="Indometacin">Indometacin</option>
+                          <option value="Ketoprofen">Ketoprofen</option>
+                          <option value="Mefenamic Acid">Mefenamic Acid</option>
+                          <option value="Meloxicam">Meloxicam</option>
+                          <option value="Nabumetone">Nabumetone</option>
+                          <option value="Naproxen">Naproxen</option>
+                          <option value="Piroxicam">Piroxicam</option>
+                          <option value="Sulindac">Sulindac</option>
+                          <option value="Tenoxicam">Tenoxicam</option>
+                          <option value="Tiaprofenic Acid">Tiaprofenic Acid</option>
+                          <option value="Other (please state below)">Other (please state below)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+      
+                </form>
 
               <h2 class="heading-medium">Other NSAID or COX2 inhibitor prescribed</h2>
               <div class="govuk-form-group">
@@ -84,106 +467,99 @@
 
                 <h2 class="heading-medium">Total daily dose prescribed</h2>
                 <div class="govuk-form-group">
-                    <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
-                    <label class="govuk-label" for="width-2">
+                    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-2">
                         mg
                       </label>
                   </div>
 
                   <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more then 2 months?</h2>
 
-                  <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                      
-                        <div class="govuk-radios govuk-radios--inline">
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                            <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                              Yes
-                            </label> </div>
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                              No
-                            </label> </div>
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                                <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                  unkown
-                                </label> </div>
-                        </div>
-                        
-                      </fieldset>
-                    </div>
-                    <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more then 2 months?</h2>
-
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                        
-                          <div class="govuk-radios govuk-radios--inline">
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-                              <label class="govuk-label govuk-radios__label" for="changed-name-1">
-                                Yes
-                              </label> </div>
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                No
-                              </label> </div>
-                              <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                                    unkown
-                                  </label> </div>
-                          </div>
-                          
-                        </fieldset>
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Yes</label>
                       </div>
-                      <h2 class="heading-medium">Is the patient taking any other medicines (listed) that might increase the risk of bleeding?</h2>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="counciltax" value="no">
+                        <label for="no">No</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="no" type="radio" name="counciltax" value="no">
+                          <label for="no">Unknown</label>
+                        </div>
+  
+                    </div><br><br>
+
+                            <h2 class="heading-medium">NSAID or COX2 inhibitor used regularly i.e. taking at least 3 days each week?</h2>
+
+                            <div class="inline">
+                                <legend class="visually-hidden">
+                                </legend>
+                    
+                                <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                                  <label for="yes">Yes</label>
+                                </div>
+                    
+                                <div class="multiple-choice">
+                                  <input id="no" type="radio" name="counciltax" value="no">
+                                  <label for="no">No</label>
+                                </div>
+                    
+                                <div class="multiple-choice">
+                                    <input id="no" type="radio" name="counciltax" value="no">
+                                    <label for="no">Unknown</label>
+                                  </div>
+            
+                              </div><br><br>
+          
+          
+                                      <h2 class="heading-medium">Is the patient taking any other medicines (listed) that might increase the risk of bleeding?</h2>
                       <span id="changed-name-hint" class="govuk-hint">
                           (Please select all that apply)
                         </span>
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                            
-                            </br>
-                              <div class="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item">
-                                  <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                                  <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                                    No
-                                  </label> </div>
-                                <div class="govuk-checkboxes__item">
-                                  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                                  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                    Anticoagulant
-                                  </label> </div>
-                                <div class="govuk-checkboxes__item">
-                                  <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                  <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                    Antiplatelet (including asprin)
-                                  </label> </div>
+                        
+                        <div class="form-group" >
+              
+          
+                            <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                <label for="MS">No</label>
                               </div>
-                              <div class="govuk-checkboxes">
-                                  <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
-                                    <label class="govuk-label govuk-checkboxes__label" for="waste-1">
-                                      Selective serotonin re-uptake inhibitor
-                                    </label> </div>
-                                  <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                                      Unknown
-                                    </label> </div>
-                                  <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                                      Other (please state below)
-                                    </label> </div>
+                    
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                  <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                  <label for="MUR">Anticoagulant</label>
                                 </div>
-                            </fieldset>
-                          </div>
+                                
+                                <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                    <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                    <label for="AUR">Antiplatelet (including aspirin)</label>
+                                  </div>
+ 
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                      <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                      <label for="AUR">Selective Serotonin re-uptake inhibitor</label>
+                                    </div>
+                                    
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                        <label for="AUR">Unknown</label>
+                                      </div>
+                                      
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                          <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                          <label for="AUR">Other (please state below)</label>
+                                        </div>
+  
+                                  </div>
+      
                           <h2 class="heading-medium">Other medicines prescribed that might increase the risk of GI bleeding</h2>
                           <div class="govuk-form-group">
                               
@@ -221,7 +597,15 @@
 
       </div>
   </div>
+<!-- Javascript -->
+<script src="/public/javascripts/details.polyfill.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/application.js"></script>
 
+
+<!-- selector -->
+<script src="/public/javascripts/typeahead-aria.js"></script>
+<script src="/public/javascripts/init-autocomplete.js"></script>
 </main>
 
 {% endblock %}

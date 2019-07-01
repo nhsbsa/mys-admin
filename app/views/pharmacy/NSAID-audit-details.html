@@ -1,3 +1,4 @@
+
 {% extends "layout_bsa.html" %}
 
 {% block page_title %}
@@ -73,12 +74,60 @@
                   NSAID Audit details
               </h1>
 
+              <p>You have now entered the maximum number of patient entries required for this audit. To review you previous entries click "Back". If you are ready to submit your data click "Next" to continue. Click "Save" to continue later.</p>
 
-              
+              <h2 class="heading-medium">Thank you for completing the required information.</h2>
+            </br>
+              <h2 class="heading-medium">Please enter the date you stopped collecting information for this audit.</h2>
 
-              <p>Content goes here</p>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                  <span id="dob-hint" class="govuk-hint">
+                    For example, 31 3 1980
+                  </span>
+                  <div class="govuk-date-input" id="dob">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" autocomplete="bday-day" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" autocomplete="bday-month" pattern="[0-9]*">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" autocomplete="bday-year" pattern="[0-9]*">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <br>
 
+              <h2 class="heading-medium">Email address</h2>
 
+              <div class="govuk-form-group">
+                  <input class="govuk-input" id="event-name" name="event-name" type="text">
+                </div>
+                <br>
+                <h2 class="heading-medium">Confirm email address</h2>
+
+                <div class="govuk-form-group">
+                    <input class="govuk-input" id="event-name" name="event-name" type="text">
+                  </div>
+                  <br>
+  
                   <a class="button button-start" href="NSAID-check-your-answers2" role="button">Next</a>
 
 

@@ -221,17 +221,7 @@ body {
   z-index: 1;
 }
 
-.form-date .form-group {
-  float: left;
-  width: 50px;
-  margin-right: 20px;
-  margin-bottom: 0;
-  clear: none;
-}
 
-.form-date .form-group input {
-    width: 100%;
-}
 
 #security-number, #amount {
   width: 100px;
@@ -1393,4 +1383,178 @@ a {
     @include button;
     padding-bottom: 10px;
     float: right;
+}
+.app-c-option-select {
+  position: relative;
+  padding: 0 0 1px;
+  background-color: #dee0e2;
+  margin-bottom: 30px;
+}
+.app-c-option-select__button {
+  z-index: 100;
+  padding-right: 40px;
+  width: 100%;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.app-c-option-select__title {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 10px 8px 5px 16px;
+  margin: 0;
+}
+.app-c-option-select__title {
+  font-size: 19px;
+  line-height: 1.3157894737;
+}
+.app-c-option-select__icon {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 30px;
+  height: 40px;
+  fill: currentColor;
+}
+.app-c-option-select__icon--up {
+  display: block;
+}
+:not(svg) {
+    transform-origin: 0px 0px;
+}
+.js-enabled .app-c-option-select__container {
+  height: 200px;
+}
+.js-enabled .app-c-option-select__container {
+  border: 5px solid #dee0e2;
+  border-top: 0;
+}
+.app-c-option-select__container {
+  position: relative;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 5px solid #dee0e2;
+  background-color: #ffffff;
+}
+.app-c-option-select__container-inner {
+  padding: 5px 13px;
+}
+.app-c-option-select ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.app-c-option-select ::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+.app-c-option-select .gem-c-checkboxes {
+  margin: 0;
+}
+.govuk-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+}
+.gem-c-checkboxes .gem-c-checkboxes__legend--hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+.govuk-fieldset__legend--m {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.govuk-fieldset__legend {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 0;
+  overflow: hidden;
+  white-space: normal;
+}
+.gem-c-checkboxes__list {
+  padding-left: 0;
+  margin: 0;
+}
+.govuk-date-input:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.govuk-date-input__item {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+.govuk-form-group .govuk-form-group:last-of-type {
+  margin-bottom: 0;
+}
+.govuk-date-input__label {
+  display: block;
+}
+.govuk-input--width-2 {
+  max-width: 5.4ex;
+}
+.govuk-input--width-4 {
+  max-width: 9ex;
+}
+.govuk-textarea {
+  font-family: "nta",Arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding: 5px;
+  resize: vertical;
+  border: 2px solid #0b0c0c;
+  border-radius: 0;
+  -webkit-appearance: none;
 }

@@ -1,3 +1,4 @@
+
 {% extends "layout_bsa.html" %}
 
 {% block page_title %}
@@ -73,10 +74,27 @@
                   Add another patient
               </h1>
 
+             <h2 class="heading-medium">Do you want to complete an entry for another patient?</h2>
+
+             <div class="inline" style="margin-bottom: 125px;">
+              <legend class="visually-hidden">
+              </legend>
+  
+              <div class="multiple-choice" data-target="wages-reveal">
+                <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                <label for="yes">Yes</label>
+              </div>
+  
+              <div class="multiple-choice">
+                <input id="no" type="radio" name="counciltax" value="no">
+                <label for="no">No</label>
+              </div>
+  
+
+            </div>
+                    
 
               
-
-              <p>Content goes here</p>
 
 
                   <a class="button button-start" href="NSAID-patient-details2" role="button">Next</a>
