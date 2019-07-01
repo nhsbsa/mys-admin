@@ -35,3 +35,4 @@ router.get(/reportrange-handler/, function (req, res) {
     res.redirect('reports2');
   }
 });
+
