@@ -74,6 +74,83 @@
               </h1>
 
               <h2 class="heading-medium">Name of NSAID or COX2 inhibitor prescribed</h2>
+              <!-- Search box -->
+            <div class="search-wrapper">
+              <fieldset>
+                  <legend>
+                      <label id="input-label" for="keywords" class="label-space form-label-bold">Cartoon characters</label>
+                  </legend>
+                  <div id="count"></div>
+                  <div class="search-body">
+                      <!-- Input with spy glass -->
+                      <div class="color-spacing form-group">
+                          <div class="input-glyph-inner">
+                              <span class="glass-symbol">&#9906;</span>
+                              <input class="search-control input-glyph form-control" autocomplete="off" id="keywords" name="keywords" type="text" onkeyup="searchProjects()">
+                          </div>
+                      </div>
+                      <!-- /. -->
+                      <!-- List of results -->
+                      <fieldset>
+                          <legend class="visuallyhidden">Checkbox inputs</legend>
+                          <ul id="service-list" class="frame scroll-box">
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list1" name="list1" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list1">Bart Simpson</label>
+                                  </div>            
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list2" name="list2" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list2">Donald Duck</label>
+                                  </div>          
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list3" name="list3" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list3">Fry</label>
+                                  </div>            
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list4" class="list-input" name="list4" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list4">Some others</label>
+                                  </div>            
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list5" class="list-input" name="list5" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list5">wwwwwwwwwww</label>
+                                  </div>            
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list6" class="list-input" name="list6" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list6">xxxxxxxxxxx</label>
+                                  </div>          
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list7" class="list-input" name="list7" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list7">yyyyyyyy</label>
+                                  </div>            
+                              </li>
+                              <li>
+                                  <div class="multiple-choice multiple-radio">
+                                      <input id="list8" class="list-input" name="list8" type="checkbox" value="true" onclick="updateCount()">
+                                      <label class="check-label" for="list8">zzzzz</label>
+                                  </div>            
+                              </li>
+                          </ul>
+                      </fieldset>
+                      <!-- /. -->
+                  </div>
+              </fieldset>
+          </div>
+          <!-- /. -->
+
+
 
               <h2 class="heading-medium">Other NSAID or COX2 inhibitor prescribed</h2>
               <div class="govuk-form-group">
@@ -195,8 +272,136 @@
                   <a class="button button-start" href="NSAID-Gastro-details" role="button">Next</a>
 
 
+                  <style>
+                    /* wrapper style */
+                    ul#service-list {
+                        background-color: white;
+                    }
+                    .search-body {
+                        background-color: #FFF;
+                    }
+                    .search-wrapper {
+                        background-color: #DEE0E2; 
+                        border: 5px solid #DEE0E2;
+                    }
+                    .color-spacing {
+                        padding:10px;
+                    }
+                    /* /. */
+                    /* scroll box */
+                    ul.scroll-box  {
+                        height:160px;
+                        width:100%;
+                        overflow:hidden;
+                        overflow: scroll;
+                        margin-top:-20px;
+                    }
+                    .search-control {
+                        width: 100%;
+                    }
+                    @media only screen and (max-width:767px) {
+                        ul.scroll-box  {
+                            height:100px;
+                            width:100%;
+                            margin-top:-10px;
+                        }
+                    }
+                    
+                    .frame::-webkit-scrollbar {
+                        -webkit-appearance: none;
+                    }
+                    .frame::-webkit-scrollbar:vertical {
+                        width: 11px;
+                    }
+                    .frame::-webkit-scrollbar:horizontal {
+                        height: 11px;
+                    }
+                    .frame::-webkit-scrollbar-thumb {
+                        border-radius: 8px;
+                        border: 2px solid white; /* should match background, can't be transparent */
+                        background-color: rgba(0, 0, 0, .5);
+                    }
+                    /* /. */
+                    /* spy glass in the input */
+                    .input-glyph-inner {
+                        position: relative;
+                    }
+                    .glass-symbol {
+                        position: absolute;
+                        bottom: 2px; 
+                        left: 10px;
+                        font-weight: 800;
+                        color: #333333;
+                        -webkit-transform: rotate(-45deg); 
+                        -moz-transform: rotate(-45deg); 
+                        -o-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                        font-size:30px;
+                    }
+                    @media only screen and (max-width:642px) {
+                        .glass-symbol {
+                            font-size:26px;
+                        }
+                    }
+                    
+                    .input-glyph {
+                        padding-left: 40px;
+                    }
+                    @media all and (-ms-high-contrast: none) , ( -ms-high-contrast : active) {
+                        /* IE10+ CSS styles */
+                        .input-glyph {
+                            padding-bottom: 3px; /* 7px for the other symbol */
+                        }
+                    }
+                    /* /. */ 
+                    /* Label styles */ 
+                    .multiple-radio label {
+                        margin-left: 40px !important;
+                    }
+                    .check-label{
+                        padding-bottom:16px !important; /* on some prototypes the labels are really thin */
+                        width: 100%;
+                    }
+                    .multiple-choice {
+                        background-color: #fff; /* overwrites grey background */
+                    }
+                    .label-space, #count {
+                        padding: 5px 10px;
+                    }
+                    /* /. */
+                </style>
+<script>
+  /* searches list based on input */
+  function searchProjects() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('keywords');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("service-list");
+      li = ul.getElementsByTagName('li');
 
-
+      for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("label")[0];
+      txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+</script>
+<script>
+  /* Counts checked checkboxes */
+  window.updateCount = function() {
+      var count = $(".list-input:checked").length;
+      document.getElementById("count").innerHTML = count + ' selected';
+      if (count < 1) {
+          document.getElementById("count").style.display = "none";
+      } else {
+          document.getElementById("count").style.display = "block";
+      }   
+  };
+</script>
 
 
 
