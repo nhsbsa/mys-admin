@@ -1,0 +1,151 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a  href="qps">Quality Payments Scheme</a></li>
+              <li><a class="active" href="nsaid-start">NSAID Audit</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge" style="margin-bottom: 10px">
+                  Patient Details
+              </h1>
+
+              <p style="color:grey">Patient 1</p>
+              
+
+              <h2 class="heading-large">Patient age</h2>
+
+              <div class="govuk-form-group">
+                
+                <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text" style="margin-bottom: 40px">
+                <label class="govuk-label" for="width-3">
+                  years
+                </label>
+              </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+                      <h2 class="heading-large">Patient gender</h2>
+                    
+                  </legend>
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                        Male
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                        Female
+                      </label> </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                        Not confirmed
+
+                  </div>
+                  <br/>
+                  <br/>
+                </fieldset>
+              </div>
+
+
+                  <a class="button button-start" href="NSAID-Meds-prescribed" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
