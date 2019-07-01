@@ -1,0 +1,182 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+
+            <li>
+                <h3 class="heading-small">Dashboard</h3>
+            </li>
+
+            <div id="options" class="options">
+                <li><a href="index">View summary</a></li>
+            </div>
+
+            <li>
+                <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+            
+            <div id="options" class="options">
+              <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
+            </div>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+            <div class="phase-banner">
+                <p>
+                <strong class="phase-tag">BETA</strong>
+                This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+            <div class="grid-row">
+                <div class="column-two-thirds">
+
+                    <h1 class="heading-xlarge">
+                        Storage of Prescribed Drugs and Return of Unwanted Medicines
+                    </h1>
+
+                    <!--Question 1 -->
+                    <div class="question1">
+                        <h1 class="heading-medium">
+                            Is the information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?
+                        </h1>
+
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Is the information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?</legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q1">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                  </div>
+
+                  <!--Question 2 -->
+                  <div class="question2 visually-hidden">
+                      
+                  </div>
+                  
+                  <div id="ac" class="form-group acceptanceCriteria visually-hidden">
+                      <h1 class="heading-medium">
+                          Are you giving extra information verbally when you believe it needs reinforcement?
+                      </h1>
+
+                      <form>
+                          <div class="form-group">
+                              <fieldset class="inline">
+                          
+                                  <legend class="visually-hidden">Are you giving extra information verbally when you believe it needs reinforcement?
+                                    </legend>
+                          
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q2" type="radio" name="radio-inline-group" value="Yes">
+                                  <label for="radio-inline-q2">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q2-no" type="radio" name="radio-inline-group" value="No">
+                                  <label for="radio-inline-q2-no">No</label>
+                                  </div>
+                          
+                              </fieldset>
+                          </div>
+                      </form>
+                    </div>
+
+                    <!--Question 3 -->
+                  <div class="question3 visually-hidden">
+                      
+                    </div>
+                    
+                    <div id="ac" class="form-group acceptanceCriteria2 visually-hidden">
+                        <h1 class="heading-medium">
+                            Are printed information supplied to patients on high risk medicines?
+                        </h1>
+  
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Are printed information supplied to patients on high risk medicines?
+                                      </legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q3" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q3">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q3-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q3-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                      </div>
+                </div>
+            </div>
+            <br><a href="cpaf-repeat-dispensing.html"><input class="button" type="submit" value="Next"></a>
+      </div>
+</div>
+
+</main>
+
+{% endblock %}
