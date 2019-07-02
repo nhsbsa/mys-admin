@@ -390,7 +390,7 @@ td.strong {
 }
 
 .multiple-choice {
-  background-color: #DEE0E2;
+  background: #DEE0E2;
   border :1px solid white;
   padding-left :0;
   margin-bottom: 15px;
@@ -1387,7 +1387,7 @@ a {
 .app-c-option-select {
   position: relative;
   padding: 0 0 1px;
-  background-color: #dee0e2;
+  background-color: #F8F8F8;
   margin-bottom: 30px;
 }
 .app-c-option-select__button {
@@ -1408,6 +1408,7 @@ a {
   line-height: 1.25;
   padding: 10px 8px 5px 16px;
   margin: 0;
+  background: #DEE0E2;
 }
 .app-c-option-select__title {
   font-size: 19px;
@@ -1474,7 +1475,7 @@ fieldset {
   padding-inline-end: 0.75em;
   padding-block-end: 0.625em;
   min-inline-size: min-content;
-  border-width: 2px;
+  border-width: 0;
   border-style: groove;
   border-color: threedface;
   border-image: initial;
@@ -1557,4 +1558,42 @@ fieldset {
   border: 2px solid #0b0c0c;
   border-radius: 0;
   -webkit-appearance: none;
+}
+.nhsuk-date-input__item {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 24px;
+}
+.nhsuk-form-group .nhsuk-form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.nhsuk-label {
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 4px;
+}
+.nhsuk-input--width-2 {
+  max-width: 5.4ex;
+}
+.nhsuk-input--width-4 {
+  max-width: 9ex;
+}
+.nhsuk-input {
+  font-weight: 400;
+  line-height: 1.5;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #425563;
+  border-radius: 0;
+  box-sizing: border-box;
+  height: 40px;
+  margin-top: 0;
+  padding: 4px;
+  width: 100%;
+}
+.nhsuk-date-input__input {
+  margin-bottom: 0;
 }

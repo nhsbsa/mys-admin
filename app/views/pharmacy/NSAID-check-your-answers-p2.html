@@ -69,11 +69,11 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-                <h1 class="heading-xlarge" style="margin-bottom: 10px">
-                    Check your answers
-              </h1>
-              <p style="color:grey">Patient 2</p>
-
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Patient 2</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>                    
+                <hr>
+            </header>
               <h2 class="heading-medium">
                   Patient details
                 </h2>
@@ -248,7 +248,7 @@
     
                         <div>
                             <dt class="cya-question">
-                              PLease add any other comments
+                              Please add any other comments
                             </dt>
                             <dd class="cya-answer">
                               No other comments
@@ -265,16 +265,19 @@
   
           
 
-                  <div class="multiple-choice multiple-radio" data-target="medicineservice">
-                    <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
-                    <label for="MS">I have manually recorded that I have competed an entry for this patient to prevent duplication</label>
-                  </div>
-        </div>
+                    <div class="form-group" >
+              
+          
+                      <div class="multiple-choice multiple-radio" data-target="medicineservice" style="margin-top: 50px;">
+                          <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                          <label for="MS">I have manually recorded that I have competed an entry for this patient to prevent duplication</label>
+                        </div>
+              </div>
 
 
-                  <a class="button button-start" href="NSAID-add-another2" role="button">Next</a>
 
-
+                  <a class="button" href="NSAID-add-another2" role="button">Next</a>
+                  <a class="button" href="NSAID-save-for-later" role="button" style="background-color: #005EA5">Save and continue later</a>
 
 
 
