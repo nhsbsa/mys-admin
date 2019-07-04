@@ -1,0 +1,144 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+        <style>.nhsuk-list--bullet, ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+        
+            </style>
+<div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+
+            <li>
+                <h3 class="heading-small">Dashboard</h3>
+            </li>
+
+            <div id="options" class="options">
+                <li><a href="index">View summary</a></li>
+            </div>
+
+            <li>
+                <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+            
+            <div id="options" class="options">
+              <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
+            </div>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+            <div class="phase-banner">
+                <p>
+                <strong class="phase-tag">BETA</strong>
+                This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+            <div class="grid-row">
+                <div class="column-two-thirds">
+
+                    <h1 class="heading-xlarge">
+                        Prescription based interventions
+                    </h1>
+                    <p>When appropriate we provide advice to people presenting prescriptions who appear to:</p>
+                        <ul class="nhsuk-list nhsuk-list--bullet">
+                            <li>have diabetes</li>
+                            <li>be at risk of coronary heart disease (especially those with high blood pressure)</li>
+                            <li>smoke or are overweight</li>
+                        </ul>
+                    </p>
+                    <p>with the aim of increasing the person's knowledge and understanding of the health issues which are relevant to that person's personal circumstances by:</p>
+                   
+                    <h1 class="heading-medium">Please tick the boxes to show which criteria your pharmacy meets</h1>
+
+                    <form>
+                            <div class="form-group">
+                                <div>
+    
+                                <legend class="visually-hidden">Please tick the boxes to show which criteria your pharmacy meets</legend>
+    
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Providing leaflets in the pharmacy or on the website for patients to self-select</label>
+                                </div>
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Providing additional advice directly to the patient/carer when asked</label>
+                                </div>
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Taking opportunities to provide advice directly to patients/carers where appropriate for the above patient groups</label>
+                                </div>
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Making a note where appropriate of the advice in a form that facilitates audit of the provision of the service and follow up care for the person given the advice</label>
+                                </div>
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Using records of previous advice given to follow up with patients when necessary</label>
+                                </div>
+                                <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                        <label for="MS">Actively seeking opportunities to provide ongoing support backed up with written information e.g. leaflet when dispensing their blood pressure medication (following the first time)</label>
+                                </div>
+
+                            </div>
+                            </div>
+                        </form>
+    
+    
+            <br><a href="cpaf-repeat-dispensing2.html"><input class="button" type="submit" value="Next"></a>
+      </div>
+</div>
+
+</main>
+
+{% endblock %}

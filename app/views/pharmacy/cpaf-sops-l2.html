@@ -15,7 +15,12 @@
 {% block content %}
 
 <main id="content" role="main">
+<style>.nhsuk-list--bullet, ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
 
+    </style>
 <div class="sidebar-layout">
       <div class="sidebar-content">
 
@@ -56,9 +61,7 @@
             
             <div id="options" class="options">
               <li><a href="qps">Quality Payments Scheme</a></li>
-            </div>
-            
-            <div id="options" class="options">
+              <li><a href="nsaid-start">NSAID Audit</a></li>
               <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
             </div>
 
@@ -81,15 +84,36 @@
                 <div class="column-two-thirds">
 
                     <header class="page-header" style="clear: none; display: block;">
-                        <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Storage of prescribed drugs and return of unwanted medicines</h1>                    
-                        <p class="page-header--sub heading-secondary">Level 1 criteria</p>
+                        <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Standard operating procedures (SOPs)</h1>                    
+                        <p class="page-header--sub heading-secondary">Level 2 criteria</p>
                         <hr>
                     </header>
-    
+                    
+                    <div class="form-group">
+                        <details role="group">
+                      
+                          <summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">Which SOPs does this refer to?</span></summary>
+                      
+                          <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true"> <p>Please answer this question while considering the following SOPs:</p>
+                        <ul class="nhsuk-list nhsuk-list--bullet">
+                            <li>dispensing drugs and appliances</li>
+                            <li>repeat dispensing</li>
+                            <li>providing advice and support to people caring for themselves and their families</li>
+                        </ul>
+                    </p>
+                    <p>Requirements for having SOPs are included in a number of different pieces of legislation or specification, for instance:</p>
+                    <ul>
+                        <li>the Medicines (Pharmacies) (Responsible pharmacist), Regulations 2008</li>
+                        <li>NHS (Pharmaceutical and Local Pharmaceutical Services) Regulations 2013</li>
+                        <li>enhanced services that are commissioned locally</li>
+                    </ul>
+                  </div>
+                </details>
+                </div>
                     <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
-                            Is information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?
+                            Have each of the SOPs been read by each member of staff to which they apply?
                         </h1>
 
 
@@ -97,7 +121,34 @@
                             <div class="form-group">
                                 <fieldset class="inline">
                             
-                                    <legend class="visually-hidden">Is the information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?</legend>
+                                    <legend class="visually-hidden">Have each of the SOPs been read by each member of staff to which they apply?</legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q1">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                  </div>
+                    
+                  <!--Question 2 -->
+                    <div class="question1">
+                        <h1 class="heading-medium">
+                            Do staff fully understand the SOPs and work in accordance with them?
+                        </h1>
+
+
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Do staff fully understand the SOPs and work in accordance with them?</legend>
                             
                                     <div class="multiple-choice">
                                     <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
@@ -113,70 +164,7 @@
                         </form>
                   </div>
 
-                  <!--Question 2 -->
-                  <div class="question2 visually-hidden">
-                      
-                  </div>
-                  
-                  <div id="ac" class="form-group acceptanceCriteria visually-hidden">
-                      <h1 class="heading-medium">
-                          Are you giving extra information verbally when you believe it needs reinforcement?
-                      </h1>
-
-                      <form>
-                          <div class="form-group">
-                              <fieldset class="inline">
-                          
-                                  <legend class="visually-hidden">Are you giving extra information verbally when you believe it needs reinforcement?
-                                    </legend>
-                          
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q2" type="radio" name="radio-inline-group" value="Yes">
-                                  <label for="radio-inline-q2">Yes</label>
-                                  </div>
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q2-no" type="radio" name="radio-inline-group" value="No">
-                                  <label for="radio-inline-q2-no">No</label>
-                                  </div>
-                          
-                              </fieldset>
-                          </div>
-                      </form>
-                    </div>
-
-                    <!--Question 3 -->
-                  <div class="question3 visually-hidden">
-                      
-                    </div>
-                    
-                    <div id="ac" class="form-group acceptanceCriteria2 visually-hidden">
-                        <h1 class="heading-medium">
-                            Are printed information supplied to patients on high risk medicines?
-                        </h1>
-  
-                        <form>
-                            <div class="form-group">
-                                <fieldset class="inline">
-                            
-                                    <legend class="visually-hidden">Are printed information supplied to patients on high risk medicines?
-                                      </legend>
-                            
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q3" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q3">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q3-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q3-no">No</label>
-                                    </div>
-                            
-                                </fieldset>
-                            </div>
-                        </form>
-                      </div>
-                </div>
-            </div>
-            <br><a href="cpaf-repeat-dispensing.html"><input class="button" type="submit" value="Next"></a>
+            <br><a href="cpaf-sops-l3.html"><input class="button" type="submit" value="Next"></a>
       </div>
 </div>
 

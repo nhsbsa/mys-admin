@@ -1,0 +1,190 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+        <style>.nhsuk-list--bullet, ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+        
+            </style>
+<div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+
+            <li>
+                <h3 class="heading-small">Dashboard</h3>
+            </li>
+
+            <div id="options" class="options">
+                <li><a href="index">View summary</a></li>
+            </div>
+
+            <li>
+                <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            
+            <div id="options" class="options">
+              <li><a href="qps">Quality Payments Scheme</a></li>
+            </div>
+            
+            <div id="options" class="options">
+              <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
+            </div>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+            <div class="phase-banner">
+                <p>
+                <strong class="phase-tag">BETA</strong>
+                This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+            <div class="grid-row">
+                <div class="column-two-thirds">
+
+                        <header class="page-header" style="clear: none; display: block;">
+                                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Clinical governance - locums</h1>                    
+                                <p class="page-header--sub heading-secondary">Level 2 criteria</p>
+                                <hr>
+                            </header>
+                    <p>Locums are usually booked by a responsible person</p>
+                    <div class="form-group">
+                            <details role="group">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">If locums are not booked in the pharmacy</span></summary>
+                              
+                    <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true"> 
+
+<p>It is recognised that some of the process of engaging a locum may be undertaken by someone who is not at the pharmacy.  If this is the case, please contact the relevant person to establish your current process.</p>
+              </div>
+  </details>
+  </div>
+
+                    <!--Question 1 -->
+                    <div class="question1">
+                        <h1 class="heading-medium">
+                                Do they check the locum's registration with the GPhC?
+                                                    </h1>
+
+
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Do they check the locum's registration with the GPhC?</legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q1">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                  </div>
+                    <!--Question 2 -->
+                    <div class="question1">
+                        <h1 class="heading-medium">
+                                Do they carry out appropriate checks where required e.g. for MUR accreditation and smartcards (if the pharmacy is enabled for the electronic prescription service)?
+                                                    </h1>
+
+
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Do they carry out appropriate checks where required e.g. for MUR accreditation and smartcards (if the pharmacy is enabled for the electronic prescription service)?</legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q1">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                  </div>
+                    <!--Question 3 -->
+                    <div class="question1">
+                            <h1 class="heading-medium">
+                                    Do they provide all other information the locum will need to be able to perform their duties?
+                                                        </h1>
+    
+    
+                            <form>
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                
+                                        <legend class="visually-hidden">Do they provide all other information the locum will need to be able to perform their duties?</legend>
+                                
+                                        <div class="multiple-choice">
+                                        <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                        <label for="radio-inline-q1">Yes</label>
+                                        </div>
+                                        <div class="multiple-choice">
+                                        <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                        <label for="radio-inline-q1-no">No</label>
+                                        </div>
+                                
+                                    </fieldset>
+                                </div>
+                            </form>
+                      </div>
+    
+            <br><a href="cpaf-governance-locums-l3.html"><input class="button" type="submit" value="Next"></a>
+      </div>
+</div>
+
+</main>
+
+{% endblock %}

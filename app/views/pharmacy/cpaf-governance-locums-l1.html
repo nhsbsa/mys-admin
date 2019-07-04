@@ -15,7 +15,12 @@
 {% block content %}
 
 <main id="content" role="main">
-
+        <style>.nhsuk-list--bullet, ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+        
+            </style>
 <div class="sidebar-layout">
       <div class="sidebar-content">
 
@@ -80,24 +85,61 @@
             <div class="grid-row">
                 <div class="column-two-thirds">
 
-                    <header class="page-header" style="clear: none; display: block;">
-                        <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Storage of prescribed drugs and return of unwanted medicines</h1>                    
-                        <p class="page-header--sub heading-secondary">Level 1 criteria</p>
-                        <hr>
-                    </header>
-    
+                        <header class="page-header" style="clear: none; display: block;">
+                                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Clinical governance - locums</h1>                    
+                                <p class="page-header--sub heading-secondary">Level 1 criteria</p>
+                                <hr>
+                            </header>
+                    <p>Locums are usually booked by a responsible person</p>
+                    <div class="form-group">
+                            <details role="group">
+<summary role="button" aria-controls="details-content-0" aria-expanded="false"><span class="summary">If locums are not booked in the pharmacy</span></summary>
+                              
+                    <div class="panel panel-border-narrow" id="details-content-0" aria-hidden="true"> 
+
+<p>It is recognised that some of the process of engaging a locum may be undertaken by someone who is not at the pharmacy.  If this is the case, please contact the relevant person to establish your current process.</p>
+              </div>
+  </details>
+  </div>
+
                     <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
-                            Is information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?
-                        </h1>
+                                Do they check the locum's availability and book them?
+                                                    </h1>
 
 
                         <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
-                                    <legend class="visually-hidden">Is the information made available in the pharmacy e.g. displayed on a poster or on the dispensing bag or on the website?</legend>
+                                    <legend class="visually-hidden">Do they check the locum's availability and book them?</legend>
+                            
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
+                                    <label for="radio-inline-q1">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                            
+                                </fieldset>
+                            </div>
+                        </form>
+                  </div>
+                    <!--Question 2 -->
+                    <div class="question1">
+                        <h1 class="heading-medium">
+                                Do they inform the locum of the pharmacy location, opening times and key contacts?
+                                                    </h1>
+
+
+                        <form>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                            
+                                    <legend class="visually-hidden">Do they inform the locum of the pharmacy location, opening times and key contacts?</legend>
                             
                                     <div class="multiple-choice">
                                     <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
@@ -113,70 +155,7 @@
                         </form>
                   </div>
 
-                  <!--Question 2 -->
-                  <div class="question2 visually-hidden">
-                      
-                  </div>
-                  
-                  <div id="ac" class="form-group acceptanceCriteria visually-hidden">
-                      <h1 class="heading-medium">
-                          Are you giving extra information verbally when you believe it needs reinforcement?
-                      </h1>
-
-                      <form>
-                          <div class="form-group">
-                              <fieldset class="inline">
-                          
-                                  <legend class="visually-hidden">Are you giving extra information verbally when you believe it needs reinforcement?
-                                    </legend>
-                          
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q2" type="radio" name="radio-inline-group" value="Yes">
-                                  <label for="radio-inline-q2">Yes</label>
-                                  </div>
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q2-no" type="radio" name="radio-inline-group" value="No">
-                                  <label for="radio-inline-q2-no">No</label>
-                                  </div>
-                          
-                              </fieldset>
-                          </div>
-                      </form>
-                    </div>
-
-                    <!--Question 3 -->
-                  <div class="question3 visually-hidden">
-                      
-                    </div>
-                    
-                    <div id="ac" class="form-group acceptanceCriteria2 visually-hidden">
-                        <h1 class="heading-medium">
-                            Are printed information supplied to patients on high risk medicines?
-                        </h1>
-  
-                        <form>
-                            <div class="form-group">
-                                <fieldset class="inline">
-                            
-                                    <legend class="visually-hidden">Are printed information supplied to patients on high risk medicines?
-                                      </legend>
-                            
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q3" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q3">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q3-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q3-no">No</label>
-                                    </div>
-                            
-                                </fieldset>
-                            </div>
-                        </form>
-                      </div>
-                </div>
-            </div>
-            <br><a href="cpaf-repeat-dispensing.html"><input class="button" type="submit" value="Next"></a>
+            <br><a href="cpaf-governance-locums-l2.html"><input class="button" type="submit" value="Next"></a>
       </div>
 </div>
 
