@@ -83,31 +83,31 @@
                         <p class="page-header--sub heading-secondary">Level 1 criteria</p>
                         <hr>
                     </header>
-                    <!--Question 1 -->
+
+                    <form class="form" action="repeatTwo" method="GET"> <!-- wrapped all questions inside <form> -->
+                      <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                                 Have you trained relevant staff to be able to deliver the repeat dispensing service?
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Have you trained relevant staff to be able to deliver the repeat dispensing service?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
-                            
+                                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q1-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q1-no">No</label>
+                                      </div>
+                              
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
                   <div class="question2">
                         <h1 class="heading-medium">
@@ -115,27 +115,28 @@
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Do you ask the patient (or their representative) whether the patient's condition has changed each time you issue a batch prescription?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
-                            
+                                      <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroup2" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q2-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q2-no" type="radio" name="radioInlineGroup2" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q2-no">No</label>
+                                      </div>
+                              
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
 
-            <br><a href="cpaf-repeat-dispensing-l2.html"><input class="button" type="submit" value="Next"></a>
+                  <br>
+                  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                </form> <!-- closed <form> after questions and input -->
       </div>
 </div>
 

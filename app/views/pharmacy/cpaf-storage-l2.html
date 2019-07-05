@@ -84,34 +84,37 @@
                         <hr>
                     </header>
                     <p>How information on safe storage of prescribed drugs and return of unwanted medicines is provided.</p>
-                    <!--Question 1 -->
+
+                    <form class="form" action="storageTwo" method="GET"> <!-- wrapped all questions inside <form> -->
+                      <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                                 Is extra information given verbally when you believe it needs reinforcement?
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Is extra information given verbally when you believe it needs reinforcement?</legend>
-                            
+
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
+                                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q1-yes">Yes</label>
                                     </div>
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
+                                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
                                     <label for="radio-inline-q1-no">No</label>
                                     </div>
-                            
+                          
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
 
-            <br><a href="cpaf-storage-l3.html"><input class="button" type="submit" value="Next"></a>
+                  <br>
+                  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                </form> <!-- closed <form> after questions and input -->
       </div>
 </div>
 

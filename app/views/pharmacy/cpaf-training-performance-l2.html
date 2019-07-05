@@ -61,9 +61,7 @@
             
             <div id="options" class="options">
               <li><a href="qps">Quality Payments Scheme</a></li>
-            </div>
-            
-            <div id="options" class="options">
+              <li><a href="nsaid-start">NSAID Audit</a></li>
               <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
             </div>
 
@@ -91,31 +89,30 @@
                                 <hr>
                             </header>
 
-                    <!--Question 1 -->
+                            <form class="form" action="trainingTwo" method="GET"> <!-- wrapped all questions inside <form> -->
+                              <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                                 Do staff have an induction that includes a training needs assessment in respect of any role they are asked to perform?
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Do staff have an induction that includes a training needs assessment in respect of any role they are asked to perform?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
+                                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q1-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q1-no">No</label>
+                                      </div>
                             
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
                     <!--Question 2 -->
                     <div class="question1">
@@ -124,24 +121,22 @@
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Do staff have a training needs assessment that aligns their training needs with the needs of the business?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
+                                      <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroup2" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q2-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q2-no" type="radio" name="radioInlineGroup2" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q2-no">No</label>
+                                      </div>
                             
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
                     <!--Question 3 -->
                     <div class="question1">
@@ -150,24 +145,22 @@
                                                         </h1>
     
     
-                            <form>
                                 <div class="form-group">
                                     <fieldset class="inline">
                                 
                                         <legend class="visually-hidden">Are staff supported to access training appropriate to meet needs identified?</legend>
                                 
                                         <div class="multiple-choice">
-                                        <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                        <label for="radio-inline-q1">Yes</label>
-                                        </div>
-                                        <div class="multiple-choice">
-                                        <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                        <label for="radio-inline-q1-no">No</label>
-                                        </div>
+                                          <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup3" value="Yes"> <!-- unique name per question block -->
+                                          <label for="radio-inline-q3-yes">Yes</label>
+                                          </div>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup3" value="No"> <!-- both options here need same name -->
+                                          <label for="radio-inline-q3-no">No</label>
+                                          </div>
                                 
                                     </fieldset>
                                 </div>
-                            </form>
                       </div>
         
                     <!--Question 3 -->
@@ -177,26 +170,27 @@
                                                         </h1>
     
     
-                            <form>
                                 <div class="form-group">
                                     <fieldset class="inline">
                                 
                                         <legend class="visually-hidden">Are staff subject to a process to address poor performance where this occurs?</legend>
                                 
                                         <div class="multiple-choice">
-                                        <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                        <label for="radio-inline-q1">Yes</label>
-                                        </div>
-                                        <div class="multiple-choice">
-                                        <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                        <label for="radio-inline-q1-no">No</label>
-                                        </div>
+                                          <input id="radio-inline-q4-yes" type="radio" name="radioInlineGroup4" value="Yes"> <!-- unique name per question block -->
+                                          <label for="radio-inline-q4-yes">Yes</label>
+                                          </div>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q4-no" type="radio" name="radioInlineGroup4" value="No"> <!-- both options here need same name -->
+                                          <label for="radio-inline-q4-no">No</label>
+                                          </div>
                                 
                                     </fieldset>
                                 </div>
-                            </form>
                       </div>
-            <br><a href="cpaf-training-performance-l3.html"><input class="button" type="submit" value="Next"></a>
+                      <br>
+                      <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                      <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                    </form> <!-- closed <form> after questions and input -->
       </div>
 </div>
 

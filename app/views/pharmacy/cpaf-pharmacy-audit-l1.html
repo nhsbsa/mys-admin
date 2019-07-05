@@ -61,9 +61,7 @@
             
             <div id="options" class="options">
               <li><a href="qps">Quality Payments Scheme</a></li>
-            </div>
-            
-            <div id="options" class="options">
+              <li><a href="nsaid-start">NSAID Audit</a></li>
               <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
             </div>
 
@@ -91,14 +89,14 @@
                                 <hr>
                             </header>
 
-                    <!--Question 1 -->
+                            <form class="form" action="auditTwo counciltaxiteration3-handler" method="GET"> <!-- wrapped all questions inside <form> -->
+                              <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                                 Has the pharmacy completed one pharmacy based clinical audit in 2018/19?
                                                     </h1>
 
 
-                                                    <form action="counciltaxiteration3-handler" method="get" class="form">
 
                                                             <div class="form-group">
                                                     
@@ -107,15 +105,16 @@
                                                                 </legend>
                                                     
                                                                 <div class="multiple-choice" data-target="wages-reveal">
-                                                                  <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
-                                                                  <label for="yes">Yes</label>
-                                                                </div>
+                                                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                                                  <label for="radio-inline-q1-yes">Yes</label>
+                                                                  </div>
+                                                                  <div class="multiple-choice">
+                                                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                                                  <label for="radio-inline-q1-no">No</label>
+                                                                  </div>
                                                     
-                                                                <div class="multiple-choice">
-                                                                  <input id="no" type="radio" name="counciltax" value="no">
-                                                                  <label for="no">No</label>
-                                                                </div>
-                                                    
+                            
+
                                                               </fieldset>
                                                 
                                                               <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
@@ -131,12 +130,14 @@
                                                             </div>
                                                 
                                                     
-                                                          </form>
                   </div>
 
 
-                      <br><a href="cpaf-pharmacy-audit-l2.html"><input class="button" type="submit" value="Next"></a>
-      </div>
+                  <br>
+                  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                </form> <!-- closed <form> after questions and input -->
+  </div>
 </div>
 
 </main>

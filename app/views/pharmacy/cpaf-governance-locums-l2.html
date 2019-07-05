@@ -61,9 +61,7 @@
             
             <div id="options" class="options">
               <li><a href="qps">Quality Payments Scheme</a></li>
-            </div>
-            
-            <div id="options" class="options">
+              <li><a href="nsaid-start">NSAID Audit</a></li>
               <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
             </div>
 
@@ -102,31 +100,30 @@
   </details>
   </div>
 
-                    <!--Question 1 -->
+  <form class="form" action="locumsTwo" method="GET"> <!-- wrapped all questions inside <form> -->
+    <!--Question 1 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                                 Do they check the locum's registration with the GPhC?
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Do they check the locum's registration with the GPhC?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
+                                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q1-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q1-no">No</label>
+                                      </div>
                             
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
                     <!--Question 2 -->
                     <div class="question1">
@@ -135,24 +132,22 @@
                                                     </h1>
 
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Do they carry out appropriate checks where required e.g. for MUR accreditation and smartcards (if the pharmacy is enabled for the electronic prescription service)?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
+                                      <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroup2" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q2-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q2-no" type="radio" name="radioInlineGroup2" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q2-no">No</label>
+                                      </div>
                             
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
                     <!--Question 3 -->
                     <div class="question1">
@@ -161,28 +156,29 @@
                                                         </h1>
     
     
-                            <form>
                                 <div class="form-group">
                                     <fieldset class="inline">
                                 
                                         <legend class="visually-hidden">Do they provide all other information the locum will need to be able to perform their duties?</legend>
                                 
                                         <div class="multiple-choice">
-                                        <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                        <label for="radio-inline-q1">Yes</label>
-                                        </div>
-                                        <div class="multiple-choice">
-                                        <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                        <label for="radio-inline-q1-no">No</label>
-                                        </div>
-                                
+                                          <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup3" value="Yes"> <!-- unique name per question block -->
+                                          <label for="radio-inline-q3-yes">Yes</label>
+                                          </div>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup3" value="No"> <!-- both options here need same name -->
+                                          <label for="radio-inline-q3-no">No</label>
+                                          </div>
+                                    
                                     </fieldset>
                                 </div>
-                            </form>
                       </div>
     
-            <br><a href="cpaf-governance-locums-l3.html"><input class="button" type="submit" value="Next"></a>
-      </div>
+                      <br>
+                      <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                      <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                    </form> <!-- closed <form> after questions and input -->
+          </div>
 </div>
 
 </main>

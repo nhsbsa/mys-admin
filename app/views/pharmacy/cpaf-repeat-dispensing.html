@@ -56,9 +56,7 @@
             
             <div id="options" class="options">
               <li><a href="qps">Quality Payments Scheme</a></li>
-            </div>
-            
-            <div id="options" class="options">
+              <li><a href="nsaid-start">NSAID Audit</a></li>
               <li><a class="active" href="cpaf">Community Pharmacy Assurance Framework</a></li>
             </div>
 
@@ -85,97 +83,36 @@
                     </h1>
                     <p>For the purposes of this questionnaire repeat dispensing means 'batch prescriptions', i.e. NHS repeatable prescriptions.</p>
                     
-                    <!--Question 1 -->
+                    <form class="form" action="repeatOne" method="GET"> <!-- wrapped all questions inside <form> -->
+                      <!--Question 1 -->
                     <div class="question4">
                         <h1 class="heading-medium">
                                 Has your pharmacy dispensed one or more repeatable prescriptions in the last year?
                         </h1>
 
-                        <form>
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Has your pharmacy dispensed one or more repeatable prescriptions in the last year?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q4" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q4">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q4-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q4-no">No</label>
-                                    </div>
-                            
+                                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q1-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q1-no">No</label>
+                                      </div>
+                              
                                 </fieldset>
                             </div>
-                        </form>
                   </div>
 
-                  <!--Question 2 -->
-                  <div class="question5 visually-hidden">
-                      
-                  </div>
-                  
-                  <div id="ac" class="form-group acceptanceCriteria5 visually-hidden">
-                      <h1 class="heading-medium">
-                            Have you trained relevant staff to be able to deliver the repeat dispensing service?
-                      </h1>
 
-                      <form>
-                          <div class="form-group">
-                              <fieldset class="inline">
-                          
-                                  <legend class="visually-hidden">Have you trained relevant staff to be able to deliver the repeat dispensing service?
-                                    </legend>
-                          
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q5" type="radio" name="radio-inline-group" value="Yes">
-                                  <label for="radio-inline-q5">Yes</label>
-                                  </div>
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q5-no" type="radio" name="radio-inline-group" value="No">
-                                  <label for="radio-inline-q5-no">No</label>
-                                  </div>
-                          
-                              </fieldset>
-                          </div>
-                      </form>
-                    </div>
-
-                    <!--Question 3 -->
-                  <div class="question5 visually-hidden">
-                      
-                    </div>
-                    
-                    <div id="ac" class="form-group acceptanceCriteria6 visually-hidden">
-                        <h1 class="heading-medium">
-                                Have you ask the patient (or their representative) whether the patient's condition has changed each time we issue a batch prescription?
-                        </h1>
-  
-                        <form>
-                            <div class="form-group">
-                                <fieldset class="inline">
-                            
-                                    <legend class="visually-hidden">Have you ask the patient (or their representative) whether the patient's condition has changed each time we issue a batch prescription?
-                                      </legend>
-                            
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q6" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q6">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q6-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q6-no">No</label>
-                                    </div>
-                            
-                                </fieldset>
-                            </div>
-                        </form>
-                      </div>
-                </div>
-            </div>
-
-            <br><a href="cpaf-repeat-dispensing-l1.html"><input class="button" type="submit" value="Next"></a>
+                  <br>
+                  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                </form> <!-- closed <form> after questions and input -->
       </div>
 </div>
 

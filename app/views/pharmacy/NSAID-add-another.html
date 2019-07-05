@@ -74,55 +74,37 @@
                   Add another patient
               </h1>
 
-             <h2 class="heading-medium">Do you want to complete an entry for another patient?</h2>
+              <form class="form" action="addOne" method="GET"> <!-- wrapped both questions inside <form> -->
 
-             <div class="inline" style="margin-bottom: 125px;">
-              <legend class="visually-hidden">
-              </legend>
-  
-              <div class="multiple-choice" data-target="wages-reveal">
-                <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
-                <label for="yes">Yes</label>
-              </div>
-  
-              <div class="multiple-choice">
-                <input id="no" type="radio" name="counciltax" value="no">
-                <label for="no">No</label>
-              </div>
-  
+                <!--Question 1 -->
+              <div class="question1">
+                  <h1 class="heading-medium">
+                      Do you want to complete an entry for another patient?
+                  </h1>
 
+
+                      <div class="form-group">
+                          <fieldset class="inline">
+                      
+                              <legend class="visually-hidden">Do you want to complete an entry for another patient?</legend>
+                      
+                              <div class="multiple-choice">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+                            
+                          </fieldset>
+                      </div>
             </div>
-                    
 
-              
-
-
-                  <a class="button" href="NSAID-Patient-details2" role="button">Next</a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          </div>
-        
-
+            <br>
+            <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+            <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+          </form> <!-- closed <form> after questions and input -->
 
       </div>
   </div>

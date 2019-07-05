@@ -111,60 +111,64 @@
                 </details>
                 </div>
                     <!--Question 1 -->
-                    <div class="question1">
-                        <h1 class="heading-medium">
-                            Do you have SOPs for dispensing, repeat dispensing and support for self care?
-                        </h1>
+                    <form class="form" action="sopOne" method="GET"> <!-- wrapped both questions inside <form> -->
+                      <div class="question1">
+                          <h1 class="heading-medium">
+                              Do you have SOPs for dispensing, repeat dispensing and support for self care?
+                          </h1>
 
 
-                        <form>
+                          
                             <div class="form-group">
-                                <fieldset class="inline">
-                            
-                                    <legend class="visually-hidden">Do you have SOPs for dispensing, repeat dispensing and support for self care?</legend>
-                            
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
-                                    </div>
-                            
-                                </fieldset>
+                              <fieldset class="inline">
+                          
+                                <legend class="visually-hidden">Do you have SOPs for dispensing, repeat dispensing and support for self care?</legend>
+                        
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+                          
+                              </fieldset>
                             </div>
-                        </form>
-                  </div>
+
+                    </div>
                     
-                  <!--Question 2 -->
+                    <!--Question 2 -->
                     <div class="question1">
                         <h1 class="heading-medium">
                             Are the SOPs formally reviewed every 2 years or earlier if needed?
                         </h1>
 
 
-                        <form>
+
                             <div class="form-group">
                                 <fieldset class="inline">
                             
                                     <legend class="visually-hidden">Are the SOPs formally reviewed every 2 years or earlier if needed?</legend>
                             
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1" type="radio" name="radio-inline-group" value="Yes">
-                                    <label for="radio-inline-q1">Yes</label>
+                                    <input id="radio-inline-q1-yes1" type="radio" name="radioInlineGroup2" value="Yes"> <!-- unique name per question -->
+                                    <label for="radio-inline-q1-yes1">Yes</label>
                                     </div>
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1-no" type="radio" name="radio-inline-group" value="No">
-                                    <label for="radio-inline-q1-no">No</label>
+                                    <input id="radio-inline-q1-no1" type="radio" name="radioInlineGroup2" value="No"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q1-no1">No</label>
                                     </div>
                             
                                 </fieldset>
                             </div>
-                        </form>
-                  </div>
 
-            <br><a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a>
+                    </div>
+
+                    <br>
+                    <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                    <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                  </form> <!-- closed <form> after questions and input -->
       </div>
 </div>
 
