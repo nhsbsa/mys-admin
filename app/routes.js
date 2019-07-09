@@ -219,6 +219,6 @@ router.get(/addOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('NSAID-patient-details'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('NSAID-audit-details'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('NSAID-met-requirements'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
