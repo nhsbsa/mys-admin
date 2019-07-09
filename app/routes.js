@@ -217,7 +217,7 @@ router.get(/auditTwo/, function (req, res) {
 // NSAIDs Add Another //
 router.get(/addOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('NSAID-patient-details'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('NSAID-Patient-details'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('NSAID-met-requirements'); // if both input values are "Yes" - redirect to 'page-name' //
   }
