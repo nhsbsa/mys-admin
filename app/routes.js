@@ -222,3 +222,49 @@ router.get(/addOne/, function (req, res) {
     res.redirect('NSAID-met-requirements'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+// CPCS register//
+router.get(/cpcsRegister/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('cpcs-reg'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('index'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// CPCS De-reg//
+router.get(/deRegister/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('cpcs-dereg-confirm'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('cpcs-start'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// CPAF Questionnnaire FULL//
+// appliancesOne is the action from your <form> //
+router.get(/appliancesOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('cpafq-appliances'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('cpafq-eps-enabled'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// appliancesTwo is the action from your <form> //
+router.get(/appliancesTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('cpafq-apps-del-supply'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('cpafq-eps-enabled'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// epssOne is the action from your <form> //
+router.get(/epsOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes") {
+    res.redirect('cpafq-eps'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('cpafq-eps-signpost'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
