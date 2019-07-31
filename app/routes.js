@@ -37,14 +37,6 @@ router.get(/reportrange-handler/, function (req, res) {
 });
 
 // Standard Operating Procedures //
-// sopOne is the action from your <form> //
-router.get(/sopOne/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" && req.query.radioInlineGroup2 === "Yes") {
-    res.redirect('cpaf-sops-l2'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else {
-    res.redirect('cpaf-storage-l1'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
 
 // sopTwo is the action from your <form> //
 router.get(/sopTwo/, function (req, res) {
