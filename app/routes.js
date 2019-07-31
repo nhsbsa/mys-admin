@@ -36,35 +36,6 @@ router.get(/reportrange-handler/, function (req, res) {
   }
 });
 
-// Standard Operating Procedures //
-
-// sopTwo is the action from your <form> //
-router.get(/sopTwo/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" && req.query.radioInlineGroup2 === "Yes") {
-    res.redirect('cpaf-sops-l3'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else {
-    res.redirect('cpaf-storage-l1'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
-
-// Storage and returns //
-// storageOne is the action from your <form> //
-router.get(/storageOne/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes") {
-    res.redirect('cpaf-storage-l2'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else {
-    res.redirect('cpaf-repeat-dispensing'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
-
-// storageTwo is the action from your <form> //
-router.get(/storageTwo/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('cpaf-storage-l3'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else {
-    res.redirect('cpaf-repeat-dispensing'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
 
 // Repeat Dispensing //
 // repeatOne is the action from your <form> //
@@ -73,14 +44,6 @@ router.get(/repeatOne/, function (req, res) {
     res.redirect('cpaf-prescription-based-interventions-l1'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('cpaf-repeat-dispensing-l1'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
-// repeatTwo is the action from your <form> //
-router.get(/repeatTwo/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" && req.query.radioInlineGroup2 === "Yes" ) {
-    res.redirect('cpaf-repeat-dispensing-l2'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else {
-    res.redirect('cpaf-prescription-based-interventions-l1'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 // repeatThree is the action from your <form> //
