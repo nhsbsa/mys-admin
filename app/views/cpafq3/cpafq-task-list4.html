@@ -1,0 +1,180 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="../index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="../fp34c">Prescription submissions (FP34C)</a></li>
+                <li><a href="../unpaid">Unpaid items</a></li>
+                <li><a href="../disallowed">Disallowed items</a></li>
+                <li><a href="../pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="../numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+                <li><a href="../flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="../qps">Pharmacy Quality Scheme</a></li>                <li><a href="../nsaid-start">NSAID Audit</a></li>
+                <li><a href="../cpaf">CPAF pre-screening questionnaire</a></li>
+                <li><a class="active" href="cpafq-start">CPAF Questionnaire</a></li>
+              </div>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+            <div class="phase-banner">
+                <p>
+                <strong class="phase-tag">BETA</strong>
+                This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+            <div class="grid-row">
+                <div class="column-two-thirds">
+
+                    <header class="page-header" style="clear: none; display: block;">
+                        <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Pharmacy Assurance Framework</h1>                    
+                        <p class="page-header--sub heading-secondary">2018/19 Questionnaire</p>
+                        <hr>
+                    </header>
+                    <p>You can’t submit the questionnaire until you have completed all the sections.</p>
+                    <ol class="task-list">
+
+                        <h2 class="task-list-section">Check before you start</h2>
+                        <ul class="task-list-items">
+                          <li class="task-list-item" style="border-top: 1px solid #bfc1c3;">
+                            <a aria-describedby="eligibility-completed" class="task-name" href="#">Which advanced services do you offer?</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Completed</strong></a>
+                          </li>
+                        </ul>
+                
+                
+                
+                        <h2 class="task-list-section">Essential Services</h2>
+                        <ul class="task-list-items">
+                          <li style="list-style: none; display: inline">
+                          </li>
+                          <li class="task-list-item">
+                            <a aria-describedby="personal-details-completed" class="task-name" href="cpafq-es-dispensing-cya.html">Dispensing</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed">Completed</strong></a>
+                          </li>
+                          <li class="task-list-item">
+                            <a aria-describedby="personal-details-completed" class="task-name" href="cpafq-es-appliances-cya.html">Appliances</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed">Completed</strong></a>
+                          </li>
+                          <li class="task-list-item">
+                            <a aria-describedby="personal-details-completed" class="task-name" href="cpafq-es-spec-appliances-cya.html">Specified appliances</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed">Completed</strong></a>
+                          </li>
+                          <li class="task-list-item">
+                            <a aria-describedby="personal-details-completed" class="task-name" href="cpafq-eps-enabled.html">Electronic Prescriptions</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                          </li>
+                          <li class="task-list-item">
+                            <a class="task-name" href="#">Repeat Dispensing</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a></li>
+                            <li class="task-list-item">
+                                <a aria-describedby="personal-details-completed" class="task-name" href="#">Diposal of unwanted meds</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                              </li>
+                              <li class="task-list-item">
+                                <a aria-describedby="personal-details-completed" class="task-name" href="#">Promotion of healthy lifestyles</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                              </li>
+                              <li class="task-list-item">
+                                <a aria-describedby="personal-details-completed" class="task-name" href="#">Signposting</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                              </li>
+                              <li class="task-list-item">
+                                <a aria-describedby="personal-details-completed" class="task-name" href="#">Support for self-care</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                              </li>
+                        </ul>
+                
+                        <h2 class="task-list-section">Clinical Governance</h2>
+                        <ul class="task-list-items">
+                          <li class="task-list-item" style="border-top: 1px solid #bfc1c3;">
+                            <a aria-describedby="eligibility-completed" class="task-name" href="#">Clinical Governance</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                        </ul>
+
+                        <div id="qs" class="qs">
+                            <h2 class="task-list-section">Advanced Services</h2>
+                            <ul class="task-list-items">
+                            <li id="q1" class="task-list-item">
+                                <a class="task-name" href="job-title1">Medicines Use Review and Prescription Intervention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                            </li>
+                            <li id="q2" class="task-list-item">
+                                <a class="task-name" href="job-title1">New Medicine Service</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                            </li>
+                            <li id="q3" class="task-list-item">
+                                <a class="task-name" href="job-title1">Appliance Use Reviews</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                            </li>
+                            <li id="q4" class="task-list-item">
+                                <a class="task-name" href="job-title1">Stoma Appliance Customisation</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                            </li>
+                            </ul>
+                        </div>
+                
+                
+                        <h2 class="task-list-section">Submit application</h2>
+                        <div style="padding-left: 35px; margin-top: 1em">
+                            <a href="/apply/submit/iteration-2/declaration"><input class="button" disabled="" type="submit" value="Send"></a>
+                        </div>
+                
+                      </ol>     </div>
+</div>
+
+</main>
+
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script>
+    let q1 = sessionStorage.getItem("q1"),
+        q2 = sessionStorage.getItem("q2"),
+        q3 = sessionStorage.getItem("q3"),
+        q4 = sessionStorage.getItem("q4");
+
+    if (q1 === "No") {
+        document.querySelector("#q1").setAttribute("class", "visually-hidden");
+    }
+    if (q2 === "No") {
+        document.querySelector("#q2").setAttribute("class", "visually-hidden");
+    }
+    if (q3 === "No") {
+        document.querySelector("#q3").setAttribute("class", "visually-hidden");
+    }
+    if (q4 === "No") {
+        document.querySelector("#q4").setAttribute("class", "visually-hidden");
+    }
+
+    if (q1 === "No" && q2 === "No" && q3 === "No" && q4 === "No") {
+        document.querySelector("#qs").setAttribute("class", "visually-hidden");
+    }
+</script>
+
+{% endblock %}

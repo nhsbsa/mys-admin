@@ -1,0 +1,196 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Pharmacy Quality Scheme</a></li>              <li><a class="active" href="nsaid-start">NSAID Audit</a></li>
+              <li><a href="cpaf">CPAF pre-screening questionnaire</a></li>
+            <li><a href="cpaf-questionnaire/cpafq-start.html">CPAF Questionnaire</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Essential Services - Dispensing</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>                    
+                <hr>
+            </header>
+                                                                          <h2 class="heading-medium">
+                                                                                Electronic Prescriptions
+                                                                              </h2>
+                                                              
+                                                                            <dl class="govuk-check-your-answers cya-questions-short">
+                                                                                <div>
+                                                                                  <dt class="cya-question">
+                                                                                    Are you EPS2 enabled?
+                                                                                  </dt>
+                                                                                  <dd class="cya-answer">
+                                                                                    Yes
+                                                                                  </dd>
+                                                                                  <dd class="cya-change">
+                                                                                    <a href="#">
+                                                                                      Change<span class="visually-hidden"> if you're EPS2 enabled</span>
+                                                                                    </a>
+                                                                                  </dd>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <dt class="cya-question">
+                                                                                          Are you receiving electronic prescriptions?
+                                                                                        </dt>
+                                                                                        <dd class="cya-answer">
+                                                                                          Yes
+                                                                                        </dd>
+                                                                                        <dd class="cya-change">
+                                                                                          <a href="#">
+                                                                                            Change<span class="visually-hidden"> if you're receiving electronic prescriptions</span>
+                                                                                          </a>
+                                                                                        </dd>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Can staff explain EPS?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                              <a href="#">
+                                                                                                Change<span class="visually-hidden"> if staff can explain EPS</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                              <div>
+                                                                                                <dt class="cya-question">
+                                                                                                  Can staff set the nomination of a dispensing contractor?
+                                                                                                </dt>
+                                                                                                <dd class="cya-answer">
+                                                                                                  Yes
+                                                                                                </dd>
+                                                                                                <dd class="cya-change">
+                                                                                                  <a href="#">
+                                                                                                    Change<span class="visually-hidden"> if staff can set the nomination of a dispensing contractor</span>
+                                                                                                  </a>
+                                                                                                </dd>
+                                                                                              </div>
+                                                                                              <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Do you provide written copies of electronic prescriptions?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                      <a href="#">
+                                                                                                        Change<span class="visually-hidden"> if you provide for written copies of electronic prescriptions</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you include the number of times an electronic repeat prescription can be dispensed on a written copy?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="#">
+                                                                                                            Change<span class="visually-hidden"> if you include the number of times an electronic repeat prescription can be dispensed on a written copy</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                          
+                                                                            </dl>
+<br>
+
+
+                  <a class="button" href="cpafq-task-list2.html" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

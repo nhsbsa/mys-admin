@@ -1,0 +1,310 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="numsas">NHS Urgent Medicine Supply Advanced Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Pharmacy Quality Scheme</a></li>              <li><a class="active" href="nsaid-start">NSAID Audit</a></li>
+              <li><a href="cpaf">CPAF pre-screening questionnaire</a></li>
+            <li><a href="cpaf-questionnaire/cpafq-start.html">CPAF Questionnaire</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                  Check your answers
+              </h1>
+              <p>You've added one patient.  You must add a minimum of ten before you submit your audit.</p>
+
+              <details class="govuk-details" style="margin-bottom: 40px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Patient 1
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+              <h2 class="heading-medium">
+                  Patient details
+                </h2>
+
+              <dl class="govuk-check-your-answers cya-questions-short">
+                  <div>
+                    <dt class="cya-question">
+                      Patient age
+                    </dt>
+                    <dd class="cya-answer">
+                      67
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> age</span>
+                      </a>
+                    </dd>
+                  </div>
+          
+                  <div>
+                    <dt class="cya-question">
+                      Patient gender
+                    </dt>
+                    <dd class="cya-answer">
+                      Female
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> gender</span>
+                      </a>
+                    </dd>
+                  </div>
+                                  </dl>
+          
+          
+                <h2 class="heading-medium">
+                  Medicines prescribed
+                </h2>
+          
+                <dl class="govuk-check-your-answers cya-questions-short">
+                  <div>
+                    <dt class="cya-question">
+                      Name of NSAID or COX2 inhibitor prescribed
+                    </dt>
+                    <dd class="cya-answer">
+                      Diclofenac Potassium
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> answer</span>
+                      </a>
+                    </dd>
+                  </div>
+          
+                  <div>
+                    <dt class="cya-question">
+                      Total daily dose prescribed
+                    </dt>
+                    <dd class="cya-answer">
+                      400mg
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> answer</span>
+                      </a>
+                    </dd>
+                  </div>
+          
+                  <div>
+                    <dt class="cya-question">
+                      NSAID or COX2 inhibitor prescribed for more than 2 months?
+                    </dt>
+                    <dd class="cya-answer">
+                      No
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> answer</span>
+                      </a>
+                    </dd>
+                  </div>
+          
+                  <div>
+                    <dt class="cya-question">
+                      NSAID or COX2 inhibitor used regularly i.e. taking at least 3 days each week?
+                    </dt>
+                    <dd class="cya-answer">
+                      Yes
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Change<span class="visually-hidden"> answer</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                      <dt class="cya-question">
+                        Is the patient taking any other medicines (listed) that might increase the risk of GI bleeding?
+                      </dt>
+                      <dd class="cya-answer">
+                        No
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="#">
+                          Change<span class="visually-hidden"> answer</span>
+                        </a>
+                      </dd>
+                    </div>
+  
+                </dl>
+          
+                <h2 class="heading-medium">
+                    Gastro-protection
+                  </h2>
+  
+                <dl class="govuk-check-your-answers cya-questions-short">
+                    <div>
+                      <dt class="cya-question">
+                        Proton pump inhibitor prescribed at licensed daily dose for NSAID prophylaxis?
+                      </dt>
+                      <dd class="cya-answer">
+                        Yes - Omeprazole 20mg or more
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="#">
+                          Change<span class="visually-hidden"> answer</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                        Any other gastro-protection prescribed?
+                      </dt>
+                      <dd class="cya-answer">
+                        No
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="#">
+                          Change<span class="visually-hidden"> answer</span>
+                        </a>
+                      </dd>
+                    </div>
+                    
+                    <div>
+                        <dt class="cya-question">
+                          Conversation with the patient about their NSAID/COX2 medicine?
+                        </dt>
+                        <dd class="cya-answer">
+                          Yes - Conversation with the patient in the pharmacy
+                        </dd>
+                        <dd class="cya-change">
+                          <a href="#">
+                            Change<span class="visually-hidden"> answer</span>
+                          </a>
+                        </dd>
+                      </div>
+
+                      <div>
+                          <dt class="cya-question">
+                            Was the patient referred to the prescriber about gastro-protection?
+                          </dt>
+                          <dd class="cya-answer">
+                            Yes
+                          </dd>
+                          <dd class="cya-change">
+                            <a href="#">
+                              Change<span class="visually-hidden"> answer</span>
+                            </a>
+                          </dd>
+                        </div>
+    
+                        <div>
+                            <dt class="cya-question">
+                              Please add any other comments
+                            </dt>
+                            <dd class="cya-answer">
+                              No other comments
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="#">
+                                Change<span class="visually-hidden"> answer</span>
+                              </a>
+                            </dd>
+                          </div>
+      
+
+                  </dl></ddiv>
+  </details>
+          
+
+
+  <a class="button" href="NSAID-add-another3" role="button">Next</a>
+  <a class="button" href="NSAID-save-for-later" role="button" style="background-color: #005EA5">Save and continue later</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
