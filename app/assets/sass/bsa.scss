@@ -1250,7 +1250,7 @@ border-bottom: 1px solid #bfc1c3;
     padding: 0;
   }
   li {
-    // margin-left: 5px;
+    margin-left: 5px;
   }
   .page-active {
     padding: 3px 8px;
@@ -1267,7 +1267,6 @@ border-bottom: 1px solid #bfc1c3;
 }
 
 .pagination {
-  float: right;
   margin-top: 15px;
   display: inline-block;
 
@@ -1282,7 +1281,7 @@ border-bottom: 1px solid #bfc1c3;
     padding: 0;
   }
   li {
-    // margin-left: 5px;
+    margin-left: 5px;
   }
   .page-active {
     padding: 3px 8px;
@@ -1455,7 +1454,6 @@ a {
 .app-c-option-select ::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
 }
 .app-c-option-select .gem-c-checkboxes {
   margin: 0;
