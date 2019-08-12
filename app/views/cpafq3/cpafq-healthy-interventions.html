@@ -1,0 +1,197 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a class="active" href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">CPAF questionnaire</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Essential services - promotion of healthy lifestyles</h1>
+                <hr>
+            </header>
+
+              <form class="form"> <!-- wrapped both questions inside <form> -->
+
+                <!--Question 1 -->
+                <div class="question1">
+                    <h1 class="heading-medium">
+                            Have you made any records of any advice in relation to prescription interventions in the last 12 months?
+                                                </h1>
+
+
+
+                                                        <div class="form-group">
+                                                
+                                                          <fieldset class="inline">
+                                                            <legend class="visually-hidden">Have you made any records of any advice in relation to prescription interventions in the last 12 months?
+                                                            </legend>
+                                                
+                                                            <div class="multiple-choice" data-target="wages-reveal">
+                                                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                                              <label for="radio-inline-q1-yes">Yes</label>
+                                                              </div>
+                                                              <div class="multiple-choice">
+                                                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                                              <label for="radio-inline-q1-no">No</label>
+                                                              </div>
+                                                
+                        
+
+                                                          </fieldset>
+                                            
+                                                          <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">How often is advice recorded?</h2>
+                                                              <div class="form-group" >
+      
+                                                                <fieldset>
+                                                                <div class="multiple-choice multiple-radio" >
+                                                                    <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                                                    <label for="MS">Daily</label>
+                                                                  </div>
+                                                        
+                                                                  <div class="multiple-choice multiple-radio" >
+                                                                      <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                                                      <label for="MUR">Weekly</label>
+                                                                    </div>
+                                                                    
+                                                                    <div class="multiple-choice multiple-radio" >
+                                                                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                                                        <label for="AUR">Monthly</label>
+                                                                      </div>
+                                            
+                                                                      <div class="multiple-choice multiple-radio" >
+                                                                          <input id="AUR2" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                                                          <label for="AUR2">Less than monthly</label>
+                                                                        </div>
+                                                                                                                                  
+                                                              
+                                                                      </div>
+                                                                                        
+                                                                      <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Where do you keep records of advice given?</h2>
+                                                                      <div class="form-group" >
+              
+                                                                        <fieldset>
+                                                                        <div class="multiple-choice multiple-radio" >
+                                                                            <input id="MS2" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                                                            <label for="MS2">Patient medication record</label>
+                                                                          </div>
+                                                                
+                                                                          <div class="multiple-choice multiple-radio" >
+                                                                              <input id="MUR2" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                                                              <label for="MUR2">Separate computer record</label>
+                                                                            </div>
+                                                                            
+                                                                            <div class="multiple-choice multiple-radio" >
+                                                                                <input id="AUR3" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                                                                <label for="AUR3">Paper record</label>
+                                                                              </div>
+                                                    
+                                                                              <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
+                                                                                  <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
+                                                                                  <label for="AUR5">Other</label>
+                                                                              </div>
+                                                                           
+                                                                                 
+                                                                              <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
+                                                                                <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                                                                                <div class="nhsuk-form-group">              
+                                                                                  <div class="nhsuk-form-group">
+                                                                                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                                                                                                                                  
+                                                                      
+                                                                              </div>
+                                                                                                
+                                                        
+        
+                                                        </div>
+                                                       </div>
+                                                                                                        </form>
+                                                                                                   
+                                                
+              </div>
+
+
+            <br>
+            <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+            <a class="button" href="cpafq-healthy-campaigns.html" role="button">Next</a>
+          </form> <!-- closed <form> after questions and input -->
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

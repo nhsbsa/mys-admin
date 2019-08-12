@@ -1,0 +1,171 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a class="active" href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">CPAF questionnaire</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Essential services - disposal of unwanted medicines</h1>
+                    <hr>
+                </header>
+    
+              <form class="form"> <!-- wrapped both questions inside <form> -->
+
+                <!--Question 1 -->
+                <div class="question1">
+                    <h1 class="heading-medium">
+                            Are staff trained in order to protect themselves, others and the environment from hazards?
+                                                </h1>
+
+
+
+                                                        <div class="form-group">
+                                                
+                                                          <fieldset class="inline">
+                                                            <legend class="visually-hidden">Are staff trained in order to protect themselves, others and the environment from hazards?
+                                                            </legend>
+                                                
+                                                            <div class="multiple-choice" data-target="wages-reveal">
+                                                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                                              <label for="radio-inline-q1-yes">Yes</label>
+                                                              </div>
+                                                              <div class="multiple-choice">
+                                                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                                              <label for="radio-inline-q1-no">No</label>
+                                                              </div>
+                                                
+                        
+
+                                                          </fieldset>
+                                                                                        
+                                                
+                                                        </div>
+                                                       </div>
+                                                        <h1 class="heading-medium">
+                                                            Do you have protective equipment, including gloves, overalls and materials to deal with spills?
+                                                                                </h1>
+                                                                                <form>
+                                                                                    <div class="form-group">
+                                                                                        <fieldset class="inline">
+                                                                                    
+                                                                                            <legend class="visually-hidden">Do you have protective equipment, including gloves, overalls and materials to deal with spills?</legend>
+                                                                                    
+                                                                                            <div class="multiple-choice">
+                                                                                            <input id="radio-inline-q2" type="radio" name="radio-inline-group" value="Yes">
+                                                                                            <label for="radio-inline-q2">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="multiple-choice">
+                                                                                            <input id="radio-inline-q2-no" type="radio" name="radio-inline-group" value="No">
+                                                                                            <label for="radio-inline-q2-no">No</label>
+                                                                                            </div>
+                                                                                    
+                                                                                        </fieldset>
+                                                                                    </div>
+                                                                                </form>
+                                                                                
+                                                                                <h1 class="heading-medium">
+                                                                                    Do you have access to a controlled drug denaturing kit when required?
+                                                                                                        </h1>
+                                                                                                        <form>
+                                                                                                            <div class="form-group">
+                                                                                                                <fieldset class="inline">
+                                                                                                            
+                                                                                                                    <legend class="visually-hidden">Do you have access to a controlled drug denaturing kit when required?</legend>
+                                                                                                            
+                                                                                                                    <div class="multiple-choice">
+                                                                                                                    <input id="radio-inline-q3" type="radio" name="radio-inline-group" value="Yes">
+                                                                                                                    <label for="radio-inline-q3">Yes</label>
+                                                                                                                    </div>
+                                                                                                                    <div class="multiple-choice">
+                                                                                                                    <input id="radio-inline-q3-no" type="radio" name="radio-inline-group" value="No">
+                                                                                                                    <label for="radio-inline-q3-no">No</label>
+                                                                                                                    </div>
+                                                                                                            
+                                                                                                                </fieldset>
+                                                                                                            </div>
+                                                                                                        </form>
+                                                                                                   
+                                                
+
+
+            <br>
+            <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+            <a class="button" href="cpafq-disposal-notes.html" role="button">Next</a>
+          </form> <!-- closed <form> after questions and input -->
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

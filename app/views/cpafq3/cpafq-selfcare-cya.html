@@ -1,0 +1,221 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="cpcs">Community Pharmacy Consultation Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Pharmacy Quality Scheme</a></li>              
+              <li><a class="active" href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Essential services - support for self-care</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>                    
+                <hr>
+            </header>
+                                                                          <h2 class="heading-medium">
+                                                                                Support for self-care
+                                                                              </h2>
+                                                              
+                                                                            <dl class="govuk-check-your-answers cya-questions-short">
+                                                                                <div>
+                                                                                  <dt class="cya-question">
+                                                                                    Do you have a support for self-care SOP?
+                                                                                  </dt>
+                                                                                  <dd class="cya-answer">
+                                                                                    Yes
+                                                                                  </dd>
+                                                                                  <dd class="cya-change">
+                                                                                    <a href="cpafq-healthy-sop.html">
+                                                                                      Change<span class="visually-hidden"> if you have a support for self-care SOP</span>
+                                                                                    </a>
+                                                                                  </dd>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <dt class="cya-question">
+                                                                                          When was it last updated?
+                                                                                        </dt>
+                                                                                        <dd class="cya-answer">
+                                                                                          July 2019
+                                                                                        </dd>
+                                                                                        <dd class="cya-change">
+                                                                                          <a href="cpafq-healthy-sop.html">
+                                                                                            Change<span class="visually-hidden"> when it was last updated</span>
+                                                                                          </a>
+                                                                                        </dd>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Are staff trained on the SOP for Medicines Sales Protocol?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                              <a href="cpafq-healthy-leaflets.html">
+                                                                                                Change<span class="visually-hidden"> if staff are trained on the SOP for Medicines Sales Protocol</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                              <div>
+                                                                                                <dt class="cya-question">
+                                                                                                  Do staff provide advice on self-care?
+                                                                                                </dt>
+                                                                                                <dd class="cya-answer">
+                                                                                                  Yes
+                                                                                                </dd>
+                                                                                                <dd class="cya-change">
+                                                                                                  <a href="cpafq-healthy-leaflets.html">
+                                                                                                    Change<span class="visually-hidden"> if staff provide advice on self-care</span>
+                                                                                                  </a>
+                                                                                                </dd>
+                                                                                              </div>
+                                                                                              <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Do you have leaflets to support self-care?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                      <a href="cpafq-healthy-interventions.html">
+                                                                                                        Change<span class="visually-hidden"> if you have leaflets to support self-care</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Have you made records of advice given and drugs dispensed in the last 12 months?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                      <a href="cpafq-healthy-interventions.html">
+                                                                                                        Change<span class="visually-hidden"> if you've made records of advice given and drugs dispensed in the last 12 months</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          How often are records made?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Monthly
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-healthy-interventions.html">
+                                                                                                            Change<span class="visually-hidden"> how often records are made</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Where do you keep the records?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Separate paper record
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-healthy-interventions.html">
+                                                                                                            Change<span class="visually-hidden"> where you keep the records</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                </dl>
+<br>
+
+
+                  <a class="button" href="cpafq-task-list10.html" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
