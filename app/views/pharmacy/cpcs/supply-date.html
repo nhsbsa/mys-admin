@@ -1,0 +1,116 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+      /* /. */
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a class="active" href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Community Pharmacy Consultation Service</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Create a token</h1>
+                <hr>
+            </header>
+                      <h2 class="heading heading-medium">
+                      What day was this supply/non-supply made?
+                      </h2>
+
+            <div class="form-group">
+                <fieldset>
+                      <span class="form-hint" id="dob-hint">For example, 31 3 1980</span>
+                   <div class="form-date">
+                      <div class="form-group form-group-day">
+                         <label class="form-label" for="dob-day">Day</label>
+                         <input class="form-control" id="dob-day" name="dob_day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                      </div>
+                      <div class="form-group form-group-month">
+                         <label class="form-label" for="dob-month">Month</label>
+                         <input class="form-control" id="dob-month" name="dob_month" type="number" pattern="[0-9]*" min="0" max="12">
+                      </div>
+                      <div class="form-group form-group-year">
+                         <label class="form-label" for="dob-year">Year</label>
+                         <input class="form-control" id="dob-year" name="dob_year" type="number" pattern="[0-9]*" min="0" max="2016">
+                      </div>
+                   </div>
+                </fieldset>
+             </div>
+
+
+                                                  <a class="button" href="cya.html" role="button">Submit</a>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

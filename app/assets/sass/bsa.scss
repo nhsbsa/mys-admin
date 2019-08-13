@@ -1146,6 +1146,17 @@ border-bottom: 1px solid #bfc1c3;
     // using margin instead of padding because of easier absolutely positioning of .change
   }
 
+
+  .cya-question-long {
+    font-weight: bold;
+    margin: em(12, 19) 4em em(4,19) 0;
+    width: 100%;
+    // top: from Elements' td
+    // right: due to length of "change" link (adjust if you change the link to be much longer)
+    // bottom: by eye
+    // using margin instead of padding because of easier absolutely positioning of .change
+  }
+
   > *:first-child .cya-question {
     margin-top: 0;
   }
@@ -1594,4 +1605,30 @@ fieldset {
 }
 .nhsuk-date-input__input {
   margin-bottom: 0;
+}
+
+.declaration {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #bfc1c3;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+.declaration:before {
+  content: "DECLARATION";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1.25;
+  background: #bfc1c3;
+  color: white;
 }
