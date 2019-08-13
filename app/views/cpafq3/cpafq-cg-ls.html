@@ -76,7 +76,7 @@
         
                 <header class="page-header" style="clear: none; display: block;">
                     <p class="page-header--sub heading-secondary">CPAF questionnaire</p>
-                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Essential services - signposting</h1>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Clinical governance - public information</h1>
                     <hr>
                 </header>
     
@@ -85,7 +85,7 @@
                 <!--Question 1 -->
                 <div class="question1">
                     <h1 class="heading-medium">
-                            Do you have a signposting SOP which all relevant staff understand and work to?
+                            Have you carried out the patient satisfaction survey?
                                                 </h1>
 
 
@@ -93,14 +93,14 @@
                                                         <div class="form-group">
                                                 
                                                           <fieldset class="inline">
-                                                            <legend class="visually-hidden">Do you have a signposting SOP which all relevant staff understand and work to?
+                                                            <legend class="visually-hidden">Have you carried out the patient satisfaction survey?
                                                             </legend>
                                                 
-                                                            <div class="multiple-choice" data-target="wages-reveal">
+                                                            <div class="multiple-choice" data-target="yes-reveal">
                                                               <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
                                                               <label for="radio-inline-q1-yes">Yes</label>
                                                               </div>
-                                                              <div class="multiple-choice">
+                                                              <div class="multiple-choice" data-target="no-reveal">
                                                               <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
                                                               <label for="radio-inline-q1-no">No</label>
                                                               </div>
@@ -109,8 +109,8 @@
 
                                                           </fieldset>
                                             
-                                                          <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
-                                                            <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">When was the SOP last reviewed?</h2>
+                                                          <div class="panel panel-border-narrow js-hidden" id="yes-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                                            <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">When was the survey carried out?</h2>
                                                             <div class="nhsuk-form-group">
                                                               <span class="nhsuk-hint" id="dob-hint">
                                                                 For example, 10 2017
@@ -136,10 +136,92 @@
                                                               </div>
                                                           
                                                           </div>
-                                          
+                                                          <br>
+                                                          <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">When were the results published?</h2>
+                                                          <div class="nhsuk-form-group">
+                                                            <span class="nhsuk-hint" id="dob-hint">
+                                                              For example, 10 2017
+                                                            </span>
+                                                        
+                                                            <div class="nhsuk-date-input" id="dob">
+                                                              <div class="nhsuk-date-input__item">
+                                                                <div class="nhsuk-form-group">
+                                                                  <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                                                                    Month
+                                                                  </label>
+                                                                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                                                                </div>
+                                                              </div>
+                                                              <div class="nhsuk-date-input__item">
+                                                                <div class="nhsuk-form-group">
+                                                                  <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                                                                    Year
+                                                                  </label>
+                                                                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                        
+                                                        </div>
+
                                               
                                                       </div>
                                           
+                                                      <div class="panel panel-border-narrow js-hidden" id="no-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                                            <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">When will you carry out the survey?</h2>
+                                                            <div class="nhsuk-form-group">
+                                                              <span class="nhsuk-hint" id="dob-hint">
+                                                                For example, 10 2017
+                                                              </span>
+                                                          
+                                                              <div class="nhsuk-date-input" id="dob">
+                                                                <div class="nhsuk-date-input__item">
+                                                                  <div class="nhsuk-form-group">
+                                                                    <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                                                                      Month
+                                                                    </label>
+                                                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                                                                  </div>
+                                                                </div>
+                                                                <div class="nhsuk-date-input__item">
+                                                                  <div class="nhsuk-form-group">
+                                                                    <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                                                                      Year
+                                                                    </label>
+                                                                    <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <br>
+                                                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">When will you publish the results?</h2>
+                                                              <div class="nhsuk-form-group">
+                                                                <span class="nhsuk-hint" id="dob-hint">
+                                                                  For example, 10 2017
+                                                                </span>
+                                                            
+                                                                <div class="nhsuk-date-input" id="dob">
+                                                                  <div class="nhsuk-date-input__item">
+                                                                    <div class="nhsuk-form-group">
+                                                                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                                                                        Month
+                                                                      </label>
+                                                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                                                                    </div>
+                                                                  </div>
+                                                                  <div class="nhsuk-date-input__item">
+                                                                    <div class="nhsuk-form-group">
+                                                                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                                                                        Year
+                                                                      </label>
+                                                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+    
+                                                          </div>
+                                          
+                                              
+                                                      </div>
                                                 
                                                         </div>
                                                        </div>
@@ -166,13 +248,13 @@
                                                                                 </form>
                                                                                 
                                                                                 <h1 class="heading-medium">
-                                                                                    Do you use written referral forms in aproppriate cases?
+                                                                                    Do you use written referral forms in appropriate cases?
                                                                                                         </h1>
                                                                                                         <form>
                                                                                                             <div class="form-group">
                                                                                                                 <fieldset class="inline">
                                                                                                             
-                                                                                                                    <legend class="visually-hidden">Do you use written referral forms in aproppriate cases?</legend>
+                                                                                                                    <legend class="visually-hidden">Do you use written referral forms in appropriate cases?</legend>
                                                                                                             
                                                                                                                     <div class="multiple-choice">
                                                                                                                     <input id="radio-inline-q3" type="radio" name="radio-inline-group" value="Yes">
