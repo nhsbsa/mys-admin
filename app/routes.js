@@ -214,7 +214,7 @@ router.get(/notMetOne/, function (req, res) {
 // CPCS register//
 router.get(/cpcsRegister/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('cpcs-reg'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('cpcs-dec'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('index'); // if both input values are "Yes" - redirect to 'page-name' //
   }
