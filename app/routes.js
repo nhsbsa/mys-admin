@@ -211,6 +211,23 @@ router.get(/notMetOne/, function (req, res) {
   }
 });
 
+// NSAIDs add another NSAID //
+router.get(/addMedsOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('NSAID-Meds-prescribed'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('NSAID-other-meds'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+router.get(/addMedsTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('NSAID-another-nsaid'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('NSAID-dosage-details'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
 // CPCS register//
 router.get(/cpcsRegister/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {

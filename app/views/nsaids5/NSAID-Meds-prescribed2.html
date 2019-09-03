@@ -1,0 +1,536 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+:not(svg) {
+    transform-origin: initial;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-block-start: 0px;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding-block-end: 0px;
+    min-inline-size: auto;
+    border-width: 0px;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+  /* show/hide button */
+  button.filter-button{
+      background-color: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+  }
+  .show-count{
+      font-size:16px;
+  }
+  input:checked + label {
+      display:block !important;
+  }
+  /* wrapper style */
+  ul#service-list {
+      background-color: white;
+      margin-top: 10px;
+  }
+  .search-body {
+      background-color: #FFF;
+  }
+  .search-wrapper {
+      background-color: #DEE0E2; 
+      border: 5px solid #DEE0E2;
+  }
+  .color-spacing {
+      padding:10px;
+  }
+  /* /. */
+  /* scroll box */
+  ul.scroll-box  {
+      height:200px;
+      width:100%;
+      overflow:hidden;
+      overflow: scroll;
+      /* margin-top:-20px; */
+  }
+  .search-control {
+      width: 100%;
+  }
+  @media only screen and (max-width:767px) {
+      ul.scroll-box  {
+          height:100px;
+          width:100%;
+          margin-top:-10px;
+      }
+  }
+  
+  .frame::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  .frame::-webkit-scrollbar:vertical {
+      width: 11px;
+  }
+  .frame::-webkit-scrollbar:horizontal {
+      height: 11px;
+  }
+  .frame::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white; /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+  }
+  /* /. */
+  /* spy glass in the input */
+  .input-glyph-inner {
+      position: relative;
+  }
+  .glass-symbol {
+      position: absolute;
+      bottom: 2px; 
+      left: 10px;
+      font-weight: 800;
+      color: #333333;
+      -webkit-transform: rotate(-45deg); 
+      -moz-transform: rotate(-45deg); 
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      font-size:30px;
+  }
+  @media only screen and (max-width:642px) {
+      .glass-symbol {
+          font-size:26px;
+      }
+  }
+  
+  .input-glyph {
+      padding-left: 40px;
+  }
+  @media all and (-ms-high-contrast: none) , ( -ms-high-contrast : active) {
+      /* IE10+ CSS styles */
+      .input-glyph {
+          padding-bottom: 3px; /* 7px for the other symbol */
+      }
+  }
+  /* /. */ 
+  /* Label styles */ 
+  .multiple-radio label {
+      margin-left: 40px !important;
+  }
+  .check-label{
+      padding-bottom:16px !important; /* on some prototypes the labels are really thin */
+      width: 100%;
+  }
+  .clear-bg {
+      background-color: #fff; /* overwrites grey background */
+  }
+  .label-space, #count {
+      padding: 5px 10px;
+  }
+  .label-space, #count {
+    padding: 5px 3px;
+}
+  /* /. */
+</style>
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="cpcs">Community Pharmacy Consultation Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a  href="qps">Pharmacy Quality Scheme</a></li>
+              <li><a class="active" href="nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Patient 2</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Details of medicines prescribed</h1>                    
+                    <hr>
+                </header>
+
+              <h2 class="heading-medium">Name of NSAID or COX2 inhibitor prescribed</h2>
+              <!-- Search box -->
+            <div class="search-wrapper">
+              <button id="filterHead" class="filter-button">
+                  <div id="input-label" class="label-space form-label-bold">Select all that apply
+                      <span class="chevron" style="float:right;">
+                          <span id="up" style="display:none; font-size:24px; margin-top:4px;">&#x2303;</span>
+                          <span id="down" style="display:inline-block; margin-top:-4px; transform: rotate(180deg); font-size:24px;">&#x2303;</span>
+                      </span>    
+                  </div>
+                  
+                  <div id="count" class="show-count"></div>
+              </button>    
+              <div class="search-body" style="display:block;">
+                  <!-- List of results -->
+                  <fieldset>
+                      <legend class="visuallyhidden">Checkbox inputs</legend>
+                      <ul id="service-list" class="frame scroll-box">
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Aceclofenac" name="Aceclofenac" class="list-input" type="checkbox" value="true" onclick="updateCount();">
+                                  <label class="check-label" for="Aceclofenac">Aceclofenac</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Acemetacin" name="Acemetacin" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Acemetacin">Acemetacin</label>
+                              </div>          
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Celecoxib" name="Celecoxib" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Celecoxib">Celecoxib</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Dexketoprofen" class="list-input" name="Dexketoprofen" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Dexketoprofen">Dexketoprofen</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Diclofenac Potassium" class="list-input" name="Diclofenac Potassium" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Diclofenac Potassium">Diclofenac Potassium</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Diclofenac Sodium" class="list-input" name="Diclofenac Sodium" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Diclofenac Sodium">Diclofenac Sodium</label>
+                              </div>          
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Etodolac" class="list-input" name="Etodolac" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Etodolac">Etodolac</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Etoricoxib" class="list-input" name="Etoricoxib" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Etoricoxib">Etoricoxib</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Flurbiprofen" class="list-input" name="Flurbiprofen" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Flurbiprofen">Flurbiprofen</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Ibuprofen" class="list-input" name="Ibuprofen" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Ibuprofen">Ibuprofen</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Indometacin" class="list-input" name="Indometacin" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Indometacin">Indometacin</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Ketoprofen" class="list-input" name="Ketoprofen" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Ketoprofen">Ketoprofen</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Mefenamic Acid" class="list-input" name="Mefenamic Acid" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Mefenamic Acid">Mefenamic Acid</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Meloxicam" class="list-input" name="Meloxicam" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Meloxicam">Meloxicam</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Nabumetone" class="list-input" name="Nabumetone" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Nabumetone">Nabumetone</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Naproxen" class="list-input" name="Naproxen" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Naproxen">Naproxen</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Piroxicam" class="list-input" name="Piroxicam" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Piroxicam">Piroxicam</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Sulindac" class="list-input" name="Sulindac" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Sulindac">Sulindac</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Tenoxicam" class="list-input" name="Tenoxicam" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Tenoxicam">Tenoxicam</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Tiaprofenic Acid" class="list-input" name="Tiaprofenic Acid" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Tiaprofenic Acid">Tiaprofenic Acid</label>
+                              </div>            
+                          </li>
+                          <li class="list-item">
+                              <div class="clear-bg multiple-choice multiple-radio">
+                                  <input id="Other (please state below)" class="list-input" name="Other (please state below)" type="checkbox" value="true" onclick="updateCount()">
+                                  <label class="check-label" for="Other (please state below)">Other (please state below)</label>
+                              </div>            
+                          </li>
+
+                      </ul>
+                  </fieldset>
+                  <!-- /. -->
+              </div>
+          </div>
+          <!-- /. -->
+
+              <h2 class="heading-medium">Other NSAID or COX2 inhibitor prescribed</h2>
+              <div class="govuk-form-group">
+                
+          
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%"></textarea>
+                </div>
+
+                <h2 class="heading-medium">Total daily dose prescribed</h2>
+                <div class="govuk-form-group">
+                    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-2">
+                        mg
+                      </label>
+                  </div>
+
+                  <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more than 2 months?</h2>
+
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Yes</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="counciltax" value="no">
+                        <label for="no">No</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="no" type="radio" name="counciltax" value="no">
+                          <label for="no">Unknown</label>
+                        </div>
+  
+                    </div><br><br>
+
+                            <h2 class="heading-medium">NSAID or COX2 inhibitor used regularly i.e. taking at least 3 days each week?</h2>
+
+                            <div class="inline">
+                                <legend class="visually-hidden">
+                                </legend>
+                    
+                                <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                                  <label for="yes">Yes</label>
+                                </div>
+                    
+                                <div class="multiple-choice">
+                                  <input id="no" type="radio" name="counciltax" value="no">
+                                  <label for="no">No</label>
+                                </div>
+                    
+                                <div class="multiple-choice">
+                                    <input id="no" type="radio" name="counciltax" value="no">
+                                    <label for="no">Unknown</label>
+                                  </div>
+            
+                              </div><br><br>
+          
+          
+                                      <h2 class="heading-medium">Is the patient taking any other medicines (listed) that might increase the risk of bleeding?</h2>
+                      <span id="changed-name-hint" class="govuk-hint">
+                          (Please select all that apply)
+                        </span>
+                        
+                        <div class="form-group" >
+              
+          
+                            <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                <label for="MS">No</label>
+                              </div>
+                    
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                  <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                  <label for="MUR">Anticoagulant</label>
+                                </div>
+                                
+                                <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                    <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                    <label for="AUR">Antiplatelet (including aspirin)</label>
+                                  </div>
+ 
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                      <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                      <label for="AUR">Selective Serotonin re-uptake inhibitor</label>
+                                    </div>
+                                    
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                        <label for="AUR">Unknown</label>
+                                      </div>
+                                      
+                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                          <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                          <label for="AUR">Other (please state below)</label>
+                                        </div>
+  
+                                  </div>
+      
+                          <h2 class="heading-medium">Other medicines prescribed that might increase the risk of GI bleeding</h2>
+                          <div class="govuk-form-group">
+                              
+                              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                            </div>
+
+              
+
+                  <a class="button" href="NSAID-Gastro-details2" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+<!-- Javascript -->
+<script src="/public/javascripts/details.polyfill.js"></script>
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/application.js"></script>
+<!-- jQuery -->
+<script
+src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- /. -->
+<script>
+ $(document).ready(function(){
+  $("button").click(function(){
+    $(".search-body").toggle();
+    $("#up").toggle();
+    $("#down").toggle();
+  });
+});
+</script>
+
+<script>
+    /* Counts checked checkboxes */
+    window.updateCount = function() {
+        var count = $(".list-input:checked").length;
+        document.getElementById("count").innerHTML = count + ' selected';
+        if (count < 1) {
+            document.getElementById("count").style.display = "none";
+        } else {
+            document.getElementById("count").style.display = "block";
+        }   
+    };
+</script>
+
+<!-- selector -->
+
+</main>
+
+{% endblock %}

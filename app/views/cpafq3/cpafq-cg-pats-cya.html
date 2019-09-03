@@ -1,0 +1,313 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="cpcs">Community Pharmacy Consultation Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Pharmacy Quality Scheme</a></li>              
+              <li><a class="active" href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Clinical governance - patients</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>                    
+                <hr>
+            </header>
+                                                                          <h2 class="heading-medium">
+                                                                                Patients
+                                                                              </h2>
+                                                              
+                                                                            <dl class="govuk-check-your-answers cya-questions-short">
+                                                                                <div>
+                                                                                  <dt class="cya-question">
+                                                                                    Are there arrangements for patient safety incident reporting?
+                                                                                  </dt>
+                                                                                  <dd class="cya-answer">
+                                                                                    Yes
+                                                                                  </dd>
+                                                                                  <dd class="cya-change">
+                                                                                    <a href="cpafq-cg-pats-incidents.html">
+                                                                                      Change<span class="visually-hidden"> if there are arrangements for patient safety incident reporting</span>
+                                                                                    </a>
+                                                                                  </dd>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <dt class="cya-question">
+                                                                                          Do you report patient safety incidents to NRLS?
+                                                                                        </dt>
+                                                                                        <dd class="cya-answer">
+                                                                                          Yes
+                                                                                        </dd>
+                                                                                        <dd class="cya-change">
+                                                                                          <a href="cpafq-cg-pats-incidents.html">
+                                                                                            Change<span class="visually-hidden"> if you report patient safety incidents to NRLS</span>
+                                                                                          </a>
+                                                                                        </dd>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Are the pharmacy team able to participate in analysis of critical incidents?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                                <a href="cpafq-cg-pats-incidents.html">
+                                                                                                    Change<span class="visually-hidden"> if the pharmacy team are able to participate in analysis of critical incidents</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                          <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Arrangements for dealing with complaints?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                                <a href="cpafq-cg-pats-complaints.html">
+                                                                                                    Change<span class="visually-hidden"> who the complaints manager is</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                          <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Who is the complaints manager?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              John Smith
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                                <a href="cpafq-cg-pats-complaints.html">
+                                                                                                    Change<span class="visually-hidden"> who the complaints manager is</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                              <div>
+                                                                                                <dt class="cya-question">
+                                                                                                  Who is responsible for ensuring compliance with complaints procedure?
+                                                                                                </dt>
+                                                                                                <dd class="cya-answer">
+                                                                                                  Dave Jones
+                                                                                                </dd>
+                                                                                                <dd class="cya-change">
+                                                                                                  <a href="cpafq-cg-pats-complaints.html">
+                                                                                                    Change<span class="visually-hidden"> who's responsible for ensuring compliance with complaints procedure</span>
+                                                                                                  </a>
+                                                                                                </dd>
+                                                                                              </div>
+                                                                                              <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Is information on complaints procedure available to the public?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                        <a href="cpafq-cg-pats-complaints-reports.html">
+                                                                                                        Change<span class="visually-hidden"> if information on complaints procedure is available to the public</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Do you keep records of complaints?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                        <a href="cpafq-cg-pats-complaints-reports.html">
+                                                                                                        Change<span class="visually-hidden"> if you keep records of complaints</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          When was your last complaints Annual Report?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          May 2019
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-complaints-reports.html">
+                                                                                                            Change<span class="visually-hidden"> When your last complaints Annual Report was</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Did you send the complaints Annual Report to NHS England?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-complaints-reports.html">
+                                                                                                            Change<span class="visually-hidden"> if you sent the complaints Annual Report to NHS England</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                                                                                                                        <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          When did you send the report?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                         June 2019
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-complaints-reports.html">
+                                                                                                            Change<span class="visually-hidden"> when you sent the report</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          When was your last accessibility review?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          March 2019
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-accessibility.html">
+                                                                                                            Change<span class="visually-hidden"> when your last accesibility review was</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you assess patients and record adjustments where needed?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-accessibility.html">
+                                                                                                            Change<span class="visually-hidden"> if you assess patients and record adjustments where needed</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                      <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you monitor items owed to patients?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-owed-items.html">
+                                                                                                            Change<span class="visually-hidden"> if you monitor items owed to patients</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                      <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you take action as a result of monitoring?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-pats-owed-items.html">
+                                                                                                            Change<span class="visually-hidden"> if you take action as a result of monitoring</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                </dl>
+<br>
+
+
+                  <a class="button" href="cpafq-task-list13.html" role="button">Next</a>
+                  <a class="button" href="cpafq-save-continue13" role="button" style="background-color: #005EA5">Save and continue later</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

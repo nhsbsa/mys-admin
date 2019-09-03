@@ -1,0 +1,274 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="unpaid">Unpaid items</a></li>
+              <li><a href="disallowed">Disallowed items</a></li>
+              <li><a href="pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="cpcs">Community Pharmacy Consultation Service</a></li>
+              <li><a href="flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="qps">Pharmacy Quality Scheme</a></li>              
+              <li><a class="active" href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Clinical governance - staff</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>                    
+                <hr>
+            </header>
+                                                                          <h2 class="heading-medium">
+                                                                                Staff
+                                                                              </h2>
+                                                              
+                                                                            <dl class="govuk-check-your-answers cya-questions-short">
+                                                                                <div>
+                                                                                  <dt class="cya-question">
+                                                                                    Do you give inductions to new staff?
+                                                                                  </dt>
+                                                                                  <dd class="cya-answer">
+                                                                                    Yes
+                                                                                  </dd>
+                                                                                  <dd class="cya-change">
+                                                                                    <a href="cpafq-cg-staff.html">
+                                                                                      Change<span class="visually-hidden"> if you give inductions to new staff</span>
+                                                                                    </a>
+                                                                                  </dd>
+                                                                                </div>
+                                                                                <div>
+                                                                                        <dt class="cya-question">
+                                                                                            Do you give inductions to locums?
+                                                                                        </dt>
+                                                                                        <dd class="cya-answer">
+                                                                                          Yes
+                                                                                        </dd>
+                                                                                        <dd class="cya-change">
+                                                                                          <a href="cpafq-cg-staff.html">
+                                                                                            Change<span class="visually-hidden"> if you give inductions to locums</span>
+                                                                                          </a>
+                                                                                        </dd>
+                                                                                      </div>
+                                                                                      <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Do you have evidence of CPD and accredition for relevant staff?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                                <a href="cpafq-cg-staff.html">
+                                                                                                    Change<span class="visually-hidden"> if you have evidence of CPD and accredition for relevant staff</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                      <div>
+                                                                                            <dt class="cya-question">
+                                                                                              Do you perform necessary pre-employment checks?
+                                                                                            </dt>
+                                                                                            <dd class="cya-answer">
+                                                                                              Yes
+                                                                                            </dd>
+                                                                                            <dd class="cya-change">
+                                                                                                <a href="cpafq-cg-staff.html">
+                                                                                                    Change<span class="visually-hidden"> if you perform necessary pre-employment checks</span>
+                                                                                              </a>
+                                                                                            </dd>
+                                                                                          </div>
+                                                                                              <div>
+                                                                                                <dt class="cya-question">
+                                                                                                  Do you keep records of staff training?
+                                                                                                </dt>
+                                                                                                <dd class="cya-answer">
+                                                                                                  Yes
+                                                                                                </dd>
+                                                                                                <dd class="cya-change">
+                                                                                                  <a href="cpafq-cg-staff-training.html">
+                                                                                                    Change<span class="visually-hidden"> if you keep records of staff training</span>
+                                                                                                  </a>
+                                                                                                </dd>
+                                                                                              </div>
+                                                                                              <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Are there arrangements to address poor performance?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                        <a href="cpafq-cg-staff-training.html">
+                                                                                                        Change<span class="visually-hidden"> if there are arrangements to address poor performance</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                    <dt class="cya-question">
+                                                                                                      Do you encourage whistleblowing?
+                                                                                                    </dt>
+                                                                                                    <dd class="cya-answer">
+                                                                                                      Yes
+                                                                                                    </dd>
+                                                                                                    <dd class="cya-change">
+                                                                                                        <a href="cpafq-cg-staff-training.html">
+                                                                                                        Change<span class="visually-hidden"> if you encourage whistleblowing</span>
+                                                                                                      </a>
+                                                                                                    </dd>
+                                                                                                  </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Are relevant staff trained in safeguarding?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-staff-safeguarding.html">
+                                                                                                            Change<span class="visually-hidden"> if relevant staff are trained in safeguarding</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you have details of the local safeguarding team?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-staff-safeguarding.html">
+                                                                                                            Change<span class="visually-hidden"> if you have details of the local safeguarding team</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                                                                                                                        <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do you have a clinical effectiveness programme in place?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                         Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-staff-effectiveness.html">
+                                                                                                            Change<span class="visually-hidden"> if you have a clinical effectiveness programme in place</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                  <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Can staff use the resources in the programme?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-staff-effectiveness.html">
+                                                                                                            Change<span class="visually-hidden"> if staff can use the resources in the programme</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                                      <div>
+                                                                                                        <dt class="cya-question">
+                                                                                                          Do staff know when to refer to the pharmacist?
+                                                                                                        </dt>
+                                                                                                        <dd class="cya-answer">
+                                                                                                          Yes
+                                                                                                        </dd>
+                                                                                                        <dd class="cya-change">
+                                                                                                          <a href="cpafq-cg-staff-effectiveness.html">
+                                                                                                            Change<span class="visually-hidden"> if staff know when to refer to the pharmacist</span>
+                                                                                                          </a>
+                                                                                                        </dd>
+                                                                                                      </div>
+                                                                                </dl>
+<br>
+
+
+                  <a class="button" href="cpafq-task-list14.html" role="button">Next</a>
+                  <a class="button" href="cpafq-save-continue14" role="button" style="background-color: #005EA5">Save and continue later</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

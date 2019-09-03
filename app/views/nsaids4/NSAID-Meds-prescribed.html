@@ -347,15 +347,25 @@ fieldset {
                               </div>            
                           </li>
                           <li class="list-item">
-                              <div class="clear-bg multiple-choice multiple-radio">
-                                  <input id="Other (please state below)" class="list-input" name="Other (please state below)" type="checkbox" value="true" onclick="updateCount()">
-                                  <label class="check-label" for="Other (please state below)">Other (please specify)</label>
-                              </div>            
-                          </li>
+                            <div class="clear-bg multiple-choice multiple-radio" data-target="wages-reveal-2">
+                                <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
+                                <label for="AUR5">Other</label>
+                            </div>
+                         
+                               
+</li>
 
                       </ul>
                   </fieldset>
-                  <!-- /. -->
+                                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+  <!-- /. -->
               </div>
           </div>
           <!-- /. -->
@@ -370,119 +380,12 @@ fieldset {
 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%"></textarea>
                 </div>
 
-                <h2 class="heading-medium">Total daily dose prescribed</h2>
-                <div class="govuk-form-group">
-                    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
-                                        <label class="govuk-label" for="width-2">
-                        mg
-                      </label>
-                  </div>
-
-                  <h2 class="heading-medium">NSAID or COX2 inhibitors prescribed for more than 2 months?</h2>
-
-                  <div class="inline">
-                      <legend class="visually-hidden">
-                      </legend>
-          
-                      <div class="multiple-choice" data-target="wages-reveal">
-                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
-                        <label for="yes">Yes</label>
-                      </div>
-          
-                      <div class="multiple-choice">
-                        <input id="no" type="radio" name="counciltax" value="no">
-                        <label for="no">No</label>
-                      </div>
-          
-                      <div class="multiple-choice">
-                          <input id="no" type="radio" name="counciltax" value="no">
-                          <label for="no">Unknown</label>
-                        </div>
-  
-                    </div><br><br>
-
-                            <h2 class="heading-medium">NSAID or COX2 inhibitor used regularly i.e. taking at least 3 days each week?</h2>
-
-                            <div class="inline">
-                                <legend class="visually-hidden">
-                                </legend>
-                    
-                                <div class="multiple-choice" data-target="wages-reveal">
-                                  <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
-                                  <label for="yes">Yes</label>
-                                </div>
-                    
-                                <div class="multiple-choice">
-                                  <input id="no" type="radio" name="counciltax" value="no">
-                                  <label for="no">No</label>
-                                </div>
-                    
-                                <div class="multiple-choice">
-                                    <input id="no" type="radio" name="counciltax" value="no">
-                                    <label for="no">Unknown</label>
-                                  </div>
-            
-                              </div><br><br>
-          
-          
-                                      <h2 class="heading-medium">Is the patient taking any other medicines that might increase the risk of bleeding?</h2>
-                      <span id="changed-name-hint" class="govuk-hint">
-                          (Please select all that apply)
-                        </span>
-                        
-                        <div class="form-group" >
-              
-          
-                            <div class="multiple-choice multiple-radio" data-target="medicineservice">
-                                <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
-                                <label for="MS">No</label>
-                              </div>
-                    
-                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                  <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                  <label for="MUR">Anticoagulant</label>
-                                </div>
-                                
-                                <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
-                                    <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
-                                    <label for="AUR">Antiplatelet (including aspirin)</label>
-                                  </div>
- 
-                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
-                                      <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
-                                      <label for="AUR">Selective Serotonin re-uptake inhibitor</label>
-                                    </div>
-                                    
-                                  <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
-                                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
-                                        <label for="AUR">Unknown</label>
-                                      </div>
-                                      
-                                      <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
-                                            <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
-                                            <label for="AUR5">Other</label>
-                                        </div>
-                                     
-                                           
-                                        <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
-                                          <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
-                                          <div class="nhsuk-form-group">              
-                                            <div class="nhsuk-form-group">
-                                                    <span class="form-hint">
-                                                            Do not include any personal information which can identify the patient.
-                                                          </span>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
-                                            </div>
-                                          </div>
-                                        </div>
-              
-                                  </div>
       
               
 
-                  <a class="button" href="NSAID-Gastro-details" role="button">Next</a>
+                  <a class="button" href="NSAID-dosage-details" role="button">Next</a>
 
-
+</div> 
 
 
 
