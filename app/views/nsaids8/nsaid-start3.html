@@ -1,0 +1,151 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+              <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+              <li><a href="/pharmacy/pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+              <li><a href="/pharmacy/flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>              
+              <li><a class="active" href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="/pharmacy/cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>
+            </div>
+          </ul>        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">2018/19</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">NSAID Audit</h1>                    
+                    <hr>
+                </header>
+
+              <p>To meet the requirements for this audit you must:</p>
+              <ul style="list-style: disc; margin-left: 35px;">
+                <li>collect data for 2 weeks</li>
+                <li>identify at least 10 patients who meet the criteria</li>
+                <li>add a maximum of 20 patients</li>
+              </ul> <br>  
+              <p>If you cannot identify 10 patients in 2 weeks, your audit period will be extended by up to 2 weeks</p>
+              <p>If you cannot identify 10 patients at the end of the extended audit period (4 weeks), you will be able to submit your audit with less than 10 patients.</p>
+              <p>You do not need to input all entries at once.  You can save your audit after adding each patient</p>
+              
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Why we do this audit
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+            
+                <p>Adverse effects of non-steroidal anti-inflammatory drugs (NSAIDs) including cyclo-oxygenase-2 (COX2) selective inhibitors are a frequent cause of hospital admissions which are potentially preventable.  The adverse effects include gastro-intestinal (GI) bleeds, pro-thombotic events (e.g. heart attack, stroke) and reduced renal blood flow leading to acute kidney injury. This audit looks only at GI safety.</p>
+
+                <p>National Institute for Health and Care Excellence guidance requires all patients prescribed oral NSAIDs for osteaarthritis or rheumatoid arthritis (no age limit) or for low back pain (if aged aged over 45) to be co-prescribed gastro-protection (e.g. proton pump inhibitor).  All older patients (aged 65 or over) are at increased risk of NSAID induced GI adverse events.  Additional risk factors include prolonged treatment and concomitant use of other other medicines which increase the likelihood of GI events.  GI adverse events have also been reported where patients have self-medicated with a second NSAID in addition to the prescribed agent or have not taken a gastro-protective despite this being co-prescribed.</p>
+             
+              <P>For full audit information please click here.  This link also provides contact details for any questions regarding this audit.  If you have any technical problems accessing/using the audit tool, please email <a href "">nhsbsaresearch@nhs.net</a></P>
+
+            </div>
+          </details>
+          <br><br>
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Instructions
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>INCLUDE all patients aged 65 or over who present a prescription for any oral NSAID or COX2 inhibitor.  (NSAIDs/COX2 inhibitors are in BNF chapter 10, Pain and inflammation in musculoskeletal disorders: this does not include patients prescribed aspirin).</p>
+                  <p>Oral COX2 inhbitors and NSAIDs are listed in the guidance.</p>
+                </div>
+              </details>
+              <br><br>
+              <a class="button button-start" href="NSAID-Patient-details" role="button">Start now</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

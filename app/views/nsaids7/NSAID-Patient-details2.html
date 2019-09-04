@@ -1,4 +1,3 @@
-
 {% extends "layout_bsa.html" %}
 
 {% block page_title %}
@@ -50,8 +49,7 @@
             <div id="options" class="options">
               <li><a  href="qps">Pharmacy Quality Scheme</a></li>
               <li><a class="active" href="nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
-              <li><a href="cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
-              <li><a href="cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>  </div>
+            </div>
           </ul>
         </div>
 
@@ -71,36 +69,63 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-              <header class="page-header" style="clear: none; display: block;">
-                <p class="page-header--sub heading-secondary">NSAID audit - patient 1</p>
-                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Record keeping</h1>                    
-                <hr>
-            </header>
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Patient 2</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Patient Details</h1>                    
+                    <hr>
+                </header>
+              
 
-             <h2 class="heading-medium">Have you manually recorded that you've completed an entry for this patient to prevent duplication?</h2>
+              <h2 class="heading-medium">Patient age</h2>
 
-             <div class="inline" style="margin-bottom: 125px;">
-              <legend class="visually-hidden">
-              </legend>
-  
-              <div class="multiple-choice">
-                <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
-                <label for="yes">Yes</label>
+                <div class="form-group">
+              <div class="govuk-form-group">
+                
+                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
+                <label class="govuk-label" for="width-3">
+                  years
+                </label>
               </div>
-  
-              <div class="multiple-choice">
-                <input id="no" type="radio" name="counciltax" value="no">
-                <label for="no">No</label>
-              </div>
-  
 
-            </div>
+              <div class="govuk-form-group">
+
+                  <h2 class="heading-medium">Patient gender</h2>
                     
 
               
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Male</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="counciltax" value="no">
+                        <label for="no">Female</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="no" type="radio" name="counciltax" value="no">
+                          <label for="no">Unknown</label>
+                        </div>
+  
+                    </div><br><br>
 
 
-            <a class="button" href="NSAID-check-patient.html" role="button">Next</a>
+                                                            
+
+
+          
+              
+                  <br/>
+                  <br/>
+              
+
+
+                  <a class="button" href="NSAID-Meds-prescribed2" role="button">Next</a>
 
 
 
