@@ -144,6 +144,11 @@ fieldset {
   .label-space, #count {
     padding: 5px 3px;
 }
+.option-text {
+    clear: left;
+    margin-bottom: 10px;
+}
+
   /* /. */
 </style>
 <main id="content" role="main">
@@ -217,10 +222,6 @@ fieldset {
                         <div class="form-group" >
               
           
-                            <div class="multiple-choice multiple-radio" data-target="medicineservice">
-                                <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
-                                <label for="MS">No</label>
-                              </div>
                     
                               <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
                                   <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
@@ -256,7 +257,15 @@ fieldset {
                                         </div>
                                       </div>
                                     </div>
-
+                                    <div class="option-text">
+						
+                                      or
+                                  
+                                            </div> 
+                            <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                                <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                                <label for="MS">No</label>
+                              </div>
                                   </div>
       
 
