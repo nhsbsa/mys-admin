@@ -202,6 +202,14 @@ router.get(/addFour/, function (req, res) {
   }
 });
 
+router.get(/addFive/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('NSAID-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('NSAID-audit-start-date'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
 // NSAIDs requirements not met //
 router.get(/notMetOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
