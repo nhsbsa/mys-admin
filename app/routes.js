@@ -198,7 +198,7 @@ router.get(/addFour/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('NSAID-patient-details'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('NSAID-check-your-answers2'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('NSAID-audit-end-date'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 
