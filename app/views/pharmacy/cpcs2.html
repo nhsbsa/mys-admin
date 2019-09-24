@@ -71,29 +71,47 @@
         
                 <header class="page-header" style="clear: none; display: block;">
                     <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Pharmacist Consultation Service</h1>                    
+                    <p class="page-header--sub heading-secondary">Register for this service</p>
                     <hr>
                 </header>
 
-               <h2 class="heading-medium">Registration and de-reg</h2>
+                <p>The Community Pharmacy Consultation Service (CPCS) connects patients who have a minor illness to a community pharmacy, after initial referral by NHS 111 for example.
+</p>
+<p>The service replaces the NHS Urgent Medicine Supply Advanced Service (NUMSAS) and Digital Minor Illness Referral Service (DMIRS).
+</p>              
+  <p>Read <a href="#">details of the service and requirements on the NHS England website</a>. More information can be found on the <a href="#">PSNC website</a>.
+  </p>           
+    <p>You need to register your pharmacy to use this service.</p>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                                
+                  <form class="form" action="cpcsRegister" method="GET"> <!-- wrapped both questions inside <form> -->
+                      <div class="question1">
+                        <h1 class="heading-medium">
+                            Do you want to register for this service?
+                        </h1>
 
-               <a href="cpcs.html">Version 1</a>
-               <ul style="list-style: disc; margin-left: 30px;">
-                <li>CPCS Service Registration and de-reg</li>
-              </ul>
+                                    <legend class="visually-hidden">Do you and want to register for this service?</legend>
+                            
+                                    <div class="multiple-choice">
+                                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                      <label for="radio-inline-q1-yes">Yes</label>
+                                      </div>
+                                      <div class="multiple-choice">
+                                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                      <label for="radio-inline-q1-no">No</label>
+                                      </div>
+                                  
+                                </fieldset>
+                            </div>
+      
+                  <br>
+                  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+                  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+                </form> <!-- closed <form> after questions and input -->
 
-              <h2 class="heading-medium">CPCS Token</h2>
 
-              <a href="numsas.html">Version 1</a>
-              <ul style="list-style: disc; margin-left: 30px;">
-               <li>NUMSAS flow with content changed to CPCS</li>
-             </ul>
 
-             <h2 class="heading-medium">CPCS view submission</h2>
-
-             <a href="cpcs2/cpcs-urgent-meds-start.html">Version 1</a>
-             <ul style="list-style: disc; margin-left: 30px;">
-              <li>View and confirm monthly submissions from API</li>
-            </ul>
 
 
 

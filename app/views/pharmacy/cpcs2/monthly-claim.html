@@ -1,0 +1,186 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a class="active" href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">January 2019</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Monthly claim</h1>
+                <hr>
+            </header>
+            <p>You've submitted the following totals through Manage your Service for the period of 1 January 2019 to 31 January 2019.</p>
+              <form class="form"> <!-- wrapped both questions inside <form> -->
+
+
+
+                <dl class="govuk-check-your-answers cya-questions-long">
+                  <div>
+                    <dt class="cya-question-long">
+                      Number of FP10DT forms
+                    </dt>
+                    <dd class="cya-answer">
+                      60
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="cya-question-long">
+                      Number of consultations (items not supplied)
+                    </dt>
+                    <dd class="cya-answer">
+                      20
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="cya-question-long">
+                      Number of consultations (items supplied)
+                    </dt>
+                    <dd class="cya-answer">
+                      30
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="cya-question-long">
+                      Number of items supplied
+                    </dt>
+                    <dd class="cya-answer">
+                      80
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="cya-question-long">
+                      Number of prescription charges collected
+                    </dt>
+                    <dd class="cya-answer">
+                      70
+                    </dd>
+                  </div>
+              </dl>
+
+              <div class="question1">
+                <h1 class="heading-medium">
+                    Are you submitting any handwritten tokens for CPCS for this period?
+                                            </h1>
+
+
+
+                                                    <div class="form-group">
+                                            
+                                                      <fieldset class="inline">
+                                                        <legend class="visually-hidden">Are you submitting any handwritten tokens for CPCS for this period?
+                                                        </legend>
+                                            
+                                                        <div class="multiple-choice" data-target="wages-reveal">
+                                                          <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                                          <label for="radio-inline-q1-yes">Yes</label>
+                                                          </div>
+                                                          <div class="multiple-choice">
+                                                          <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                                          <label for="radio-inline-q1-no">No</label>
+                                                          </div>
+                                            
+                    
+
+                                                      </fieldset>
+                                        
+                                                      <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                                        <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Handwritten totals</h2>
+                                                        <div class="nhsuk-form-group">
+                                                            <span class="form-label">Number of FP10DT forms</span>
+                                                            <textarea class="govuk-textarea" id="more-detail1" name="more-detail1" rows="2" aria-describedby="more-detail-hint" style="width: 30%; margin-bottom: 40px;"></textarea>
+                                                            <span class="form-label">Number of consultations (items not supplied)</span>
+                                                            <textarea class="govuk-textarea" id="more-detail2" name="more-detail2" rows="2" aria-describedby="more-detail-hint" style="width: 30%; margin-bottom: 40px;"></textarea>
+                                                            <span class="form-label">Number of consultations (items supplied)</span>
+                                                            <textarea class="govuk-textarea" id="more-detail3" name="more-detail3" rows="2" aria-describedby="more-detail-hint" style="width: 30%; margin-bottom: 40px;"></textarea>
+                                                            <span class="form-label">Number of items supplied</span>
+                                                            <textarea class="govuk-textarea" id="more-detail4" name="more-detail4" rows="2" aria-describedby="more-detail-hint" style="width: 30%; margin-bottom: 40px;"></textarea>
+                                                            <span class="form-label">Number of prescription charges collected</span>
+                                                            <textarea class="govuk-textarea" id="more-detail5" name="more-detail5" rows="2" aria-describedby="more-detail-hint" style="width: 30%; margin-bottom: 40px;"></textarea>
+                                                      </div>
+                                
+                                          
+                                                  </div>
+                                                  <br>
+                                                  <a class="button" href="monthly-claim-cya.html" role="button">Next</a>
+
+                                                    </div>
+                                                   </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
