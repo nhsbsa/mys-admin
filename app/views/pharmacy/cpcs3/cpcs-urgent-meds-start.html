@@ -13,91 +13,6 @@
 {% endblock %}
 
 {% block content %}
-<style>
-.nhsuk-pagination {
-    margin-top: 28px;
-    margin-bottom: 68px;
-}
-.nhsuk-list, ul, ol {
-    line-height: 1.47368;
-}
-.nhsuk-list, ul, ol {
-    margin-bottom: 16px;
-    list-style-type: none;
-    margin-top: 0;
-    padding-left: 0;
-}
-.nhsuk-pagination-item--previous {
-    float: left;
-    text-align: left;
-    width: 50%;
-}
-.nhsuk-pagination-item--next {
-    float: right;
-    text-align: right;
-    width: 50%;
-}
-.nhsuk-pagination__title {
-    line-height: 1.33333;
-}
-.nhsuk-pagination__title {
-    display: block;
-}
-.nhsuk-u-visually-hidden {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-.nhsuk-pagination__page {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-.nhsuk-pagination__page {
-    display: block;
-    text-decoration: underline;
-}
-.nhsuk-pagination__link {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
-}
-.nhsuk-pagination__link:visited .nhsuk-icon {
-    fill: #330072;
-}
-.nhsuk-pagination__link .nhsuk-icon {
-    position: absolute;
-    top: -2px;
-}
-.nhsuk-pagination-item--previous .nhsuk-pagination__title {
-    padding-left: 32px;
-}
-.nhsuk-pagination-item--next .nhsuk-pagination__title {
-    padding-right: 32px;
-}
-.nhsuk-icon {
-    height: 34px;
-    width: 34px;
-}
-.nhsuk-icon__arrow-left {
-    fill: #005eb8;
-}
-.nhsuk-icon__arrow-right {
-    fill: #005eb8;
-}
-.nhsuk-pagination-item--next .nhsuk-icon {
-    right: -6px;
-}
-nav, section {
-    display: block;
-}
-</style>
 
 <main id="content" role="main">
 
@@ -156,34 +71,72 @@ nav, section {
         
                 <header class="page-header" style="clear: none; display: block;">
                     <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Pharmacist Consultation Service</h1>                    
-                    <p class="page-header--sub heading-secondary">Urgent medicines supply</p>
+                    <p class="page-header--sub heading-secondary">Urgent medicines supply and minor illness referrals</p>
                     <hr>
                 </header>
 
                 
 
 
-                <h2 class="heading-medium">Reference ID 12345678901</h2>
-                <dl class="govuk-check-your-answers cya-questions-short">
-                    <div>
-                      <dt class="cya-question">
-                        Patient Name
-                      </dt>
-                      <dd class="cya-answer">
-                        Joe Bloggs
-                      </dd>
-                    </div>
-                    <div>
-                        <dt class="cya-question">
-                          Date of birth
-                        </dt>
-                        <dd class="cya-answer">
-                          1st January 1975
-                        </dd>
-                      </div>
-                    </dl>
-                    <br><br>
-                    <a class="button" href="cpcs-um-september.html" role="button">Back to month view</a>
+                <h2 class="heading-medium">September 2019 submission</h2>
+                <div class="submissions" style="padding: 0;">
+                  <table class="data-table assets-summary check-your-answers">
+                    <tbody><tr>
+                      <td><span class="strong">Urgent Medicines</span></td>
+                      <td><span class="strong">Minor Illnesses</span></td>
+                      <td style="text-align: end;"><span class="strong">Status</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>26</td>
+                      <td>10</td>
+                      <td><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">TO ACTION</strong></td>
+                      <td style="text-align:right; padding-right:0;"><a href="cpcs-submit-september.html" style="text-decoration: underline;">View and submit</a></td>
+                    </tr>
+                    <tr>
+                  </tbody></table>
+                </div>
+
+                <h2 class="heading-medium">Previous submissions</h2>
+
+                <div class="submissions" style="padding: 0;">
+                  <table class="data-table assets-summary check-your-answers">
+                    <tbody><tr>
+                      <td><span class="strong">Period</span></td>
+                      <td><span class="strong">Urgent Medicines</span></td>
+                      <td><span class="strong">Minor Illnesses</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>August 2019</td>
+                      <td>10</td>
+                      <td>10</td>
+                      <td style="text-align:right; padding-right:0;"><a href="cpcs-view-august.html" style="text-decoration: underline;">View</a></td>
+                    </tr>
+                    <tr>
+                      <td>July 2019</td>
+                      <td>10</td>
+                      <td>10</td>
+                      <td style="text-align:right; padding-right:0;"><a href="cpcs-view-july.html" style="text-decoration: underline;">View</a></td>
+                    </tr>
+                    <tr>
+                  </tbody></table>
+                </div>
+
+                <br>
+                <br>
+                <p style="margin-bottom: 5px; font-weight: bold;">Missed a submission?</p>
+
+                <div style="margin-top: 0; font-size: 16px;">Contact the helpdesk on 01924 334249 or via email at 
+                  <a href="mailto:nhsbsa.mys@nhs.net">nhsbsa.mys@nhs.net</a> for help.</div>
+
+
+
+
+
+
+
+
 
 
 

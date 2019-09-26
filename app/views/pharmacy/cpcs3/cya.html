@@ -1,0 +1,271 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+      /* /. */
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a class="active" href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Create a CPCS token</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>
+                <hr>
+                <h2 class="heading-medium">
+                  Patient details
+               </h2>
+               <dl class="govuk-check-your-answers cya-questions-short">
+                  <div>
+                     <dt class="cya-question">
+                        First name
+                     </dt>
+                     <dd class="cya-answer">
+                        John
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change<span class="visually-hidden"> name</span>
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        Last name
+                     </dt>
+                     <dd class="cya-answer">
+                        Smith
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        Date of birth
+                     </dt>
+                     <dd class="cya-answer">
+                        22/02/1965
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        Address
+                     </dt>
+                     <dd class="cya-answer">
+                        35 Eastfield Road<br>
+                        Benton<br>
+                        Newcastle upon Tyne<br>
+                        NE12 8BD
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        NHS number
+                     </dt>
+                     <dd class="cya-answer">
+                        1648654756
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        NHS 111 referral ID
+                     </dt>
+                     <dd class="cya-answer">
+                       648364
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+               </dl>
+               <h2 class="heading-medium">
+                  GP details
+               </h2>
+               <dl class="govuk-check-your-answers cya-questions-short">
+                  <div>
+                     <dt class="cya-question">
+                        Name
+                     </dt>
+                     <dd class="cya-answer">
+                       Lane End Surgery
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change<span class="visually-hidden"> name</span>
+                        </a>
+                     </dd>
+                  </div>
+                  <div>
+                     <dt class="cya-question">
+                        Address
+                     </dt>
+                     <dd class="cya-answer">
+                        2 Manor Walk<br>
+                        Newcastle upon Tyne<br>
+                        NE7 7XX
+                     </dd>
+                     <dd class="cya-change">
+                        <a href="#">
+                        Change
+                        </a>
+                     </dd>
+                  </div>
+               </dl>
+               <h2 class="heading-medium">
+                  Item details
+               </h2>
+               <div class="form-group">
+                  <dl class="govuk-check-your-answers cya-questions-short">
+                     <div>
+                        <dt class="cya-question">
+                           Item 1
+                        </dt>
+                        <dd class="cya-answer">
+                           Codeine 15mg tablets<br>
+                           Quantity: 28<br>
+   
+                        </dd>
+                        <dd class="cya-change">
+                           <a href="#">
+                           Change<span class="visually-hidden"> name</span>
+                           </a>
+                        </dd>
+                     </div>
+                     <div>
+                        <dt class="cya-question">
+                           Item 2
+                        </dt>
+                        <dd class="cya-answer">
+                            Ibuprofen 800mg tablets<br>
+                            Quantity: 90
+                        </dd>
+                        <dd class="cya-change">
+                           <a href="#">
+                           Change<span class="visually-hidden"> name</span>
+                           </a>
+                        </dd>
+                     </div>
+                     <div>
+                        <dt class="cya-question">
+                           Date of supply
+                        </dt>
+                        <dd class="cya-answer">
+                          06/02/2019
+                        </dd>
+                        <dd class="cya-change">
+                           <a href="#">
+                           Change<span class="visually-hidden"> name</span>
+                           </a>
+                        </dd>
+                     </div>
+                     <div>
+                        <dt class="cya-question">
+                           Time of supply
+                        </dt>
+                        <dd class="cya-answer">
+                          19:29
+                        </dd>
+                        <dd class="cya-change">
+                           <a href="#">
+                           Change
+                           </a>
+                        </dd>
+                     </div>
+                  </dl>
+               </div>
+                                                  <a class="button" href="done.html" role="button">Next</a>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

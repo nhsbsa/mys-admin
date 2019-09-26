@@ -19,7 +19,7 @@ router.get(/downloadreports-handler/, function (req, res) {
     res.redirect('/public/images/bsa/MYS Report - Prescription Returns.xlsx');
   } else if (req.query.reports.includes('flu')) {
     res.redirect('/public/images/bsa/MYS Report - Flu Submissions.xlsx');
-  } else if (req.query.reports.includes('numsas')) {
+  } else if (req.query.reports.includes('../cpcs')) {
     res.redirect('reports3');
   } else {
     res.redirect('reports3');
