@@ -1,0 +1,118 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+        
+        
+              <h1 class="heading-xlarge">
+                Summary
+              </h1>
+
+              <h2 class="heading-medium">Unpaid items</h2>
+
+              <p>Items with missing information</p>
+
+              <div class="nhsuk-grid-row nhsuk-panel-group">
+                <div class="nhsuk-grid-column-one-quarter nhsuk-panel-group__item">
+                  
+
+    <div class="nhsuk-panel">
+      <div class="nhsuk-panel__number">5</div>        
+      <div class="nhsuk-panel__description">EPS items</div>
+      <a href="#">Add information</a>
+    </div>
+    
+                </div>
+                <div class="nhsuk-grid-column-one-quarter nhsuk-panel-group__item">
+                  
+    <div class="nhsuk-panel">
+        <div class="nhsuk-panel__number">3</div>        
+        <div class="nhsuk-panel__description">Paper items</div>
+        <a href="#">Add information</a>
+    </div>
+    
+                </div>
+              </div>              <hr>
+              <div class="grid-row">
+                  <div class="column-full">
+
+                <h2 class="heading-medium">Pharmacy activity summary</h2>
+
+                <div class="nhsuk-table-responsive">
+                    <table class="nhsuk-table">
+                      <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+                          <th class="nhsuk-table__header" scope="col">Period</th>
+                          <th class="nhsuk-table__header" scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody class="nhsuk-table__body">
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">September</td>
+                          <td class="numeric"><a href="#">Start submission</a></td>
+                        </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">August</td>
+                          <td class="numeric"><a href="#">View</a></td>
+                        </tr>
+                        <tr class="nhsuk-table__row">
+                          <td class="nhsuk-table__cell">July</td>
+                          <td class="numeric"><a href="#">View</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+               <br>
+                  <p style="margin-bottom: 5px; font-weight: bold;">Missed a submission?</p>
+                  <div style="margin-top: 0; font-size: 16px;">Contact the helpdesk on 01924 334249 or via email at <a href="mailto:nhsbsa.mys@nhs.net">nhsbsa.mys@nhs.net</a> for help.</div>               
+                </div>
+                </div>
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

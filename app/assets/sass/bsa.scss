@@ -1213,21 +1213,15 @@ border-bottom: 1px solid #bfc1c3;
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
   }
 
   li a {
     display: block;
     color: #005EB8;
-    padding: 8px 36px;
+    padding: 16px;
+    font-size: 18px;
     text-decoration: none;
-  }
-
-  li h3 {
-    display: block;
-    color: #005EB8;
-    padding: 8px 16px;
-    text-decoration: none;
+    border-bottom: #ccc 1px solid;
   }
 
   li a.active {
@@ -1240,9 +1234,6 @@ border-bottom: 1px solid #bfc1c3;
     color: white;
   }
 
-  .options {
-    font-size: 16px;
-  }
 }
 
 // Results per page
@@ -1632,3 +1623,260 @@ fieldset {
   background: #bfc1c3;
   color: white;
 }
+
+.nhsuk-promo {
+  margin-bottom: 36px;
+  /* [1] */
+  width: 100%; }
+
+.nhsuk-promo__link-wrapper {
+  background-color: #F8F8F8;
+  box-shadow: 0 4px 0 0 #d8dde0;
+  /* [2] */
+  display: block;
+  height: 100%;
+  /* [3] */
+  position: relative;
+  /* [4] */
+  text-decoration: none;
+  /* [5] */
+  }
+  
+  .nhsuk-promo__link-wrapper:focus {
+    background-color: #F8F8F8;
+    box-shadow: 0 0 0 4px #ffb81C; }
+    .nhsuk-promo__link-wrapper:focus .nhsuk-promo__heading {
+      text-decoration: underline;
+      /* [6] */ }
+    .nhsuk-promo__link-wrapper:focus .nhsuk-promo__heading,
+    .nhsuk-promo__link-wrapper:focus .nhsuk-promo__description {
+      color: #212b32; }
+  .nhsuk-promo__link-wrapper:hover {
+    background-color: #F8F8F8;
+    box-shadow: 0 0 0 4px #ffb81C;
+    color: #005eb8; }
+  .nhsuk-promo__link-wrapper:active {
+    background-color: #F8F8F8;
+    /* [7] */
+    box-shadow: 0 0 0 4px #ffbf33;
+    top: 4px;
+    /* [7] */ }
+  .nhsuk-promo__link-wrapper:hover .nhsuk-promo__heading, .nhsuk-promo__link-wrapper:active .nhsuk-promo__heading {
+    text-decoration: none; }
+
+.nhsuk-promo__img {
+  border-bottom: 1px solid #f0f4f5;
+  /* [8] */
+  display: block;
+  width: 100%; }
+  @media print {
+    .nhsuk-promo__img {
+      display: none; } }
+
+.nhsuk-promo__heading {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  text-decoration: underline; }
+  @media (min-width: 61.875em) {
+    .nhsuk-promo__heading {
+      font-size: 24px;
+      line-height: 1.33333; } }
+  @media print {
+    .nhsuk-promo__heading {
+      font-size: 24pt;
+      line-height: 1.15; } }
+
+.nhsuk-promo__content {
+  padding: 24px; }
+  .nhsuk-promo__content > *:first-child {
+    margin-top: 0; }
+  .nhsuk-promo__content > *:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 61.875em) {
+    .nhsuk-promo__content {
+      padding: 32px; } }
+
+.nhsuk-promo__description {
+  color: #425563; }
+
+/* Promo size variant
+   ========================================================================== */
+/**
+ * Promo small reduces the size of the text heading and description.
+ */
+.nhsuk-promo--small .nhsuk-promo__heading {
+  font-size: 16px;
+  line-height: 1.5; }
+  @media (min-width: 61.875em) {
+    .nhsuk-promo--small .nhsuk-promo__heading {
+      font-size: 19px;
+      line-height: 1.47368; } }
+  @media print {
+    .nhsuk-promo--small .nhsuk-promo__heading {
+      font-size: 14pt;
+      line-height: 1.15; } }
+
+.nhsuk-promo--small .nhsuk-promo__description {
+  font-size: 14px;
+  line-height: 1.71429; }
+  @media (min-width: 61.875em) {
+    .nhsuk-promo--small .nhsuk-promo__description {
+      font-size: 16px;
+      line-height: 1.5; } }
+  @media print {
+    .nhsuk-promo--small .nhsuk-promo__description {
+      font-size: 14pt;
+      line-height: 1.2; } }
+
+/* Promo group
+   ========================================================================== */
+/**
+ * Promo group allows you to have a row of promos.
+ *
+ * Flexbox is used to make each promo in a row the same height.
+ */
+.nhsuk-promo-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 36px; }
+  @media (max-width: 61.875em) {
+    .nhsuk-promo-group {
+      margin-bottom: 28px; } }
+
+.nhsuk-promo-group__item {
+  display: flex;
+  }
+  @media (max-width: 61.875em) {
+    .nhsuk-promo-group__item {
+      flex: 0 0 100%; } }
+  @media (max-width: 61.875em) {
+    .nhsuk-promo-group__item {
+      margin-bottom: 28px; }
+      .nhsuk-promo-group__item:last-child {
+        margin-bottom: 0; } }
+  .nhsuk-promo-group__item .nhsuk-promo {
+    margin-bottom: 0; }
+
+    .nhsuk-grid-row {
+      margin-left: -16px;
+      margin-right: -16px; }
+      .nhsuk-grid-row:after {
+        clear: both;
+        content: '';
+        display: block; }
+    
+    .nhsuk-grid-column-one-quarter {
+      box-sizing: border-box;
+      padding: 0 16px; }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-one-quarter {
+          float: left;
+          width: 25%; } }
+    
+    .nhsuk-grid-column-one-third {
+      box-sizing: border-box;
+      padding: 0 16px;
+      }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-one-third {
+          float: left;
+          width: 33.3333%; } }
+    
+    .nhsuk-grid-column-one-half {
+      box-sizing: border-box;
+      padding: 0 16px; }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-one-half {
+          float: left;
+          width: 50%; } }
+    
+    .nhsuk-grid-column-two-thirds {
+      box-sizing: border-box;
+      padding: 0 16px; }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-two-thirds {
+          float: left;
+          width: 66.6666%; } }
+    
+    .nhsuk-grid-column-three-quarters {
+      box-sizing: border-box;
+      padding: 0 16px; }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-three-quarters {
+          float: left;
+          width: 75%; } }
+    
+    .nhsuk-grid-column-full {
+      box-sizing: border-box;
+      padding: 0 16px; }
+      @media (min-width: 48.0625em) {
+        .nhsuk-grid-column-full {
+          float: left;
+          width: 100%; } }
+         
+          /* ==========================================================================
+   COMPONENTS / #PANEL
+   ========================================================================== */
+
+  .nhsuk-panel {
+    background: #ffffff;
+    padding: 20px;
+    border: #ccc 2px solid;
+    border-left: #da291c 4px solid;
+    width: 100%; }
+
+.nhsuk-panel-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+  
+      @media (max-width: 61.875em){
+.nhsuk-panel-group__item {
+    flex: 0 0 100%;
+}}
+@media (max-width: 61.875em){
+  .nhsuk-panel-group__item {
+      margin-bottom: 24px;
+  }}
+
+/* Panel colour variant
+   ========================================================================== */
+.nhsuk-panel--grey {
+  background-color: #f0f4f5; }
+
+          /* Panel group
+   ========================================================================== */
+/**
+ * Panel group allows you to have a row of panels.
+ *
+ * 1. Flexbox is used to make each panel in a row the same height.
+ */
+.nhsuk-panel-group {
+  display: flex;
+  flex-wrap: wrap;
+  /* [1] */
+  margin-bottom: 32px; }
+
+.nhsuk-panel-group__item {
+  display: flex;
+  /* [1] */ }
+  @media (max-width: 61.875em) {
+    .nhsuk-panel-group__item {
+      flex: 0 0 100%; } }
+  @media (max-width: 61.875em) {
+    .nhsuk-panel-group__item {
+      margin-bottom: 24px; }
+      .nhsuk-panel-group__item:last-child {
+        margin-bottom: 0; } }
+  .nhsuk-panel-group__item .nhsuk-panel {
+    margin-bottom: 0;
+    margin-top: 0; }
+    .nhsuk-panel .nhsuk-panel__number {
+      font-size: 40px;
+      margin-bottom: 0;
+      line-height: 1;
+  }
+  
