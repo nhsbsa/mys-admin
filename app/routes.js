@@ -209,6 +209,14 @@ router.get(/addFive/, function (req, res) {
     res.redirect('NSAID-audit-start-date'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+//PQS Gateway kickout //
+router.get(/addSix/, function (req, res) {
+  if (req.query.radioInlineGroup === "No" ) {
+    res.redirect('pqs-gateway-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-tasklist1'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
 
 // NSAIDs requirements not met //
 router.get(/notMetOne/, function (req, res) {
