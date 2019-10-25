@@ -1,0 +1,346 @@
+
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+      /* /. */
+      <style>
+        :not(svg) {
+            transform-origin: initial;
+        }
+        
+        fieldset {
+            display: block;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-block-start: 0px;
+            padding-inline-start: 0px;
+            padding-inline-end: 0px;
+            padding-block-end: 0px;
+            min-inline-size: auto;
+            border-width: 0px;
+            border-style: groove;
+            border-color: threedface;
+            border-image: initial;
+        }
+          /* show/hide button */
+          button.filter-button{
+              background-color: transparent;
+              border: none;
+              width: 100%;
+              text-align: left;
+          }
+          .show-count{
+              font-size:16px;
+          }
+          input:checked + label {
+              display:block !important;
+          }
+          /* wrapper style */
+          ul#service-list {
+              background-color: white;
+              margin-top: 10px;
+          }
+          .search-body {
+              background-color: #FFF;
+          }
+          .search-wrapper {
+              background-color: #DEE0E2; 
+              border: 5px solid #DEE0E2;
+          }
+          .color-spacing {
+              padding:10px;
+          }
+          /* /. */
+          /* scroll box */
+          ul.scroll-box  {
+              height:200px;
+              width:100%;
+              overflow:hidden;
+              overflow: scroll;
+              /* margin-top:-20px; */
+          }
+          .search-control {
+              width: 100%;
+          }
+          @media only screen and (max-width:767px) {
+              ul.scroll-box  {
+                  height:100px;
+                  width:100%;
+                  margin-top:-10px;
+              }
+          }
+          
+          .frame::-webkit-scrollbar {
+              -webkit-appearance: none;
+          }
+          .frame::-webkit-scrollbar:vertical {
+              width: 11px;
+          }
+          .frame::-webkit-scrollbar:horizontal {
+              height: 11px;
+          }
+          .frame::-webkit-scrollbar-thumb {
+              border-radius: 8px;
+              border: 2px solid white; /* should match background, can't be transparent */
+              background-color: rgba(0, 0, 0, .5);
+          }
+          /* /. */
+          /* spy glass in the input */
+          .input-glyph-inner {
+              position: relative;
+          }
+          .glass-symbol {
+              position: absolute;
+              bottom: 2px; 
+              left: 10px;
+              font-weight: 800;
+              color: #333333;
+              -webkit-transform: rotate(-45deg); 
+              -moz-transform: rotate(-45deg); 
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+              font-size:30px;
+          }
+          @media only screen and (max-width:642px) {
+              .glass-symbol {
+                  font-size:26px;
+              }
+          }
+          
+          .input-glyph {
+              padding-left: 40px;
+          }
+          @media all and (-ms-high-contrast: none) , ( -ms-high-contrast : active) {
+              /* IE10+ CSS styles */
+              .input-glyph {
+                  padding-bottom: 3px; /* 7px for the other symbol */
+              }
+          }
+          /* /. */ 
+          /* Label styles */ 
+          .multiple-radio label {
+              margin-left: 40px !important;
+          }
+          .check-label{
+              padding-bottom:16px !important; /* on some prototypes the labels are really thin */
+              width: 100%;
+          }
+          .clear-bg {
+              background-color: #fff; /* overwrites grey background */
+          }
+          .label-space, #count {
+              padding: 5px 10px;
+          }
+          .label-space, #count {
+            padding: 5px 3px;
+        }
+          /* /. */
+        </style>
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+            <ul>
+                <li>
+                    <h3 class="heading-small">Dashboard</h3>
+                  </li>
+                  <div id="options" class="options">
+                    <li><a href="/pharmacy/index">View summary</a></li>
+                  </div>
+              <li>
+                <h3 class="heading-small">Prescriptions</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/fp34c">Prescription submissions (FP34C)</a></li>
+
+                <li><a href="/pharmacy/unpaid">Unpaid items</a></li>
+                <li><a href="/pharmacy/disallowed">Disallowed items</a></li>
+                <li><a href="/pharmacy/pir">Prescription image request</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Advanced services</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a class="active" href="/pharmacy/cpcs">Community Pharmacy Consultation Service</a></li>
+                <li><a href="/pharmacy/flu">Flu submission</a></li>
+              </div>
+              <li>
+                <h3 class="heading-small">Surveys</h3>
+              </li>
+              <div id="options" class="options">
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+                <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+                <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+
+              </div>
+            </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Create a CPCS token</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Item details</h1>
+                <hr>
+            </header>
+              <form class="form"> <!-- wrapped both questions inside <form> -->
+          
+     
+                 <!-- Manual address entry view -->
+     
+                       <fieldset aria-label="Patient address">
+                       <div class="form-group">
+                          <label class="form-label" for="lineone">
+                          Name
+                          </label>
+                          <input class="form-control" id="lineone" name="patient_line_one" type="text">
+                          </div>
+                          <div class="form-group">
+                          <label class="form-label" for="linetwo">
+                         Quantity
+                          </label>
+                          <input class="form-control" id="linetwo" name="patient_line_two" type="text">
+                       </div>
+     
+                    </fieldset>    
+                    <details>
+                        <summary><span class="summary">How to enter quantity</span></summary>
+                          <p>
+                            Enter the number of doses supplied not the number of packs. For example, the number of tablets,
+                            millilitres of liquid, grams of cream or number of doses of inhaler.
+                          </p>
+                      </details>
+                      <h1 class="heading-medium">
+                        Was this item supplied?
+                                                </h1>
+    
+    
+    
+                                                        <div class="form-group">
+                                                
+                                                          <fieldset class="inline">
+                                                            <legend class="visually-hidden">Was this item supplied?
+                                                            </legend>
+                                                
+                                                            <div class="multiple-choice">
+                                                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                                              <label for="radio-inline-q1-yes">Yes</label>
+                                                              </div>
+                                                              <div class="multiple-choice" data-target="wages-reveal">
+                                                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                                              <label for="radio-inline-q1-no">No</label>
+                                                              </div>
+                                                
+                        
+    
+                                                          </fieldset>
+                                            
+                                                          <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                                            <div class="search-wrapper">
+                                                                <button id="filterHead" class="filter-button">
+                                                                    <div id="input-label" class="label-space form-label-bold">Reason code for not supplying
+                                                                        <span class="chevron" style="float:right;">
+                                                                            <span id="up" style="display:none; font-size:24px; margin-top:4px;">&#x2303;</span>
+                                                                            <span id="down" style="display:inline-block; margin-top:-4px; transform: rotate(180deg); font-size:24px;">&#x2303;</span>
+                                                                        </span>    
+                                                                    </div>
+                                                                    
+                                                                    <div id="count" class="show-count"></div>
+                                                                </button>    
+                                                                <div class="search-body" style="display:block;">
+                                                                    <!-- List of results -->
+                                                                    <fieldset>
+                                                                        <legend class="visuallyhidden">Checkbox inputs</legend>
+                                                                        <ul id="service-list" class="frame scroll-box">
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Aceclofenac" name="Aceclofenac" class="list-input" type="checkbox" value="true" onclick="updateCount();">
+                                                                                    <label class="check-label" for="Aceclofenac">No Supp A - Item not able to be supplied under emergency supply regulations</label>
+                                                                                </div>            
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Acemetacin" name="Acemetacin" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Acemetacin">No Supp B - EPS prescription dispensed for patient</label>
+                                                                                </div>          
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Celecoxib" name="Celecoxib" class="list-input" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Celecoxib">No Supp C - Pharmacist determined that supply not necessary</label>
+                                                                                </div>            
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Dexketoprofen" class="list-input" name="Dexketoprofen" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Dexketoprofen">No Supp D - Item not in stock</label>
+                                                                                </div>            
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Diclofenac Potassium" class="list-input" name="Diclofenac Potassium" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Diclofenac Potassium">No Supp E - Patient/Patient's representative did not make contact</label>
+                                                                                </div>            
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Diclofenac Sodium" class="list-input" name="Diclofenac Sodium" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Diclofenac Sodium">No Supp F - Patient bought the item</label>
+                                                                                </div>          
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <div class="clear-bg multiple-choice multiple-radio">
+                                                                                    <input id="Etodolac" class="list-input" name="Etodolac" type="checkbox" value="true" onclick="updateCount()">
+                                                                                    <label class="check-label" for="Etodolac">No Supp G - Other</label>
+                                                                                </div>            
+                                                                            </li>
+                                                                        </ul>
+                                                                    </fieldset>
+                                                                    <!-- /. -->
+                                                                </div>
+                                                            </div>
+                                                                                                    </div>
+    
+                                                  <br>
+                                                  <a class="button" href="add-another.html" role="button">Next</a>
+
+                                                    </div>
+                                                   </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,234 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+.nhsuk-pagination {
+    margin-top: 28px;
+    margin-bottom: 68px;
+}
+.nhsuk-list, ul, ol {
+    line-height: 1.47368;
+}
+.nhsuk-list, ul, ol {
+    margin-bottom: 16px;
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 0;
+}
+.nhsuk-pagination-item--previous {
+    float: left;
+    text-align: left;
+    width: 50%;
+}
+.nhsuk-pagination-item--next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.nhsuk-pagination__title {
+    line-height: 1.33333;
+}
+.nhsuk-pagination__title {
+    display: block;
+}
+.nhsuk-u-visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.nhsuk-pagination__page {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.nhsuk-pagination__page {
+    display: block;
+    text-decoration: underline;
+}
+.nhsuk-pagination__link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+}
+.nhsuk-pagination__link:visited .nhsuk-icon {
+    fill: #330072;
+}
+.nhsuk-pagination__link .nhsuk-icon {
+    position: absolute;
+    top: -2px;
+}
+.nhsuk-pagination-item--previous .nhsuk-pagination__title {
+    padding-left: 32px;
+}
+.nhsuk-pagination-item--next .nhsuk-pagination__title {
+    padding-right: 32px;
+}
+.nhsuk-icon {
+    height: 34px;
+    width: 34px;
+}
+.nhsuk-icon__arrow-left {
+    fill: #005eb8;
+}
+.nhsuk-icon__arrow-right {
+    fill: #005eb8;
+}
+.nhsuk-pagination-item--next .nhsuk-icon {
+    right: -6px;
+}
+nav, section {
+    display: block;
+}
+</style>
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="/pharmacy/index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="../fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="../unpaid">Unpaid items</a></li>
+              <li><a href="../disallowed">Disallowed items</a></li>
+              <li><a href="../pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="../cpcs">Community Pharmacist Consultation Service</a></li>
+              <li><a href="../flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="../qps">Pharmacy Quality Scheme</a></li>              <li><a href="nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="../cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+            <li><a href="../cpaf-questionnaire/cpafq.html">CPAF questionnaire</a></li>            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Pharmacist Consultation Service</h1>                    
+                    <p class="page-header--sub heading-secondary">Urgent medicines supply</p>
+                    <hr>
+                </header>
+
+                
+
+
+                <h2 class="heading-medium">August 2019</h2>
+                <div class="submissions" style="padding: 0;">
+                  <table class="data-table assets-summary check-your-answers">
+                    <tbody><tr>
+                      <td><span class="strong">Referral ID</span></td>
+                      <td><span class="strong">Date</span></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>12345678901</td>
+                      <td>1st August 2019</td>
+                    </tr>
+                    <tr>
+                        <td>12345678902</td>
+                        <td>2nd August 2019</td>
+                      </tr>              
+                    <tr>
+                      <td>12345678903</td>
+                      <td>3rd August 2019</td>
+                    </tr>
+                                      <tr>
+                      <td>12345678904</td>
+                      <td>4th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678905</td>
+                      <td>5th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678906</td>
+                      <td>6th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678907</td>
+                      <td>7th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678908</td>
+                      <td>8th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678909</td>
+                      <td>9th August 2019</td>
+                    </tr>
+                    <tr>
+                      <td>12345678910</td>
+                      <td>10th August 2019</td>
+                    </tr>
+</tbody></table>
+                </div>
+  <br><br>
+                <a class="button" href="cpcs-view-august.html" role="button">Back to summary</a>
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
