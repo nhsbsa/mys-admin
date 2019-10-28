@@ -209,12 +209,32 @@ router.get(/addFive/, function (req, res) {
     res.redirect('NSAID-audit-start-date'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+//PQS routes //
+
 //PQS Gateway kickout //
 router.get(/addSix/, function (req, res) {
   if (req.query.radioInlineGroup === "No" ) {
     res.redirect('pqs-gateway-ko'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('pqs-tasklist1'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+//PQS domain 2 audit kickout //
+router.get(/domainNotMetOne/, function (req, res) {
+  if (req.query.incomesingle === "lithium-audit") {
+    res.redirect('pqs-d2-lithium'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.incomesingle === "methotrexate-audit") {
+    res.redirect('pqs-d2-methotrexate');
+  } else if (req.query.incomesingle === "amiodarone-audit") {
+    res.redirect('pqs-d2-amiodarone');
+  } else if (req.query.incomesingle === "phenobarbital-audit") {
+    res.redirect('pqs-d2-phenobarbital');
+  } else if (req.query.incomesingle === "none-of-these") {
+    res.redirect('pqs-d2-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    return;
   }
 });
 

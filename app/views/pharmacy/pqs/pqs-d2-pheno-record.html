@@ -77,41 +77,47 @@
                 <hr>
             </header>
             
-            <p>You will be paid for the domains that are marked as complete.</p>
-            <p>Domains that need more action will not be paid.  You can amend your answers if you have since met the criteria for these domains.</p>
+            <form class="form"> <!-- wrapped both questions inside <form> -->
+                        <div class="question1">
+                          <h1 class="heading-medium">
+                              How many patients discussed their treatment with pharmacy staff?
+                          </h1>
 
-            <ol class="task-list">
+                        <div class="nhsuk-form-group">
+                      
+                            <label class="form-label" for="number-did">Patients that discussed their treatment</label>
+                            <input class="form-control" id="number-did" type="text" style="width: 100px;">
+                            
+                             <br><br>                    
 
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Gateway Criteria</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  </li>
-                </ul>
-                
-                <h2 class="task-list-section">Quality Domains</h2>
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-rms-rmt.html">Risk management and safety</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">QOF and QI</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-prevention-cya2.html">Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #B10E1E; color: #ffffff;">not passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Primary Care Networks</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Asthma</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Digital enablers</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                </ul>
-
-        
-        
-                <div style="padding-left: 35px; margin-top: 1em">
-                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
-                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
-                </div>
-
-              </ol>         </div>
+                            <label class="form-label" for="number-did-not">Patients that did not discuss their treatment</label>
+                            <input class="form-control" id="number-did-not" type="text" style="width: 100px;">                     
+                        
+                        </div>
+                              </div> 
+                              
+                        <div class="question1">
+                                <h1 class="heading-medium">
+                                    How many patients have a record on their PMR for which manufacturer's product of phenobarbital to be dispensed?
+                                </h1>
+      
+                              <div class="nhsuk-form-group">
+                            
+                                  <label class="form-label" for="number-did">Patients with PMR record</label>
+                                  <input class="form-control" id="number-did" type="number" style="width: 100px;">
+                                  
+                                   <br><br>                    
+      
+                                  <label class="form-label" for="number-did-not">Patients without PMR record</label>
+                                  <input class="form-control" id="number-did-not" type="text" style="width: 100px;">                     
+                              
+                              </div>
+                                    </div> 
+                                         
+                              <br><br>       
+                            </form>
+                              <a href="pqs-d2-pheno-seizures.html"><input class="button" type="submit" value="Continue"></a>
+         </div>
 
 
 

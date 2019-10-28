@@ -13,7 +13,12 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+.option-text {
+    clear: left;
+    margin-bottom: 10px;
+}
+</style>
 <main id="content" role="main">
 
   <div class="sidebar-layout">
@@ -77,41 +82,49 @@
                 <hr>
             </header>
             
-            <p>You will be paid for the domains that are marked as complete.</p>
-            <p>Domains that need more action will not be paid.  You can amend your answers if you have since met the criteria for these domains.</p>
+            <form class="form" action="domainNotMetOne" method="GET"> <!-- wrapped both questions inside <form> -->
+            <div class="question1">
+               <h1 class="heading-medium">
+                   Have you completed any of these audits?
+               </h1>
+               <span class="form-hint">You must tell us about one of these audits to claim payment for this domain.</span>
 
-            <ol class="task-list">
+               <div class="form-group">
+              
+                              
+                <div class="multiple-choice" data-target="medicineusereviews">
+                    <input id="checkBoxOne" name="incomesingle" value="lithium-audit" type="radio" aria-controls="medicineusereviews" aria-expanded="false">
+                    <label for="checkBoxOne">Lithium audit</label>
+                  </div>
+                  
+                  <div class="multiple-choice" data-target="applianceusereviews">
+                      <input id="checkBoxTwo" name="incomesingle" value="methotrexate-audit" type="radio" aria-controls="applianceusereviews" aria-expanded="false">
+                      <label for="checkBoxTwo">Methotrexate audit</label>
+                    </div>
 
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Gateway Criteria</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  </li>
-                </ul>
-                
-                <h2 class="task-list-section">Quality Domains</h2>
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-rms-rmt.html">Risk management and safety</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">QOF and QI</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-prevention-cya2.html">Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #B10E1E; color: #ffffff;">not passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Primary Care Networks</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Asthma</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Digital enablers</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >Passed</strong></a>
-                </ul>
+                    <div class="multiple-choice" data-target="applianceusereviews">
+                        <input id="checkBoxThree" name="incomesingle" value="amiodarone-audit" type="radio" aria-controls="applianceusereviews" aria-expanded="false">
+                        <label for="checkBoxThree">Amiodarone audit</label>
+                      </div>
+                      
+                    <div class="multiple-choice" data-target="applianceusereviews">
+                          <input id="checkBoxFour" name="incomesingle" value="phenobarbital-audit" type="radio" aria-controls="applianceusereviews" aria-expanded="false">
+                          <label for="checkBoxFour">Phenobarbital audit</label>
+                        </div>
+                                                 
+                      <div class="option-text">
+                        or                    
+                              </div> 
 
-        
-        
-                <div style="padding-left: 35px; margin-top: 1em">
-                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
-                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
+              <div class="multiple-choice" data-target="medicineservice">
+                <input id="checkBoxFive" name="incomesingle" value="none-of-these" type="radio" aria-controls="applianceusereviews" aria-expanded="false">
+                <label for="checkBoxFive">None of these</label>
                 </div>
-
-              </ol>         </div>
+                </div>         
+                </div>               
+         <input class="button" type="submit" value="Next">
+         </form>
+         </div>
 
 
 
