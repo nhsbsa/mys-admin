@@ -1,0 +1,142 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+              <li>
+                  <h3 class="heading-small">Dashboard</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="../index">View summary</a></li>
+                </div>
+            <li>
+              <h3 class="heading-small">Prescriptions</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="../fp34c">Prescription submissions (FP34C)</a></li>
+              <li><a href="../unpaid">Unpaid items</a></li>
+              <li><a href="../disallowed">Disallowed items</a></li>
+              <li><a href="../pir">Prescription image request</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Advanced services</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a href="../cpcs">Community Pharmacist Consultation Service
+</a></li>
+              <li><a href="../flu">Flu submission</a></li>
+            </div>
+            <li>
+              <h3 class="heading-small">Surveys</h3>
+            </li>
+            <div id="options" class="options">
+              <li><a class="active" href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>              
+              <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
+              <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
+              <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>                
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">February 2020 Declaration</h1>                    
+                <hr>
+            </header>
+            
+            <p>You cannot submit the declaration until you have met all the criteria.</p>
+            <ol class="task-list">
+
+                <ul class="task-list-items">
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Gateway Criteria</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >passed</strong></a>
+                  </li>
+                </ul>
+                
+                <h2 class="task-list-section">Quality Domains</h2>
+                <ul class="task-list-items">
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-rms-rmt.html">Risk management and safety</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >passed</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-d2-audits.html">QOF and QI</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed"  >passed</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Primary Care Networks</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Asthma</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Digital enablers</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                </ul>
+
+        
+        
+                <div style="padding-left: 35px; margin-top: 1em">
+                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
+                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
+                </div>
+
+              </ol>         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -224,6 +224,22 @@ router.get(/addSix/, function (req, res) {
 //PQS domain 2 audit kickout //
 router.get(/domainNotMetOne/, function (req, res) {
   if (req.query.incomesingle === "lithium-audit") {
+    res.redirect('pqs-d2-audit2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.incomesingle === "methotrexate-audit") {
+    res.redirect('pqs-d2-audit2');
+  } else if (req.query.incomesingle === "amiodarone-audit") {
+    res.redirect('pqs-d2-audit2');
+  } else if (req.query.incomesingle === "phenobarbital-audit") {
+    res.redirect('pqs-d2-audit2');
+  } else if (req.query.incomesingle === "none-of-these") {
+    res.redirect('pqs-d2-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    return;
+  }
+});
+
+router.get(/domainNotMetTwo/, function (req, res) {
+  if (req.query.incomesingle === "lithium-audit") {
     res.redirect('pqs-d2-lithium'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.incomesingle === "methotrexate-audit") {
     res.redirect('pqs-d2-methotrexate');
@@ -232,9 +248,81 @@ router.get(/domainNotMetOne/, function (req, res) {
   } else if (req.query.incomesingle === "phenobarbital-audit") {
     res.redirect('pqs-d2-phenobarbital');
   } else if (req.query.incomesingle === "none-of-these") {
-    res.redirect('pqs-d2-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-phenobarbital-audit-dates'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     return;
+  }
+});
+
+router.get(/domainNotMetThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-lithium-audit'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-d2-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+router.get(/auditCompleteOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-which-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-methotrexate-audit'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-which-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-amiodarone-audit'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-which-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-phenobarbital-audit'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-which-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-d2-ko'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteFive/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-lithium-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-audit-dates'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteSix/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-d2-lithium'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-methotrexate-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteSeven/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-d2-methotrexate'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-amiodarone-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteEight/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-d2-amiodarone'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-phenobarbital-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/auditCompleteNine/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-d2-phenobarbital'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-audit-dates'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 
