@@ -78,39 +78,53 @@
                 <hr>
             </header>
             
-            <p>You cannot submit the declaration until you have met all the criteria.</p>
-            <ol class="task-list">
+            <form class="form"> <!-- wrapped both questions inside <form> -->
+                        <div class="question1">
+                          <h1 class="heading-medium">
+                              How many patients have seen their GP or specialist to discuss the need for effective contraception while using valproate in the last 12 months?
+                          </h1>
 
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Gateway Criteria</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >passed</strong></a>
-                  </li>
-                </ul>
-                
-                <h2 class="task-list-section">Quality Domains</h2>
-                <ul class="task-list-items">
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-rms-rmt.html">Risk management and safety</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-d2-audits.html">QOF and QI</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed"  >passed</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-d3-prevention.html">Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Primary Care Networks</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Asthma</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
-                  <li class="task-list-item" >
-                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Digital enablers</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
-                </ul>
+                        <div class="nhsuk-form-group">
+                      
+                            <label class="form-label" for="number-did">Patients that have</label>
+                            <input class="form-control" id="number-did" type="text" style="width: 100px;">
+                            
+                             <br><br>                    
 
-        
-        
-                <div style="padding-left: 35px; margin-top: 1em">
-                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
-                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
-                </div>
+                            <label class="form-label" for="number-did-not">Patients that have not</label>
+                            <input class="form-control" id="number-did-not" type="text" style="width: 100px;">                     
 
-              </ol>         </div>
+                            <br><br>                    
+
+                            <label class="form-label" for="number-did-not-know">Patients that did not know</label>
+                            <input class="form-control" id="number-did-not-know" type="text" style="width: 100px;">                     
+
+                        </div>
+                              </div> 
+                              
+                        <div class="question2">
+                                <h1 class="heading-medium">
+                                    How many patients have reported that they are using highly effective contraception?
+                                </h1>
+      
+                              <div class="nhsuk-form-group">
+                            
+                                  <label class="form-label" for="number-did">Patients that are</label>
+                                  <input class="form-control" id="number-did" type="number" style="width: 100px;">
+                                  
+                                   <br><br>                    
+      
+                                  <label class="form-label" for="number-did-not">Patients that are not</label>
+                                  <input class="form-control" id="number-did-not" type="text" style="width: 100px;">                     
+                              
+                              </div>
+                                    </div> 
+
+                                         
+                              <br><br>       
+                            </form>
+                              <a href="pqs-valproate-referrals.html"><input class="button" type="submit" value="Continue"></a>
+         </div>
 
 
 

@@ -13,12 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<style>
-.option-text {
-    clear: left;
-    margin-bottom: 10px;
-}
-</style>
+
 <main id="content" role="main">
 
   <div class="sidebar-layout">
@@ -83,31 +78,107 @@
                 <hr>
             </header>
             
-            <form class="form" action="auditCompleteThree" method="GET"> <!-- wrapped both questions inside <form> -->
+            <form class="form" action="addSix" method="GET"> <!-- wrapped both questions inside <form> -->
             <div class="question1">
                <h1 class="heading-medium">
-                   Have you completed a valproate audit?
+                   Tell us the start date for your valproate audit
                </h1>
 
-                  <div class="form-group">
-                        <fieldset class="inline">
-                    
-                            <legend class="visually-hidden"></legend>
-                    
-                            <div class="multiple-choice">
-                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                              <label for="radio-inline-q1-yes">Yes</label>
-                              </div>
-                              <div class="multiple-choice">
-                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                              <label for="radio-inline-q1-no">No</label>
-                              </div>
-                          
-                        </fieldset>
+
+               <div class="nhsuk-form-group">
+                <span class="nhsuk-hint" id="dob-hint">
+                  For example, 31 3 1980
+                </span>
+            
+                <div class="nhsuk-date-input" id="dob">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                        Day
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
                     </div>
-                 </div>               
-         <input class="button" type="submit" value="Next">
-         </form>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                </div>
+            
+            </div>
+                   </div>        
+                   <div class="question2">
+                    <h1 class="heading-medium">
+                        Tell us the end date for your valproate audit
+                    </h1>
+     
+     
+                    <div class="nhsuk-form-group">
+                     <span class="nhsuk-hint" id="dob-hint">
+                       For example, 31 3 1980
+                     </span>
+                 
+                     <div class="nhsuk-date-input" id="dob">
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                             Day
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                             Month
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                             Year
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                     </div>
+                 
+                 </div>
+                        </div>        
+                        <div class="question3">
+                          <h1 class="heading-medium">
+                              Tell us how many patients that are of childbearing potential were prescribed valproate during the audit
+                          </h1>
+           
+           
+                          <div class="nhsuk-form-group">
+                       
+                            <div class="govuk-form-group">
+                
+                              <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                            <label class="govuk-label" for="width-3">
+                              patients
+                            </label>
+                          </div>                       
+                       </div>
+                              </div>        
+                              <br><br>       
+                            </form>
+                              <a href="pqs-valproate-record.html"><input class="button" type="submit" value="Continue"></a>
          </div>
 
 
