@@ -336,7 +336,7 @@ router.get(/primaryCareNetworkOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-tasklist5'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/primaryCareNetworkTwo/, function (req, res) {
@@ -350,7 +350,7 @@ router.get(/diabetesAuditOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-d3-diabetes-discuss'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-d3-cya'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-prevention-cya'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 
