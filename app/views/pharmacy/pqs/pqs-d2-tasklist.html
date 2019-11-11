@@ -14,9 +14,9 @@
 
 {% block content %}
 <style>
-.option-text {
-    clear: left;
-    margin-bottom: 10px;
+.task-name {
+    width: 50%;
+    float: left;
 }
 </style>
 <main id="content" role="main">
@@ -79,37 +79,31 @@
         
               <header class="page-header" style="clear: none; display: block;">
                 <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>                
-                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Medicines safety audits</h1>                    
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">February 2020 declaration</h1>                    
 
                 <hr>
             </header>
             
-            <form class="form" action="auditCompleteTen" method="GET"> <!-- wrapped both questions inside <form> -->
-            <div class="question1">
-               <h1 class="heading-medium">
-                   Have you completed a Valproate audit?
-               </h1>
+            <ol class="task-list">
+                
+                <h2 class="task-list-section">Medicines safety audits</h2><br>
+                <ul class="task-list-items">
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-phenobarbital-identified.html">Phenobarbital audit</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-valproate.html">Valproate audit</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pqs-nsaid.html">NSAID audit</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                </ul>
 
-                  <div class="form-group">
-                        <fieldset class="inline">
-                    
-                            <legend class="visually-hidden"></legend>
-                    
-                            <div class="multiple-choice">
-                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                              <label for="radio-inline-q1-yes">Yes</label>
-                              </div>
-                              <div class="multiple-choice">
-                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                              <label for="radio-inline-q1-no">No</label>
-                              </div>
-                          
-                        </fieldset>
-                    </div>
-                 </div>               
-         <input class="button" type="submit" value="Next">
-         </form>
-         </div>
+        
+        
+                <div style="padding-left: 35px; margin-top: 1em">
+                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
+                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
+                </div>
+
+              </ol>         </div>
 
 
 

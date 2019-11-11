@@ -264,28 +264,28 @@ router.get(/domainNotMetThree/, function (req, res) {
 
 router.get(/auditCompleteOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-lithium-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('pqs-methotrexate-audit'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/auditCompleteTwo/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-methotrexate-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('pqs-amiodarone-audit'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/auditCompleteThree/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-amiodarone-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('pqs-phenobarbital-audit'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/auditCompleteFour/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-phenobarbital-identified'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('pqs-d2-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
   }
@@ -327,9 +327,9 @@ router.get(/auditCompleteNine/, function (req, res) {
 });
 router.get(/auditCompleteTen/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-valproate'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-tasklist'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-nsaid'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-d2-tasklist'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/primaryCareNetworkOne/, function (req, res) {
