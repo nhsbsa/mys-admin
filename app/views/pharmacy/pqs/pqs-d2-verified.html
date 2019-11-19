@@ -13,7 +13,12 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+.task-name {
+    width: 50%;
+    float: left;
+}
+</style>
 <main id="content" role="main">
 
   <div class="sidebar-layout">
@@ -74,42 +79,37 @@
         
               <header class="page-header" style="clear: none; display: block;">
                 <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>                
-                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Asthma</h1>                    
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Medicines Safety Audits</h1>                    
 
                 <hr>
             </header>
             
-            <form class="form"> <!-- wrapped both questions inside <form> -->
-            <div class="question1">
-               <h1 class="heading-medium">
-                   Can the pharmacy show evidence that asthma patients who were dispensed more than 6 short-acting bronchodilator inhalers without any corticosteroid inhalers within a 6 month period were referred to an appropriate health care professional for an asthma review?
-               </h1>
+            <ol class="task-list">
+                
+              <p>Our records confirm that you've completed these audits. </p>
+<table class="data-table assets-summary check-your-answers">
+              <tbody>
+                <tr>
+                  <td>Phenobarbital audit</td>
+                  <td style="text-align:right; padding-right:0;"><a href="pqs-d2-pheno-verified.html" style="text-decoration: underline;">View</a></td>
+                </tr>
+                <tr>
+                  <td>Valproate audit</td>
+                  <td style="text-align:right; padding-right:0;"><a href="pqs-d2-valproate-verified.html" style="text-decoration: underline;">View</a></td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="border-bottom: 0;">
+                                    </tbody>
+            </table>
 
-               <span class="form-hint">This must include evidence that that all children aged 5-15 prescribed an inhaled corticosteroid for asthma have a spacer device where appropriate in line with NICE TA38 and have a personalised asthma action plan.</span>
+        
+        
+                <div>
+                    <a href="pqs-nsaid2.html"><input class="button" type="submit" value="Continue"></a>
+                    <a class="button" href="pqs-save-continue1" role="button" style="background-color: #005EA5">Save and continue later</a>
+                </div>
 
-                   <div class="form-group">
-                       <fieldset class="inline">
-                   
-                           <legend class="visually-hidden"></legend>
-                   
-                           <div class="multiple-choice">
-                             <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                             <label for="radio-inline-q1-yes">Yes</label>
-                             </div>
-                             <div class="multiple-choice">
-                             <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                             <label for="radio-inline-q1-no">No</label>
-                             </div>
-                         
-                       </fieldset>
-                   </div>
-         </div>              
-          
-  <a class="button" href="pqs-d5-cya.html" role="button">Continue</a>
-  <a class="button" href="pqs-save-continue2" role="button" style="background-color: #005EA5">Save and continue later</a>
-
-</form>
-         </div>
+              </ol>         </div>
 
 
 

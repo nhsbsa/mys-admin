@@ -14,7 +14,6 @@
 {% endblock %}
 
 {% block content %}
-
 <main id="content" role="main">
 
   <div class="sidebar-layout">
@@ -42,14 +41,15 @@
                 <h3 class="heading-small">Advanced services</h3>
               </li>
               <div id="options" class="options">
-                <li><a href="/pharmacy/cpcs">Community Pharmacist Consultation Service</a></li>
+                <li><a class="active" href="/pharmacy/cpcs">Community Pharmacist Consultation Service
+</a></li>
                 <li><a href="/pharmacy/flu">Flu submission</a></li>
               </div>
               <li>
                 <h3 class="heading-small">Surveys</h3>
               </li>
               <div id="options" class="options">
-                <li><a class="active" href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
+                <li><a href="/pharmacy/qps">Pharmacy Quality Scheme</a></li>                
                 <li><a href="/pharmacy/nsaids">Non-steroidal anti-inflammatory drug audit</a></li>
                 <li><a href="/pharmacy/cpaf">Community Pharmacy Assurance Framework pre-screening questionnaire</a></li>
                 <li><a href="/pharmacy/cpaf-questionnaire/cpafq">Community Pharmacy Assurance Framework pre-visit questionnaire</a></li>
@@ -74,20 +74,63 @@
           <div class="grid-row">
             <div class="column-two-thirds">
         
-                <div class="done-panel">
-                    <h1 class="heading-large" style="margin-bottom: 10px;">Submission complete</h1>
-                </div>
-                
-                <h2 class="heading-medium">What happens next</h2>
-                
-                <p>We will send an email to <span class="strong">shared.premises@nhs.net</span> confirming your submission.</p>
-                <p>Payment will be made as part of the payment by the NHSBSA.</p>
-                <div class="form-group">
-                    <a class="button" href="../index.html" role="button">Finish</a>
-                  
+                  <header class="page-header" style="clear: none; display: block;">
+                        <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>                
+                        <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Medicines safety audits</h1>                    
 
-   </div>
-   </div>
+                        <hr>
+                    </header>
+                        
+                <h2 class="heading-medium">
+                  Check your answers
+               </h2>
+               <br>
+               
+               <dl class="govuk-check-your-answers cya-questions-short">
+                <div>
+                   <dt class="cya-question">
+                    Claim for NSAID at last review?
+                   </dt>
+                   <dd class="cya-answer">
+                      Yes
+                   </dd>
+                   <dd class="cya-change">
+                      <a href="#">
+                      Change<span class="visually-hidden"> answer</span>
+                      </a>
+                   </dd>
+                </div>
+                <div>
+                   <dt class="cya-question">
+                    Implement findings from NSAID?
+                      </dt>
+                   <dd class="cya-answer">
+                         Yes
+                      </dd>
+                   <dd class="cya-change">
+                      <a href="#">
+                      Change
+                      </a>
+                   </dd>
+                </div>
+                <div>
+                   <dt class="cya-question">
+                         Complete NSAID audit for this review period?
+                   </dt>
+                   <dd class="cya-answer">
+                         Yes
+                      </dd>
+                   <dd class="cya-change">
+                      <a href="#">
+                      Change
+                      </a>
+                   </dd>
+                </div>
+             </dl>
+                              <br><br>                       
+               <a class="button" href="pqs-d2-tasklist6.html" role="button">Continue</a>
+               <a class="button" href="pqs-save-continue2" role="button" style="background-color: #005EA5">Save and continue later</a>
+
 
 
       </div>

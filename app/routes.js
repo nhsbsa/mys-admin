@@ -336,7 +336,7 @@ router.get(/primaryCareNetworkOne/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-tasklist-9'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/primaryCareNetworkTwo/, function (req, res) {
