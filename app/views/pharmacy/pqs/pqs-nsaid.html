@@ -80,33 +80,10 @@
             </header>
             
             <form class="form"> <!-- wrapped both questions inside <form> -->
-              <div class="question1">
-                 <h1 class="heading-medium">
-                     Did you claim for the NSAID quality criterion at the last review date (15th February 2019)?
-                 </h1>
-  
-  
-                     <div class="form-group">
-                         <fieldset class="inline">
-                     
-                             <legend class="visually-hidden"></legend>
-                     
-                             <div class="multiple-choice">
-                               <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                               <label for="radio-inline-q1-yes">Yes</label>
-                               </div>
-                               <div class="multiple-choice">
-                               <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                               <label for="radio-inline-q1-no">No</label>
-                               </div>
-                           
-                         </fieldset>
-                     </div>
-           </div>              
             
            <div class="question2">
               <h1 class="heading-medium">
-                  Have you implemented the findings from the Community Pharmacy NSAID Safety Audit 2018-19 report into your day-to-day practice?
+                  Have you implemented the findings and recommendations from the Community Pharmacy NSAID Safety Audit 2018-19 report into your day-to-day practice?
               </h1>
 
               <span class="form-hint">View the <a href="https://www.england.nhs.uk/publication/community-pharmacy-nsaid-safety-audit-2018-19/">Community Pharmacy NSAID Safety Audit 2018-19 report</a> on the NHS England website</span>
@@ -132,7 +109,7 @@
   
         <div class="question3">
           <h1 class="heading-medium">
-              Have you completed an NSAID Audit for this review period?
+              Have you completed an NSAID Audit for this review period and shared your anonymised data with NHS England and NHS Improvement via MYS or PharmOutcomes?
           </h1>
   
   
@@ -141,7 +118,7 @@
               
                       <legend class="visually-hidden"></legend>
               
-                      <div class="multiple-choice">
+                      <div class="multiple-choice" data-target="wages-reveal">
                         <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
                         <label for="radio-inline-q3-yes">Yes</label>
                         </div>
@@ -151,6 +128,92 @@
                         </div>
                     
                   </fieldset>
+              <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+            <div class="question1">
+               <h1 class="heading-medium">
+                   What was the start date for your NSAID audit?
+               </h1>
+
+
+               <div class="nhsuk-form-group">
+                <span class="nhsuk-hint" id="dob-hint">
+                  For example, 31 3 1980
+                </span>
+            
+                <div class="nhsuk-date-input" id="dob">
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                        Day
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                        Month
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                  <div class="nhsuk-date-input__item">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                        Year
+                      </label>
+                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                    </div>
+                  </div>
+                </div>
+            
+            </div>
+                   </div>        
+                   <div class="question2">
+                    <h1 class="heading-medium">
+                        What was the end date for your NSAID audit?
+                    </h1>
+     
+     
+                    <div class="nhsuk-form-group">
+                     <span class="nhsuk-hint" id="dob-hint">
+                       For example, 31 3 1980
+                     </span>
+                 
+                     <div class="nhsuk-date-input" id="dob">
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                             Day
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                             Month
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                       <div class="nhsuk-date-input__item">
+                         <div class="nhsuk-form-group">
+                           <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                             Year
+                           </label>
+                           <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                         </div>
+                       </div>
+                     </div>
+                 
+                 </div>
+                                  </div>
+                              
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>  
               </div>
     </div>  
     <a class="button" href="pqs-d2-cya" role="button">Continue</a>
