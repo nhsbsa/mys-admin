@@ -1,0 +1,183 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+    .declaration li {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .declaration li {
+      list-style-type: decimal;
+    }
+  
+    .declaration {
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #bfc1c3;
+      margin-top: 15px;
+      margin-bottom: 35px;
+      padding-top: 50px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+    }
+  
+    .declaration:before {
+      content: "DECLARATION";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+      line-height: 1.25;
+      background: #bfc1c3;
+      color: white;
+    }
+  </style>
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Hepatitis C testing</h1>                    
+                    <p class="page-header--sub heading-secondary">Register for this service</p>
+                    <hr>
+                </header>
+
+                        <p>
+                          By registering you are confirming that you are ready to provide the service in line with the requirements of the service specification.
+                        </p>
+                        <hr>
+                                                
+                                    <div class="grid-row">
+                                        <div class="column-third">
+                                           <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                                        </div>
+                                        <div class="column-two-thirds">
+                                           <div class="declaration">
+                                              <ol>
+                                                 <li style="margin-left:40px; padding-bottom:10px;">I confirm that I have read and understood the service specification document </li>
+                                                  
+                                                  <li style="margin-left:40px; padding-bottom:10px;">I confirm that my pharmacy has the appropriate IT functionality in place to provide this service.</li>  
+                                                  
+                                                </ol>
+                                           </div>
+                                            
+                                     <!--
+                                           <div class="form-group">
+                                              <label class="form-label" for="telephone-number">Full name</label>
+                                              <input class="form-control form-control-1-2" id="telephone-number" name="telephone-number" type="text" value="Tom Smith" readonly>
+                                           </div>
+                                     -->
+                                            
+                                            <div class="form-group">
+                                        <label class="form-label" for="full-name-f1">Your full name</label>
+                                     <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
+                                         </div>
+                                            
+                    
+                                           <div class="multiple-choice multiple-radio">
+                                              <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+                                              <label for="benefits">I agree and accept the declaration above.</label>
+                                            </div>
+                                            <br>
+                                            <br>
+                                     
+                                         
+                                     <h1 class="heading-medium">Next steps</h1>
+                
+                                     <p>We'll send an email to the email address below.  If this is incorrect, change it.</p>
+                                     <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1"><br><br>
+                                     <p>If you would like a copy sent to another email address, please enter it below. </p>
+                                     
+                                       <div class="form-group">
+                                         <label class="form-label" for="full-name-f1">Email address (optional)</label>
+                                      <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
+                                          </div>
+                                           <div style="clear:both;"><a href="hep-c-reg-confirm.html"><input class="button" type="submit" value="Register"></a></div>
+                                     </div>
+                                          </div>
+                         
+                  <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

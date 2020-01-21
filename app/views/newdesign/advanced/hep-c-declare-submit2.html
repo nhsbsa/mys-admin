@@ -1,0 +1,175 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Hepatitis C testing</h1>                    
+                    <p class="page-header--sub heading-secondary">Monthly submission</p>
+                    <hr>
+                </header>
+
+                              
+              <form class="form"> <!-- wrapped both questions inside <form> -->
+
+
+                <h2 class="heading-medium">Your submission</h2>
+                <div class="submissions" style="padding: 0;">
+                  <table class="data-table assets-summary check-your-answers">
+                    <tbody><tr>
+                      <td><span class="strong">Month</span></td>
+                      <td><span class="strong">Positive tests</span></td>
+                      <td><span class="strong">Negative tests</span></td>
+                    </tr>
+                    <tr>
+                      <td>April 2020</td>
+                      <td>5</td>
+                      <td>43</td>
+                    </tr>
+                    <tr>
+                      <td>March 2020</td>
+                      <td>4</td>
+                      <td>32</td>
+                    </tr>
+                    <tr>
+                      <td>February 2020</td>
+                      <td>7</td>
+                      <td>36</td>
+                    </tr>
+                  </tbody></table>
+                </div>
+              <br>
+
+              <div class="grid-row">
+                <div class="column-third">
+                   <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                </div>
+                <div class="column-two-thirds">
+                   <div class="declaration">
+                      <br>
+                      <p>I am claiming payment in accordance with the terms of this service.</p>
+                     <p>I confirm that the pharmacy named above has been registered with the NHS Business Services
+                        Authority as a provider of this service and understand that this payment claim will not be
+                         approved if the pharmacy has not been registered.</p>
+                   </div>
+                   
+                      <div class="form-group">
+                         <label class="form-label" for="firstname">
+                         First name
+                         </label>
+                         <input class="form-control" id="firstname" name="firstname" type="text">
+                      </div>
+                      <div class="form-group">
+                         <label class="form-label" for="lastname">
+                         Last name
+                         </label>
+                         <input class="form-control" id="lastname" name="lastname" type="text">
+                      </div>
+   
+   
+                      <div class="panel panel-border-wide">
+                         <p>We'll send an email to <span class="strong">premises.address@nhs.net</span>.</p>
+                           <p>If you would like a copy sent to another email address, please enter it below.
+                         </p>
+                      </div>
+                      <div class="form-group">
+                         <label class="form-label" for="additional-email">
+                         Email address (optional)
+                         </label>
+                         <input class="form-control" id="additional-email" name="additional-email" type="text" width="20">
+                      </div>
+                      <div class="multiple-choice nbg">
+                         <input type="checkbox" id="declaration" class="multiple-choice nbg">
+                         <label for="declaration">I agree and accept this declaration.<p></p>
+                      </label></div><br><br><br>
+                      <div class="form-group">
+                        <a class="button" href="monthly-claim-done.html" role="button">Next</a>
+                      </div>
+   
+   
+   
+   </div>
+   </div>
+
+
+      </form></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

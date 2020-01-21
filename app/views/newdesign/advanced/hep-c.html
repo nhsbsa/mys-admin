@@ -1,0 +1,101 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+
+              <header class="page-header" style="clear: none; display: block;">
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Hep C Design</h1>                    
+                <hr>
+            </header>
+
+            <h2 class="heading-large">Hep C service registration</h2>
+
+            <h2 class="heading-medium">Registration</h2>
+
+            <li><a href="hep-c-start-reg.html">Version 1</a></li>
+
+            <h2 class="heading-medium">De-registration</h2>
+
+            <li><a href="hep-c-start-dereg.html">Version 1</a></li>
+
+
+            <h2 class="heading-large">Hep C claim form</h2>
+
+            <P>Requirements for Hep C are that contractors can claim for the last 6 months, starting from but not before February 2020.  This means that the user flow for February will need to be different, changing to include the previous months option from March 20 onwards.</P>
+
+
+            <li><a href="hep-c-start.html">First month claims</a></li>
+            <li><a href="hep-c-start-later.html">Later claims</a></li>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

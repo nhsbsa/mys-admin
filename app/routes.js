@@ -389,14 +389,40 @@ router.get(/cpcsRegister/, function (req, res) {
   }
 });
 
-// CPCS De-reg//
-router.get(/deRegister/, function (req, res) {
+// Hep C De-reg//
+router.get(/deRegisterHep/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('cpcs-dereg-confirm'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('hep-c-dereg-confirm'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('cpcs-start'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('hep-c-start-dereg'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+router.get(/deRegisterHep/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hep-c-dereg-confirm'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('hep-c-start-dereg'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+// Hep C register//
+router.get(/hepRegister/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hep-c-reg'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('../index'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// Hep C previous month//
+router.get(/hepPreviousMonth/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('hep-c-month'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('hep-c-declare-submit2'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
 
 // CPAF Questionnnaire FULL//
 // appliancesOne is the action from your <form> //

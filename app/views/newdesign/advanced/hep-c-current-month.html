@@ -1,0 +1,116 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Hepatitis C testing</h1>                    
+                    <p class="page-header--sub heading-secondary">Monthly submission</p>
+                    <hr>
+                </header>
+
+                
+                  <div class="form-group" >
+                        <h1 class="heading-medium">
+                            Which month are you claiming for?
+                        </h1>
+              
+<form>
+  <div class="form-group">
+      <fieldset>
+
+      <legend class="visually-hidden">Where do you live?</legend>
+
+      <div class="multiple-choice">
+        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <label for="radio-1">February 2020</label>
+      </div>
+
+    </fieldset>
+  </div>
+</form>                        <br>
+                                       
+                               
+
+                  <a class="button" href="hep-c-tests.html" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
