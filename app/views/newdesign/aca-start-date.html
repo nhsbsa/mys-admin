@@ -1,0 +1,126 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Oral anticoagulant safety audit</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Audit start date</h1>                    
+                    <hr>
+                </header>
+    
+              <h2 class="heading-medium">Please enter the date you started collecting information for this audit.</h2>
+
+              <div class="nhsuk-form-group">
+                    <span class="nhsuk-hint" id="dob-hint">
+                      For example, 31 3 1980
+                    </span>
+                
+                    <div class="nhsuk-date-input" id="dob">
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                            Day
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                            Month
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                      <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                            Year
+                          </label>
+                          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                    </div>
+                
+                </div>
+              <br>
+                <br>
+  
+                  <a class="button" href="aca-Patient-details.html" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

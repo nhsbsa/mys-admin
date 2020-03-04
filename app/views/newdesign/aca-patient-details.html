@@ -1,0 +1,202 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Oral anticoagulant safety audit - patient 1</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Patient Details</h1>                    
+                    <hr>
+                </header>
+              
+                 <div class="nhsuk-form-group">
+               <h2 class="heading-medium">Date identified</h2>
+
+                      <span class="nhsuk-hint" id="dob-hint">
+                        For example, 31 3 1980
+                      </span>
+                  
+                      <div class="nhsuk-date-input" id="dob">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                      </div>
+                  
+                  </div>
+  
+                <div class="form-group">
+              <h2 class="heading-medium">Patient age</h2>
+
+              <div class="govuk-form-group">
+                
+                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
+                <label class="govuk-label" for="width-3">
+                  years
+                </label>
+              </div>
+
+              <div class="govuk-form-group">
+
+
+                
+                  <h2 class="heading-medium">Patient gender</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="counciltax" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Male</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="counciltax" value="no">
+                        <label for="no">Female</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="unknown" type="radio" name="counciltax" value="no">
+                          <label for="unknown">Unknown</label>
+                        </div>
+  
+                    </div>
+                    </div>
+                    </div>
+
+              <div class="govuk-form-group">
+
+
+                
+                  <h2 class="heading-medium">Is this patient a care home resident?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice">
+                        <input id="yes1" type="radio" name="carehome" value="yes">
+                        <label for="yes1">Yes</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no1" type="radio" name="carehome" value="no">
+                        <label for="no1">No</label>
+                      </div>
+            
+                    </div>
+                    </div>
+
+                    <br><br>
+
+
+                                                            
+
+
+          
+              
+                  <br/>
+                  <br/>
+              
+
+
+                  <a class="button" href="aca-acs-prescribed" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

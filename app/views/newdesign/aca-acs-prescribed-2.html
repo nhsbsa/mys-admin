@@ -1,0 +1,161 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Oral anticoagulant safety audit - patient 1</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Anticoagulants prescribed</h1>                    
+                <hr>
+            </header>
+
+              <h2 class="heading-medium">Name of anticoagulant prescribed</h2> 
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    
+                  </legend>
+                  <span id="waste-hint" class="govuk-hint">
+                    Select one.
+                  </span>
+                  <div class="form-group" >
+              
+          
+                    <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="MS">Acenocoumarol</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="MUR">Apixaban</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">Dabigatran</label>
+                          </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                              <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                              <label for="AUR">Edoxaban</label>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">Phenindione</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">Rivaroxaban</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">Warfarin</label>
+                              </div>
+                          </div>
+              
+                  <h2 class="heading-medium">Was the anticoagulant supplied in a monitored dosage system/compliance aid?</h2>
+                    
+
+              
+                  <div class="form-group">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="MS">No</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                        <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                        <label for="MUR">Yes - one drug per blister</label>
+                     </div>
+                        
+                     <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                        <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                        <label for="AUR">Yes - multiple drugs per blister</label>
+                     </div>  
+                  </div>
+                  </br>
+
+                  <a class="button" href="aca-add-another-drug-2.html" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                 <p class="page-header--sub heading-secondary">Oral anticoagulant safety audit - patient 1</p>
+                 <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Anticoagulants prescribed</h1>                    
+                 <hr>
+                </header>
+    
+              <form class="form" action="addTwo" method="GET"> <!-- wrapped both questions inside <form> -->
+
+                <!--Question 1 -->
+              <div class="question1">
+                <br>
+                  <h1 class="heading-medium">
+                      Did you check this combination with the presriber?
+                  </h1>
+
+
+                  <div class="form-group" >
+                          
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="MUR">Yes - prescriber discontinued one or both anticoagulants</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="AUR">Yes – prescriber confirmed two anticoagulants required</label>
+                          </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
+                                <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
+                                <label for="AUR5">Yes - other action by prescriber</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">No – patient/representative reported reason for both agents being required</label>
+                              </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-3">
+                                <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
+                                <label for="AUR5">No - other reason</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-3" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+
+            <br>
+                  <a class="button" href="aca-nsaids-prescribed.html" role="button">Next</a>
+
+      </div>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

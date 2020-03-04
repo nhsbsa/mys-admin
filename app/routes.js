@@ -453,3 +453,19 @@ router.get(/epsOne/, function (req, res) {
 });
 
 
+// NSAIDs add another anticoagulant //
+router.get(/addMedsThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('aca-acs-prescribed-2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('aca-nsaids-prescribed'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+router.get(/addMedsFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('aca-acs-prescribed-2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('aca-check-combo'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
