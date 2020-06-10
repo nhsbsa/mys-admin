@@ -1,0 +1,134 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+                        <li>
+              <a href="ppc-start" class="active">PPC sales</a>
+            </li>
+
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+              <div class="grid-row">
+<div class="column-two-thirds">
+
+            <div class="heading-group">
+               <h1 class="heading-large">
+                  Check answers
+               </h1>
+            </div>
+
+            <h2 class="heading-medium table-head">Customer details</h2>
+            <table id="review-table-one" class="check-table">
+               <!-- about you -->
+               <tbody><tr>
+                  <td width="35%"><span class="strong">Name</span></td>
+                  <td>John Smith</td>
+                  <td width="8%"><a href="name">Change</a></td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Date of birth</span></td>
+                  <td>1/1/1990</td>
+                  <td><a href="dob">Change</a></td>
+               </tr>
+
+               <tr id="nhsno">
+                  <td><span class="strong">NHS Number</span></td>
+                  <td></td>
+                  <td><a href="nhsno">Change</a></td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Address</span></td>
+                  <td>STELLA HOUSE<br>NEWCASTLE UPON TYNE<br>NE15 8NY</td>
+                  <td><a href="post-address">Change</a></td>
+               </tr>
+               <!-- about your prepayment -->
+            </tbody></table>
+            <h2 class="heading-medium table-head">Certificate details</h2>
+
+                  <table id="review-table-two" class="check-table">
+               <tbody><tr>
+                  <td width="35%"><span class="strong">Length</span></td>
+                  <td> 12 months</td>
+                  <td width="8%"><a href="duration">Change</a></td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Starts on</span></td>
+                  <td>18/09/2018</td>
+                  <td><a href="start-date">Change</a></td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Ends on</span></td>
+                  <td>17/09/2019</td>
+                  <td><a href="start-date">Change</a></td>
+               </tr>
+               <tr>
+                  <td><span class="strong">Total cost</span></td>
+                  <td>£105.90</td>
+                  <td><a href="duration"></a></td>
+               </tr>               
+               <tr>
+                 <td><span class="strong">Get prepayment certificate by text?</span></td>
+                 <td>Yes</td>
+                 <td><a href="copy">Change</a></td>
+               </tr>
+                  <tr><td><span class="strong">Mobile number</span></td>
+                  <td> </td>
+                  <td><a href="copy">Change</a></td>
+               </tr>
+               <tr>
+                 <td><span class="strong">Get prepayment certificate by email?</span></td>
+                 <td>Yes</td>
+                 <td><a href="copy">Change</a></td>
+               </tr>
+               <tr id="email-value">
+                  <td><span class="strong">Email</span></td>
+                  <td></td>
+                  <td><a href="copy">Change</a></td>
+               </tr>
+
+            </tbody></table>
+            <br>
+
+
+    <p><a class="button" href="ppc-done" role="button">Continue</a></p>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

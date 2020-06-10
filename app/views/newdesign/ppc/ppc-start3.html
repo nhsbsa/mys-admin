@@ -1,0 +1,60 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+                        <li>
+              <a href="ppc/ppc-start" class="active">PPC sales</a>
+            </li>
+
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+              <div class="grid-row">
+                  <div class="column-two-thirds">
+
+
+        <h1 class="heading-large">Sell a Prescription Prepayment Certificate (PPC)</h1>
+        <br>
+
+         <p>Start a PPC sale.</p>
+    <p><a class="button button-start" href="ppc-patient-info2" role="button">Start now</a></p>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

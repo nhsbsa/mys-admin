@@ -1,0 +1,78 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+                        <li>
+              <a href="ppc-start" class="active">PPC sales</a>
+            </li>
+
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+              <div class="grid-row">
+<div class="column-two-thirds">
+    <div class="done-panel">
+      <h1 class="heading-large"><span id="done-tick"></span>Prepayment complete</h1>
+      <h2 class="heading-medium">We have received the PPC information.</h2>
+    </div>
+    <h2 class="heading-medium">Customer's prepayment details</h2>
+    <!-- <p> Please give the customer these details and keep a record of them. -->
+    <div class="info-table">
+      <p>Prepayment for: <span class="strong"></span></p>
+      <p>Certificate number: <span class="strong">869 467 589</span></p>
+      <p>Started on: <span class="strong">29 June 2017</span></p>
+      <p>Ends on: <span class="strong" id="Edate">29 September 2017</span></p>
+    </div>
+        <p>The customer will receive a text or email with their certificate details.</p>
+    <h2 class="heading-medium">Payment</h2>
+    <p>If the customer has not already paid, the charge is <strong class="bold">£104</strong>.</p>
+    <h2 class="heading-medium">Dispensing prescriptions</h2>
+    <p>You should ask customers for prepayment details.</p>
+    <p>If they do not have them, tick 'Evidence not seen' on the prescription. Do not charge them.</p>
+    <p>We prevent fraud by matching prepayment details on our database with prescriptions.</p>
+    <h2 class="heading-medium">Save or print</h2>
+    <ul class="options-list">
+      <li><a class="icon print-icon" href="javascript:window.print();">Print this</a></li>
+      <li><a class="icon download-icon" href="" target="_blank">Save this page (PDF 55k)</a></li>
+    </ul>
+    <br>
+    <p><a class="button" href="../index2" role="button">Finished</a></p>
+  </div>  </div>
+  </div>
+
+</main>
+
+{% endblock %}

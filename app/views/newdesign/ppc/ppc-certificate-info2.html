@@ -1,0 +1,144 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+                        <li>
+              <a href="ppc-start" class="active">PPC sales</a>
+            </li>
+
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+              <div class="grid-row">
+                  <div class="column-two-thirds">
+
+
+        <h1 class="heading-large">Certificate details</h1>
+        <br>
+
+<div id="manual-address">
+     
+                       <fieldset aria-label="Patient address">
+                       <legend><span class="form-label-bold">
+                       Address
+                       </span></legend>
+                       <div class="form-group">
+                          <label class="form-label" for="lineone">
+                          Address line 1
+                          </label>
+                          <input class="form-control" id="lineone" name="patient_line_one" type="text">
+                          </div>
+                          <div class="form-group">
+                          <label class="form-label" for="linetwo">
+                          Address line 2
+                          </label>
+                          <input class="form-control" id="linetwo" name="patient_line_two" type="text">
+                       </div>
+                       <div class="form-group">
+                          <label class="form-label" for="patient_town">
+                          Town or city
+                          </label>
+                          <input class="form-control" id="patient-town" name="patient_town" type="text">
+                       </div>
+                       <div class="form-group">
+                          <label class="form-label" for="patient-postcode">
+                          Postcode
+                          </label>
+                          <input class="form-control form-control-1-4" name="patient_postcode" id="patient-postcode" type="text">
+                       </div>
+     
+                    </fieldset></div>
+
+                    <div class="form-group">
+            <fieldset>
+              <legend>
+              <span class="form-label-bold">PPC duration</span>
+              </legend>
+                <div class="form-item-wrapper">
+                  <div class="multiple-choice">
+                    <input type="radio" id="twelve" value="twelve" name="duration">
+                      <label class="form-control-radio" for="three">
+                        3 months
+                        <span class="strong">£29.65</span>
+                      </label>
+                  </div>
+                  <div class="form-group">
+                    <div class="multiple-choice">
+                      <input type="radio" id="three" value="three" name="duration">
+                      <label class="form-control-radio" for="twelve">
+                       12 months
+                      <span class="strong">£105.90</span>
+                    </label>
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-group">
+               <div class="form-group">
+    <fieldset>
+      <legend>
+        <span class="form-label-bold">
+          PPC start date
+        </span>
+        <span class="form-hint" id="dob-hint">For example, 31 3 1980</span>
+      </legend>
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+        </div>
+      </div>
+    </fieldset>
+  </div>
+    
+  </fieldset></div>
+
+    <p><a class="button" href="ppc-certificate-options" role="button">Continue</a></p>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}

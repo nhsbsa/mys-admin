@@ -55,7 +55,7 @@
 
                 <!--Question 1 -->
               <div class="question1">
-                                  <h2 class="heading-medium">Was the patient prescribed an oral NSAID as well as anticoagulants?</h2>
+                                  <h2 class="heading-medium">Was the patient prescribed an antiplatelet as well as anticoagulants?</h2>
                     
 
               
@@ -78,11 +78,35 @@
             <br><br>
                             
                             
-              <div class="question2 js-hidden" id="wages-reveal-1" style="margin-top:25px; padding-top:0">
+              <div class="question3 js-hidden" id="wages-reveal-1" style="margin-top:25px; padding-top:0">
+            
+
+                                  <h2 class="heading-medium">Was the patient also prescribed gastro-protection?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice">
+                        <input id="yes1" type="radio" name="counciltax1" value="no">
+                        <label for="yes1">Yes</label>
+                      </div>
+            
+                      <div class="multiple-choice" data-target="wages-reveal-2">
+                        <input id="no1" type="radio" name="counciltax1" value="yes" aria-controls="wages-reveal-2" aria-expanded="false">
+                        <label for="no1">No</label>
+                      </div>
+          
+                    </div>
+            </div>
+                        <br><br>
+              <div class="question2 js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
             
 
                   <h1 class="heading-medium">
-                      Did you check this combination with the presriber?
+                      Did you refer the patient back to the presriber for a gastro protection review?
                   </h1>
 
 
@@ -90,35 +114,27 @@
                           
                       <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
                           <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                          <label for="MUR">Yes - prescriber discontinued one or both anticoagulants</label>
+                          <label for="MUR">Yes - gastro-protection prescribed</label>
                         </div>
                         
                         <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
                             <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
-                            <label for="AUR">Yes – prescriber confirmed two anticoagulants required</label>
+                            <label for="AUR">Yes - prescriber discontinued anticoagulant and/or antiplatelet</label>
                           </div>
-
-                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
-                                <input id="AUR5" name="incomesingle" value="earned-income" type="checkbox">
-                                <label for="AUR5">Yes - other action by prescriber</label>
-                            </div>
-                         
-                               
-                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
-                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
-                              <div class="nhsuk-form-group">              
-                                <div class="nhsuk-form-group">
-                                    <span class="form-hint">
-                                        Do not include any personal information which can identify the patient.
-                                      </span>
-                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
-                                </div>
-                              </div>
-                            </div>
                             
                           <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
                                 <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
-                                <label for="AUR">No – patient/representative reported reason for both agents being required</label>
+                                <label for="AUR">Yes - prescriber confirmed no medication changes required</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">No - Patient had already been referred for gastro-protection within the last 6 months</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="AUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="AUR">No - Patient already discussed with prescriber and had made decision not to take gastro-protection</label>
                               </div>
 
                             <div class="multiple-choice multiple-radio" data-target="wages-reveal-3">
@@ -140,6 +156,7 @@
                             </div>
                           </div>
             </div>
+
 
 
             <br>

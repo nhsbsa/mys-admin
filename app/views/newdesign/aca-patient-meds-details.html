@@ -1,0 +1,601 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+                <header class="page-header" style="clear: none; display: block;">
+                    <p class="page-header--sub heading-secondary">Oral anticoagulant safety audit - patient 1</p>
+                    <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Patient Details</h1>                    
+                    <hr>
+                </header>
+              
+                 <div class="nhsuk-form-group">
+               <h2 class="heading-medium">Date identified</h2>
+
+                      <span class="nhsuk-hint" id="dob-hint">
+                        For example, 31 3 1980
+                      </span>
+                  
+                      <div class="nhsuk-date-input" id="dob">
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                              Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                              Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                          <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                              Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                          </div>
+                        </div>
+                      </div>
+                  
+                  </div>
+  
+                <div class="form-group">
+              <h2 class="heading-medium">Patient age</h2>
+
+              <div class="govuk-form-group">
+                
+                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:250px;">
+                <label class="govuk-label" for="width-3">
+                  years
+                </label>
+              </div>
+
+              <div class="govuk-form-group">
+
+
+                
+                  <h2 class="heading-medium">Patient gender</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="yes" type="radio" name="gender" value="yes" aria-controls="wages-reveal" aria-expanded="false">
+                        <label for="yes">Male</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no" type="radio" name="gender" value="no">
+                        <label for="no">Female</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                          <input id="unknown" type="radio" name="gender" value="no">
+                          <label for="unknown">Unknown</label>
+                        </div>
+  
+                    </div>
+                    </div>
+                    </div>
+
+              <div class="govuk-form-group">
+
+
+                
+                  <h2 class="heading-medium">Is this patient a care home resident?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice">
+                        <input id="yes1" type="radio" name="carehome" value="yes">
+                        <label for="yes1">Yes</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no1" type="radio" name="carehome" value="no">
+                        <label for="no1">No</label>
+                      </div>
+            
+                    </div>
+                    </div>
+                    <br><br>
+                                  <h2 class="heading-medium">Name of anticoagulant prescribed</h2> 
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    
+                  </legend>
+                  <span id="waste-hint" class="govuk-hint">
+                    Select one.
+                  </span>
+                  <div class="form-group" >
+              
+          
+                    <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="Acenocoumarol" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="Acenocoumarol">Acenocoumarol</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="Apixaban" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="Apixaban">Apixaban</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="Dabigatran" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="Dabigatran">Dabigatran</label>
+                          </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                              <input id="Edoxaban" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                              <label for="Edoxaban">Edoxaban</label>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="Phenindione" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="Phenindione">Phenindione</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="Rivaroxaban" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="Rivaroxaban">Rivaroxaban</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="Warfarin" name="anticoagulant" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="Warfarin">Warfarin</label>
+                              </div>
+                          </div>
+              
+                  <h2 class="heading-medium">Was the anticoagulant supplied in a monitored dosage system/compliance aid?</h2>
+                    
+
+              
+                  <div class="form-group">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice multiple-radio" data-target="medicineservice">
+                        <input id="no" name="compliance" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                        <label for="no">No</label>
+                      </div>
+            
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                        <input id="yesone" name="compliance" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                        <label for="yesone">Yes - one drug per blister</label>
+                     </div>
+                        
+                     <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                        <input id="yesmultiple" name="compliance" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                        <label for="yesmultiple">Yes - multiple drugs per blister</label>
+                     </div>  
+                  </div>
+                  </br>
+
+
+
+              <div class="question1">
+                <br>
+                  <h1 class="heading-medium">
+                      If more than one anticoagulant was prescribed, did you check this combination with the presriber?
+                  </h1>
+
+
+                  <div class="form-group" >
+                          
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="ypd" name="checkcombo" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="ypd">Yes - prescriber discontinued one or both anticoagulants</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="yc2" name="checkcombo" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="yc2">Yes – prescriber confirmed two anticoagulants required</label>
+                          </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal">
+                                <input id="yesother" name="checkcombo" value="earned-income" type="checkbox">
+                                <label for="yesother">Yes - other action by prescriber</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="npr" name="checkcombo" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="npr">No – patient/representative reported reason for both agents being required</label>
+                              </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
+                                <input id="nor" name="checkcombo" value="earned-income" type="checkbox">
+                                <label for="nor">No - other reason</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+
+                                                            
+              <div class="question1">
+                                  <h2 class="heading-medium">Was the patient prescribed an oral NSAID as well as anticoagulants?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal-3">
+                        <input id="yes2" type="radio" name="oralnsaid" value="yes" aria-controls="wages-reveal-3" aria-expanded="false">
+                        <label for="yes2">Yes</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no2" type="radio" name="oralnsaid" value="no">
+                        <label for="no2">No</label>
+                      </div>
+            
+                    </div>
+                </div>
+            <br><br>
+                            
+                            
+              <div class="question2 js-hidden" id="wages-reveal-3" style="margin-top:25px; padding-top:0">
+            
+
+                  <h1 class="heading-medium">
+                      Did you check this combination with the presriber?
+                  </h1>
+
+
+                  <div class="form-group" >
+                          
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="CHC" name="checknsaidcombo" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="CHC">Yes - prescriber discontinued one or both anticoagulants</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="CHC2" name="checknsaidcombo" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="CHC2">Yes – prescriber confirmed two anticoagulants required</label>
+                          </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-4">
+                                <input id="CHC3" name="checknsaidcombo" value="earned-income" type="checkbox">
+                                <label for="CHC3">Yes - other action by prescriber</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-4" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="CHC4" name="checknsaidcombo" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="CHC4">No – patient/representative reported reason for both agents being required</label>
+                              </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-5">
+                                <input id="CHC5" name="checknsaidcombo" value="earned-income" type="checkbox">
+                                <label for="CHC5">No - other reason</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-5" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+
+
+            <br>
+               <!--Question 1 -->
+              <div class="question1">
+                                  <h2 class="heading-medium">Was the patient prescribed an antiplatelet as well as anticoagulants?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice" data-target="wages-reveal-6">
+                        <input id="yes3" type="radio" name="antiplatelet" value="yes" aria-controls="wages-reveal-6" aria-expanded="false">
+                        <label for="yes3">Yes</label>
+                      </div>
+          
+                      <div class="multiple-choice">
+                        <input id="no3" type="radio" name="antiplatelet" value="no">
+                        <label for="no3">No</label>
+                      </div>
+            
+                    </div>
+                </div>
+            <br><br>
+                            
+                            
+              <div class="question3 js-hidden" id="wages-reveal-6" style="margin-top:25px; padding-top:0">
+            
+
+                                  <h2 class="heading-medium">Was the patient also prescribed gastro-protection?</h2>
+                    
+
+              
+                  <div class="inline">
+                      <legend class="visually-hidden">
+                      </legend>
+          
+                      <div class="multiple-choice">
+                        <input id="yes4" type="radio" name="gastro" value="no">
+                        <label for="yes4">Yes</label>
+                      </div>
+            
+                      <div class="multiple-choice" data-target="wages-reveal-7">
+                        <input id="no4" type="radio" name="gastro" value="yes" aria-controls="wages-reveal-7" aria-expanded="false">
+                        <label for="no4">No</label>
+                      </div>
+          
+                    </div>
+            </div>
+                        <br><br>
+              <div class="question2 js-hidden" id="wages-reveal-7" style="margin-top:25px; padding-top:0">
+            
+
+                  <h1 class="heading-medium">
+                      Did you refer the patient back to the presriber for a gastro protection review?
+                  </h1>
+
+
+                  <div class="form-group" >
+                          
+                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                          <input id="refrev" name="referreview" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                          <label for="refrev">Yes - gastro-protection prescribed</label>
+                        </div>
+                        
+                        <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                            <input id="refrev2" name="referreview" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                            <label for="refrev2">Yes - prescriber discontinued anticoagulant and/or antiplatelet</label>
+                          </div>
+                            
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="refrev3" name="referreview" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="refrev3">Yes - prescriber confirmed no medication changes required</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="refrev4" name="referreview" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="refrev4">No - Patient had already been referred for gastro-protection within the last 6 months</label>
+                              </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="applianceusereviews">
+                                <input id="refrev5" name="referreview" value="earned-income" type="checkbox" aria-controls="applianceusereviews" aria-expanded="false">
+                                <label for="refrev5">No - Patient already discussed with prescriber and had made decision not to take gastro-protection</label>
+                              </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-8">
+                                <input id="refrev6" name="referreview" value="earned-income" type="checkbox">
+                                <label for="refrev6">No - other reason</label>
+                            </div>
+                         
+                               
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-8" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            </div>
+
+
+              <div class="question1">
+                <br>
+                  <h1 class="heading-medium">
+                      How was the audit completed for this patient?
+                  </h1>
+
+
+                  <div class="form-group" >
+                          
+                      <div class="multiple-choice multiple-radio">
+                          <input id="inperson" name="auditmethod" value="earned-income" type="checkbox">
+                          <label for="inperson">Conversation with the patient in the pharmacy</label>
+                        </div>
+                        
+                      <div class="multiple-choice multiple-radio">
+                          <input id="phone" name="auditmethod" value="earned-income" type="checkbox">
+                            <label for="phone">Conversation with the patient by telephone</label>
+                        </div>
+
+                      <div class="multiple-choice multiple-radio">
+                          <input id="skype" name="auditmethod" value="earned-income" type="checkbox">
+                                <label for="skype">Conversation with the patient by skype/video link</label>
+                            </div>
+                         
+                      <div class="multiple-choice multiple-radio">
+                          <input id="other" name="auditmethod" value="earned-income" type="checkbox">
+                                <label for="other">Conversation with the patient by other route e.g. mail etc.</label>
+                            </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-9">
+                                <input id="not1" name="auditmethod" value="earned-income" type="checkbox"  aria-controls="wages-reveal-9" aria-expanded="false">
+                                <label for="not1">Patient's representative in pharmacy, patient not contacted</label>
+                            </div>
+                                                        <div class="panel panel-border-narrow js-hidden" id="wages-reveal-9" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify why the patient was not contacted</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-10">
+                                <input id="not2" name="auditmethod" value="earned-income" type="checkbox"  aria-controls="wages-reveal-10" aria-expanded="false">
+                                <label for="not2">Medicine delivered by pharmacy, patient not contacted</label>
+                            </div>
+                            <div class="panel panel-border-narrow js-hidden" id="wages-reveal-10" style="margin-top:25px; padding-top:0">
+                              <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify why the patient was not contacted</h2>
+                              <div class="nhsuk-form-group">              
+                                <div class="nhsuk-form-group">
+                                    <span class="form-hint">
+                                        Do not include any personal information which can identify the patient.
+                                      </span>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="multiple-choice multiple-radio" data-target="wages-reveal-2">
+                                <input id="not3" name="auditmethod" value="earned-income" type="checkbox"  aria-controls="wages-reveal" aria-expanded="false">
+                                <label for="not3">Patient unwilling to discuss anticoagulant medicine</label>
+                            </div>
+                            
+                          </div>
+            </div>
+
+            <br>
+
+          
+              
+                  <br/>
+                  <br/>
+              
+
+
+                  <a class="button" href="aca-audit-questions" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+  </div>
+
+</main>
+
+{% endblock %}
