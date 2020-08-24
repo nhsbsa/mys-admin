@@ -469,3 +469,12 @@ router.get(/addMedsFour/, function (req, res) {
     res.redirect('aca-check-combo'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+// Flu submissions 2020 //
+router.get(/fluOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu-api-submit'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});

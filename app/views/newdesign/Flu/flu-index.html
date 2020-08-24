@@ -1,0 +1,85 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <h1 class="heading-large">
+                  Community Seasonal Influenza Vaccination Service
+              </h1><hr>
+
+
+              <h2 class="heading-medium">Last year claim form</h2>
+
+              <ul style="list-style: disc; margin-left: 30px;">
+              <li><a href="flu.html">Manual claim journey</a>
+              </li>
+            </ul>
+
+
+              <h2 class="heading-medium">2020 claim with API</h2>
+
+              <p>API/manual claim</p>
+
+              <ul style="list-style: disc; margin-left: 30px;">
+              <li><a href="flu-api-start.html">Flu claim journey</a>
+              </li>
+            </ul>
+
+              </div>
+          </div>
+
+
+
+      </div>
+  </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
