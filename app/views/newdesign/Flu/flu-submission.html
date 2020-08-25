@@ -219,43 +219,45 @@
                        </div>
                  -->
 
-                        <div class="form-group">
-                    <label class="form-label" for="full-name-f1">Your full name</label>
-                 <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
-                     </div>
-
-                        <div class="form-group">
-                    <label class="form-label" for="full-name-f1">Email address (optional)</label>
-                         <span class="form-hint">
-                             This address will only be used to send you a receipt of submission.
-                   </span>
-                 <input class="form-control form-control-1-2" id="full-name-f1" type="text" name="full-name-f1">
-                     </div>
+                 <fieldset>
+<legend class="visually-hidden">New Submission</legend>
+<div class="form-group">
+<label class="form-label" for="firstname">First name</label>
 
 
-                       <div class="multiple-choice multiple-radio">
-                          <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
-                          <label for="benefits">I agree and accept the declaration above.</label>
-                        </div>
-                        <br>
-                        <br>
-                        <!--
-                        <hr>
+<input class="form-control" id="firstname" type="text" name="firstname" value="">
+</div>
+<div class="form-group">
+<label class="form-label" for="surname">Surname</label>
 
-                        <div class="multiple-choice" style="margin-bottom:20px;">
-                          <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
-                          <label for="checkbox-telephone-number">As user <strong>Tom Smith</strong>, I agree to the declaration above.</label>
-                       </div>
 
-                        <div class="panel panel-border-wide">
-                   <p>
-                    You will be prompted for your password to validate your identity and complete your submission.
-                   </p>
-                 </div>
+<input class="form-control" id="surname" type="text" name="surname" value="">
+</div>
+<div class="form-group">
+<span id="emailHint" class="panel panel-border-narrow">
+A confirmation email will be sent to <span class="strong">dynamic email</span>.
+If you would like a copy sent to another email address, please enter it below.
+</span>
+<label class="form-label" for="email">Email address (optional)</label>
 
-                 -->
 
-                       <div style="clear:both;"><a href="flu-done"><input class="button" type="submit" value="Send submission"></a></div>
+<input class="form-control" id="email" type="text" name="email" value="">
+</div>
+<div class="form-group">
+
+
+<div class="multiple-choice multiple-radio">
+<input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+<label for="benefits">I agree and accept this declaration.</label>
+</div>
+
+</div>
+<div class="form-group">
+<a class="button" href="flu-done" role="button">Continue</a>
+
+</div>
+
+</fieldset>
                     </div>
                  </div>
 
