@@ -478,3 +478,10 @@ router.get(/fluOne/, function (req, res) {
     res.redirect('flu'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+router.get(/fluTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu-submission'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
