@@ -58,32 +58,58 @@
 
                       </header><br><br>
 
-                      <h2 class="heading-medium" style="margin-top:0px;">You've confirmed your Flu vaccination data for October 2020.</h2>
-                      <table>
-                         <thead>
-                            <tr>
-                               <td><span class="strong">Period</span></td>
-                               <td><span class="strong">number of vaccines</span></td>
-                               <td style="text-align: end;"><span class="strong">Status</span></td>
-                               <td><span class="strong"></span></td>
-                            </tr>
-                         </thead>
-                         <tbody>
-                            <tr>
-                               <td>October 2020</td>
-                               <td>145</td>
-                               <td><strong class="task-completed" id="eligibility-completed">CONFIRMED</strong></td>
-                               <td style="text-align:right; padding-right:0;"><a href="flu-api-oct.html" style="text-decoration: underline;">View</a></td>
-                            </tr>
-                         </tbody>
-                      </table>
-                                          <hr>
-            <form class="form" action="fluTwo" method="GET"> <!-- wrapped both questions inside <form> -->
+                      <p>We've got the information about your Influenza vaccinations from your pharmacy IT provider.</p>
+                      <hr>
+                      <div class="grid-row">
+                    <div class="column-third">
+                       <h2 class="heading-medium" style="margin-top:0px;">October</h2>
+                    </div>
+                    <div id="hideme" class="column-two-thirds">
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+
+                          </tbody>
+                       </table>
+
+                       <table>
+                          <thead>
+                             <tr>
+                                <td><span class="strong">Category</span></td>
+                                <td><span class="strong">Quantity</span></td>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td>FluarixTM Tetra Split virion</td>
+                                <td>21</td>
+                             </tr>
+                             <tr>
+                                <td>Influvac® Surface antigen</td>
+                                <td>13</td>
+                             </tr>
+                             <tr>
+                                <td>Imuvac® Surface antigen</td>
+                                <td>54</td>
+                             </tr>
+                             <tr>
+                                <td>Influenza vaccine Split virions</td>
+                                <td>34</td>
+                             </tr>
+                          </tbody>
+                       </table>
+
+                    </div>
+                 </div>
+                 <hr>
+
+            <form class="form" action="fluThree" method="GET"> <!-- wrapped both questions inside <form> -->
 
       <!--Question 1 -->
     <div class="question1">
         <h1 class="heading-medium">
-            Do you want to add another month?
+            Do you want to use these figures?
         </h1>
 
 
@@ -98,7 +124,7 @@
                       </div>
                       <div class="multiple-choice">
                       <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                      <label for="radio-inline-q1-no">No</label>
+                      <label for="radio-inline-q1-no">No, I want to submit manually</label>
                       </div>
 
                 </fieldset>

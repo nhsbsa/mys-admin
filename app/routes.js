@@ -480,8 +480,29 @@ router.get(/fluOne/, function (req, res) {
 });
 router.get(/fluTwo/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('flu'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('flu-api-start-months2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu-submission2'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/fluThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu-another-month'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu-step2-oct'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/fluFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu-api-start-months2'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('flu-submission'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/fluFive/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu-submission'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu-step2-sept'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
