@@ -501,7 +501,7 @@ router.get(/fluFour/, function (req, res) {
 });
 router.get(/fluFive/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('flu-submission'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('flu-submission3'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
     res.redirect('flu-step2-sept'); // if both input values are "Yes" - redirect to 'page-name' //
   }
