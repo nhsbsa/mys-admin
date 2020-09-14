@@ -506,3 +506,26 @@ router.get(/fluFive/, function (req, res) {
     res.redirect('flu-step2-sept'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+// PQS 20/21 //
+router.get(/pqsOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-pharmacy-lead'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/pqsTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-pcn-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-pcn-non-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+router.get(/pqsThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-pharmacy-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('pqs-pharmacy-non-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});

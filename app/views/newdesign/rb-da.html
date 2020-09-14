@@ -1,0 +1,101 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="prescriptions" class="active">Prescriptions</a>
+            </li>
+            <li>
+              <a href="advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+        <header class="page-header" style="clear: none; display: block;">
+          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Unpaid/Disallowed items</h1>
+          <hr>
+      </header>
+
+
+      <h2 class="heading-large">Integrated UI</h2>
+
+      <h2 class="heading-medium">Assumptions</h2>
+
+      <p>Users would benefit from an integrated UI for disallowed and unpaid items, to allow them to see the record history, and avoid confusion if items have moved between unpaid and disallowed.</p>
+
+
+      <ul style="list-style: disc; margin-left: 30px;">
+            <li><span class="strong"><a href="rb-da-integrated.html">Integrated view</a></span></li>
+            </ul>
+<br>
+
+<h2 class="heading-large">Separate UI</h2>
+
+<h2 class="heading-medium">Assumptions</h2>
+
+<p>Users would prefer a separate UI.  This may cause confusion if items have moved between unpaid and disallowed.</p>
+
+
+<ul style="list-style: disc; margin-left: 30px;">
+      <li><span class="strong"><a href="rb-da-separate.html">Unpaid items</a></span></li>
+      <li><span class="strong"><a href="rb-da-separate.html">Disallowed items</a></span></li>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

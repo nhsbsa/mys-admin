@@ -399,32 +399,43 @@
                 <hr>
             </header>
 
-            <p>Use this service to complete your Pharmacy Quality Scheme (PQS) Part 2 Payment declaration for February 2021.</P>
-
-              <p>You will need to have previously completed the Part 1 Essential Criteria checklist declaration and provide information on the following quality domains:</p>
-
-              <ul style="list-style: disc; margin-left: 30px;">
-                    <li>Infection Prevention and Control and Antimicrobial Stewardship</li>
-                    <li>Prevention</li>
-                    <li>Risk Management</li>
-                    <li>Primary Care Network Prevention</li>
-                    <li>Primary Care Network Business Continuity</li>
-                    </ul>
-
-                    <br>
-
-                    <div class="panel panel-border-wide">
-  <p>
-    The declaration closes on 26 February at 11.59pm.
-  </p>
-</div>
-
-<a class="button button-start" href="pqs-gateway-1" role="button">Start now</a>
-
-              </div>
-              </div>
 
 
+            <form class="form" action="pqsOne" method="GET"> <!-- wrapped both questions inside <form> -->
+
+      <!--Question 1 -->
+    <div class="question1">
+        <h1 class="heading-medium">
+            Are you in a PCN area, or a non-PCN area?
+        </h1>
+        <span class="form-hint">Some hint text to describe what the difference is</span><br>
+
+
+            <div class="form-group">
+                <fieldset>
+
+                    <legend class="visually-hidden"></legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-q1-Yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">No</label>
+                      </div>
+
+                </fieldset>
+            </div>
+  </div>
+
+  <br>
+  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+</form>
+          </div>
+          </div>
+      </div>
   </div>
   <script src="/public/javascripts/details.polyfill.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>

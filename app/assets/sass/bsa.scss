@@ -1642,7 +1642,7 @@ fieldset {
   text-decoration: none;
   /* [5] */
   }
-  
+
   .nhsuk-promo__link-wrapper:focus {
     background-color: #F8F8F8;
     box-shadow: 0 0 0 4px #ffb81C; }
@@ -1767,7 +1767,7 @@ fieldset {
         clear: both;
         content: '';
         display: block; }
-    
+
     .nhsuk-grid-column-one-quarter {
       box-sizing: border-box;
       padding: 0 16px; }
@@ -1775,7 +1775,7 @@ fieldset {
         .nhsuk-grid-column-one-quarter {
           float: left;
           width: 25%; } }
-    
+
     .nhsuk-grid-column-one-third {
       box-sizing: border-box;
       padding: 0 16px;
@@ -1784,7 +1784,7 @@ fieldset {
         .nhsuk-grid-column-one-third {
           float: left;
           width: 33.3333%; } }
-    
+
     .nhsuk-grid-column-one-half {
       box-sizing: border-box;
       padding: 0 16px; }
@@ -1792,7 +1792,7 @@ fieldset {
         .nhsuk-grid-column-one-half {
           float: left;
           width: 50%; } }
-    
+
     .nhsuk-grid-column-two-thirds {
       box-sizing: border-box;
       padding: 0 16px; }
@@ -1800,7 +1800,7 @@ fieldset {
         .nhsuk-grid-column-two-thirds {
           float: left;
           width: 66.6666%; } }
-    
+
     .nhsuk-grid-column-three-quarters {
       box-sizing: border-box;
       padding: 0 16px; }
@@ -1808,7 +1808,7 @@ fieldset {
         .nhsuk-grid-column-three-quarters {
           float: left;
           width: 75%; } }
-    
+
     .nhsuk-grid-column-full {
       box-sizing: border-box;
       padding: 0 16px; }
@@ -1816,7 +1816,7 @@ fieldset {
         .nhsuk-grid-column-full {
           float: left;
           width: 100%; } }
-         
+
           /* ==========================================================================
    COMPONENTS / #PANEL
    ========================================================================== */
@@ -1833,7 +1833,7 @@ fieldset {
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
-  
+
       @media (max-width: 61.875em){
 .nhsuk-panel-group__item {
     flex: 0 0 100%;
@@ -1965,16 +1965,16 @@ fieldset {
       border-color: #e3504c;
       color: #000000;
       border-color: #000000; }
-  
+
   .nhsuk-case__content__header {
     font-weight: normal;
     font-size: 20px;
     margin-bottom: 10px;
     color: #345a9b; }
-  
+
   .nhsuk-case--urgent .nhsuk-case__content__header {
     color: #e3504c; }
-  
+
   .nhsuk-case__content__data-list {
     display: flex;
     margin: 10px 0; }
@@ -1987,34 +1987,34 @@ fieldset {
       .nhsuk-icon {
         height: 34px;
         width: 34px; }
-      
+
       .nhsuk-icon__search {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__chevron-left {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__chevron-right {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__close {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__cross {
         fill: #da291c; }
-      
+
       .nhsuk-icon__tick {
         stroke: #007f3b; }
-      
+
       .nhsuk-icon__arrow-right {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__arrow-left {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__arrow-right-circle {
         fill: #007f3b; }
-      
+
       .nhsuk-icon__chevron-down {
         -moz-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
@@ -2022,43 +2022,41 @@ fieldset {
         -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
         fill: #005eb8; }
-      
+
       .nhsuk-icon__chevron-down path {
         fill: #fff; }
-      
+
       .nhsuk-icon__chevron-up {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__chevron-up path {
         fill: #fff; }
-      
+
       .nhsuk-icon__emdash path {
         fill: #aeb7bd; }
-      
+
       .nhsuk-icon__plus {
         fill: #005eb8; }
-      
+
       .nhsuk-icon__minus {
         fill: #005eb8; }
-      
+
       .nhsuk-icon--size-15 {
         height: 25px;
         width: 25px; }
-      
+
       .nhsuk-icon--size-25 {
         height: 42.5px;
         width: 42.5px; }
-      
+
       .nhsuk-icon--size-50 {
         height: 51px;
         width: 51px; }
-      
+
       .nhsuk-icon--size-75 {
         height: 59.5px;
         width: 59.5px; }
-      
+
       .nhsuk-icon--size-100 {
         height: 68px;
         width: 68px; }
-      
-      

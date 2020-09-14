@@ -394,37 +394,53 @@
             <div class="column-two-thirds">
 
               <header class="page-header" style="clear: none; display: block;">
-                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
-                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">2020/21</h1>
+                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2020/21</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Before you start</h1>
                 <hr>
             </header>
 
-            <p>Use this service to complete your Pharmacy Quality Scheme (PQS) Part 2 Payment declaration for February 2021.</P>
-
-              <p>You will need to have previously completed the Part 1 Essential Criteria checklist declaration and provide information on the following quality domains:</p>
-
-              <ul style="list-style: disc; margin-left: 30px;">
-                    <li>Infection Prevention and Control and Antimicrobial Stewardship</li>
-                    <li>Prevention</li>
-                    <li>Risk Management</li>
-                    <li>Primary Care Network Prevention</li>
-                    <li>Primary Care Network Business Continuity</li>
-                    </ul>
-
-                    <br>
-
-                    <div class="panel panel-border-wide">
-  <p>
-    The declaration closes on 26 February at 11.59pm.
-  </p>
-</div>
-
-<a class="button button-start" href="pqs-gateway-1" role="button">Start now</a>
-
-              </div>
-              </div>
 
 
+            <form class="form"> <!-- wrapped both questions inside <form> -->
+                                      <div class="question2">
+                                        <h1 class="heading-medium">
+                                            Which regional area are you the pharmacy lead for?
+                                        </h1>
+
+                                        <div class="form-group">
+                                          <input class="form-control" type="text" id="full-name-f2">
+                                        </div>
+                                    </div>
+
+                                    <div class="question1">
+                                      <h1 class="heading-medium">
+                                          Do you declare that you are the Pharmacy lead for that regional area?
+                                      </h1>
+
+                                      <div class="form-group">
+                                        <fieldset class="inline">
+
+                                            <legend class="visually-hidden"></legend>
+
+                                            <div class="multiple-choice">
+                                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                              <label for="radio-inline-q1-yes">Yes</label>
+                                              </div>
+                                              <div class="multiple-choice">
+                                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                              <label for="radio-inline-q1-no">No</label>
+                                              </div>
+
+                                        </fieldset>
+                                    </div>
+                                        </div>
+
+                                          <br><br>
+                                        </form>
+              <a href="pqs-gateway-cya.html"><input class="button" type="submit" value="Next"></a>
+          </div>
+          </div>
+      </div>
   </div>
   <script src="/public/javascripts/details.polyfill.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
