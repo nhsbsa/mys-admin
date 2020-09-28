@@ -408,8 +408,6 @@
         <h1 class="heading-medium">
             Are you the appointed Pharmacy lead for your area?
         </h1>
-        <span class="form-hint">Some hint text</span><br>
-
 
             <div class="form-group">
                 <fieldset>
@@ -425,7 +423,21 @@
                       <label for="radio-inline-q1-no">No</label>
                       </div>
 
-                </fieldset>
+                </fieldset><br>
+
+                <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                What is a Pharmacy Lead?
+                </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <p>A Pharmacy Lead is an individual appointed by a group of community pharmacies who do not fall under a local Primary Care Network (PCN).  They provide leadership and act as a single channel of communication between their group and their NHS England & NHS Improvement regional team for that area.</p>
+
+
+                  </div>
+                  </details>
+
             </div>
   </div>
 
@@ -437,22 +449,18 @@
           </div>
       </div>
   </div>
-  <script src="/public/javascripts/details.polyfill.js"></script>
+  <!-- <script src="/public/javascripts/details.polyfill.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
-  <script src="/public/javascripts/application.js"></script>
-
-
+  <script src="/public/javascripts/application.js"></script>-->
   <!-- selector -->
-  <script src="/public/javascripts/typeahead-aria.js"></script>
-  <script src="/public/javascripts/init-autocomplete.js"></script>
-
+  <!--<script src="/public/javascripts/typeahead-aria.js"></script>
+  <script src="/public/javascripts/init-autocomplete.js"></script> -->
   <script>
       sessionStorage.removeItem("q1");
       sessionStorage.removeItem("q2");
       sessionStorage.removeItem("q3");
       sessionStorage.removeItem("q4");
   </script>
-
 </main>
 
 {% endblock %}

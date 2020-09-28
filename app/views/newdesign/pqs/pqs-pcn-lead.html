@@ -1,60 +1,49 @@
 {% extends "layout_bsa.html" %}
-
 {% block page_title %}
   NHSBSA Prototype
 {% endblock %}
-
 {% block proposition_header %}
   <!-- blank to remove the proposition header -->
 {% endblock %}
-
 {% block header_class %}
   <!-- blank to remove the proposition header -->
 {% endblock %}
-
 {% block content %}
 <style>
   .ui-autocomplete {
     padding: 0;
     list-style: none;
     background-color: #fff;
-    border: 2px solid #6f777b;
+    border: 2px solid #6F777B;
     max-height: 350px;
     overflow-x: hidden;
   }
-
   .ui-autocomplete .ui-menu-item {
-    border-top: 1px solid #bfc1c3;
+    border-top: 1px solid #BFC1C3;
     display: block;
     padding: 4px 6px;
-    color: #0b0c0c;
+    color: #0B0C0C;
     cursor: pointer;
   }
-
   .ui-autocomplete .ui-menu-item:first-child {
     border-top: none;
   }
-
   .ui-autocomplete .ui-menu-item.ui-state-focus {
     font-weight: bold;
-    background-color: #6f777b;
+    background-color: #6F777B;
     color: #fff;
   }
-
   .ui-autocomplete {
     width: 100%;
   }
-
   @media (min-width: 641px) {
     .ui-autocomplete {
       width: 66.66%;
     }
   }
-
   .added-country .form-control {
     padding: 0.5em;
   }
-
   .typeahead,
   .tt-query,
   .tt-hint {
@@ -64,45 +53,36 @@
     margin: 0;
     /* padding: 0.5em; */
   }
-
   .tt-hint {
     display: none;
   }
-
   .tt-dropdown-menu {
     padding: 0;
     background-color: #fff;
     border: 1px solid #ccc;
     width: 100%;
   }
-
   .tt-suggestion {
     padding: 0.5em;
     font-size: 19px;
     line-height: 24px;
   }
-
   .tt-suggestion p {
     margin: 0;
   }
-
   .tt-suggestion.tt-is-under-cursor {
     color: #fff;
-    background-color: #0097cf;
+    background-color: #0097CF;
   }
-
   .twitter-typeahead {
     width: 100%;
   }
-
   .validation-wrapper .optional-section .twitter-typeahead input {
     margin-bottom: 0;
   }
-
   .test-case {
     overflow: visible;
   }
-
   .visually-hidden,
   .visuallyhidden,
   .hidden-hint .screenreader-punctuation,
@@ -116,11 +96,9 @@
     padding: 0;
     border: 0;
   }
-
   .added-country .form-control {
     padding: 0.5em;
   }
-
   .tt-menu {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -128,29 +106,23 @@
     max-height: 220px;
     overflow-y: scroll;
   }
-
   .tt-suggestion {
     padding: 0.5em;
   }
-
   .tt-suggestion:hover,
   .tt-suggestion.tt-cursor {
     color: #fff;
-    background-color: #0097cf;
+    background-color: #0097CF;
   }
-
   .tt-suggestion:hover {
     cursor: pointer;
   }
-
   .twitter-typeahead {
     width: 100%;
   }
-
   .test-case {
     overflow: visible;
   }
-
   dialog {
     position: absolute;
     left: 0;
@@ -168,11 +140,9 @@
     color: black;
     display: none;
   }
-
   dialog[open] {
     display: block;
   }
-
   dialog+.backdrop {
     position: fixed;
     top: 0;
@@ -181,7 +151,6 @@
     left: 0;
     background: rgba(0, 0, 0, 0.1);
   }
-
   /* for small devices, modal dialogs go full-screen */
   @media screen and (max-width: 540px) {
     dialog[_polyfill_modal] {
@@ -191,7 +160,6 @@
       margin: 1em;
     }
   }
-
   ._dialog_overlay {
     position: fixed;
     top: 0;
@@ -199,7 +167,6 @@
     bottom: 0;
     left: 0;
   }
-
   dialog {
     display: block;
     position: inherit;
@@ -207,7 +174,6 @@
     padding: 0;
     border: 0;
   }
-
   dialog h1 {
     font-family: "nta", Arial, sans-serif;
     font-weight: 700;
@@ -215,14 +181,12 @@
     font-size: 24px;
     line-height: 1.0416666667;
   }
-
   @media (min-width: 641px) {
     dialog h1 {
       font-size: 36px;
       line-height: 1.1111111111;
     }
   }
-
   dialog[open] {
     box-sizing: border-box;
     margin: 0 auto;
@@ -230,7 +194,6 @@
     width: 90%;
     border: 5px solid black;
   }
-
   @media (min-width: 641px) {
     dialog[open] {
       padding: 30px;
@@ -238,43 +201,35 @@
       max-width: 500px;
     }
   }
-
   dialog[open]+.backdrop {
     background: rgba(0, 0, 0, 0.8);
   }
-
   dialog[open]::backdrop {
     background: rgba(0, 0, 0, 0.8);
   }
-
   .dialog-button {
     display: none;
   }
-
   .js-enabled .dialog-button {
     display: block;
   }
-
   .js-enabled dialog {
     display: none;
   }
-
   .js-enabled dialog[open] {
     display: block;
     position: absolute;
   }
-
   .dialog-is-open {
     overflow: hidden;
   }
-
   .disclosure-control {
     font-family: "nta", Arial, sans-serif;
     font-weight: 400;
     text-transform: none;
     font-size: 16px;
     line-height: 1.25;
-    color: #005ea5;
+    color: #005EA5;
     background: none;
     cursor: pointer;
     border: none;
@@ -283,14 +238,12 @@
     padding-left: 20px;
     position: relative;
   }
-
   @media (min-width: 641px) {
     .disclosure-control {
       font-size: 19px;
       line-height: 1.3157894737;
     }
   }
-
   .disclosure-control__icon {
     display: block;
     width: 12px;
@@ -300,19 +253,15 @@
     left: 0;
     top: 4px;
   }
-
   .disclosure-control[aria-expanded="true"] .disclosure-control__icon {
     background: url("/public/images/disclosure/icon-open.png") no-repeat;
   }
-
   .js-enabled div[aria-hidden="true"] {
     display: none;
   }
-
   .js-enabled div[aria-hidden="false"] {
     display: block;
   }
-
   .grid-row:after,
   #content:after,
   .notice:after,
@@ -332,7 +281,6 @@
     display: block;
     clear: both;
   }
-
   .hint-underneath,
   .hint {
     display: block;
@@ -342,12 +290,10 @@
     font-size: 16px;
     line-height: 1.25;
     margin: 0 0 5px 0;
-    color: #6f777b;
+    color: #6F777B;
     clear: both;
   }
-
   @media (min-width: 641px) {
-
     .hint-underneath,
     .hint {
       font-size: 19px;
@@ -355,12 +301,9 @@
     }
   }
 </style>
-
 <main id="content" role="main">
-
   <div class="sidebar-layout">
     <div class="sidebar-content">
-
       <div class="side-nav">
         <ul>
           <li>
@@ -377,56 +320,40 @@
           </li>
           </ul>
         </div>
-
     </div>      <div class="main-content">
-
-
           <div class="phase-banner">
               <p>
               <strong class="phase-tag">BETA</strong>
               This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
               </p>
             </div>
-
             <a href="javascript:history.back()" class="link-back">Back</a>
-
           <div class="grid-row">
             <div class="column-two-thirds">
-
               <header class="page-header" style="clear: none; display: block;">
                 <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
                 <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">2020/21</h1>
                 <hr>
             </header>
-
-
-
             <form class="form" action="pqsTwo" method="GET"> <!-- wrapped both questions inside <form> -->
-
       <!--Question 1 -->
     <div class="question1">
         <h1 class="heading-medium">
             Are you the appointed Pharmacy PCN lead?
         </h1>
-
-
             <div class="form-group">
                 <fieldset>
-
                     <legend class="visually-hidden"></legend>
-
                     <div class="multiple-choice">
-                      <input id="radio-inline-q1-Yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
                       <label for="radio-inline-q1-yes">Yes</label>
                       </div>
                       <div class="multiple-choice">
                       <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
                       <label for="radio-inline-q1-no">No</label>
                       </div>
-
                 </fieldset>
                 <br>
-
                                 <details class="govuk-details" data-module="govuk-details">
                                 <summary class="govuk-details__summary">
                                 <span class="govuk-details__summary-text">
@@ -435,19 +362,11 @@
                                 </summary>
                                 <div class="govuk-details__text">
                                   <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
                                   <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
                                   </div>
                                   </details>
-
-                                  <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
-                                  <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
             </div>
   </div>
-
   <br>
   <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
   <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
@@ -456,22 +375,17 @@
           </div>
       </div>
   </div>
-  <script src="/public/javascripts/details.polyfill.js"></script>
+  <!-- <script src="/public/javascripts/details.polyfill.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
-  <script src="/public/javascripts/application.js"></script>
-
-
+  <script src="/public/javascripts/application.js"></script>-->
   <!-- selector -->
-  <script src="/public/javascripts/typeahead-aria.js"></script>
-  <script src="/public/javascripts/init-autocomplete.js"></script>
-
+  <!--<script src="/public/javascripts/typeahead-aria.js"></script>
+  <script src="/public/javascripts/init-autocomplete.js"></script> -->
   <script>
       sessionStorage.removeItem("q1");
       sessionStorage.removeItem("q2");
       sessionStorage.removeItem("q3");
       sessionStorage.removeItem("q4");
   </script>
-
 </main>
-
 {% endblock %}
