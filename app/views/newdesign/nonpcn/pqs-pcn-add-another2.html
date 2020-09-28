@@ -400,77 +400,60 @@
             </header>
 
 
+<h1 class="heading-large">These are the pharmacies you've said attended the business continuity meeting.</h1>
 
-            <form class="form" action="pqsTwo" method="GET"> <!-- wrapped both questions inside <form> -->
+<table class="data-table assets-summary check-your-answers">
+                    <tbody><tr>
+                      <td><span class="strong">F code</span></td>
+                      <td><span class="strong">Pharmacy</span></td>
+                      <td><span class="strong"></span></td>
+                    </tr>
+                    <tr>
+                      <td>FAAAA</td>
+                      <td>Boots<br>123 random street<br>some place</td>
+                      <td>
+                      <a href="#">Change<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>FBBBB</td>
+                      <td>A different Boots<br>on a different street<br>some other place</td>
+                      <td>
+                      <a href="#">Change<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                  </tbody></table>
 
-      <!--Question 1 -->
-    <div class="question1">
-        <h1 class="heading-medium">
-            Are you the appointed Pharmacy PCN lead?
-        </h1>
+
+            <div class="question1">
+                <h1 class="heading-medium">Do you want to add another pharmacy?
+                </h1>
 
 
-            <div class="form-group">
-                <fieldset>
+                    <div class="form-group">
+                        <fieldset class="inline">
 
-                    <legend class="visually-hidden"></legend>
+                            <legend class="visually-hidden"></legend>
 
-                    <div class="multiple-choice">
-                      <input id="radio-inline-q1-Yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                      <label for="radio-inline-q1-yes">Yes</label>
-                      </div>
-                      <div class="multiple-choice">
-                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                      <label for="radio-inline-q1-no">No</label>
-                      </div>
+                            <div class="multiple-choice">
+                              <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                              <label for="radio-inline-q1-yes">Yes</label>
+                              </div>
+                              <div class="multiple-choice">
+                              <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                              <label for="radio-inline-q1-no">No</label>
+                              </div>
 
-                </fieldset>
-                <br>
-
-                                <details class="govuk-details" data-module="govuk-details">
-                                <summary class="govuk-details__summary">
-                                <span class="govuk-details__summary-text">
-                                What is a Pharmacy PCN Lead?
-                                </span>
-                                </summary>
-                                <div class="govuk-details__text">
-                                  <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
-                                  <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
-                                  </div>
-                                  </details>
-
-                                  <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
-                                  <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
+                        </fieldset>
+                    </div>
             </div>
-  </div>
-
-  <br>
-  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
-  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
-</form>
+              </div>
+          </div>
+            <a href="pqs-pcn-bc-cya"><input class="button" type="submit" value="Next"></a>
           </div>
           </div>
-      </div>
-  </div>
-  <script src="/public/javascripts/details.polyfill.js"></script>
-  <script src="/public/javascripts/jquery-1.11.3.js"></script>
-  <script src="/public/javascripts/application.js"></script>
 
 
-  <!-- selector -->
-  <script src="/public/javascripts/typeahead-aria.js"></script>
-  <script src="/public/javascripts/init-autocomplete.js"></script>
-
-  <script>
-      sessionStorage.removeItem("q1");
-      sessionStorage.removeItem("q2");
-      sessionStorage.removeItem("q3");
-      sessionStorage.removeItem("q4");
-  </script>
 
 </main>
 

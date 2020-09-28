@@ -400,58 +400,45 @@
             </header>
 
 
-
-            <form class="form" action="pqsTwo" method="GET"> <!-- wrapped both questions inside <form> -->
-
-      <!--Question 1 -->
-    <div class="question1">
-        <h1 class="heading-medium">
-            Are you the appointed Pharmacy PCN lead?
-        </h1>
+<h1 class="heading-large">Tell us which pharmacies attended PCN meetings.</h1>
 
 
-            <div class="form-group">
-                <fieldset>
+              <label class="form-label" for="ni-number">
+              Enter the pharmacy F code
+              </label>
 
-                    <legend class="visually-hidden"></legend>
 
-                    <div class="multiple-choice">
-                      <input id="radio-inline-q1-Yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                      <label for="radio-inline-q1-yes">Yes</label>
-                      </div>
-                      <div class="multiple-choice">
-                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                      <label for="radio-inline-q1-no">No</label>
-                      </div>
 
-                </fieldset>
-                <br>
-
-                                <details class="govuk-details" data-module="govuk-details">
-                                <summary class="govuk-details__summary">
-                                <span class="govuk-details__summary-text">
-                                What is a Pharmacy PCN Lead?
-                                </span>
-                                </summary>
-                                <div class="govuk-details__text">
-                                  <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
-                                  <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
-                                  </div>
-                                  </details>
-
-                                  <p>A Pharmacy PCN Lead is an individual appointed by a group of community pharmacies. Their role is to build a quality relationship on behalf of their group with their local PCN.</p>
-
-                                  <p>They promote collaboration and act as a single channel of communication between their group and the PCN.</p>
-
+              <div class="test-case" style="overflow: visible">
+                <div>
+                  <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
+                    <option value=""></option>
+                    <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">FA123 - Boots, Eldon Square,
+                      Newcastle, NE1 7XE</option>
+                    <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">FA124 - Boots,
+                      Northumberland Street, Newcastle, NE1 7DQ</option>
+                    <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">FA125 - Boots,
+                      Newcastle Central Station, Newcastle, NE1 5DL</option>
+                    <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">FA126 - Boots, Osborne Road,
+                      Newcastle, NE2 2AD</option>
+                    <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">FA127 - Boots, Gateshead
+                      Trinity Square, Gateshead, NE8 1BF</option>
+                    <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">FA128 - Boots, Byker, Newcastle, NE6 1DN
+                    </option>
+                    <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">FA129 - Boots, Dunston, Gateshead, NE11
+                      9FJ</option>
+                    <option value="YP123 - Boots, Newcastle, NE1">YP123 - Boots, Newcastle, NE1</option>
+                    <option value="YP124 - Boots, Leeds, LS1">YP124 - Boots, Leeds, LS1</option>
+                    <option value="YP125 - Boots, Manchester, M1">YP125 - Boots, Manchester, M1</option>
+                    <option value="YP126 - Boots, Liverpool, L1">YP126 - Boots, Liverpool, L1</option>
+                  </select>
+                </div>
+              </div>
             </div>
-  </div>
+          </form>
 
-  <br>
-  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
-  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
-</form>
+          </div><div class="form-group"></div>
+            <a href="pqs-pcn-add-another2.html"><input class="button" type="submit" value="Next"></a>
           </div>
           </div>
       </div>
