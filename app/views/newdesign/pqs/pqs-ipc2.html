@@ -1,0 +1,126 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Infection Prevention and Control</h1>
+            <hr>
+            </header>
+
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+            <div class="question1">
+              <h1 class="heading-medium">
+On the day of the declaration, do you have for each staff member, excluding those staff for whom there is a training plan, at premises level, a copy of the personalised certificate provided upon completion of the training and assessment, as evidence that all members of staff have completed the training?              </h1>
+                  <div class="form-group">
+                      <fieldset class="inline">
+                      <legend class="visually-hidden"></legend>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">No</label>
+                      </div>
+                      </fieldset>
+                  </div>
+          </div>
+          <div class="question2">
+            <h1 class="heading-medium">
+Do you confirm that following the completion of the training, all of the pharmacy team working at the pharmacy have completed a team review documenting the reflections and actions following the training, and amended SOPs and associated guidance, where appropriate?            </h1>
+                <div class="form-group">
+                    <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q1-yes">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q1-no">No</label>
+                    </div>
+                    </fieldset>
+                </div>
+        </div>
+          <a class="button" href="pqs-ipc3" role="button">Continue</a>
+          <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

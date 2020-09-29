@@ -1,0 +1,162 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Infection Prevention and Control</h1>
+            <hr>
+            </header>
+
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+          <div class="question1">
+                        <h1 class="heading-medium">
+On the day of the declaration, have all patient-facing staff working at the pharmacy completed the Zero Suicide Alliance (ZSA) training, available on the Zero Suicide alliance website?
+                        </h1>
+                        <span class="form-hint">Staff members, who have been affected by suicide and do not wish to undertake the ZSA training, are exempt from completing it.</span>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice" data-target="wages-reveal">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-controls="wages-reveal-two" aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+                                </fieldset>
+                            </div>
+                        <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+                          <h1 class="heading-medium">
+How many staff have satisfactorily completed the training?
+                          </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    staff
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                          </div>
+                          <div class="question3">
+                              <h1 class="heading-medium">
+How many staff have not completed the training under the above exemption?
+                              </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f2" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    staff
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                              </div>
+                    </div>
+                    </div>
+          <div class="question4">
+            <h1 class="heading-medium">
+Do you confirm you have completed an action plan or that a previous action plan has been reviewed and is up to date?
+            </h1>
+                <div class="form-group">
+                    <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q1-yes">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q1-no">No</label>
+                    </div>
+                    </fieldset>
+                </div>
+
+        </div>
+          <a class="button" href="pqs-prevention2" role="button">Continue</a>
+          <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

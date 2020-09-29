@@ -1,0 +1,180 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Risk Management</h1>
+            <hr>
+            </header>
+
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+          <div class="question1">
+            <h1 class="heading-medium">
+              On the day of the declaration,  have 80% of all registered pharmacy professionals working at the pharmacy satisfactorily completed the ‘CPPE risk management training and e-assessment’, available on the CPPE website?
+            </h1>
+                <div class="form-group">
+                    <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice" data-target="wages-reveal">
+                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q1-yes">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q1-no">No</label>
+                    </div>
+                    </fieldset>
+                </div>
+            <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                  <div class="question2">
+                  <h1 class="heading-medium">
+How many registered pharmacy professionals working at the pharmacy have satisfactorily completed ‘CPPE Risk management training and e-assessment’?
+                  </h1>
+                      <div class="form-group">
+                          <fieldset class="inline">
+
+                              <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                              <label class="govuk-label" for="width-3">
+                            staff
+                          </label>
+
+                          </fieldset>
+                      </div>
+                  </div>
+              </div>
+        </div>
+
+          <div class="question3">
+                        <h1 class="heading-medium">
+                          On the day of the declaration,  do you have available, at premises level, a new risk review or an update of the previous risk review undertaken as part of the 2019/20 Pharmacy Quality Scheme (i.e. updated since the last review period of February 2020)?
+                        </h1>
+                        <span class="form-hint">This new or updated review must include a recorded reflection on the risk of missing sepsis identification and the risk minimisation actions that the pharmacy team has been taking and any subsequent actions identified as a result of the reflection.
+</span>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupTwo" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q3-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupTwo" value="No" aria-controls="wages-reveal-two" aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q3-no">No</label>
+                                </div>
+                                </fieldset>
+                            </div>
+                        <div class="panel panel-border-narrow js-hidden" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question4">
+                          <h1 class="heading-medium">
+                            How many registered pharmacy professionals working at the pharmacy have satisfactorily completed ‘CPPE Risk management training and e-assessment’?
+                          </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    staff
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                          </div>
+                          <div class="question5">
+                              <h1 class="heading-medium">
+                                How many registered pharmacy professionals working at the pharmacy have satisfactorily completed ‘CPPE sepsis online training and e-assessment’?
+                              </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f2" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    staff
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                              </div>
+                    </div>
+                    </div>
+          <a class="button" href="pqs-rm2" role="button">Continue</a>
+          <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
