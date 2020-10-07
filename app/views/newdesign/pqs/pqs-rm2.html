@@ -59,26 +59,28 @@
         <form class="form"> <!-- wrapped both questions inside <form> -->
             <div class="question1">
               <h1 class="heading-medium">
-                Can you confirm you have completed a new risk review on the risk of missing sepsis identification and have recorded demonstrable risk minimisation actions that have been undertaken to mitigate this risk?
+                Did you complete a risk review on the risk of missing sepsis as part of the 2019/20 PQS?
                 </h1>
                   <div class="form-group">
                       <fieldset class="inline">
                       <legend class="visually-hidden"></legend>
-                      <div class="multiple-choice">
+                      <div class="multiple-choice" data-target="wages-reveal">
                       <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
                       <label for="radio-inline-q1-yes">Yes</label>
                       </div>
-                      <div class="multiple-choice">
+                      <div class="multiple-choice" data-target="wages-reveal-two">
                       <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
                       <label for="radio-inline-q1-no">No</label>
                       </div>
                       </fieldset>
                   </div>
           </div>
+          <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
           <div class="question2">
             <h1 class="heading-medium">
-              Can you confirm that you have completed a new risk review about the risk of missing red flag symptoms during over the counter consultations and have recorded demonstrable risk minimisation actions that have been undertaken to mitigate this risk?
+              Do you declare that on the day of the declaration you have available, at premises level, an updated risk review on the risk of missing sepsis identification?
               </h1>
+              <span class="form-hint">This should be an updated version of the review undertaken in 2019/20 (updated since the last review period of February 2020) and have recorded demonstrable risk minimisation actions that have been undertaken to mitigate this risk.</span>
               <div class="form-group">
                     <fieldset class="inline">
                     <legend class="visually-hidden"></legend>
@@ -93,24 +95,43 @@
                     </fieldset>
                 </div>
         </div>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
         <div class="question3">
           <h1 class="heading-medium">
-            Does the risk review identify the risk of missing red flag symptoms during over the counter consultations and the risk of missing sepsis identification?
+            Do you declare that on the day of the declaration you have available, at premises level, a new risk review on the risk of missing sepsis identification, and have recorded demonstrable risk minimisation actions that have been undertaken to mitigate this risk?
             </h1>
             <div class="form-group">
                   <fieldset class="inline">
                   <legend class="visually-hidden"></legend>
                   <div class="multiple-choice">
-                  <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
+                  <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
                   <label for="radio-inline-q3-yes">Yes</label>
                   </div>
                   <div class="multiple-choice">
-                  <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                  <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
                   <label for="radio-inline-q3-no">No</label>
                   </div>
                   </fieldset>
               </div>
       </div>
+      <div class="question4">
+      <h1 class="heading-medium">
+        How many registered pharmacy professionals working at the pharmacy have satisfactorily completed ‘CPPE sepsis online training and e-assessment’?
+      </h1>
+          <div class="form-group">
+              <fieldset class="inline">
+
+                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                  <label class="govuk-label" for="width-3">
+                staff
+              </label>
+
+              </fieldset>
+          </div>
+      </div>
+      </div>
+
           <a class="button" href="pqs-rm-cya" role="button">Continue</a>
           <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
           </form>
