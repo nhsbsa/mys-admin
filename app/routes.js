@@ -518,14 +518,18 @@ router.get(/pqsOne/, function (req, res) {
 router.get(/pqsTwo/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-pcn-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "No") {
+    res.redirect('pqs-pcn-non-lead-questions');
   } else {
-    res.redirect('pqs-pcn-non-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-tasklist-7'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/pqsThree/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-pharmacy-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "No") {
+    res.redirect('pqs-pharmacy-non-lead-questions');
   } else {
-    res.redirect('pqs-pharmacy-non-lead-questions'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-tasklist-7'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
