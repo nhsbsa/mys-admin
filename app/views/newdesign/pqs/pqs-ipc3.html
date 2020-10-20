@@ -61,6 +61,7 @@
             <h1 class="heading-medium">
               On the day of the declaration, have all patient-facing pharmacy staff that provide advice on medicines or health care satisfactorily completed the ‘PHE Antimicrobial Stewardship for Community Pharmacy e-learning and e-assessment’ on the Health Education England e-Learning for Healthcare website?
             </h1>
+            <span class="form-hint">You can include any new staff, or those returning to work after long term leave, if there is a training plan in place to make sure they complete the training within 30 days of the date of the declaration.</span>
                 <div class="form-group">
                     <fieldset class="inline">
                     <legend class="visually-hidden"></legend>
@@ -91,18 +92,33 @@ How many staff have satisfactorily completed the training and assessment?
                       </div>
                   </div>
               </div>
-        </div><!-- wrapped both questions inside <form> -->
-            <div class="question3">
+        </div>
+        <div class="question3">
+          <h1 class="heading-medium">
+On the day of the declaration do you have, at premises level, a copy of the personalised certificate provided on completion of the training and assessment for any member of staff who does not have a training plan?              </h1>
+                <fieldset class="inline">
+                  <legend class="visually-hidden"></legend>
+                  <div class="multiple-choice">
+                  <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                  <label for="radio-inline-q2-yes">Yes</label>
+                  </div>
+                  <div class="multiple-choice">
+                  <input id="radio-inline-q2-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                  <label for="radio-inline-q2-no">No</label>
+                  </div>
+                  </fieldset>
+              </div>
+            <div class="question4">
               <h1 class="heading-medium">
 Do you confirm that you have, at premises level, an antimicrobial stewardship action plan for the pharmacy, which details how you will promote Antimicrobial Stewardship (AMS)?</h1>                      <fieldset class="inline">
                       <legend class="visually-hidden"></legend>
                       <div class="multiple-choice">
-                      <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
-                      <label for="radio-inline-q2-yes">Yes</label>
+                      <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q3-yes">Yes</label>
                       </div>
                       <div class="multiple-choice">
-                      <input id="radio-inline-q2-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
-                      <label for="radio-inline-q2-no">No</label>
+                      <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q3-no">No</label>
                       </div>
                       </fieldset>
                   </div>
@@ -113,11 +129,11 @@ Do you confirm that you have, at premises level, an antimicrobial stewardship ac
                     <fieldset class="inline">
                     <legend class="visually-hidden"></legend>
                     <div class="multiple-choice">
-                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
+                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupFour" value="Yes"> <!-- unique name per question block -->
                     <label for="radio-inline-q3-yes">Yes</label>
                     </div>
                     <div class="multiple-choice">
-                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupFour" value="No"> <!-- both options here need same name -->
                     <label for="radio-inline-q3-no">No</label>
                     </div>
                     </fieldset>
