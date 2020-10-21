@@ -410,43 +410,37 @@ NHSBSA Prototype
         <div class="column-two-thirds">
               <h2 class="heading-large">CPCS amendments - September 2020</h2>
 
-              <label class="form-label" for="ni-number">
-                     <h1 class="heading-medium">Enter an F-code to see CPCS amendments for september</h1>
-                   </label>
+              <h2 class="heading-medium">These are the CPCS items with no price information for [f-code] in September 2020</h2>
 
-
-                   <div class="test-case" style="overflow: visible">
-                     <div>
-                       <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
-                         <option value=""></option>
-                         <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">FA123 - Boots, Eldon Square,
-                           Newcastle, NE1 7XE</option>
-                         <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">FA124 - Boots,
-                           Northumberland Street, Newcastle, NE1 7DQ</option>
-                         <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">FA125 - Boots,
-                           Newcastle Central Station, Newcastle, NE1 5DL</option>
-                         <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">FA126 - Boots, Osborne Road,
-                           Newcastle, NE2 2AD</option>
-                         <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">FA127 - Boots, Gateshead
-                           Trinity Square, Gateshead, NE8 1BF</option>
-                         <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">FA128 - Boots, Byker, Newcastle, NE6 1DN
-                         </option>
-                         <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">FA129 - Boots, Dunston, Gateshead, NE11
-                           9FJ</option>
-                         <option value="YP123 - Boots, Newcastle, NE1">YP123 - Boots, Newcastle, NE1</option>
-                         <option value="YP124 - Boots, Leeds, LS1">YP124 - Boots, Leeds, LS1</option>
-                         <option value="YP125 - Boots, Manchester, M1">YP125 - Boots, Manchester, M1</option>
-                         <option value="YP126 - Boots, Liverpool, L1">YP126 - Boots, Liverpool, L1</option>
-                       </select>
-                     </div>
-                   </div>
-
-                   <br><br>
-                   <a class="button" href="cpcs-september-f-code" role="button">Continue</a>
-                    <br><br>
-                    <a href="cpcs-september-all">
-                      View all for september
-                    </a>
+              <div class="submissions" style="padding: 0;">
+                          <table class="data-table assets-summary check-your-answers">
+                            <tbody><tr>
+                              <td><span class="strong">Item</span></td>
+                              <td><span class="strong">Date</span></td>
+                              <td></td>
+                            </tr>
+            <tr>
+                <td>Item 1</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         <tr>
+               <td>Item 3</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td>Item 4</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         </tbody></table>
+                        </div>
 
 
         </div>
@@ -455,6 +449,7 @@ NHSBSA Prototype
       </div>
     </div>
 
+    <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>
     <script src="/public/javascripts/jquery-1.11.3.js"></script>
     <script src="/public/javascripts/application.js"></script>
@@ -464,12 +459,6 @@ NHSBSA Prototype
     <script src="/public/javascripts/typeahead-aria.js"></script>
     <script src="/public/javascripts/init-autocomplete.js"></script>
 
-    <script>
-        sessionStorage.removeItem("q1");
-        sessionStorage.removeItem("q2");
-        sessionStorage.removeItem("q3");
-        sessionStorage.removeItem("q4");
-    </script>
 </main>
 
 {% endblock %}
