@@ -408,34 +408,87 @@ NHSBSA Prototype
 
       <div class="grid-row">
         <div class="column-two-thirds">
-              <h2 class="heading-large">CPCS amendments - september</h2>
+              <h2 class="heading-large">CPCS amendments - September 2020 - FAAAA</h2>
 
-              <div class="submissions" style="padding: 0;">
-                          <table class="data-table assets-summary check-your-answers">
-                            <tbody><tr>
-                              <td><span class="strong">F-code</span></td>
-                              <td><span class="strong">Items with no price</span></td>
-                              <td><span class="strong">Precription charge corrections</span></td>
-                              <td></td>
-                            </tr>
-                            <tr>
-                              <td>FAAAA</td>
-                              <td><a href="cpcs-september-faaaa.html" style="text-decoration: underline;">17</a></td>
-                              <td><a href="cpcs-september-faaaa-scripts.html" style="text-decoration: underline;">13<a></td>
-                            </tr>
-                            <tr>
-                              <td>FBBBB</td>
-                              <td>32</td>
-                              <td>45</td>
-                            </tr>
-                            <tr>
-                              <td>FYYYY</td>
-                              <td>27</td>
-                              <td>45</td>
-                            </tr>
-                            <tr>
-                          </tr></tbody></table>
-                        </div>
+              <p>token 12345678 - 3 items</p>
+
+              <div class="grid-row">
+                                        <div class="column-full" style="margin-bottom: 25px;">
+
+                                <table class="table-form">
+                                  <caption class="visuallyhidden">Flu vaccinations administered</caption>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Name</th>
+                                      <th scope="col">Details</th>
+                                        <th scope="col">Supplier</th>
+                                      <th scope="col" style="text-align:right; padding-right:0;">Set price to £0.00?</th>
+                                    </tr>
+                                  </thead>
+                                  <tfoot>
+                                  </tfoot>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Item 1</th>
+                                      <td>packsize/quant</td>
+                                        <td>Supplier name</td>
+                                        <td class="numeric last">
+                                          <fieldset class="inline">
+                      <legend class="visually-hidden"></legend>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">No</label>
+                      </div>
+                      </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Item 2</th>
+                                      <td>packsize/quant</td>
+                                        <td>Supplier name</td>
+                                      <td style="text-align:right; padding-right:0;">
+                                        <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q2-yes">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q2-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q2-no">No</label>
+                    </div>
+                    </fieldset>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Item 3</th>
+                                      <td>packsize/quant</td>
+                                        <td>Supplier name</td>
+                                      <td>
+                                        <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q3-yes">Yes</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q3-no">No</label>
+                    </div>
+                    </fieldset>                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                         </div>
+                                      </div>
+
+                   <br><br>
+                   <a class="button" href="cpcs-september-faaaa-scripts2" role="button">Next token</a>
+                    <br><br>
 
 
         </div>
@@ -444,7 +497,6 @@ NHSBSA Prototype
       </div>
     </div>
 
-    <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>
     <script src="/public/javascripts/jquery-1.11.3.js"></script>
     <script src="/public/javascripts/application.js"></script>
@@ -454,6 +506,12 @@ NHSBSA Prototype
     <script src="/public/javascripts/typeahead-aria.js"></script>
     <script src="/public/javascripts/init-autocomplete.js"></script>
 
+    <script>
+        sessionStorage.removeItem("q1");
+        sessionStorage.removeItem("q2");
+        sessionStorage.removeItem("q3");
+        sessionStorage.removeItem("q4");
+    </script>
 </main>
 
 {% endblock %}
