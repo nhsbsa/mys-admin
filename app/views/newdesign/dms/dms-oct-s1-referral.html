@@ -359,73 +359,129 @@
 <main id="content" role="main">
 
   <div class="sidebar-layout">
-    <div class="sidebar-content">
+      <div class="sidebar-content">
 
-      <div class="side-nav">
-        <ul>
-          <li>
-            <a href="../index">Dashboard</a>
-          </li>
-          <li>
-            <a href="../prescriptions">Prescriptions</a>
-          </li>
-          <li>
-            <a href="../advanced-services">Advanced Services</a>
-          </li>
-          <li>
-            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
-          </li>
-          </ul>
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../pharmacy-services">Pharmacy services</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Discharge medicines service (DMS)</h1>
+                          <p class="page-header--sub heading-secondary">October 2020 submission - Stage 1</p>
+                      </header><br><br>
+
+                <h2 class="task-list-section">What is the patient's NHS number?</h2><br>
+
+                <input class="form-control" id="hasnhsno" name="nhsno" type="number" value="">
+                <br><br><br>
+                <h2 class="task-list-section">What date was the patient discharged?</h2><br>
+
+                <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
         </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+        </div>
+      </div>
+      <br><br><br>
+      <br><br>
 
-    </div>      <div class="main-content">
+      <h2 class="task-list-section">Which trust did the referral come from?</h2><br>
+
+      <div class="test-case" style="overflow: visible">
+        <div>
+          <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
+            <option value=""></option>
+            <option value="Newcastle upon Tyne NHS Foundation Trust">Newcastle upon Tyne NHS Foundation Trust</option>
+            <option value="Gateshead Health NHS Foundation Trust">Gateshead Health NHS Foundation Trust</option>
+            <option value="Sunderland Teaching NHS Foundation Trust">Sunderland Teaching NHS Foundation Trust</option>
+          </select>
+        </div>
+      </div>
+      <div class="question4">
+        <h1 class="heading-medium">
+          Did the referral from the NHS trust meet the minimum essential dataset requirements?
+          </h1>
+                <fieldset class="inline">
+                <legend class="visually-hidden"></legend>
+                <div class="multiple-choice">
+                <input id="radio-inline-q4-yes" type="radio" name="radioInlineGroupFour" value="Yes"> <!-- unique name per question block -->
+                <label for="radio-inline-q4-yes">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                <input id="radio-inline-q4-no" type="radio" name="radioInlineGroupFour" value="No"> <!-- both options here need same name -->
+                <label for="radio-inline-q4-no">No</label>
+                </div>
+                </fieldset>
+            </div><br>
+
+                <div style="margin-top: 3em">
+                    <a href="dms-submit"><input class="button" type="submit" value="Continue"></a>
+                </div>
 
 
-          <div class="phase-banner">
-              <p>
-              <strong class="phase-tag">BETA</strong>
-              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
-              </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
             </div>
-
-            <a href="javascript:history.back()" class="link-back">Back</a>
-
-          <div class="grid-row">
-            <div class="column-two-thirds">
-
-              <header class="page-header" style="clear: none; display: block;">
-                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
-                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">February 2021 declaration</h1>
-                <hr>
-            </header>
-
-            <p>Use this service to complete your Pharmacy Quality Scheme (PQS) Part 2 Payment declaration for February 2021.</P>
-
-              <p>You will need to have previously completed and declared the Part 1 Essential Criteria checklist declaration and provide information on the following quality domains:</p>
-
-              <ul style="list-style: disc; margin-left: 30px;">
-                    <li>Infection Prevention and Control and Antimicrobial Stewardship</li>
-                    <li>Prevention</li>
-                    <li>Risk Management</li>
-                    <li>Primary Care Network Prevention</li>
-                    <li>Primary Care Network Business Continuity</li>
-                    </ul>
-
-                    <br>
-
-                    <div class="panel panel-border-wide">
-  <p>
-    The declaration closes on 26 February at 11.59pm.
-  </p>
-</div>
-
-<a class="button button-start" href="pqs-gateway-1" role="button">Start now</a>
-
-              </div>
-              </div>
-
-
+        </div>
   </div>
+
   <script src="/public/javascripts/details.polyfill.js"></script>
   <script src="/public/javascripts/jquery-1.11.3.js"></script>
   <script src="/public/javascripts/application.js"></script>
@@ -441,6 +497,8 @@
       sessionStorage.removeItem("q3");
       sessionStorage.removeItem("q4");
   </script>
+
+
 
 </main>
 

@@ -407,7 +407,7 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
+        <div class="column-full">
               <h2 class="heading-large">CPCS amendments - September 2020 - FAAAA</h2>
 
               <p>token 12345679 - 1 item</p>
@@ -415,39 +415,45 @@ NHSBSA Prototype
               <div class="grid-row">
                                         <div class="column-full" style="margin-bottom: 25px;">
 
-                                <table class="table-form">
-                                  <caption class="visuallyhidden">Flu vaccinations administered</caption>
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">Name</th>
-                                      <th scope="col">Details</th>
-                                        <th scope="col">Supplier</th>
-                                      <th scope="col" style="text-align:right; padding-right:0;">Set price to £0.00?</th>
-                                    </tr>
-                                  </thead>
-                                  <tfoot>
-                                  </tfoot>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row">Item 1</th>
-                                      <td>packsize/quant</td>
-                                        <td>Supplier name</td>
-                                        <td class="numeric last">
-                                          <fieldset class="inline">
-                      <legend class="visually-hidden"></legend>
-                      <div class="multiple-choice">
-                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                      <label for="radio-inline-q1-yes">Yes</label>
-                      </div>
-                      <div class="multiple-choice">
-                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                      <label for="radio-inline-q1-no">No</label>
-                      </div>
-                      </fieldset>
-                                        </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
+                                          <table class="table-form">
+                                            <caption class="visuallyhidden">Flu vaccinations administered</caption>
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Packsize</th>
+                                                  <th scope="col">Quantity</th>
+                                                  <th scope="col">current charge status</th>
+                                                <th scope="col">Amend charge</th>
+                                              </tr>
+                                            </thead>
+                                            <tfoot>
+                                            </tfoot>
+                                            <tbody>
+                                              <tr>
+                                                <th scope="row">Ibuprofen 400mg - Big pharma company A</th>
+                                                <td>36</td>
+                                                  <td>15</td>
+                                                  <td>£0.00</td>
+                                                  <td class="numeric last">
+                                                    <fieldset class="inline">
+                                          <legend class="visually-hidden"></legend>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                          <label for="radio-inline-q1-yes">Add charge</label>
+                                          </div>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                          <label for="radio-inline-q1-no">Remove charge</label>
+                                          </div>
+                                          <div class="multiple-choice">
+                                          <input id="radio-inline-q1-no2" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                          <label for="radio-inline-q1-no2">No change</label>
+                                          </div>
+                                          </fieldset>
+                                                  </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
                                          </div>
                                       </div>
 
