@@ -2060,3 +2060,88 @@ fieldset {
       .nhsuk-icon--size-100 {
         height: 68px;
         width: 68px; }
+
+        .nhsuk-pagination {
+            margin-top: 28px;
+            margin-bottom: 68px;
+        }
+        .nhsuk-list, ul, ol {
+            line-height: 1.47368;
+        }
+        .nhsuk-list, ul, ol {
+            margin-bottom: 16px;
+            list-style-type: none;
+            margin-top: 0;
+            padding-left: 0;
+        }
+        .nhsuk-pagination-item--previous {
+            float: left;
+            text-align: left;
+            width: 50%;
+        }
+        .nhsuk-pagination-item--next {
+            float: right;
+            text-align: right;
+            width: 50%;
+        }
+        .nhsuk-pagination__title {
+            line-height: 1.33333;
+            font-size: 24px;
+        }
+        .nhsuk-pagination__title {
+            display: block;
+        }
+        .nhsuk-u-visually-hidden {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+        .nhsuk-pagination__page {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .nhsuk-pagination__page {
+            display: block;
+            text-decoration: underline;
+        }
+        .nhsuk-pagination__link {
+            display: block;
+            position: relative;
+            text-decoration: none;
+            width: 100%;
+        }
+        .nhsuk-pagination__link:visited .nhsuk-icon {
+            fill: #330072;
+        }
+        .nhsuk-pagination__link .nhsuk-icon {
+            position: absolute;
+            top: -2px;
+        }
+        .nhsuk-pagination-item--previous .nhsuk-pagination__title {
+            padding-left: 32px;
+        }
+        .nhsuk-pagination-item--next .nhsuk-pagination__title {
+            padding-right: 32px;
+        }
+        .nhsuk-icon {
+            height: 34px;
+            width: 34px;
+        }
+        .nhsuk-icon__arrow-left {
+            fill: #005eb8;
+        }
+        .nhsuk-icon__arrow-right {
+            fill: #005eb8;
+        }
+        .nhsuk-pagination-item--next .nhsuk-icon {
+            right: -6px;
+        }
+        nav, section {
+            display: block;
+        }
