@@ -1,0 +1,128 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+.task-name {
+    width: 60%;
+    float: left;
+}
+</style>
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">February 2021 declaration</h1>
+
+                <hr>
+            </header>
+
+            <p>Complete your declaration by answering the questions in all of the quality domains.</p>
+
+            <p>Your pharmacy must meet the requirements for each domain you are claiming payment for on the day you submit your declaration.</p>
+
+            <ol class="task-list">
+
+                <ul class="task-list-items">
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Before you start</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >met</strong></a>
+                  </li>
+                </ul>
+
+                <h2 class="task-list-section">Quality Domains</h2>
+                <ul class="task-list-items">
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Infection Prevention and Control and Antimicrobial Stewardship</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >met</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >met</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="#">Risk Management</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" >met</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pcn-prevention1">Primary Care Network Prevention</a> <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                  <li class="task-list-item" >
+                    <a aria-describedby="eligibility-completed" class="task-name" href="pcn-bc1">Primary Care Network Business Continuity</a>  <a href="job-title1"><strong class="task-completed" id="eligibility-completed" style="background-color: #dee0e2; color: #626262;">NOT STARTED</strong></a>
+                </ul>
+
+
+
+                <div style="padding-left: 35px; margin-top: 1em">
+                    <a href="#"><input class="button" disabled="" type="submit" value="Continue"></a>
+                    <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+                </div>
+
+              </ol>         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
