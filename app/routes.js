@@ -540,3 +540,47 @@ router.get(/pqsFour/, function (req, res) {
     res.redirect('pqs-pcn-non-lead-questions');
   }
 });
+
+// DMS routes //
+router.get(/dmsOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s1-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-s1-cya');
+  }
+});
+router.get(/dmsTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-oct-s1-referral'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-oct-start2');
+  }
+});
+router.get(/dmsThree/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s2-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-s2-cya');
+  }
+});
+router.get(/dmsFour/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-oct-s2-referral'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-oct-start3');
+  }
+});
+router.get(/dmsFive/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s3-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-s3-cya');
+  }
+});
+router.get(/dmsSix/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-oct-s3-referral'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-oct-start4');
+  }
+});

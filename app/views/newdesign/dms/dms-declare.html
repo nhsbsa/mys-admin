@@ -1,0 +1,153 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../pharmacy-services" class="active">Pharmacy services</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                        <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission</h1>
+                      </header><br><br>
+
+                      <div class="grid-row">
+                                                    <p>CONTENT REQUIRED</p>
+
+                                                    <hr>
+
+                                                    <div class="column-third">
+                                                     <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                                                  </div>
+                                                  <div class="column-two-thirds">
+
+
+                                                    <div class="declaration">
+                                                        <br>
+                                                        <p>CONTENT REQUIRED</p>
+                                                     </div>
+
+                                                     <fieldset>
+                               <legend class="visually-hidden">New Submission</legend>
+                               <div class="form-group">
+                               <label class="form-label" for="firstname">First name</label>
+
+
+                               <input class="form-control" id="firstname" type="text" name="firstname" value="">
+                               </div>
+                               <div class="form-group">
+                               <label class="form-label" for="surname">Surname</label>
+
+
+                               <input class="form-control" id="surname" type="text" name="surname" value="">
+                               </div>
+                               <div class="form-group">
+                               <span id="emailHint" class="panel panel-border-narrow">
+                               A confirmation email will be sent to <span class="strong">joe.bloggs@nhs.net</span>.
+                               If you would like a copy sent to another email address, please enter it below.
+                               </span>
+                               <label class="form-label" for="email">Email address (optional)</label>
+
+
+                               <input class="form-control" id="email" type="text" name="email" value="">
+                               </div>
+                               <div class="form-group">
+
+
+                               <div class="multiple-choice multiple-radio">
+                               <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+                               <label for="benefits">I agree and accept this declaration.</label>
+                               </div>
+
+                               </div>
+                               <div class="form-group">
+                               <a class="button" href="dms-done" role="button">Continue</a>
+
+                               </div>
+
+                               </fieldset>
+
+
+
+                                     </div>
+                                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+  </div>
+
+
+
+
+</main>
+
+{% endblock %}
