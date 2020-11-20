@@ -6,42 +6,76 @@
 
 {% block content %}
 
-<main id="content" role="main" style="max-width: 960px !important; margin: 0 auto !important;">
+<main id="content" role="main" style="max-width: 80% !important; margin: 0 auto !important;">
 
   <div class="grid-row">
-  <div class="column-two-thirds">
 
-        <h1 class="heading-xlarge">
-          <span class="heading-secondary">Manage your service</span>
-          Admin Dashboards
-          <p class="lede">Head Office &amp; Pharmacy</p>
-        </h1>
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Manage your service</span>
+      Admin Dashboards
+      <p class="lede">Head Office &amp; Pharmacy</p>
+    </h1>
 
-  
-        <h2 class="heading-large">Pharmacy dashboard</h2>
 
-        <a href="/pharmacy/index"><input class="button" type="submit" value="Open"></a>
+        <div class="column-one-third">
+          <h2 class="heading-large">Pharmacy dashboard</h2>
+
+          <a href="/newdesign/index2"><input class="button button-start" type="submit" value="Open"></a>
+
+          <hr>
+        </div>
+
+        <div class="column-one-third">
+          <h2 class="heading-large">Head office dashboard</h2>
+
+        <a href="/management/"><input class="button button-start" type="submit" value="Open"></a>
+
+        <hr>
+        </div>
+
+        <div class="column-one-third">
+          <h2 class="heading-large">Old pharmacy dashboard</h2>
+
+        <a href="/pharmacy/index"><input class="button button-start" type="submit" value="Open"></a>
 
         <hr>
 
-        <h2 class="heading-large">Head office dashboard</h2>
+        </div>
+        </div>
 
-        <a href="/management/"><input class="button" type="submit" value="Open"></a>
-  
+        <div class="grid-row">
+          <div class="column-one-third">
+
+        <h2 class="heading-large">Dispensing doctors dashboard</h2>
+
+        <a href="/dispdocs/index"><input class="button button-start" type="submit" value="Open"></a>
+
+        <hr>
+      </div>
+
+      <div class="column-one-third">
+
+        <h2 class="heading-large">Appliance contractors dashboard</h2>
+
+        <a href="/appcontractors/index"><input class="button button-start" type="submit" value="Open"></a>
+
         <hr>
 
-        <h2 class="heading-large">New menu design dashboard</h2>
+      </div>
 
-        <a href="/newdesign/index2"><input class="button" type="submit" value="Open"></a>
-  
+      <div class="column-one-third">
+        <h2 class="heading-large">Optometry dashboard</h2>
+
+        <a href="/optometry/index"><input class="button button-start" type="submit" value="Open"></a>
+
         <hr>
+</div>
+
 
  </div>
 
-</div>
+
 
 </main>
 
 {% endblock %}
-
-

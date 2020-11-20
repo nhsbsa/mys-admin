@@ -1,0 +1,127 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../pharmacy-services" class="active">Pharmacy services</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                        <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission</h1>
+                      </header><br><br>
+
+                <h2 class="task-list-section">DMS stages</h2><br>
+
+
+                  <table>
+                     <thead>
+                        <tr>
+                           <th scope="col" width="40%"><span class="strong">DMS stage</span></th>
+                           <th scope="col" width="40%"><span class="strong">Number of patients</span></th>
+                           <th scope="col" width="20%"><span class="strong"></span></th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Stage 1</td>
+                           <td>2 patients</td>
+                           <td style="text-align:right; padding-right:0;"><a href="dms-s1-add-another" style="text-decoration: underline;">View or add patients</a></td>
+                        </tr>
+                        <tr>
+                           <td>Stage 2</td>
+                           <td>2 patients</td>
+                           <td style="text-align:right; padding-right:0;"><a href="dms-s2-add-another" style="text-decoration: underline;">View or Add patients</a></td>
+                        </tr>
+                        <tr>
+                           <td>Stage 3</td>
+                           <td>0 patients</td>
+                           <td style="text-align:right; padding-right:0;"><a href="dms-oct-s3-referral" style="text-decoration: underline;">Add patients</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+
+
+                <div style="margin-top: 3em">
+                    <a href="dms-declare"><input class="button" type="submit" value="Declare and submit"></a>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+  </div>
+
+
+
+
+</main>
+
+{% endblock %}

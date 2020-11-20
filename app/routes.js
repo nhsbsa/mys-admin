@@ -584,3 +584,31 @@ router.get(/dmsSix/, function (req, res) {
     res.redirect('dms-oct-start4');
   }
 });
+router.get(/dmsSeven/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s1-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-s2-provided');
+  }
+});
+router.get(/dmsEight/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s2-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-s3-provided');
+  }
+});
+router.get(/dmsNine/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-s3-issues'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-cya');
+  }
+});
+router.get(/dmsTen/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('dms-referral-details'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('dms-declare');
+  }
+});
