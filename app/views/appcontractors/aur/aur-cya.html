@@ -331,6 +331,40 @@ if (x.style.display === "block") {
            </div>
         </dl>
 
+        <h2 class="heading-medium">
+           GP details
+        </h2>
+        <dl class="govuk-check-your-answers cya-questions-short">
+           <div>
+              <dt class="cya-question">
+                 Practice name
+              </dt>
+              <dd class="cya-answer">
+               {{ data.gp_name }}
+              </dd>
+              <dd class="cya-change">
+                 <a href="gp">
+                 Change<span class="visually-hidden"> name</span>
+                 </a>
+              </dd>
+           </div>
+           <div>
+              <dt class="cya-question">
+                 Address
+              </dt>
+              <dd class="cya-answer">
+                35 Eastfield Road<br>
+                Newcastle upon Tyne<br>
+                NE12 8BD
+              </dd>
+              <dd class="cya-change">
+                 <a href="gp">
+                 Change
+                 </a>
+              </dd>
+           </div>
+        </dl>
+
     <h2 class="heading-medium">
            Appliance details <a href="aur-appliance-addanother" style="float:right;display:inline;font-size:19px;font-weight:normal;">Add another</a>
         </h2>
