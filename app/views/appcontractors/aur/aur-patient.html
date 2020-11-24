@@ -1,0 +1,310 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<script>
+
+// hide postocode look up
+
+  function hidefinder() {
+  var x = document.getElementById("postcode-finder");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+// show postcode look up
+
+ function showfinder() {
+   var x = document.getElementById("postcode-finder");
+   if (x.style.display === "none") {
+     x.style.display = "block";
+   } else {
+     x.style.display = "block";
+   }
+ }
+
+// show select address section
+
+function showselect() {
+var x = document.getElementById("select-address");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "block";
+}
+}
+
+// hide select address section
+
+function hideselect() {
+var x = document.getElementById("select-address");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "none";
+}
+}
+
+
+// shows manual address entry section
+
+function showmanual() {
+var x = document.getElementById("manual-address");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "block";
+}
+}
+
+// hide manual address entry section
+
+function hidemanual() {
+var x = document.getElementById("manual-address");
+if (x.style.display === "block") {
+  x.style.display = "none";
+} else {
+  x.style.display = "none";
+}
+}
+
+</script>
+
+<style>
+
+#postcode-finder {
+  display: block;
+}
+
+#select-address {
+  display: none;
+}
+
+#manual-address {
+  display: none;
+}
+
+</style>
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                        <p class="page-header--sub heading-secondary">NHS Appliance Use Review Service - November 2020</p>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Patient details</h1>
+                      </header><br><br>
+
+                      <form action="aur-gp" method="get" class="form">
+
+                        <!-- Patient first name -->
+                        <div class="form-group">
+                           <label for="patient-first-name">
+                           <span class="form-label">First name</span>
+                           </label>
+                           <input class="form-control" type="text" name="patient_first_name" id="patient-first-name">
+                        </div>
+
+                        <!-- Patient last name -->
+                        <div class="form-group">
+                           <label for="patient-last-name">
+                           <span class="form-label">Last name</span>
+                           </label>
+                           <input class="form-control" type="text" name="patient_last_name" id="patient-last-name">
+                        </div>
+
+                        <!-- Patient dob -->
+                        <div class="form-group">
+                           <fieldset>
+                              <legend>
+                                 <span class="form-label-bold">
+                                 Date of birth
+                                 </span>
+                                 <span class="form-hint" id="dob-hint">For example, 31 3 1980</span>
+                              </legend>
+                              <div class="form-date">
+                                 <div class="form-group form-group-day">
+                                    <label class="form-label" for="dob-day">Day</label>
+                                    <input class="form-control" id="dob-day" name="dob_day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                                 </div>
+                                 <div class="form-group form-group-month">
+                                    <label class="form-label" for="dob-month">Month</label>
+                                    <input class="form-control" id="dob-month" name="dob_month" type="number" pattern="[0-9]*" min="0" max="12">
+                                 </div>
+                                 <div class="form-group form-group-year">
+                                    <label class="form-label" for="dob-year">Year</label>
+                                    <input class="form-control" id="dob-year" name="dob_year" type="number" pattern="[0-9]*" min="0" max="2016">
+                                 </div>
+                              </div>
+                           </fieldset>
+                        </div>
+
+                        <!-- Postcode look up view -->
+                        <div id="postcode-finder">
+                           <div class="form-group">
+                              <fieldset aria-label="Patient address">
+                                 <legend class="heading-small">Address</legend>
+                                 <div class="form-group">
+                                    <label class="form-label" for="patient-postcode-lookup">
+                                    <br>Postcode
+                                    </label>
+                                    <input class="form-control form-control-1-4" name="patient_postcode_lookup" id="patient-postcode-lookup" type="text">
+                                 </div>
+                                 <p class="button" style="background-color: #005EA5"onclick="hidefinder(); showselect(); ">Find address</p>
+                              </fieldset>
+                           </div>
+                        </div>
+
+                        <!-- Select an address view -->
+                        <div id="select-address">
+                           <div class="form-group">
+                              <fieldset aria-label="Patient address">
+                                 <legend class="heading-small">Address</legend>
+                                 <div class="form-group">
+                                    <label class="form-label" for="patient-postcode">
+                                    <span class="heading-small"><br>Postcode</span>
+                                    </label>
+                                    <p>NE12 8BD   <a href="javascript: showfinder(); hideselect();">Change</a></p>
+                                 </div>
+                                 <p class="heading-small">Select an address</p>
+                                 <div class="form-group">
+                                    <select class="form-control" id="select-box">
+                                       <option>34 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                       <option>35 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                       <option>36 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
+                                    </select>
+                                 </div>
+                                 <a href="javascript: hideselect(); showmanual();">Address not listed</a>
+                              </fieldset>
+                           </div>
+                        </div>
+
+                        <!-- Manual address entry view -->
+                        <div id="manual-address">
+                           <div class="form-group">
+                              <fieldset aria-label="Patient address">
+                              <legend class="heading-small">Address</legend>
+                              <div class="form-group">
+                                 <label class="form-label" for="patient-line-one">
+                                 Building and street
+                                 </label>
+                                 <input class="form-control" id="lineone" name="patient_line_one" type="text">
+                                 <input class="form-control" id="linetwo" name="patient_line_two" type="text" style="margin-top: 10px">
+                              </div>
+                              <div class="form-group">
+                                 <label class="form-label" for="patient_town">
+                                 Town or city
+                                 </label>
+                                 <input class="form-control" id="patient-town" name="patient_town" type="text">
+                              </div>
+                              <div class="form-group">
+                                 <label class="form-label" for="patient-postcode">
+                                 Postcode
+                                 </label>
+                                 <input class="form-control form-control-1-4" name="patient_postcode" id="patient-postcode" type="text">
+                              </div>
+                              <a href="javascript: hidemanual(); showfinder();">Find address for me</a>
+                           </fieldset></div>
+                        </div>
+
+                        <!-- Patient nhs number -->
+                        <div class="form-group">
+                           <label for="nhs-no">
+                           <span class="form-label">NHS number</span>
+                           <span class="form-hint" id="dob-hint">For example, 3758351245</span></label>
+                           <input class="form-control" type="text" name="nhs_no" id="nhs-no">
+                        </div>
+
+                        <div class="form-item-wrapper">
+                           <div class="form-group">
+                              <input class="button" type="submit" value="Continue">
+                           </div>
+                        </div>
+                      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+  </div>
+
+  <script src="/public/javascripts/details.polyfill.js"></script>
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/application.js"></script>
+
+
+  <!-- selector -->
+  <script src="/public/javascripts/typeahead-aria.js"></script>
+  <script src="/public/javascripts/init-autocomplete.js"></script>
+
+  <script>
+      sessionStorage.removeItem("q1");
+      sessionStorage.removeItem("q2");
+      sessionStorage.removeItem("q3");
+      sessionStorage.removeItem("q4");
+  </script>
+
+
+
+</main>
+
+{% endblock %}

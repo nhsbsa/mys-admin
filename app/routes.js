@@ -612,3 +612,20 @@ router.get(/dmsTen/, function (req, res) {
     res.redirect('dms-declare');
   }
 });
+
+// AUR submission routes //
+
+router.get(/aurOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('aur-appliance'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('aur-cya');
+  }
+});
+router.get(/aurTwo/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('aur-pharmacy'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('aur-declare');
+  }
+});
