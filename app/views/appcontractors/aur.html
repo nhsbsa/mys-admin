@@ -1,0 +1,65 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+                  <ul>
+                    <li>
+                      <a href="../index" class="active">Dashboard</a>
+                    </li>
+                    </ul>
+                  </div>
+
+      </div>
+      <div class="main-content">
+
+
+
+
+        <header class="page-header" style="clear: none; display: block;">
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">NHS Appliance Use Review Service</h1>
+
+        </header>
+
+          <h2 class="heading-medium">V1 Journey - lift and shift</h2>
+
+          <p>Version with original fields from paper form, order largely unchanged</p>
+
+          <ul style="list-style: disc; margin-left: 30px;">
+                <li><span class="strong"><a href="aur/aur-start.html">Start page</a></span></li>
+                </ul>
+
+
+           <h2 class="heading-medium">V2 Journey</h2>
+
+           <p>Optimised, with fields removed and order changed.  Less pages.</p>
+
+           <ul style="list-style: disc; margin-left: 30px;">
+                 <li><span class="strong"><a href="aur2/aur-start.html">Start page</a></span></li>
+                 </ul>
+
+
+                </div>
+
+              </div>
+
+</main>
+
+{% endblock %}

@@ -478,127 +478,40 @@ if (x.style.display === "block") {
 
                       <div class="form-group">
                                                 <h1 class="heading-small">
-                                                  Pharmacy name
+                                                  Pharmacy F-code
                                                 </h1>
 
-                                                <div class="form-group">
-                                                  <input class="form-control" type="text" name="pharmacy_name" id="pharmacy_name">
-                                                </div>
-                                               </div>
-
-                                               <!-- Postcode look up view -->
-                                               <div id="postcode-finder">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Patient address">
-                                                        <legend class="heading-small">Address</legend>
-                                                        <div class="form-group">
-                                                           <label class="form-label" for="pharmacy-postcode-lookup">
-                                                           <br>Postcode
-                                                           </label>
-                                                           <input class="form-control form-control-1-4" name="pharmacy_postcode_lookup" id="pharmacy-postcode-lookup" type="text" >
-                                                        </div>
-                                                        <p class="button"  style="background-color: #005EA5" onclick="hidefinder(); showselect(); ">Find address</p>
-                                                     </fieldset>
+                                                  <div class="test-case" style="overflow: visible">
+                                                    <div>
+                                                      <select id="pharmacy_fcode" class="typeahead js-hidden" name="pharmacy_fcode" aria-required="true">
+                                                        <option value=""></option>
+                                                        <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">FA123 - Boots, Eldon Square,
+                                                          Newcastle, NE1 7XE</option>
+                                                        <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">FA124 - Boots,
+                                                          Northumberland Street, Newcastle, NE1 7DQ</option>
+                                                        <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">FA125 - Boots,
+                                                          Newcastle Central Station, Newcastle, NE1 5DL</option>
+                                                        <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">FA126 - Boots, Osborne Road,
+                                                          Newcastle, NE2 2AD</option>
+                                                        <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">FA127 - Boots, Gateshead
+                                                          Trinity Square, Gateshead, NE8 1BF</option>
+                                                        <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">FA128 - Boots, Byker, Newcastle, NE6 1DN
+                                                        </option>
+                                                        <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">FA129 - Boots, Dunston, Gateshead, NE11
+                                                          9FJ</option>
+                                                        <option value="YP123 - Boots, Newcastle, NE1">YP123 - Boots, Newcastle, NE1</option>
+                                                        <option value="YP124 - Boots, Leeds, LS1">YP124 - Boots, Leeds, LS1</option>
+                                                        <option value="YP125 - Boots, Manchester, M1">YP125 - Boots, Manchester, M1</option>
+                                                        <option value="YP126 - Boots, Liverpool, L1">YP126 - Boots, Liverpool, L1</option>
+                                                      </select>
+                                                    </div>
                                                   </div>
                                                </div>
 
-                                               <!-- Select an address view -->
-                                               <div id="select-address">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Pharmacy address">
-                                                        <legend class="heading-small">Address</legend>
-                                                        <div class="form-group">
-                                                           <label class="form-label" for="pharmacy-postcode">
-                                                           <span class="heading-small"><br>Postcode</span>
-                                                           </label>
-                                                           <p>NE12 8BD   <a href="javascript: showfinder(); hideselect();">Change</a></p>
-                                                        </div>
-                                                        <p class="heading-small">Select an address</p>
-                                                        <div class="form-group">
-                                                           <select class="form-control" id="select-box">
-                                                              <option>34 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                              <option>35 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                              <option>36 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                           </select>
-                                                        </div>
-                                                        <a href="javascript: hideselect(); showmanual();">Address not listed</a>
-                                                     </fieldset>
-                                                  </div>
-                                               </div>
 
-                                               <!-- Manual address entry view -->
-                                               <div id="manual-address">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Pharmacy address">
-                                                     <legend class="heading-small">Address</legend>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy-line-one">
-                                                        Building and street
-                                                        </label>
-                                                        <input class="form-control" id="lineone" name="pharmacy_line_one" type="text">
-                                                        <input class="form-control" id="linetwo" name="pharmacy_line_two" type="text" style="margin-top: 10px">
-                                                     </div>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy_town">
-                                                        Town or city
-                                                        </label>
-                                                        <input class="form-control" id="pharmacy-town" name="pharmacy_town" type="text">
-                                                     </div>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy-postcode">
-                                                        Postcode
-                                                        </label>
-                                                        <input class="form-control form-control-1-4" name="pharmacy_postcode" id="pharmacy-postcode" type="text">
-                                                     </div>
-                                                     <a href="javascript: hidemanual(); showfinder();">Find address for me</a>
-                                                  </div>
-                                               </div>
-
-                                               <div class="question3">
-                                                                         <h1 class="heading-small">
-                                                                           Telephone number
-                                                                         </h1>
-
-                                                                         <div class="form-group">
-                                                                           <input class="form-control" type="number" name="pharmacy_phone" id="pharmacy_phone">
-                                                                         </div>
-                                                </div>
-                                                <div class="question4">
-                                                                          <h1 class="heading-small">
-                                                                            Name of pharmacist or specialist nurse
-                                                                          </h1>
-
-                                                                          <div class="form-group">
-                                                                            <input class="form-control" type="text" name="professional_name" id="professional_name">
-                                                                          </div>
-                                                 </div>
 
 <!-- Review date -->
-          <div class="form-group">
-             <fieldset>
-                <legend>
-                   <span class="form-label-bold">
-                   Date of Appliance Use Review
-                   </span>
-                   <span class="form-hint" id="dob-hint">For example, 31 3 2020</span>
-                </legend>
-                <div class="form-date">
-                   <div class="form-group form-group-day">
-                      <label class="form-label" for="review-day">Day</label>
-                      <input class="form-control" id="review-day" name="review_day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
-                   </div>
-                   <div class="form-group form-group-month">
-                      <label class="form-label" for="review-month">Month</label>
-                      <input class="form-control" id="review-month" name="review_month" type="number" pattern="[0-9]*" min="0" max="12">
-                   </div>
-                   <div class="form-group form-group-year">
-                      <label class="form-label" for="review-year">Year</label>
-                      <input class="form-control" id="review-year" name="review_year" type="number" pattern="[0-9]*" min="2019" max="2020">
-                   </div>
-                </div>
-             </fieldset>
-          </div>
-
+          
               <div class="form-item-wrapper">
                  <div class="form-group">
                     <input class="button" type="submit" value="Continue">

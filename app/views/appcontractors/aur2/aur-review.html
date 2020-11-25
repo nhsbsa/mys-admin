@@ -471,107 +471,10 @@ if (x.style.display === "block") {
 
                       <header class="page-header" style="clear: none; display: block;">
                         <p class="page-header--sub heading-secondary">NHS Appliance Use Review Service - November 2020</p>
-                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Pharmacy details</h1>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Review details</h1>
                       </header><br><br>
 
-                      <form action="aur-patient" method="get" class="form">
-
-                      <div class="form-group">
-                                                <h1 class="heading-small">
-                                                  Pharmacy name
-                                                </h1>
-
-                                                <div class="form-group">
-                                                  <input class="form-control" type="text" name="pharmacy_name" id="pharmacy_name">
-                                                </div>
-                                               </div>
-
-                                               <!-- Postcode look up view -->
-                                               <div id="postcode-finder">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Patient address">
-                                                        <legend class="heading-small">Address</legend>
-                                                        <div class="form-group">
-                                                           <label class="form-label" for="pharmacy-postcode-lookup">
-                                                           <br>Postcode
-                                                           </label>
-                                                           <input class="form-control form-control-1-4" name="pharmacy_postcode_lookup" id="pharmacy-postcode-lookup" type="text" >
-                                                        </div>
-                                                        <p class="button"  style="background-color: #005EA5" onclick="hidefinder(); showselect(); ">Find address</p>
-                                                     </fieldset>
-                                                  </div>
-                                               </div>
-
-                                               <!-- Select an address view -->
-                                               <div id="select-address">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Pharmacy address">
-                                                        <legend class="heading-small">Address</legend>
-                                                        <div class="form-group">
-                                                           <label class="form-label" for="pharmacy-postcode">
-                                                           <span class="heading-small"><br>Postcode</span>
-                                                           </label>
-                                                           <p>NE12 8BD   <a href="javascript: showfinder(); hideselect();">Change</a></p>
-                                                        </div>
-                                                        <p class="heading-small">Select an address</p>
-                                                        <div class="form-group">
-                                                           <select class="form-control" id="select-box">
-                                                              <option>34 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                              <option>35 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                              <option>36 Eastfield Road, Newcastle upon Tyne, NE12 8BD</option>
-                                                           </select>
-                                                        </div>
-                                                        <a href="javascript: hideselect(); showmanual();">Address not listed</a>
-                                                     </fieldset>
-                                                  </div>
-                                               </div>
-
-                                               <!-- Manual address entry view -->
-                                               <div id="manual-address">
-                                                  <div class="form-group">
-                                                     <fieldset aria-label="Pharmacy address">
-                                                     <legend class="heading-small">Address</legend>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy-line-one">
-                                                        Building and street
-                                                        </label>
-                                                        <input class="form-control" id="lineone" name="pharmacy_line_one" type="text">
-                                                        <input class="form-control" id="linetwo" name="pharmacy_line_two" type="text" style="margin-top: 10px">
-                                                     </div>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy_town">
-                                                        Town or city
-                                                        </label>
-                                                        <input class="form-control" id="pharmacy-town" name="pharmacy_town" type="text">
-                                                     </div>
-                                                     <div class="form-group">
-                                                        <label class="form-label" for="pharmacy-postcode">
-                                                        Postcode
-                                                        </label>
-                                                        <input class="form-control form-control-1-4" name="pharmacy_postcode" id="pharmacy-postcode" type="text">
-                                                     </div>
-                                                     <a href="javascript: hidemanual(); showfinder();">Find address for me</a>
-                                                  </div>
-                                               </div>
-
-                                               <div class="question3">
-                                                                         <h1 class="heading-small">
-                                                                           Telephone number
-                                                                         </h1>
-
-                                                                         <div class="form-group">
-                                                                           <input class="form-control" type="number" name="pharmacy_phone" id="pharmacy_phone">
-                                                                         </div>
-                                                </div>
-                                                <div class="question4">
-                                                                          <h1 class="heading-small">
-                                                                            Name of pharmacist or specialist nurse
-                                                                          </h1>
-
-                                                                          <div class="form-group">
-                                                                            <input class="form-control" type="text" name="professional_name" id="professional_name">
-                                                                          </div>
-                                                 </div>
+                      <form action="aur-appliance" method="get" class="form">
 
 <!-- Review date -->
           <div class="form-group">
@@ -599,6 +502,26 @@ if (x.style.display === "block") {
              </fieldset>
           </div>
 
+
+          <div class="form-group">
+             <h1 class="heading-small">Reason for review</h1>
+             <div class="form-group">
+          <textarea class="govuk-textarea" id="review-reason" name="review_reason" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>                       </div>
+          </div>
+
+              <div class="form-group">
+                     <fieldset class="inline">
+                     <h3 class="heading-small">Where was the review conducted?</h3>
+                     <div class="multiple-choice">
+                        <input id="review_pharmacy" type="radio" name="review" value="Pharmacy">
+                        <label for="review_pharmacy">Pharmacy</label>
+                     </div>
+                     <div class="multiple-choice">
+                        <input id="review_home" type="radio" name="review" value="Home">
+                        <label for="review_home">Patient's home</label>
+                     </div>
+                  </fieldset>
+              </div>
               <div class="form-item-wrapper">
                  <div class="form-group">
                     <input class="button" type="submit" value="Continue">
