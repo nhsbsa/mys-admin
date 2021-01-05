@@ -1,0 +1,84 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                  <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Seasonal Influenza Vaccination Service</h1>
+                  <p class="page-header--sub heading-secondary">2020/21 submission</p>
+                  <hr>
+              </header>
+
+              <p class="lede">The seasons runs from [date] to [date].</p>
+
+              <h2 class="heading-medium">Select a month to claim for</h2>
+
+              <div class="form-group">
+                <label class="form-label" for="select-box">Select month</label>
+                <select class="form-control" id="select-box">
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                </select>
+              </div>
+
+              <a class="button" href="flu-step2" role="button">Continue</a>
+
+
+          </div>
+      </div>
+  </div>
+      </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <h1 class="heading-large">
+                  Coronavirus (COVID-19) Vaccination Service
+              </h1><hr>
+
+
+
+
+              <h2 class="heading-small">API claim - MVP</h2>
+              <p>Contractors can view and submit API data they are presented with.  3 months window for submission, with vaccine totals included.</p>
+
+              <ul style="list-style: disc; margin-left: 30px;">
+              <li><a href="covid-api-start-months.html">MVP journey</a>
+              </li>
+            </ul>
+
+
+              </div>
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

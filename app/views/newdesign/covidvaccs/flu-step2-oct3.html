@@ -1,0 +1,146 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+            <div class="grid-row">
+              <div class="column-two-thirds">
+
+                <header class="page-header" style="clear: none; display: block;">
+                  <p class="page-header--sub heading-secondary">Flu vaccination payments</p>
+                  <h1 class="page-header--lede heading-large">October totals</h1>
+                  <hr>
+                </header>
+
+
+
+                <div class="grid-row">
+                    <div class="column-full">
+                             <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Total number of 0.5ml syringes administered</h2>
+                             <div class="grid-row">
+                                <div class="column-full" style="margin-bottom: 25px;">
+
+                        <table class="table-form">
+                          <caption class="visuallyhidden">Flu vaccinations administered</caption>
+                          <thead>
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Details</th>
+                                <th scope="col">Company</th>
+                              <th scope="col">Total</th>
+                            </tr>
+                          </thead>
+                          <tfoot>
+                          </tfoot>
+                          <tbody>
+                            <tr>
+                              <th scope="row">Adjuvanted trivalent influenza vaccine (surface antigen, activated) suspension for injection</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>Seqirus Vaccines Ltd</td>
+                              <td class="numeric last">
+                                <label class="visuallyhidden" for="land-area-1"></label>
+                                <input class="form-control" name="fluarix" type="text" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fluarix Tetra vaccine suspension for injection</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>GlaxoSmithKline UK Ltd</td>
+                              <td class="numeric last">
+                                <label class="visuallyhidden" for="land-area-1">Influvac</label>
+                                <input class="form-control" type="text" name="influvac" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Flucelvax Tetra vaccine suspension for injection</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>Seqirus Vaccines Ltd</td>
+                              <td class="numeric last">
+                                <label class="visuallyhidden" for="land-area-1">Imuvac</label>
+                                <input class="form-control" name="imuvac" type="text" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">lnfluvac sub-unit Tetra vaccine suspension for injection</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>Mylan</td>
+                              <td class="numeric last">
+                                <label class="visuallyhidden" for="land-area-1">Influenza</label>
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Quadrivalent influenza vaccine (split virion, inactivated) suspension for injection</th>
+                              <td>0.5ml pre-filled syringes</td>
+                                <td>Sanofi Pasteur</td>
+                              <td class="numeric last">
+                                <label class="visuallyhidden" for="land-area-1">Influenza</label>
+                                <input class="form-control" type="text" name="influenza" id="land-area-1" size="5" value="">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <br><br>
+                        <a class="button" href="flu-submission2" role="button">Continue</a>
+
+                                 </div>
+                              </div>
+                           </div>
+
+
+                                 </div>
+  </div>
+
+
+
+      </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Coronavirus (COVID-19) Vaccination Service</h1>
+                          <p class="page-header--sub heading-secondary">2020/21</p>
+
+                      </header><br><br>
+
+                      <p>We've got the information about your COVID-19 vaccinations from your pharmacy IT provider.</p>
+                      <hr>
+                      <h2 class="heading-medium" style="margin-top:0px;">Current submissions</h2>
+
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+
+                          </tbody>
+                       </table>
+
+                       <table>
+                          <thead>
+                             <tr>
+                                <td><span class="strong">Period</span></td>
+                                <td><span class="strong">total number of doses</span></td>
+                                <td><span class="strong"></span></td>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td>January 2021</td>
+                                <td>145</td>
+                                <td style="text-align:right; padding-right:0;"><a href="covid-api-jan.html" style="text-decoration: underline;">View and submit</a></td>
+                             </tr>
+                             <tr>
+                                <td>December 2020</td>
+                                <td>479</td>
+                                <td style="text-align:right; padding-right:0;"><a href="covid-api-dec.html" style="text-decoration: underline;">View and submit</a></td>
+                             </tr>
+                          </tbody>
+                       </table>
+
+                       <h2 class="heading-medium">Previous submissions</h2>
+
+                       <table>
+                          <thead>
+                             <tr>
+                                <td><span class="strong">Period</span></td>
+                                <td><span class="strong">total number of doses</span></td>
+                                <td><span class="strong"></span></td>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td>November 2020</td>
+                                <td>86</td>
+                                <td style="text-align:right; padding-right:0;"><a href="flu-api-aug.html" style="text-decoration: underline;">View</a></td>
+                             </tr>
+                          </tbody>
+                       </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+  </div>
+
+
+
+
+</main>
+
+{% endblock %}

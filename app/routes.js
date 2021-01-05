@@ -629,3 +629,12 @@ router.get(/aurTwo/, function (req, res) {
     res.redirect('aur-declare');
   }
 });
+
+// covid vaccs //
+router.get(/covidOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('flu-api-start-months2'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('flu-submission2'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});

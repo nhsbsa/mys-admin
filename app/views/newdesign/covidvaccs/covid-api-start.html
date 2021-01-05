@@ -1,0 +1,175 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index2">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services" class="active">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+                <div class="phase-banner">
+                    <p>
+                    <strong class="phase-tag">BETA</strong>
+                    This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+                    </p>
+                  </div>
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                      <header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Community Seasonal Influenza Vaccination Service</h1>
+                          <p class="page-header--sub heading-secondary">2020/21 submission</p>
+
+                      </header><br><br>
+
+                      <p>We've got the information about your Influenza vaccinations from your pharmacy IT provider.</p>
+                      <hr>
+                      <div class="grid-row">
+                    <div class="column-third">
+                       <h2 class="heading-medium" style="margin-top:0px;">September</h2>
+                    </div>
+                    <div id="hideme" class="column-two-thirds">
+                        <table>
+                          <thead>
+                          </thead>
+                          <tbody>
+
+                          </tbody>
+                       </table>
+
+                       <table>
+                          <thead>
+                             <tr>
+                                <td><span class="strong">Category</span></td>
+                                <td><span class="strong">Quantity</span></td>
+                             </tr>
+                          </thead>
+                          <tbody>
+                             <tr>
+                                <td>FluarixTM Tetra Split virion</td>
+                                <td>21</td>
+                             </tr>
+                             <tr>
+                                <td>Influvac® Surface antigen</td>
+                                <td>13</td>
+                             </tr>
+                             <tr>
+                                <td>Imuvac® Surface antigen</td>
+                                <td>54</td>
+                             </tr>
+                             <tr>
+                                <td>Influenza vaccine Split virions</td>
+                                <td>34</td>
+                             </tr>
+                          </tbody>
+                       </table>
+
+                    </div>
+                 </div>
+                 <hr>
+                 <div class="grid-row">
+               <div class="column-third">
+                  <h2 class="heading-medium" style="margin-top:0px;">October</h2>
+               </div>
+               <div id="hideme" class="column-two-thirds">
+
+
+                  <p>No vaccines were submitted for this month.</p>
+
+               </div>
+            </div>
+
+            <form class="form" action="fluOne" method="GET"> <!-- wrapped both questions inside <form> -->
+
+      <!--Question 1 -->
+    <div class="question1">
+        <h1 class="heading-medium">
+            Do you want to use these figures?
+        </h1>
+
+
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend class="visually-hidden">Do you want to use these figures?</legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">No, I want to submit manually</label>
+                      </div>
+
+                </fieldset>
+            </div>
+  </div>
+
+  <br>
+  <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+  <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+  </div>
+
+
+
+
+</main>
+
+{% endblock %}
