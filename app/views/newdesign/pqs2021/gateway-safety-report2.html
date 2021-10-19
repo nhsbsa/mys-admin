@@ -1,0 +1,131 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Gateway Criteria</h1>
+            <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px;">Safety report and demonstrable learnings from CPPE LASA e-learning</h1>
+            <hr>
+            </header>
+
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+          <div class="question1">
+                              
+                              <h1 class="heading-medium">
+                                Do you declare that you have at premises level, a new written safety report covering analysis of incidents and incident patterns (taken from an ongoing log), evidence of sharing learning locally and nationally, and actions taken in response to national patient safety alerts, and that this report is available for inspection from the day of the declaration?
+                              </h1>
+                              <p>(This report should be newer than February 2020, when this criterion was last included in PQS, or covering the last two years if not previously claimed)</p>
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q3-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q3-no">No</label>
+                                </div>
+                                </fieldset>
+                              </div>
+
+                              <h1 class="heading-medium">
+                                Do you declare that demonstrable learnings from the CPPE reducing look-alike, sound-alike errors (LASA) e-learning have been incorporated into the safety report?
+                              </h1>
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q3-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q3-no">No</label>
+                                </div>
+                                </fieldset>
+                              </div>
+
+                              <br>
+
+          <a class="button" href="gateway-risk-review1" role="button">Continue</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

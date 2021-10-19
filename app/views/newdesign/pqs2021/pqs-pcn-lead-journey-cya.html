@@ -1,0 +1,477 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+  .ui-autocomplete {
+    padding: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 2px solid #6f777b;
+    max-height: 350px;
+    overflow-x: hidden;
+  }
+
+  .ui-autocomplete .ui-menu-item {
+    border-top: 1px solid #bfc1c3;
+    display: block;
+    padding: 4px 6px;
+    color: #0b0c0c;
+    cursor: pointer;
+  }
+
+  .ui-autocomplete .ui-menu-item:first-child {
+    border-top: none;
+  }
+
+  .ui-autocomplete .ui-menu-item.ui-state-focus {
+    font-weight: bold;
+    background-color: #6f777b;
+    color: #fff;
+  }
+
+  .ui-autocomplete {
+    width: 100%;
+  }
+
+  @media (min-width: 641px) {
+    .ui-autocomplete {
+      width: 66.66%;
+    }
+  }
+
+  .added-country .form-control {
+    padding: 0.5em;
+  }
+
+  .typeahead,
+  .tt-query,
+  .tt-hint {
+    font-size: 19px;
+    font-weight: 300;
+    text-transform: none;
+    margin: 0;
+    /* padding: 0.5em; */
+  }
+
+  .tt-hint {
+    display: none;
+  }
+
+  .tt-dropdown-menu {
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .tt-suggestion {
+    padding: 0.5em;
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .tt-suggestion p {
+    margin: 0;
+  }
+
+  .tt-suggestion.tt-is-under-cursor {
+    color: #fff;
+    background-color: #0097cf;
+  }
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+
+  .validation-wrapper .optional-section .twitter-typeahead input {
+    margin-bottom: 0;
+  }
+
+  .test-case {
+    overflow: visible;
+  }
+
+  .visually-hidden,
+  .visuallyhidden,
+  .hidden-hint .screenreader-punctuation,
+  .hidden-hint .form-hint {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  .added-country .form-control {
+    padding: 0.5em;
+  }
+
+  .tt-menu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 65%;
+    max-height: 220px;
+    overflow-y: scroll;
+  }
+
+  .tt-suggestion {
+    padding: 0.5em;
+  }
+
+  .tt-suggestion:hover,
+  .tt-suggestion.tt-cursor {
+    color: #fff;
+    background-color: #0097cf;
+  }
+
+  .tt-suggestion:hover {
+    cursor: pointer;
+  }
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+
+  .test-case {
+    overflow: visible;
+  }
+
+  dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    margin: auto;
+    border: solid;
+    padding: 1em;
+    background: white;
+    color: black;
+    display: none;
+  }
+
+  dialog[open] {
+    display: block;
+  }
+
+  dialog+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  /* for small devices, modal dialogs go full-screen */
+  @media screen and (max-width: 540px) {
+    dialog[_polyfill_modal] {
+      /* TODO: implement */
+      top: 0;
+      width: auto;
+      margin: 1em;
+    }
+  }
+
+  ._dialog_overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  dialog {
+    display: block;
+    position: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  dialog h1 {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 1.0416666667;
+  }
+
+  @media (min-width: 641px) {
+    dialog h1 {
+      font-size: 36px;
+      line-height: 1.1111111111;
+    }
+  }
+
+  dialog[open] {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 15px;
+    width: 90%;
+    border: 5px solid black;
+  }
+
+  @media (min-width: 641px) {
+    dialog[open] {
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 500px;
+    }
+  }
+
+  dialog[open]+.backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .dialog-button {
+    display: none;
+  }
+
+  .js-enabled .dialog-button {
+    display: block;
+  }
+
+  .js-enabled dialog {
+    display: none;
+  }
+
+  .js-enabled dialog[open] {
+    display: block;
+    position: absolute;
+  }
+
+  .dialog-is-open {
+    overflow: hidden;
+  }
+
+  .disclosure-control {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #005ea5;
+    background: none;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  @media (min-width: 641px) {
+    .disclosure-control {
+      font-size: 19px;
+      line-height: 1.3157894737;
+    }
+  }
+
+  .disclosure-control__icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("/public/images/disclosure/icon-closed.png") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+
+  .disclosure-control[aria-expanded="true"] .disclosure-control__icon {
+    background: url("/public/images/disclosure/icon-open.png") no-repeat;
+  }
+
+  .js-enabled div[aria-hidden="true"] {
+    display: none;
+  }
+
+  .js-enabled div[aria-hidden="false"] {
+    display: block;
+  }
+
+  .grid-row:after,
+  #content:after,
+  .notice:after,
+  .panel:after,
+  fieldset:after,
+  .form-section:after,
+  .form-group:after,
+  .form-block:after,
+  .breadcrumbs ol:after,
+  .accordion-with-descriptions-01 .subsection-controls:after,
+  .accordion-with-descriptions-02 .subsection-controls:after,
+  .accordion-with-descriptions-03 .subsection-controls:after,
+  .question:after,
+  .question-first:after,
+  div.test-case-overflow-allowed:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .hint-underneath,
+  .hint {
+    display: block;
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0 0 5px 0;
+    color: #6f777b;
+    clear: both;
+  }
+
+  @media (min-width: 641px) {
+
+    .hint-underneath,
+    .hint {
+      font-size: 19px;
+      line-height: 1.3157894737;
+    }
+  }
+</style>
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+
+    </div>      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2020/2021</p>
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Primary Care Networks - Prevention</h1>
+                <hr>
+            </header>
+
+
+<h1 class="heading-large">Check your answers</h1>
+
+<dl class="govuk-check-your-answers cya-questions-short">
+
+
+    
+    <div>
+      <dt class="cya-question">
+        Engaged with pharmacies in PCN wishing to take part?
+      <dd class="cya-answer">
+        Yes
+      </dd>
+      <dd class="cya-change">
+        <a href="cpafq-as-mur.html">
+          Change<span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Engaged with PCN Clinical Director to increase vaccination uptake?   
+      <dd class="cya-answer">
+        Yes
+      </dd>
+      <dd class="cya-change">
+        <a href="cpafq-as-mur.html">
+          Change<span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        How many over-65s vaccinated?
+      <dd class="cya-answer">
+        xx
+      </dd>
+      <dd class="cya-change">
+        <a href="cpafq-as-mur.html">
+          Change<span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        ODS codes of those that engaged
+      <dd class="cya-answer">
+        FAAAA
+      </dd>
+      <dd class="cya-change">
+        <a href="cpafq-as-mur.html">
+          Change<span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+  <br><br>
+
+
+              </div>
+          </div>
+            <a href="pqs-pcn-non-lead-journey"><input class="button" type="submit" value="Next"></a>
+          </div>
+          </div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,173 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+.task-name {
+    width: 60%;
+    float: left;
+}
+</style>
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+                          <header class="page-header" style="clear: none; display: block;">
+                            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+                            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">2020/2021</h1>
+
+                            <hr>
+                        </header>
+
+                          <form class="form"> <!-- wrapped both questions inside <form> -->
+
+
+
+                          <div class="grid-row">
+                              <p>You are claiming a payment in line with the Pharmacy Quality Scheme.  You will be paid based on the domains you've declared that you've met.</p>
+                              <p>NHSBSA will perform pre and post-payment verification on behalf of NHS England and NHS Improvement.</p>
+                              <p>If we cannot verify that you've met the criteria using pre-payment verification, we'll adjust your PQS payment accordingly.</p>
+                              <p>If we cannot verify that you've met the criteria using post-payment verification, we'll take steps to recover any overpayments.</p>
+                              <div class="notice">
+                                <i class="icon icon-important">
+                                  <span class="visually-hidden">Warning</span>
+                                </i>
+                                <strong class="bold-small">
+                                  Once you have submitted your declaration you can no longer make any changes to it.
+                                </strong>
+                              </div>
+
+                              <hr>
+
+                              <div class="column-third">
+                               <h2 class="heading-small" style="margin-top:20px;">Declaration</h2>
+                            </div>
+                            <div class="column-two-thirds">
+
+
+                              <div class="declaration">
+                                  <br>
+                                  <p>I am claiming payment in accordance with the terms of the Pharmacy Quality Scheme, as set out in the Drug Tariff.
+                                    I declare that the information in this submission form is correct and complete and that I have the evidence to support it.</p>
+                               </div>
+
+                               <fieldset>
+         <legend class="visually-hidden">New Submission</legend>
+         <div class="form-group">
+         <label class="form-label" for="firstname">First name</label>
+
+
+         <input class="form-control" id="firstname" type="text" name="firstname" value="">
+         </div>
+         <div class="form-group">
+         <label class="form-label" for="surname">Surname</label>
+
+
+         <input class="form-control" id="surname" type="text" name="surname" value="">
+         </div>
+         <div class="form-group">
+         <span id="emailHint" class="panel panel-border-narrow">
+         A confirmation email will be sent to <span class="strong">joe.bloggs@nhs.net</span>.
+         If you would like a copy sent to another email address, please enter it below.
+         </span>
+         <label class="form-label" for="email">Email address (optional)</label>
+
+
+         <input class="form-control" id="email" type="text" name="email" value="">
+         </div>
+         <div class="form-group">
+
+
+         <div class="multiple-choice multiple-radio">
+         <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
+         <label for="benefits">I agree and accept this declaration.</label>
+         </div>
+
+         </div>
+         <div class="form-group">
+         <a class="button" href="pqs-done" role="button">Continue</a>
+
+         </div>
+
+         </fieldset>
+
+
+
+               </div>
+               </div>
+
+
+                  </form></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

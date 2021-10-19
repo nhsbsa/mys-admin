@@ -1,0 +1,195 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../prescriptions">Prescriptions</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+
+      </div>
+      <div class="main-content">
+
+
+
+
+                  <a href="javascript:history.back()" class="link-back">Back</a>
+
+                <div class="grid-row">
+                  <div class="column-two-thirds">
+
+                    <header class="page-header" style="clear: none; display: block;">
+                      <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Pharmacy Quality Scheme</h1>
+                      <hr>
+                  </header>
+
+
+                  <h2 class="heading-large">PQS 2020/21 Declaration</h2>
+
+                  <h2 class="heading-medium">Requirement</h2>
+
+                  <p>PCN leads need to be able to enter the F Codes of the pharmacies who have attended PCN meetings.  This is mainly to allow for cross referencing with pharmacies who declare they've attended, for payment verification purposes</p>
+
+
+                  <ul style="list-style: disc; margin-left: 30px;">
+                        <li><span class="strong">PCN journey </span>- partial journey showing PCN F-code input for leads.</li>
+                        <ul style="list-style: circle; margin-left: 20px;">
+                          <li><a href="pqs-pcn-attendance.html">PCN Business Continuity attendance UI - LEAD INPUT</a></li>
+                          <li><a href="pqs-gateway-1.html">PCN lead/non lead questions</a></li>
+                        </ul></ul><br>
+
+                        <ul style="list-style: disc; margin-left: 30px;">
+                              <li><span class="strong">PQS full journey </span></li>
+                              <ul style="list-style: circle; margin-left: 20px;">
+                                <li><a href="pqs-start.html">PQS start</a></li>
+                              </ul></ul><br>
+
+
+
+                                  <h2 class="heading-large">PQS 2020/21 Journeys</h2>
+
+                  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Aspirational
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <h2 class="heading-medium">PQS Aspirational Declaration</h2>
+
+
+                  <a href="pqs/qps-start.html">Version 1</a>
+                  </div>
+                  </details>
+
+                  <br>
+
+                  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      February submissions
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+                  <h2 class="heading-medium">PQS February 2020 Declaration</h2>
+
+                  <h2 class="heading-small">MVP REQUIREMENTS</h2>
+
+                  <p>Basic requirements for PQS are a straight-through journey with manual inputs and routing, with background verification for gateway criteria.</p>
+
+
+                  <ul style="list-style: disc; margin-left: 30px;">
+                        <li><span class="strong">Persona 1 </span>- has completed phenobarbital audit, and passed all other domains.</li>
+                        <ul style="list-style: circle; margin-left: 20px;">
+                          <li><a href="pqs/pqs-start.html">From beginning</a></li>
+                          <li><a href="pqs/pqs-tasklist1.html">Domain 1</a></li>
+                          <li><a href="pqs/pqs-tasklist2.html">Domain 2</a></li>
+                          <li><a href="pqs/pqs-tasklist3.html">Domain 3</a></li>
+                          <li><a href="pqs/pqs-tasklist4.html">Domain 4</a></li>
+                          <li><a href="pqs/pqs-tasklist5.html">Domain 5</a></li>
+                          <li><a href="pqs/pqs-tasklist6.html">Domain 6</a></li>
+                        </ul><br>
+
+                        <li><span class="strong">Persona 2</span> - has failed prevention domain, and passed all other domains.</li>
+                        <ul style="list-style: circle; margin-left: 20px;">
+                            <li><a href="pqs3/pqs-start.html">From continue point</a></li>
+                          </ul><br>
+
+                    <li><span class="strong">Gateway criteria</span></li>
+                    <ul style="list-style: circle; margin-left: 20px;">
+                    <li><a href="pqs/pqs-start.html">All gateway criteria verified</a></li>
+                    <li><a href="pqs2/pqs-start.html">Some gateway criteria verified</a></li>
+                    <li><a href="pqs4/pqs-start.html">No gateway criteria verified</a></li>
+                  </ul><br>
+
+                          <li><span class="strong">last week of declaration window</span></li>
+                          <ul style="list-style: circle; margin-left: 20px;">
+                           <li><a href="pqs5/pqs-gateway-some-verified.html">Some gateway criteria verified</a></li>
+                          <li><a href="pqs5/pqs-gateway-none-verified.html">No gateway criteria verified</a></li>
+
+                  </ul>
+
+                <h2 class="heading-small">ADDITIONAL FEATURES</h2>
+
+                  <p>Additional features for PQS include:            </p>
+
+                  <ul style="list-style: disc; margin-left: 30px;">
+
+                  <li><span class="strong">Background verification</span></li>
+                  <ul style="list-style: circle; margin-left: 20px;">
+                      <li><a href="pqs/pqs-d2-verified.html">Domain 2</a></li>
+                      <li><a href="pqs5/pqs-tasklist6.html">Domain 6</a></li>
+                      <li><a href="pqs5/pqs-d6-not-met.html">Domain 6 - NOT MET</a></li>
+            </ul><br>
+
+
+
+                  <li><span class="strong">last week of declaration window</span></li>
+                  <ul style="list-style: circle; margin-left: 20px;">
+                  <li><a href="pqs5/pqs-d6-some.html">Domain 6 - some verified</a></li>
+                  <li><a href="pqs5/pqs-d6-none.html">Domain 6 - none verified</a></li>
+                </ul><br>
+
+
+              </div>
+              </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+      </div>
+
+
+</main>
+
+{% endblock %}

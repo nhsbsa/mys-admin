@@ -638,3 +638,30 @@ router.get(/covidOne/, function (req, res) {
     res.redirect('flu-submission2'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+// PQS 20/21 //
+router.get(/pqsGOne/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-pcn-lead-present'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "No" ){
+    res.redirect('pqs-pharmacy-lead'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// PQS 20/21 //
+router.get(/pqsAddP/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-pcn-lead-journey-1'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "No" ){
+    res.redirect('pqs-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
+
+// PQS 20/21 //
+router.get(/pqsAddpharm/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('pqs-non-pcn-lead-journey-1'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else if (req.query.radioInlineGroup === "No" ){
+    res.redirect('pqs-non-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});

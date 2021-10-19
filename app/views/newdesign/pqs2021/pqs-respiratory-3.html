@@ -1,0 +1,153 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Respiratory</h1>
+            <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px;">Return of unwanted and used inhalers</h1>
+            <hr>
+            </header>
+            <p style="font-weight:light; font-size:100%">Patient-facing pharmacy staff should be trained on the reasons why used, unwanted and expired inhalers should be returned to the pharmacy for safe disposal, as well as the adverse effects on the environment when inhalers are disposed of in domestic waste.</p>
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+          <div class="question1">
+                        <h1 class="heading-medium">
+                          Have all patient-facing staff at your pharmacy been trained on the reasons why used, unwanted and expired inhalers should be returned to the pharmacy for safe disposal and the adverse effects of the environment when inhalers are disposed of in domestic waste?
+                        </h1>
+
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+                                </fieldset>
+                            </div>
+
+
+                        
+                             <div class="question2">
+                              <h1 class="heading-medium">
+                                On the day of the declaration, how many patient-facing staff  have been trained?
+                              </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    staff
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                              </div>
+                              
+                              <div class="question2">
+                              <p style="font-weight:light; font-size:100%">On the day of the declaration, the pharmacy must be able to evidence that they have
+                                                                            spoken (a verbal conversation rather than written communication) with all patients,
+                                                                            their carer or representatives, for whom they have dispensed an inhaler between 1
+                                                                            September 2021 to 31 January 2022.
+</p>
+                              <h1 class="heading-medium">
+                                On the day of the declaration, how many conversations about the safe and environmentally friendly disposal of inhalers have been had with patients (or their carers)?
+                              </h1>
+                              <div class="form-group">
+                                  <fieldset class="inline">
+
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    conversations
+                                  </label>
+
+                                  </fieldset>
+                              </div>
+                              </div>
+
+                      
+                              <br>
+
+          <a class="button" href="pqs-respiratory-cya" role="button">Continue</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

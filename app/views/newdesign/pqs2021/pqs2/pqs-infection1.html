@@ -1,0 +1,167 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <header class="page-header" style="clear: none; display: block;">
+              <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme</p>
+              <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Infection Prevention and Control</h1>
+              <hr>
+              </header>
+
+          <form class="form"> <!-- wrapped both questions inside <form> -->
+              <div class="question1">
+                <h1 class="heading-medium">
+On the day of the declaration, have 100% of all non-registered pharmacy staff working at the pharmacy satisfactorily completed the ‘HEE infection prevention and control Level 1 e-learning and assessment’ on the Health Education England e-Learning for Healthcare website?                </h1>
+                    <span class="form-hint">Non-registered patient-facing pharmacy staff include all pre-registration graduates, dispensary staff, medicine counter assistants and delivery drivers.</span><br>
+                    <span class="form-hint">You can include any new staff, or those returning to work after long term leave, if there is a training plan in place to make sure they complete the training within 30 days of the date of the declaration.</span>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                        <legend class="visually-hidden"></legend>
+                        <div class="multiple-choice" data-target="wages-reveal">
+                        <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                        <label for="radio-inline-q1-yes">Yes</label>
+                        </div>
+                        <div class="multiple-choice">
+                        <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                        <label for="radio-inline-q1-no">No</label>
+                        </div>
+                        </fieldset>
+                    </div>
+                <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                      <div class="question2">
+                      <h1 class="heading-medium">
+                        How many non-registered staff have satisfactorily completed the Level 1 e-learning and assessment?
+
+                      </h1>
+                          <div class="form-group">
+                              <fieldset class="inline">
+
+                                  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                  <label class="govuk-label" for="width-3">
+                                staff
+                              </label>
+
+                              </fieldset>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            <div class="question2">
+              <h1 class="heading-medium">
+  On the day of the declaration, have all registered pharmacy professionals satisfactorily completed the ‘HEE Infection Prevention and Control Level 2 e-learning and assessment’ on the Health Education England e-Learning for Healthcare website?
+              </h1>
+              <span class="form-hint">Registered pharmacy professionals include pharmacists, provisionally registered pharmacists, pharmacy technicians and locum pharmacists.</span>
+              <br><span class="form-hint">You can include any new staff, or those returning to work after long term leave, if there is a training plan in place to make sure they complete the training within 30 days of the date of the declaration.</span>
+<div class="form-group">
+                      <fieldset class="inline">
+                      <legend class="visually-hidden"></legend>
+                      <div class="multiple-choice" data-target="wages-reveal-two">
+                      <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q2-yes">Yes</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q2-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q2-no">No</label>
+                      </div>
+                      </fieldset>
+                  </div>
+              <div class="panel panel-border-narrow js-hidden" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                    <div class="question2">
+                    <h1 class="heading-medium">
+  How many registered staff have satisfactorily completed the Level 2 e-learning and assessment?
+                    </h1>
+                        <div class="form-group">
+                            <fieldset class="inline">
+
+
+                                                              <input class="form-control" id="full-name-f2" type="text" name="full-name-f2" style="width:100px;">
+                                                              <label class="govuk-label" for="width-3">
+                                                            staff
+                                                          </label>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+          </div>
+            <a class="button" href="pqs-ipc2" role="button">Continue</a>
+            <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+    </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">IPC and AMR stewardship</h1>
+            <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px;">Infection prevention and control and Review of antimicrobial stewardship practice using the target antibiotic checklist</h1>
+            <hr>
+            </header>
+
+        <form class="form"> <!-- wrapped both questions inside <form> -->
+          <div class="question1">
+                        <h1 class="heading-medium">
+                          Can you confirm that on the day of the declaration, you have reviewed your current practice using the target antibiotic checklist, in order to provide tailored advice to patients and promote antibiotic awareness and stewardship? 
+                        </h1>
+
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+                                </fieldset>
+                            </div>
+
+
+                        <h1 class="heading-medium">
+                          Can you confirm that on the day of the declaration, the patient’s GP was notified where concerns are identified? 
+                        </h1>
+
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                  <legend class="visually-hidden"></legend>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q1-yes">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice" data-target="wages-reveal-two">
+                                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+
+                        <h1 class="heading-medium">
+                          Can you confirm that on the day of the declaration, you have shared your anonymised checklist data with PHE? 
+                        </h1>
+
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                  <legend class="visually-hidden"></legend>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q1-yes">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice" data-target="wages-reveal-two">
+                                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q1-no">No</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                              
+                              </div>
+                              
+                              
+
+
+
+                              <br>
+
+          <a class="button" href="pqs-ipcamr-2" role="button">Continue</a>
+          </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}
