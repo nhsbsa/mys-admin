@@ -1,0 +1,172 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+      </div>
+    </div>
+      <div class="main-content">
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+          </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+            <header class="page-header" style="clear: none; display: block;">
+            <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Your pharmacy’s staffing</h1>
+            <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px;">Tell us how many people in your pharmacy have the following roles. This information will be used to prefill the answers to various questions within your submission.</h1>
+            <hr>
+            </header>
+
+                    <form class="form"> <!-- wrapped both questions inside <form> -->
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Registered pharmacists
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">Do not include registered pharmacy technicians or provisional registrants.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Registered pharmacy professionals
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">These are pharmacists and registered pharmacy technicians and include provisional registrants.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Patient-facing pharmacy staff
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">This are all registered pharmacy professionals, trainee pharmacists, trainee pharmacy technicians, dispensary staff, medicine counter assistants and delivery drivers. Contractors may also have other staff that can be identified as having patient-facing roles.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Non-registered pharmacy staff
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">These are all trainee pharmacists, trainee pharmacy technicians, dispensary staff, medicine counter assistants and delivery drivers.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Patient-facing staff that provide advice on medicines or healthcare
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">These are all registered pharmacy professionals, trainee pharmacists, trainee pharmacy technicians, dispensary staff and medicine counter assistants.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="question1">
+                              <div class="question2">
+                                <h1 class="heading-medium">
+                                  Non-registered patient-facing pharmacy staff who provide health advice
+                                </h1>
+                                <p style="font-weight:light; font-size:100%">These are trainee pharmacists, trainee pharmacy technicians, dispensary staff and medicine counter assistants.</p>
+          
+                                <div class="form-group">
+                                    <fieldset class="inline">
+                                        <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                        <label class="govuk-label" for="width-3">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                              </div>
+                        </div>
+
+
+                        <br>
+
+                        <a class="button" href="pqs-tasklist2" role="button">Continue</a>
+                    </form>
+            </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+{% endblock %}
