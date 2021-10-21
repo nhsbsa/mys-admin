@@ -52,20 +52,37 @@
             <div class="column-two-thirds">
             <header class="page-header" style="clear: none; display: block;">
             <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
-            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Primary Care Networks - Prevention</h1>
-            <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px; color:blue">Non-PCN Lead Journey</h1>
-           <hr>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">IPC and AMR stewardship</h1>
+            <hr>
             </header>
-            
+
 
         <form class="form"> <!-- wrapped both questions inside <form> -->
-       
           <div class="question1">
-                            <h1 class="heading-medium">
-                              Following agreement with your NHS England & NHS Improvement regional team, have you engaged with the other pharmacies in your area to increase the uptake of flu vaccinations to patients aged 65 and over?
-                            </h1>
+                        <h1 class="heading-medium">
+                          Did you declare as having met the Infection prevention & control and antimicrobial stewardship domain for last year’s PQS Part 2 (2020/21)?
+                        </h1>
 
-                            <div class="form-group">
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="pqs-ipcamr-3">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-controls="wages-reveal-two" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                        <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+                              <h1 class="heading-medium">
+                                  Can you confirm that on the day of the declaration, you have reviewed and updated your existing AMS action plan at premises level and have implemented changes to further promote AMS in your day-to-day practice?
+                              </h1>
+                              <div class="form-group">
                                 <fieldset class="inline">
                                 <legend class="visually-hidden"></legend>
                                 <div class="multiple-choice">
@@ -78,27 +95,15 @@
                                 </div>
                                 </fieldset>
                             </div>
-                            
-                              <div class="question2">
-                              <h1 class="heading-medium">
-                                People aged 65 or over by 31 March 2021 are eligible for the vaccine.<br></br>How many eligible people has your pharmacy vaccinated between 1 September 2020 and 31 January 2021?
-                              </h1>
-                              <p style="font-weight:light; font-size:100%">(If your pharmacy does not provide a flu vaccination service key in 0 (zero) patients. You will only be entitled to claim the points related to the PCN leadership for this domain, not the points for contributing to the increase in uptake of flu vaccinations.)</p>
-        
-                              <div class="form-group">
-                                  <fieldset class="inline">
+                          </div>
+<br>
+                        </div>
 
-                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
-                                      <label class="govuk-label" for="width-3">
-                                    patients
-                                  </label>
-                                  </fieldset>
-                              </div>
-                              </div>
-
-                              <br>
-
-          <a class="button" href="pqs-non-pcn-lead-journey-11" role="button">Continue</a>
+                    </div>
+                    
+<br>
+          <a class="button" href="pqs-ipcamr-cya" role="button">Continue</a>
+          <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
           </form>
         </div>
 
