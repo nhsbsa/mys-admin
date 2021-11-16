@@ -52,7 +52,7 @@
             <div class="column-two-thirds">
             <header class="page-header" style="clear: none; display: block;">
             <p class="page-header--sub heading-secondary">Pharmacy Quality Scheme 2021/2022</p>
-            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">IPC and AMR stewardship</h1>
+            <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Prevention</h1>
             <h1 class="page-header--lede heading-medium" style="margin-bottom: 5px;">Infection prevention and control and review of antimicrobial stewardship practice using the target antibiotic checklist</h1>
             <hr>
             </header>
@@ -60,17 +60,17 @@
         <form class="form"> <!-- wrapped both questions inside <form> -->
           <div class="question1">
                         <h1 class="heading-medium">
-                          Can you confirm that on the day of the declaration, you have reviewed your current practice using the target antibiotic checklist, in order to provide tailored advice to patients and promote antibiotic awareness and stewardship? 
+                          Can you confirm that on the day of the declaration, you have completed the target antibiotic checklist review?
                         </h1>
 
                             <div class="form-group">
                                 <fieldset class="inline">
                                 <legend class="visually-hidden"></legend>
                                 <div class="multiple-choice">
-                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="tabclstr" aria-expanded="false"> <!-- unique name per question block -->
                                 <label for="radio-inline-q1-yes">Yes</label>
                                 </div>
-                                <div class="multiple-choice" data-target="wages-reveal-two">
+                                <div class="multiple-choice" data-target="tabclstr">
                                 <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
                                 <label for="radio-inline-q1-no">No</label>
                                 </div>
@@ -155,22 +155,25 @@
     </div>
   </fieldset>
 </div>
-
-
+    
                         <h1 class="heading-medium">
-                          Can you confirm that on the day of the declaration, the patient’s GP was notified where concerns are identified? 
+                          With regards to the target antibiotic checklist review, were the patient’s GP notified where concerns were identified?
                         </h1>
 
                             <div class="form-group">
                                 <fieldset class="inline">
                                   <legend class="visually-hidden"></legend>
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
-                                    <label for="radio-inline-q1-yes">Yes</label>
+                                    <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="pgpnot" aria-expanded="false"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q2-yes">Yes</label>
                                     </div>
-                                    <div class="multiple-choice" data-target="wages-reveal-two">
-                                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
-                                    <label for="radio-inline-q1-no">No</label>
+                                    <div class="multiple-choice" data-target="pgpnot">
+                                    <input id="radio-inline-q2-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q2-no">No</label>
+                                    </div>
+                                    <div class="multiple-choice" data-target="pgpnot">
+                                    <input id="radio-inline-q21-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q21-no">There were no concerns identified</label>
                                     </div>
                                 </fieldset>
                             </div>
@@ -183,22 +186,43 @@
                                 <fieldset class="inline">
                                   <legend class="visually-hidden"></legend>
                                     <div class="multiple-choice">
-                                    <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="wages-reveal" aria-expanded="false"> <!-- unique name per question block -->
-                                    <label for="radio-inline-q1-yes">Yes</label>
+                                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup" value="Yes" aria-expanded="false"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q3-yes">Yes</label>
                                     </div>
-                                    <div class="multiple-choice" data-target="wages-reveal-two">
-                                    <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
-                                    <label for="radio-inline-q1-no">No</label>
+                                    <div class="multiple-choice" data-target="phe">
+                                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup" value="No" aria-controls="phe" aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q3-no">No</label>
                                     </div>
                                 </fieldset>
                             </div>
                               
+
+
+
+
+                              <div class="panel panel-border-narrow js-hidden" id="phe" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+                              <h1 class="heading-medium">
+                          Can you confirm that on the day of the declaration, an email has been sent to the NHS BSA Provider Assurance team that the pharmacy has not identified any eligible patients during the audit period?
+                              </h1>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                <div class="multiple-choice" data-target="phe">
+                                <input id="radio-inline-q4-yes" type="radio" name="radioInlineGroup" value="Yes" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q4-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice" data-target="phe">
+                                <input id="radio-inline-q4-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                <label for="radio-inline-q4-no">No</label>
+                                </div>
+                                </fieldset>
+                            </div>
+                          </div> 
+                        </div>
                               </div>
                               
-                              
-
-
-
+              
                               <br>
 
           <a class="button" href="pqs-ipcamr-2" role="button">Continue</a>
