@@ -514,14 +514,14 @@ router.get(/pqsOne/, function (req, res) {
   } else if (req.query.radioInlineGroup === "No" ){
     res.redirect('pqs-pharmacy-lead'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-tasklist-7'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-gateway-cya-7'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/pqsTwo/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
     res.redirect('pqs-pcn-lead'); // if both input values are "Yes" - redirect to 'page-name' //
   } else {
-    res.redirect('pqs-tasklist-7'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-gateway-cya-7'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/pqsThree/, function (req, res) {
@@ -530,7 +530,7 @@ router.get(/pqsThree/, function (req, res) {
   } else if (req.query.radioInlineGroup === "No") {
     res.redirect('pqs-pharmacy-non-lead-questions');
   } else {
-    res.redirect('pqs-tasklist-7'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-gateway-cya-7'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
 router.get(/pqsFour/, function (req, res) {
@@ -651,7 +651,7 @@ router.get(/pqsGOne/, function (req, res) {
 // PQS 20/21 //
 router.get(/pqsAddP/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-pcn-lead-journey-1'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-pcn-lead-journey-11'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "No" ){
     res.redirect('pqs-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
   }
@@ -660,7 +660,7 @@ router.get(/pqsAddP/, function (req, res) {
 // PQS 20/21 //
 router.get(/pqsAddpharm/, function (req, res) {
   if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('pqs-non-pcn-lead-journey-1'); // if both input values are "Yes" - redirect to 'page-name' //
+    res.redirect('pqs-non-pcn-lead-journey-11'); // if both input values are "Yes" - redirect to 'page-name' //
   } else if (req.query.radioInlineGroup === "No" ){
     res.redirect('pqs-non-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
   }
