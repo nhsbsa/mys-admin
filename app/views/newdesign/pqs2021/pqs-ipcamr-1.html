@@ -19,8 +19,8 @@
   <div class="sidebar-layout">
     <div class="sidebar-content">
 
-      <div class="side-nav">
-        <ul>
+        <div class="side-nav">
+          <ul>
           <li>
             <a href="../index">Dashboard</a>
           </li>
@@ -36,10 +36,9 @@
           </ul>
         </div>
     </div>
+
       <div class="main-content">
-
-
-          <div class="phase-banner">
+            <div class="phase-banner">
               <p>
               <strong class="phase-tag">BETA</strong>
               This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
@@ -68,96 +67,99 @@
                             <div class="form-group">
                                 <fieldset class="inline">
                                 <legend class="visually-hidden"></legend>
-                                <div class="multiple-choice">
-                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="tabclstr" aria-expanded="false"> <!-- unique name per question block -->
+                                <div class="multiple-choice" data-target="noreveal">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="noreveal" aria-expanded="false"> <!-- unique name per question block -->
                                 <label for="radio-inline-q1-yes">Yes</label>
                                 </div>
-                                <div class="multiple-choice" data-target="tabclstr">
+                                <div class="multiple-choice">
                                 <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"aria-expanded="false"> <!-- both options here need same name -->
                                 <label for="radio-inline-q1-no">No</label>
                                 </div>
                                 </fieldset>
                             </div>
 
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-        <h1 class="heading-medium">
-          What date did you begin, or expect to begin, your review?
-        </h1>
-    </legend>
-    <div class="nhsuk-hint" id="example-hint">
-      For example, 30 1 2022
-    </div>
-    
-    <div class="nhsuk-date-input" id="example">
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-            Day
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-            Month
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-            Year
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</div>
 
+<div class="panel panel-border-narrow js-hidden" id="noreveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
 
-<div class="nhsuk-form-group">
-  <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-        <h1 class="heading-medium">
-          What date did you finish, or do you expect to finish, your review?
-        </h1>
-    </legend>
-    <div class="nhsuk-hint" id="example-hint">
-      For example, 30 1 2022
-    </div>
-    <div class="nhsuk-date-input" id="example">
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-            Day
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-            Month
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-      <div class="nhsuk-date-input__item">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-            Year
-          </label>
-          <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</div>
+                            <div class="nhsuk-form-group">
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <h1 class="heading-medium">
+                                      What date did you begin, or expect to begin, your review?
+                                    </h1>
+                                </legend>
+                                <div class="nhsuk-hint" id="example-hint">
+                                  For example, 30 1 2022
+                                </div>
+                                
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Day
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Month
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Year
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
+
+<br>
+                            <div class="nhsuk-form-group">
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <h1 class="heading-medium">
+                                      What date did you finish, or do you expect to finish, your review?
+                                    </h1>
+                                </legend>
+                                <div class="nhsuk-hint" id="example-hint">
+                                  For example, 30 1 2022
+                                </div>
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Day
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-day" name="example-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Month
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="example-month" name="example-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Year
+                                      </label>
+                                      <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="example-year" name="example-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                            </div>
     
                         <h1 class="heading-medium">
                           With regards to the target antibiotic checklist review, will the patient’s GP have been notified where concerns were identified?
@@ -202,65 +204,19 @@
                                     </div>
                                 </fieldset>
                             </div>
-                              
-<!-- 206 to 226 (remove other breaks in the first column)
-                          <div class="panel panel-border-narrow js-hidden" id="phe" style="margin-top:25px; padding-top:0" aria-hidden="true">
-                            <div class="question2">
-                              <h1 class="heading-medium">
-                          Can you confirm that on the day of the declaration, an email has been sent to the NHS BSA Provider Assurance team that the pharmacy has not identified any eligible patients during the audit period?
-                              </h1>
-                                <div class="form-group">
-                                  <fieldset class="inline">
-                                  <legend class="visually-hidden"></legend>
-                                    <div class="multiple-choice" data-target="phe">
-                                    <input id="radio-inline-q4-yes" type="radio" name="radioInlineGroup" value="Yes" aria-expanded="false"> <!-- unique name per question block -->
-<!--                                    <label for="radio-inline-q4-yes">Yes</label>
-                                    </div>
-                                    <div class="multiple-choice" data-target="phe">
-                                    <input id="radio-inline-q4-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
- <!--                                   <label for="radio-inline-q4-no">No</label>
-                                    </div>
-                                </fieldset>
-                                </div>
-                            </div> 
-                          </div>
--->
-                          
-                          </div>
-                              
-              
+</div> 
+
+                                            
                               <br>
 
           <a class="button" href="pqs-ipcamr-2" role="button">Continue</a>
           <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
-          </form>
+        </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
           </div>
-
-
-
       </div>
   </div>
-
 </main>
 
 {% endblock %}

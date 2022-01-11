@@ -440,24 +440,49 @@
                                         <h1 class="heading-medium">
                                             Has the Local Pharmaceutical Committee (LPC) in which the PCN lies been notified of this?
                                         </h1>
+                                    </div>
 
-                                        <div class="form-group">
-                                          <fieldset class="inline">
 
-                                              <legend class="visually-hidden"></legend>
+                            <div class="form-group">
+                                <fieldset class="inline">
+                                  <legend class="visually-hidden"></legend>
+                                    <div class="multiple-choice">
+                                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroup" value="Yes" aria-expanded="false"> <!-- unique name per question block -->
+                                    <label for="radio-inline-q3-yes">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice" data-target="phe">
+                                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroup" value="No" aria-controls="phe" aria-expanded="false"> <!-- both options here need same name -->
+                                    <label for="radio-inline-q3-no">No</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                              
 
-                                              <div class="multiple-choice">
-                                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
-                                                <label for="radio-inline-q1-yes">Yes</label>
-                                                </div>
-                                                <div class="multiple-choice">
-                                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
-                                                <label for="radio-inline-q1-no">No</label>
-                                                </div>
+                          <div class="panel panel-border-narrow js-hidden" id="phe" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                            <div class="question2">
+                              <h1 class="heading-medium">
+                                  It is a requirement for a Pharmacy PCN Lead based at your pharmacy to inform the LPC . If this has not been done, you will not qualify for the PCN domain payment.
+                                  Are you sure the LPC has not been informed?
+                              </h1>
+                              <p>(If the LPC has been informed, leave this as ‘No’ and change the answer to the previous question).</p>
 
-                                          </fieldset>
-                                      </div>
-                                          </div>
+                                <div class="form-group">
+                                  <fieldset class="inline">
+                                  <legend class="visually-hidden"></legend>
+                                    <div class="multiple-choice" data-target="phe">
+                                    <input id="radio-inline-q4-yes" type="radio" name="radioInlineGroup" value="Yes" aria-expanded="false"> <!-- unique name per question block -->
+                                <label for="radio-inline-q4-yes">Yes</label>
+                                    </div>
+                                    <div class="multiple-choice" data-target="phe">
+                                    <input id="radio-inline-q4-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q4-no">No</label>
+                                    </div>
+                                </fieldset>
+                                </div>
+                            </div> 
+                          </div>
+
+
 
 
 
