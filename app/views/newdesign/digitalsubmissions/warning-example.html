@@ -1,0 +1,145 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="main-content">
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <header class="page-header" style="clear: none; display: block;">
+              <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Submissions</h1>
+              <p class="page-header--sub heading-secondary">EPS prescriptions</p>
+              <hr>
+              </header>
+
+
+
+
+
+
+<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+    Message to alert the user to a problem goes here
+  </h1>
+
+  <p>
+    Optional description of the errors and how to correct them
+  </p>
+
+  <ul class="error-summary-list">
+    <li><a href="#example-full-name">Descriptive link to the question with an error</a></li>
+    <li><a href="#example-ni-number">Descriptive link to the question with an error</a></li>
+  </ul>
+
+</div>
+
+<h1 class="heading-large">
+  Your personal details
+</h1>
+
+<div class="form-group error">
+
+  <label for="example-full-name" id="error-full-name">
+
+    <span class="form-label-bold">Full name</span>
+    <span class="form-hint">As shown on your birth certificate or passport</span>
+    <span class="error-message" id="error-message-full-name">Error message about full name goes here</span>
+
+  </label>
+
+  <input class="form-control" id="example-full-name" type="text" name="fullName" value="" aria-describedby="error-message-full-name">
+</div>
+
+<div class="form-group error">
+
+  <label for="example-ni-number" id="error-ni-number">
+
+    <span class="form-label-bold">National Insurance number</span>
+    <span class="form-hint">
+      It’s on your National Insurance card, benefit letter, payslip or P60.
+      <br>
+      For example, ‘QQ 12 34 56 C’.
+    </span>
+    <span class="error-message" id="error-message-ni-number">
+      Error message about National Insurance number goes here
+    </span>
+
+  </label>
+
+  <input class="form-control" id="example-ni-number" type="text" name="niNo" value="" aria-describedby="error-message-ni-number">
+
+</div>
+
+<input class="button" type="submit" value="Continue">
+
+
+
+
+
+
+                  <form class="form"> <!-- wrapped both questions inside <form> -->
+                    <div class="question1">
+                              <h1 class="heading-medium">
+                                  By 31 March 2022, will you have a process in place to refer all children aged 5 to 15 years dispensed inhaler press and breathe pMDI for asthma, to a health care professional for a spacer device, in line with NICE TA38, where appropriate? 
+                              </h1>
+                              
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="niceta38" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                        <div class="panel panel-border-narrow js-hidden" id="niceta38" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+                              <h1 class="heading-medium">
+                          Between 1 September 2021 and the day of the declaration, in line with NICE TA38, how many children aged 5 to 15 have been referred for a spacer device, where appropriate?
+                              </h1>
+                              <p>Enter 0 (zero) if you have not referred any children.</p>
+                                <div class="form-group">
+                                  <fieldset class="inline">
+                                      <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+                                      <label class="govuk-label" for="width-3">
+                                    children
+                                  </label>
+                                  </fieldset>
+                                </div> 
+                          </div>
+                        </div>
+                    
+                        <a class="button" href="pqs-respiratory-reveal-2" role="button">Continue</a>
+                        <a class="button" href="#" role="button" style="background-color: #005EA5">Save and continue later</a>
+                    </div>
+                  </form>
+            </div>
+          </div>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}
