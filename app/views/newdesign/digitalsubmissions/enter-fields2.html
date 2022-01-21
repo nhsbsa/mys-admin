@@ -18,7 +18,7 @@
 
   <div class="sidebar-layout">
     <div class="main-content">
-          <a href="javascript:history.back()" class="link-back">Back</a>
+
           <div class="grid-row">
             <div class="column-two-thirds">
               <header class="page-header" style="clear: none; display: block;">
@@ -26,15 +26,6 @@
               <p class="page-header--sub heading-secondary">EPS prescriptions</p>
               <hr>
               </header>
-
-                <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
-                  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
-                    There is a problem
-                  </h1>
-                  <ul class="error-summary-list">
-                    <li><a href="#example-ni-number">You are re-keying the figure because the previously keyed figures are out of tolerance. Please re-key the figures to confirm.</a></li>
-                  </ul>
-                </div>
 
                   <form class="form"> <!-- wrapped both questions inside <form> -->
                     <div class="question1">
@@ -56,7 +47,7 @@
                                 </fieldset>
                               </div>
 
-                        <div class="panel panel-border-narrow" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                        <div class="panel panel-border-narrow js-hidden" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
                           <div class="question2">
 
                               <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
@@ -132,25 +123,13 @@
                                     </div>
                                   </div>
                                 </div>
-
-
-                              <h1 class="heading-medium">
-                                  Confirm the number of items is correct
-                              </h1>
-                              <span class="error-message" id="error-message-ni-number">
-                                  You are re-keying the figure because the previously keyed figures are out of tolerance. Please re-key the figures to confirm.
-                              </span>
-
-                            
-
-
                               </fieldset>
 
                           </div>
                         </div>
 
                         <br>                  
-                        <a class="button" href="enter-fields-warning11" role="button">Next</a>
+                        <a class="button" href="enter-fields-warning2" role="button">Next</a>
 
                     </div>
                   </form>
