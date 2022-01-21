@@ -32,7 +32,10 @@
                     There is a problem
                   </h1>
                   <ul class="error-summary-list">
-                    <li><a href="#example-ni-number">These figures do not match the figures previously entered. Confirm new figures or amend your figures and confirm.</a></li>
+                    <li><a href="#example-ni-number">These numbers do not match the numbers previously entered for forms. Ensure the second set of boxes is correct and confirm.</a></li>
+                  </ul>
+                  <ul class="error-summary-list">
+                    <li><a href="#example-ni-number">These numbers do not match the numbers previously entered for items. Ensure the second set of boxes is correct and confirm.</a></li>
                   </ul>
                 </div>
 
@@ -131,7 +134,30 @@
                                 </div>
                               </fieldset>
 
-                              <br>
+
+                              <h1 class="heading-medium">
+                                  Confirm the number of forms is correct
+                              </h1>
+                              <span class="error-message" id="error-message-ni-number">
+                                  These numbers do not match the numbers previously entered for forms. Ensure the second set of boxes is correct and confirm.
+                              </span>
+
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="epsprescriptions" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+
+
                               <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                                 <legend class="nhsuk-fieldset__legend nhsuk-label--l">
 
@@ -205,7 +231,7 @@
                                   Confirm the number of items is correct
                               </h1>
                               <span class="error-message" id="error-message-ni-number">
-                                  These figures do not match the figures previously entered. Confirm new figures or amend your figures and confirm.
+                                  These numbers do not match the numbers previously entered for items. Ensure the second set of boxes is correct and confirm.
                               </span>
 
                               <div class="form-group">
