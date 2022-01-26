@@ -31,9 +31,11 @@
                   <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
                     There is a problem
                   </h1>
-                 
                   <ul class="error-summary-list">
-                    <li><a href="#example-ni-number">The highlighted figures do not match the figures previously entered for items. Re-key the figures in the highlighted boxes and select Yes to confirm they are correct.</a></li>
+                    <li><a href="#example-ni-number">The total number of forms you have input is significantly different to your previoius month's submission. Re-key the figures and click Yes to confirm.</a></li>
+                  </ul>
+                  <ul class="error-summary-list">
+                    <li><a href="#example-ni-number">The total number of items you have input is significantly different to your previoius month's submission. Re-key the figures and click Yes to confirm.</a></li>
                   </ul>
                 </div>
 
@@ -60,7 +62,7 @@
                         <div class="panel panel-border-narrow" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
                           <div class="question2">
 
-                            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                                 <legend class="nhsuk-fieldset__legend nhsuk-label--l">
                                     <h1 class="heading-medium">
                                       Tell us how many are exempt, paid and paid at the old rate
@@ -98,85 +100,12 @@
                                   </div>
                                 </div>
                               </fieldset>
-<br>
-                              
-
-                              
-
-                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-
-                                    <h1 class="heading-medium">
-                                      Items
-                                    </h1>
-                                </legend>
-                                
-                                <div class="nhsuk-date-input" id="example">
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                                        Exempt
-                                      </label>
-                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:70px;" value="1000">
-                                    </div>
-                                  </div>
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                                        Paid
-                                      </label>
-                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:70px;" value="1000">
-                                    </div>
-                                  </div>
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                                        Old rate
-                                      </label>
-                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:70px;" value="1000">
-                                    </div>
-                                  </div>
-                                </div>
-
-<br>
-                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
-                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
-                                    <span class="form-hint">Enter the correct amounts</span>
-                                </legend>
-                                
-                                <div class="nhsuk-date-input" id="example">
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
-                                        Exempt
-                                      </label>
-                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="border:5px solid #b10e1e; width:70px;" value="200">
-                                    </div>
-                                  </div>
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
-                                        Paid
-                                      </label>
-                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="border:5px solid #b10e1e; width:70px;" value="200">
-                                    </div>
-                                  </div>
-                                  <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
-                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
-                                        Old rate
-                                      </label>
-                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="border:5px solid #b10e1e; width:70px;" value="200">
-                                    </div>
-                                  </div>
-                                </div>
-                            </fieldset>
 
                               <h1 class="heading-medium">
-                                  Confirm the number of items is correct
+                                  Confirm the number of forms is correct
                               </h1>
                               <span class="error-message" id="error-message-ni-number">
-                                  The highlighted figures do not match the figures previously entered for items. Re-key the figures in the highlighted boxes and select Yes to confirm they are correct.
+                                  The total number of forms you have input is significantly different to your previoius month's submission. Re-key the figures and click Yes to confirm.
                               </span>
 
                               <div class="form-group">
@@ -193,13 +122,68 @@
                                 </fieldset>
                               </div>
 
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+
+                                    <h1 class="heading-medium">
+                                      Items
+                                    </h1>
+                                </legend>
+                                
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Exempt
+                                      </label>
+                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Paid
+                                      </label>
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Old rate
+                                      </label>
+                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                </div>
+
+                              <h1 class="heading-medium">
+                                  Confirm the number of items is correct
+                              </h1>
+                              <span class="error-message" id="error-message-ni-number">
+                                  The total number of items you have input is significantly different to your previoius month's submission. Re-key the figures and click Yes to confirm.
+                              </span>
+
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="epsprescriptions" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
                               </fieldset>
 
                           </div>
                         </div>
 
                         <br>                  
-                        <a class="button" href="enter-fields0" role="button">Next</a>
+                        <a class="button" href="enter-fields-warning11" role="button">Next</a>
 
                     </div>
                   </form>

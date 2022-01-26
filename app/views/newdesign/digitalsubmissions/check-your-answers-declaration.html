@@ -1,0 +1,162 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+        </div>
+
+      </div>
+
+      <div class="main-content">
+         
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <header class="page-header" style="clear: none; display: block;">
+                <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">January 2022 Submission</h1>                    
+                <p class="page-header--sub heading-secondary">Summary</p>
+            </header>
+
+              <h2 class="heading-medium">
+                  Paper prescriptions
+              </h2>
+
+              <dl class="govuk-check-your-answers cya-questions-short">
+                  <div>
+                    <dt class="cya-question">
+                      Are you sending any paper prescriptions?
+                    </dt>
+                    <dd class="cya-answer">
+                      Yes
+                    </dd>
+                    <dd class="cya-answer">
+                      
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Edit<span class="visually-hidden"></span>
+                      </a>
+                    </dd>
+                  </div>
+          
+                  <div>
+                    <dt class="cya-question">
+                      Category
+                    </dt>
+                    <dt class="cya-question">
+                      Forms
+                    </dt>
+                    <dt class="cya-question" >
+                      Item
+                    </dt>
+                    <dd class="cya-change">
+                      <a href="#">
+                        Edit<span class="visually-hidden"></span>
+                      </a>
+                    </dd>
+                  </div>
+                                  </dl>
+          
+          
+                
+          
+                <h2 class="heading-medium">
+                    Gastro-protection
+                  </h2>
+  
+                <dl class="govuk-check-your-answers cya-questions-short">
+
+                      <div>
+                          <dt class="cya-question">
+                            Was the patient referred to the prescriber about gastro-protection?
+                          </dt>
+                          <dd class="cya-answer">
+                            Yes
+                          </dd>
+                          <dd class="cya-change">
+                            <a href="#">
+                              Change<span class="visually-hidden"> answer</span>
+                            </a>
+                          </dd>
+                        </div>
+    
+                        <div>
+                            <dt class="cya-question">
+                              Please add any other comments
+                            </dt>
+                            <dd class="cya-answer">
+                              No other comments
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="#">
+                                Change<span class="visually-hidden"> answer</span>
+                              </a>
+                            </dd>
+                          </div>
+      
+
+                  </dl>
+  
+          
+
+                    <div class="form-group" >
+              
+          
+                      <div class="multiple-choice multiple-radio" data-target="medicineservice" style="margin-top: 50px;">
+                          <input id="MS" name="male" value="male" type="checkbox" aria-controls="male" aria-expanded="false">
+                          <label for="MS">I have manually recorded that I have competed an entry for this patient to prevent duplication</label>
+                        </div>
+              </div>
+
+
+
+                  <a class="button" href="NSAID-add-another" role="button">Next</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

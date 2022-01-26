@@ -32,10 +32,7 @@
                     There is a problem
                   </h1>
                   <ul class="error-summary-list">
-                    <li><a href="#example-ni-number">These figures do not match the figures previously entered for items. Re-key the figures and select Yes to confirm.</a></li>
-                  </ul>
-                  <ul class="error-summary-list">
-                    <li><a href="#example-ni-number">These figures do not match the figures previously entered for forms. Re-key the figures and select Yes to confirm.</a></li>
+                    <li><a href="#example-ni-number">The highlighted figures do not match the figures previously entered for items. Re-key the figures in the highlighted boxes and select Yes to confirm they are correct.</a></li>
                   </ul>
                 </div>
 
@@ -83,7 +80,7 @@
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
-                                    <div class="nhsuk-form-group">
+                                    <div class="form-group">
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
@@ -100,32 +97,7 @@
                                   </div>
                                 </div>
                               </fieldset>
-                              
-                              <h1 class="heading-medium">
-                                  Confirm the number of forms is correct
-                              </h1>
-                              <span class="error-message" id="error-message-ni-number">
-                                  These figures do not match the figures previously entered for forms. Re-key the figures and select Yes to confirm.
-                              </span>
-
-
-                              <div class="form-group">
-                                <fieldset class="inline">
-                                <legend class="visually-hidden"></legend>
-                                  <div class="multiple-choice">
-                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="epsprescriptions" aria-expanded="false"> <!-- unique name per question block -->
-                                  <label for="radio-inline-q1-yes">Yes</label>
-                                  </div>
-                                  <div class="multiple-choice" data-target="wages-reveal">
-                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
-                                  <label for="radio-inline-q1-no">No</label>
-                                  </div>
-                                </fieldset>
-                              </div>
-                            
-
-
-
+                              <br>
 
                               <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
                                 <legend class="nhsuk-fieldset__legend nhsuk-label--l">
@@ -149,7 +121,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
-                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:70px;" value="">
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="border:5px solid #b10e1e; width:70px;" value="">
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -162,12 +134,11 @@
                                   </div>
                                 </div>
 
-
                               <h1 class="heading-medium">
                                   Confirm the number of items is correct
                               </h1>
                               <span class="error-message" id="error-message-ni-number">
-                                  These figures do not match the figures previously entered for items. Re-key the figures and select Yes to confirm.
+                                  The highlighted figures do not match the figures previously entered for items. Re-key the figures in the highlighted boxes and select Yes to confirm they are correct.
                               </span>
 
                               <div class="form-group">
@@ -184,8 +155,6 @@
                                 </fieldset>
                               </div>
                             
-
-
                               </fieldset>
 
                           </div>

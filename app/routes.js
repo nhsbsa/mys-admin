@@ -665,12 +665,3 @@ router.get(/pqsAddpharm/, function (req, res) {
     res.redirect('pqs-non-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
-
-// Digital Submissions //
-router.get(/itemsCorrect/, function (req, res) {
-  if (req.query.radioInlineGroup === "Yes" ) {
-    res.redirect('enter-fields1'); // if both input values are "Yes" - redirect to 'page-name' //
-  } else if (req.query.radioInlineGroup === "No" ){
-    res.redirect('enter-fields1'); // if both input values are "Yes" - redirect to 'page-name' //
-  }
-});
