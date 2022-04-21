@@ -368,7 +368,7 @@ NHSBSA Prototype
             <h3 class="heading-small">Reports</h3>
           </li>
           <div id="options" class="options">
-            <li><a class="active" href="reports">Download monthly reports</a></li>
+            <li><a href="reports">Download monthly reports</a></li>
           </div>
           <li>
             <h3 class="heading-small">Prescription images</h3>
@@ -381,7 +381,7 @@ NHSBSA Prototype
           </li>
           <div id="options" class="options">
             <li><a href="payment">View payment schedules</a></li>
-            <li><a href="management/cpcs">CPCS amendments</a></li>
+            <li><a class="active" href="cpcs">CPCS amendments</a></li>
           </div>
           <li>
             <h3 class="heading-small">User management</h3>
@@ -407,87 +407,108 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
+        <div class="column-full">
+              <h2 class="heading-large">CPCS amendments - March 2022 - FAAAA</h2>
 
-          <h1 class="heading-xlarge" style="margin-bottom: 20px;">
-            Reports
-          </h1>
+              <p>Form 10 - 3 items</p>
 
-          <p class="lede" style="margin-bottom: 60px;">Use this service to download monthly reports for your pharmacies.</p>
+              <div class="grid-row">
+                                        <div class="column-full" style="margin-bottom: 25px;">
 
-          <form action="downloadreports-handler" method="get" class="form">
-            <div class="form-group">
+                                <table class="table-form">
+                                  <caption class="visuallyhidden">Flu vaccinations administered</caption>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Name</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">current charge status</th>
+                                      <th scope="col">Amend charge</th>
+                                    </tr>
+                                  </thead>
+                                  <tfoot>
+                                  </tfoot>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Warfarin 1mg tablets</th>
+                                        <td>28</td>
+                                        <td>£0.00</td>
+                                        <td class="numeric last">
+                                          <fieldset class="inline">
+                      <legend class="visually-hidden"></legend>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">Add charge</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">Remove charge</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no2" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no2">No change</label>
+                      </div>
+                      </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Warfarin 3mg tablets</th>
+                                        <td>28</td>
+                                        <td>£0.00</td>
+                                      <td style="text-align:right; padding-right:0;">
+                                        <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q2-yes" type="radio" name="radioInlineGroupTwo" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q2-yes">Add charge</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q2-no" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q2-no">Remove charge</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q2-no2" type="radio" name="radioInlineGroupTwo" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q2-no2">No change</label>
+                    </div>
+                    </fieldset>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Bisoprolol 1.25mg tablets</th>
+                                      <td>38</td>
+                                        <td>£0.00</td>
+                                      <td>
+                                        <fieldset class="inline">
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q3-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
+                    <label for="radio-inline-q3-yes">Add charge</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q3-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q3-no">Remove charge</label>
+                    </div>
+                    <div class="multiple-choice">
+                    <input id="radio-inline-q3-no2" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
+                    <label for="radio-inline-q3-no2">No change</label>
+                    </div>
+                    </fieldset>                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                         </div>
+                                      </div>
 
-
-              <label class="form-label" for="ni-number">
-                <span class="heading-small">Find a pharmacy</span>
-              </label>
-
-              <p class="form-hint">Enter F code, YP code or location</p>
-
-
-              <div class="test-case" style="overflow: visible">
-                <div>
-                  <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
-                    <option value=""></option>
-                    <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">FA123 - Boots, Eldon Square,
-                      Newcastle, NE1 7XE</option>
-                    <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">FA124 - Boots,
-                      Northumberland Street, Newcastle, NE1 7DQ</option>
-                    <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">FA125 - Boots,
-                      Newcastle Central Station, Newcastle, NE1 5DL</option>
-                    <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">FA126 - Boots, Osborne Road,
-                      Newcastle, NE2 2AD</option>
-                    <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">FA127 - Boots, Gateshead
-                      Trinity Square, Gateshead, NE8 1BF</option>
-                    <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">FA128 - Boots, Byker, Newcastle, NE6 1DN
-                    </option>
-                    <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">FA129 - Boots, Dunston, Gateshead, NE11
-                      9FJ</option>
-                    <option value="YP123 - Boots, Newcastle, NE1">YP123 - Boots, Newcastle, NE1</option>
-                    <option value="YP124 - Boots, Leeds, LS1">YP124 - Boots, Leeds, LS1</option>
-                    <option value="YP125 - Boots, Manchester, M1">YP125 - Boots, Manchester, M1</option>
-                    <option value="YP126 - Boots, Liverpool, L1">YP126 - Boots, Liverpool, L1</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-          </form>
-          <div class="form-group">
-            <a href="reports2"><input class="button" type="submit" value="Next"></a>
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                   <br><br>
+                   <a class="button" href="cpcs-september-faaaa-scripts2" role="button">Save and continue</a>
+                    <br><br>
 
 
         </div>
 
 
-
       </div>
     </div>
 
-    <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>
     <script src="/public/javascripts/jquery-1.11.3.js"></script>
     <script src="/public/javascripts/application.js"></script>
@@ -497,6 +518,12 @@ NHSBSA Prototype
     <script src="/public/javascripts/typeahead-aria.js"></script>
     <script src="/public/javascripts/init-autocomplete.js"></script>
 
+    <script>
+        sessionStorage.removeItem("q1");
+        sessionStorage.removeItem("q2");
+        sessionStorage.removeItem("q3");
+        sessionStorage.removeItem("q4");
+    </script>
 </main>
 
 {% endblock %}

@@ -1,0 +1,212 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <h3 class="heading-small">Reports</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="reports">Download monthly reports</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Prescription images</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="pir">Request an image</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">Payment information</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a href="payment">View payment schedules</a></li>
+          </div>
+          <li>
+            <h3 class="heading-small">User management</h3>
+          </li>
+          <div id="options" class="options">
+            <li><a class="active" href="list-users">Manage users</a></li>
+          </div>
+        </ul>
+      </div>
+
+
+    </div>
+    <div class="main-content">
+
+
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+        </p>
+      </div>
+
+      <a href="javascript:history.back()" class="link-back">Back</a>
+
+      <div class="grid-row">
+        <div class="column-two-thirds">
+
+          <h1 class="heading-xlarge">
+            Manage users
+          </h1>
+
+          <div class="form-group">
+            <div class="search-box-container">
+              <form action="list-users" class="search-box">
+                <div class="inline-search-wrapper">
+                  <input class="search-box__input" type="text" name="search-box" placeholder="Search" value="">
+                  <button type="submit" class="inline-search-button">
+
+                  </button>
+                </div>
+
+              </form>
+              <div class="search-box__options">
+
+
+
+
+                <a class="button" href="create-user">Create a new user</a>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email address</th>
+                  <th scope="col">FA Code</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="user-summary">Joe Bloggs</a></td>
+                  <td>joe.bloggs@nhs.net</td>
+                  <td>FA123</td>
+                </tr>
+                <tr>
+                  <td><a href="">Jane Gregory</a></td>
+                  <td>jane.gregory@nhs.net</td>
+                  <td>FA124</td>
+                </tr>
+                <tr>
+                  <td><a href="">Maurice Moyer</a></td>
+                  <td>maurice.moyer@nhs.net</td>
+                  <td>FA125</td>
+                </tr>
+                <tr>
+                  <td><a href="">Roman Dudley</a></td>
+                  <td>roman.dudley@nhs.net</td>
+                  <td>FA126</td>
+                </tr>
+                <tr>
+                  <td><a href="">Collin Moody</a></td>
+                  <td>collin.moody@nhs.net</td>
+                  <td>FA127</td>
+                </tr>
+                <tr>
+                  <td><a href="">Carla Cook</a></td>
+                  <td>carla.cook@nhs.net</td>
+                  <td>FA128</td>
+                </tr>
+                <tr>
+                  <td><a href="">Nathaniel David</a></td>
+                  <td>nathaniel.david@nhs.net</td>
+                  <td>FA129</td>
+                </tr>
+                <tr>
+                  <td><a href="">Ellen Glass</a></td>
+                  <td>ellen.glass@nhs.net</td>
+                  <td>FA130</td>
+                </tr>
+                <tr>
+                  <td><a href="">Joe Bloggs</a></td>
+                  <td>joe.bloggs@nhs.net</td>
+                  <td>FA131</td>
+                </tr>
+                <tr>
+                  <td><a href="">Harper Weber</a></td>
+                  <td>harper.weber@nhs.net</td>
+                  <td>FA132</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="results-per-page">
+            <p id="resultsPerPage">Results per page:</p>
+            <ul>
+              <li class="page-active" aria-labelledby="resultsPerPage">10</li>
+              <li><a href="" aria-labelledby="resultsPerPage">25</a></li>
+              <li><a href="" aria-labelledby="resultsPerPage">100</a></li>
+            </ul>
+          </div>
+
+          <div class="pagination">
+            <ul>
+              <li class="page-active">1</li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li>...</li>
+              <li><a href="">10</a></li>
+              <li><a href="">Next</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+</main>
+
+{% endblock %}

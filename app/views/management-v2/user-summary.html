@@ -1,0 +1,169 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+          <div class="side-nav">
+              <ul>
+                <li>
+                    <h3 class="heading-small">Reports</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="reports">Download monthly reports</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">Prescription images</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="pir">Request an image</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">Payment information</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="payment">View payment schedules</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">User management</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a class="active" href="list-users">Manage users</a></li>
+                </div>
+              </ul>
+            </div>
+
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                User details
+              </h1>
+
+              <div class="form-group">
+                  <dl class="govuk-check-your-answers cya-questions-short">
+                    <div>
+                      <dt class="cya-question">
+                        Name
+                      </dt>
+                      <dd class="cya-answer">
+                      Joe Bloggs
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-name">
+                          Change<span class="visually-hidden"> name</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                      Email address
+                      </dt>
+                      <dd class="cya-answer">
+                       joe.bloggs27@nhs.net
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-email">
+                          Change<span class="visually-hidden"> email address</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                      FA Code
+                      </dt>
+                      <dd class="cya-answer">
+                        FA123
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-F-code">
+                          Change<span class="visually-hidden"> FA code</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                    <div>
+                      <dt class="cya-question">
+                      Permissions
+                      </dt>
+                      <dd class="cya-answer">
+                      Pharmacy
+                      </dd>
+                      <dd class="cya-change">
+                        <a href="change-user-permissions">
+                          Change<span class="visually-hidden"> permissions</span>
+                        </a>
+                      </dd>
+                    </div>
+            
+                  </dl>
+            </div>
+
+            <div class="form-group">
+                <a href="remove-user" class="destructive-button-right">Remove user</a>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

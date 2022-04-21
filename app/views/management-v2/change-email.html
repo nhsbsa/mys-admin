@@ -1,0 +1,119 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+          <div class="side-nav">
+              <ul>
+                <li>
+                    <h3 class="heading-small">Reports</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="reports">Download monthly reports</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">Prescription images</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="pir">Request an image</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">Payment information</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="payment">View payment schedules</a></li>
+                </div>
+                <li>
+                    <h3 class="heading-small">User management</h3>
+                </li>
+                <div id="options" class="options">
+                  <li><a href="list-users">Manage users</a></li>
+                </div>
+              </ul>
+            </div>
+
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p> 
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+        
+          <div class="grid-row">
+            <div class="column-two-thirds">
+        
+              <h1 class="heading-xlarge">
+                Change email address
+              </h1>
+  
+                <h2 class="heading-small">Current email address</h2>
+                <p>joe.blogg@nhs.net</p>
+  
+                <form class="form" action="your-details" method="get" _lpchecked="1">
+                    <div class="form-group">
+                          <label class="form-label" for="full-name-f1"><span class="heading-small">New email address</span></label>
+                          <input class="form-control" id="full-name-f1" type="text">
+                    </div>
+                </form>
+  
+                <div class="form-group">
+                  <a href="your-details">
+                    <input class="button" type="submit" value="Update">
+                  </a>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

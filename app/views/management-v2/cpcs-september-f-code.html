@@ -368,7 +368,7 @@ NHSBSA Prototype
             <h3 class="heading-small">Reports</h3>
           </li>
           <div id="options" class="options">
-            <li><a class="active" href="reports">Download monthly reports</a></li>
+            <li><a href="reports">Download monthly reports</a></li>
           </div>
           <li>
             <h3 class="heading-small">Prescription images</h3>
@@ -381,7 +381,7 @@ NHSBSA Prototype
           </li>
           <div id="options" class="options">
             <li><a href="payment">View payment schedules</a></li>
-            <li><a href="management/cpcs">CPCS amendments</a></li>
+            <li><a class="active" href="cpcs">CPCS amendments</a></li>
           </div>
           <li>
             <h3 class="heading-small">User management</h3>
@@ -408,80 +408,42 @@ NHSBSA Prototype
 
       <div class="grid-row">
         <div class="column-two-thirds">
+              <h2 class="heading-large">CPCS amendments - September 2020</h2>
 
-          <h1 class="heading-xlarge" style="margin-bottom: 20px;">
-            Reports
-          </h1>
+              <h2 class="heading-medium">These are the CPCS items with no price information for [f-code] in September 2020</h2>
 
-          <p class="lede" style="margin-bottom: 60px;">Use this service to download monthly reports for your pharmacies.</p>
-
-          <form action="downloadreports-handler" method="get" class="form">
-            <div class="form-group">
-
-
-              <label class="form-label" for="ni-number">
-                <span class="heading-small">Find a pharmacy</span>
-              </label>
-
-              <p class="form-hint">Enter F code, YP code or location</p>
-
-
-              <div class="test-case" style="overflow: visible">
-                <div>
-                  <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
-                    <option value=""></option>
-                    <option value="FA123 - Boots, Eldon Square, Newcastle, NE1 7XE">FA123 - Boots, Eldon Square,
-                      Newcastle, NE1 7XE</option>
-                    <option value="FA124 - Boots, Northumberland Street, Newcastle, NE1 7DQ">FA124 - Boots,
-                      Northumberland Street, Newcastle, NE1 7DQ</option>
-                    <option value="FA125 - Boots, Newcastle Central Station, Newcastle, NE1 5DL">FA125 - Boots,
-                      Newcastle Central Station, Newcastle, NE1 5DL</option>
-                    <option value="FA126 - Boots, Osborne Road, Newcastle, NE2 2AD">FA126 - Boots, Osborne Road,
-                      Newcastle, NE2 2AD</option>
-                    <option value="FA127 - Boots, Gateshead Trinity Square, Gateshead, NE8 1BF">FA127 - Boots, Gateshead
-                      Trinity Square, Gateshead, NE8 1BF</option>
-                    <option value="FA128 - Boots, Byker, Newcastle, NE6 1DN">FA128 - Boots, Byker, Newcastle, NE6 1DN
-                    </option>
-                    <option value="FA129 - Boots, Dunston, Gateshead, NE11 9FJ">FA129 - Boots, Dunston, Gateshead, NE11
-                      9FJ</option>
-                    <option value="YP123 - Boots, Newcastle, NE1">YP123 - Boots, Newcastle, NE1</option>
-                    <option value="YP124 - Boots, Leeds, LS1">YP124 - Boots, Leeds, LS1</option>
-                    <option value="YP125 - Boots, Manchester, M1">YP125 - Boots, Manchester, M1</option>
-                    <option value="YP126 - Boots, Liverpool, L1">YP126 - Boots, Liverpool, L1</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-          </form>
-          <div class="form-group">
-            <a href="reports2"><input class="button" type="submit" value="Next"></a>
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <div class="submissions" style="padding: 0;">
+                          <table class="data-table assets-summary check-your-answers">
+                            <tbody><tr>
+                              <td><span class="strong">Item</span></td>
+                              <td><span class="strong">Date</span></td>
+                              <td></td>
+                            </tr>
+            <tr>
+                <td>Item 1</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td>Item 2</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         <tr>
+               <td>Item 3</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+            <tr>
+                <td>Item 4</td>
+               <td>24/01/2017</td>
+               <td><a href="">Add information</a></td>
+            </tr>
+         </tbody></table>
+                        </div>
 
 
         </div>
-
 
 
       </div>
