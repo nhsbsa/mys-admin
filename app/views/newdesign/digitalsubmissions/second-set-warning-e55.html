@@ -1,0 +1,178 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="main-content">
+          <a href="javascript:history.back()" class="link-back">Back</a>
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <header class="page-header" style="clear: none; display: block;">
+              <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Paper and EPS prescriptions submission</h1>
+              <p class="page-header--sub heading-secondary">June 2022</p>
+              <hr>
+              </header>
+
+                <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-2" tabindex="-1">
+                  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-2">
+                    There is a problem
+                  </h1>
+                
+                  <ul class="error-summary-list">
+                    <li><a href="#example-ni-number">The second set of figures you entered were different to your first set.
+<br>
+If the second set of figures are correct, select Yes to confirm.
+<br>
+If the second set of figures are not correct, change these numbers and select Yes to confirm.</a></li>
+                  </ul>
+                </div>
+
+                  <form class="form"> <!-- wrapped both questions inside <form> -->
+                    <div class="question1">
+
+                        <div class="panel panel-border-narrow" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+
+                            
+                            <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <h1 class="heading-medium">
+                                      Tell us how many are EPS prescriptions are exempt, paid and paid at the old rate
+                                    </h1>
+
+                                </legend>
+                                
+                            </fieldset>
+
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+
+                                    <h1 class="heading-medium">
+                                      Items
+                                    </h1>
+                                </legend>
+
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <span class="form-hint">First set of figures entered</span>
+                                </legend>
+
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Exempt
+                                      </label>
+                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:100px;" value="1200">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Paid
+                                      </label>
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:100px;" value="1200">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Old rate
+                                      </label>
+                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:100px;" value="1200">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+<br>
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <span class="form-hint">Second set of figures entered - change these numbers if required</span>
+                                </legend>
+                                
+                                
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Exempt
+                                      </label>
+                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="border:5px solid #b10e1e; width:100px;" value="800">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Paid
+                                      </label>
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="border:5px solid #b10e1e; width:100px;" value="800">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Old rate
+                                      </label>
+                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="border:5px solid #b10e1e; width:100px;" value="800">
+                                    </div>
+                                  </div>
+                                </div>
+                            </fieldset>
+
+
+                              <h1 class="heading-medium">
+                                  Confirm the number of EPS prescription items is correct
+                              </h1>
+                              <span class="error-message" id="error-message-ni-number">
+                                  The second set of figures you entered were different to your first set.
+<br>
+If the second set of figures are correct, select Yes to confirm.
+<br>
+If the second set of figures are not correct, change these numbers and select Yes to confirm.
+                              </span>
+
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="epsprescriptions" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                              </fieldset>
+
+                          </div>
+                        </div>
+
+                        <br>                  
+                        <a class="button" href="enter-fields-p05" role="button">Next</a>
+
+                    </div>
+                  </form>
+            </div>
+          </div>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}

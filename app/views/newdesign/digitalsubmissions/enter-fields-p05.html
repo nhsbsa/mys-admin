@@ -1,0 +1,143 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="main-content">
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <header class="page-header" style="clear: none; display: block;">
+              <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Paper prescriptions submission</h1>
+              <p class="page-header--sub heading-secondary">June 2022</p>
+              <hr>
+              </header>
+
+                  <form class="form"> <!-- wrapped both questions inside <form> -->
+                    <div class="question1">
+                              <h1 class="heading-medium">
+                                  Are you sending any paper prescriptions?
+                              </h1>
+                              
+                              <div class="form-group">
+                                <fieldset class="inline">
+                                <legend class="visually-hidden"></legend>
+                                  <div class="multiple-choice">
+                                  <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes" aria-controls="epsprescriptions" aria-expanded="false"> <!-- unique name per question block -->
+                                  <label for="radio-inline-q1-yes">Yes</label>
+                                  </div>
+                                  <div class="multiple-choice" data-target="wages-reveal">
+                                  <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No" aria-expanded="false"> <!-- both options here need same name -->
+                                  <label for="radio-inline-q1-no">No</label>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                        <div class="panel panel-border-narrow js-hidden" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <div class="question2">
+
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                                    <h1 class="heading-medium">
+                                      Tell us how many are exempt, paid and paid at the old rate
+                                    </h1>
+
+                                    <h1 class="heading-medium">
+                                      Forms
+                                    </h1>
+                                </legend>
+                                
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Exempt
+                                      </label>
+                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Paid
+                                      </label>
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Old rate
+                                      </label>
+                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:70px;" value="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+                              <br>
+                              <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
+                                <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+
+                                    <h1 class="heading-medium">
+                                      Items
+                                    </h1>
+                                </legend>
+                                
+                                <div class="nhsuk-date-input" id="example">
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
+                                        Exempt
+                                      </label>
+                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:70px;" value="2500">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
+                                        Paid
+                                      </label>
+                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:70px;" value="2500">
+                                    </div>
+                                  </div>
+                                  <div class="nhsuk-date-input__item">
+                                    <div class="nhsuk-form-group">
+                                      <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
+                                        Old rate
+                                      </label>
+                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:70px;" value="2500">
+                                    </div>
+                                  </div>
+                                </div>
+                              </fieldset>
+
+                          </div>
+                        </div>
+
+                        <br>                  
+                        <a class="button" href="enter-fields-e05" role="button">Next</a>
+
+                    </div>
+                  </form>
+            </div>
+          </div>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}
