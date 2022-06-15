@@ -18,22 +18,22 @@
     "browser-sync": "^2.11.1",
     "cross-spawn": "^5.0.0",
     "dotenv": "^4.0.0",
-    "express": "4.15.2",
+    "express": "^4.15.2",
     "express-session": "^1.13.0",
     "express-writer": "0.0.4",
-    "govuk-elements-sass": "3.1.1",
     "govuk_frontend_toolkit": "7.0.0",
     "govuk_template_jinja": "0.22.3",
+    "govuk-elements-sass": "3.1.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "^2.1.0",
-    "gulp-sass": "3.1.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-util": "^3.0.7",
+    "gulp-util": "^3.0.8",
     "jshint": "^2.11.1",
-    "marked": "^0.3.6",
-    "minimist": "1.2.0",
+    "marked": "^0.3.19",
+    "minimist": "^1.2.0",
     "nhsuk-frontend": "^3.1.0",
     "notifications-node-client": "^3.0.0",
     "nunjucks": "^2.5.2",
@@ -42,8 +42,8 @@
     "readdir": "0.0.13",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
-    "serve-favicon": "2.4.2",
-    "standard": "^10.0.2",
+    "serve-favicon": "^2.4.2",
+    "standard": "^10.0.3",
     "supertest": "^3.0.0",
     "sync-request": "^4.0.3"
   },
@@ -51,5 +51,8 @@
     "ignore": [
       "nunjucks"
     ]
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.9"
   }
 }
