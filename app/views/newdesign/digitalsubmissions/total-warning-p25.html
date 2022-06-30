@@ -38,7 +38,7 @@
                   </ul>
                 </div>
 
-                  <form class="form"> <!-- wrapped both questions inside <form> -->
+                  <form action="second-set-warning-p35" method="post" class="form"> <!-- wrapped both questions inside <form> -->
                     <div class="question1">
 
 
@@ -67,7 +67,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                         Exempt
                                       </label>
-                                        <p>4500</p>
+                                        <p>{{data['items-exempt1']}}</p>
                                     </div>
                                   </div>
                                 
@@ -76,7 +76,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
-                                      <p>3800</p>
+                                      <p>{{data['items-paid1']}}</p>
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -84,7 +84,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                         Old rate
                                       </label>
-                                      <p>0</p>
+                                      <p>{{data['items-oldrate1']}}</p>
                                     </div>
                                   </div>
                                 </div>
@@ -101,7 +101,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                         Exempt
                                       </label>
-                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="width:100px;" value="">
+                                        <input class="form-control" id="items-exempt2" type="text" name="items-exempt2" style="width:100px;" value="">
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -109,7 +109,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
-                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="width:100px;" value="">
+                                      <input class="form-control" id="items-paid2" type="text" name="items-paid2" style="width:100px;" value="">
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -117,7 +117,7 @@
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                         Old rate
                                       </label>
-                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="width:100px;" value="">
+                                      <input class="form-control" id="items-oldrate2" type="text" name="items-oldrate2" style="width:100px;" value="">
                                     </div>
                                   </div>
                                 </div>
@@ -150,8 +150,10 @@
                           </div>
                         </div>
 
-                        <br>                  
-                        <a class="button" href="second-set-warning-p35" role="button">Next</a>
+                        <br> 
+                        <div class="form-group">
+                          <input type="submit" class="button" value="Next">
+                        </div>                 
 
                     </div>
                   </form>

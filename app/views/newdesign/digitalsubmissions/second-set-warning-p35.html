@@ -41,7 +41,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                   </ul>
                 </div>
 
-                  <form class="form"> <!-- wrapped both questions inside <form> -->
+                  <form method="get" class="form"> <!-- wrapped both questions inside <form> -->
                     <div class="question1">
 
                         <div class="panel panel-border-narrow" id="epsprescriptions" style="margin-top:25px; padding-top:0" aria-hidden="true">
@@ -72,7 +72,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                         Exempt
                                       </label>
-                                        <p>4500</p>
+                                        <p>{{data['items-exempt1']}}</p>
                                     </div>
                                   </div>
                                 
@@ -81,7 +81,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
-                                      <p>3800</p>
+                                      <p>{{data['items-paid1']}}</p>
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -89,7 +89,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                         Old rate
                                       </label>
-                                      <p>0</p>
+                                      <p>{{data['items-oldrate1']}}</p>
                                     </div>
                                   </div>
                                 </div>
@@ -108,7 +108,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-day">
                                         Exempt
                                       </label>
-                                        <input class="form-control" id="forms-exempt" type="text" name="forms-exempt" style="border:5px solid #b10e1e; width:100px;" value="4500">
+                                        <input class="form-control" id="items-exempt" type="text" name="items-exempt" style="border:5px solid #b10e1e; width:100px;" value="{{data['items-exempt2']}}">
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -116,7 +116,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-month">
                                         Paid
                                       </label>
-                                      <input class="form-control" id="forms-paid" type="text" name="forms-paid" style="border:5px solid #b10e1e; width:100px;" value="8300">
+                                      <input class="form-control" id="items-paid" type="text" name="items-paid" style="border:5px solid #b10e1e; width:100px;" value="{{data['items-paid2']}}">
                                     </div>
                                   </div>
                                   <div class="nhsuk-date-input__item">
@@ -124,7 +124,7 @@ If the second set of figures are not correct, change these numbers and select Ye
                                       <label class="nhsuk-label nhsuk-date-input__label" for="example-year">
                                         Old rate
                                       </label>
-                                      <input class="form-control" id="forms-oldrate" type="text" name="forms-oldrate" style="border:5px solid #b10e1e; width:100px;" value="0">
+                                      <input class="form-control" id="items-oldrate" type="text" name="items-oldrate" style="border:5px solid #b10e1e; width:100px;" value="{{data['items-oldrate2']}}">
                                     </div>
                                   </div>
                                 </div>
