@@ -1,0 +1,123 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../pharmacy-services" class="active">Pharmacy services</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+
+    </div>      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
+                  <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission</h1>
+                <hr>
+            </header>
+
+
+<h1 class="heading-medium">These are the patients you've added so far.</h1>
+
+                <table class="data-table assets-summary check-your-answers">
+                  <tbody>
+                    <tr>
+                      <td><span class="strong">Referral</span></td>
+                      <td><span class="strong">Stage 1 provided?</span></td>
+                      <td><span class="strong">Stage 2 provided?</span></td>
+                      <td><span class="strong">Stage 3 provided?</span></td>
+                      <td><span class="strong"></span></td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 3456<br>1 October 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>
+                      <a href="dms-s1-cya">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+            </div>
+
+          </div>
+          <form class="form" action="dmsTen" method="GET"> <!-- wrapped both questions inside <form> -->
+
+                <!--Question 1 -->
+              <div class="question1">
+                  <h1 class="heading-medium">
+                      Do you want to add another patient?
+                  </h1>
+
+
+                      <div class="form-group">
+                          <fieldset class="inline">
+
+                              <legend class="visually-hidden"></legend>
+
+                              <div class="multiple-choice">
+                                <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                                <label for="radio-inline-q1-yes">Yes</label>
+                                </div>
+                                <div class="multiple-choice">
+                                <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                                <label for="radio-inline-q1-no">No</label>
+                                </div>
+
+                          </fieldset>
+                      </div>
+            </div>
+
+            <br>
+            <!-- <a href="cpaf-sops-l2.html"><input class="button" type="submit" value="Next"></a> -->
+            <input class="button" type="submit" value="Next"> <!-- input required to submit data -->
+          </form>
+
+
+
+</main>
+
+{% endblock %}

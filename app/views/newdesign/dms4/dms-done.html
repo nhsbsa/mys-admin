@@ -1,0 +1,106 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+<style>
+.task-name {
+    width: 60%;
+    float: left;
+}
+</style>
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+      <div class="sidebar-content">
+
+        <div class="side-nav">
+          <ul>
+            <li>
+              <a href="../index">Dashboard</a>
+            </li>
+            <li>
+              <a href="../pharmacy-services" class="active">Pharmacy services</a>
+            </li>
+            <li>
+              <a href="../advanced-services">Advanced Services</a>
+            </li>
+            <li>
+              <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+            </li>
+            </ul>
+          </div>
+      </div>
+      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <div class="done-panel">
+<h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
+<div id="oneoff_done">
+<h2 class="heading-medium">Discharge Medicines Service submission complete.</h2>
+</div>
+</div>
+
+
+                        <h2 class="heading-medium">What happens next</h2>
+
+                        <p>You've completed your submission for October 2020.</p>
+                        <p>We will send an email to <span class="strong">joe.bloggs@nhs.net</span> confirming your submission. Make sure you keep this email for your records.</p>
+                        <p>Payment will be made as part of the payment by the NHSBSA.</p>
+                        <div class="form-group">
+                            <a class="button" href="../index.html" role="button">Finish</a>
+
+
+           </div>
+           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+
+</main>
+
+{% endblock %}

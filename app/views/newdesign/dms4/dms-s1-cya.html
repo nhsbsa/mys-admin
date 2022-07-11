@@ -1,0 +1,188 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../prescriptions">Prescriptions</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+
+    </div>      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
+                  <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 1</h1>
+                <hr>
+            </header>
+
+
+<h1 class="heading-medium">Referral details</h1>
+
+<dl class="govuk-check-your-answers cya-questions-short">
+    <div>
+      <dt class="cya-question">
+        Date referral received
+      </dt>
+      <dd class="cya-answer">
+        1 October 2020
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Trust referral came from
+      </dt>
+      <dd class="cya-answer">
+        Newcastle Hospital Trust
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Did the referral meet requirements?
+      </dt>
+      <dd class="cya-answer">
+        Yes
+
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+
+
+  </dl>
+
+  <h1 class="heading-medium">Stage 1 details</h1>
+
+  <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          Was stage 1 provided?
+        </dt>
+        <dd class="cya-answer">
+          Yes
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Prescriptions in supply system intercepted?
+        </dt>
+        <dd class="cya-answer">
+          None existed
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Any issues or clinical actions identified?
+        </dt>
+        <dd class="cya-answer">
+          Yes<br>
+          Discrepancy with medication
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Issues discussed with?
+        </dt>
+        <dd class="cya-answer">
+          GP<br>
+          Hospital 
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+    </dl>
+
+  <div style="margin-top: 3em">
+    <a href="dms-s1-add-another"><input class="button" type="submit" value="Continue"></a>
+  </div>
+            </div>
+
+          </div>
+
+
+
+</main>
+
+{% endblock %}
