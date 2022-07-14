@@ -397,7 +397,7 @@
                       <header class="page-header" style="clear: none; display: block;">
                         <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
                           <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 2</h1>
-                      </header><br><br>
+                      </header>
 
 <form class="form" action="dmsEight" method="GET">
       <div class="question1">
@@ -457,24 +457,51 @@
                                                   </div>
                   </div>
               </div>
-              <div class="panel panel-border-narrow js-hidden"" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
+              <div class="panel panel-border-narrow js-hidden" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
 
-                        <div class="question5">
-                          <h1 class="heading-medium">
-                            Who completed it?
-                            </h1>
-                            <fieldset>
-                            <legend class="visually-hidden"></legend>
-                            <div class="multiple-choice">
-                            <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupThree" value="Yes"> <!-- unique name per question block -->
-                            <label for="radio-inline-q5-yes">Pharmacist</label>
-                            </div>
-                            <div class="multiple-choice">
-                            <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No"> <!-- both options here need same name -->
-                            <label for="radio-inline-q5-no">Pharmacy technician</label>
-                            </div>
-                            </fieldset>
+                <div class="question5">
+                  <h1 class="heading-medium">
+                    Who completed it?
+                  </h1>
+                  <fieldset>
+                    <legend class="visually-hidden"></legend>
+                    <div class="multiple-choice" data-target="wages-reveal-three">
+                      <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupThree" value="Yes">
+                      <!-- unique name per question block -->
+                      <label for="radio-inline-q5-yes">Pharmacist</label>
+                    </div>
+                    <div class="multiple-choice" data-target="wages-reveal-three">
+                      <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No">
+                      <!-- both options here need same name -->
+                      <label for="radio-inline-q5-no">Pharmacy technician</label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="panel panel-border-narrow js-hidden" id="wages-reveal-three" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                  <br>
+                          <div class="question5">
+                            <h1 class="heading-medium">
+                              Were prescriptions in supply system intercepted to prevent the patient receiving inappropriate supply?
+                              </h1>
+                              <fieldset class="inline">
+                              <legend class="visually-hidden"></legend>
+                              <div class="multiple-choice">
+                              <input id="radio-inline-q6-yes" type="radio" name="radioInlineGroupFour" value="Yes"> <!-- unique name per question block -->
+                              <label for="radio-inline-q6-yes">Yes</label>
                               </div>
+                              <div class="multiple-choice">
+                              <input id="radio-inline-q6-no" type="radio" name="radioInlineGroupFour" value="No"> <!-- both options here need same name -->
+                              <label for="radio-inline-q6-no">No</label>
+                              </div>
+                              <div class="multiple-choice">
+                              <input id="radio-inline-q6-no2" type="radio" name="radioInlineGroupFour" value="No"> <!-- both options here need same name -->
+                              <label for="radio-inline-q6-no2">No such prescriptions exist</label>
+                              </div>
+                              </fieldset>
+                                </div>
+  
+                  </div>
 
                 </div>
 <br>
