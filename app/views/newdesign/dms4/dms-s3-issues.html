@@ -419,13 +419,104 @@
                               aria-expanded="false">
                             <label for="MUR">Advice provided on medicines regimen and questions answered</label>
                           </div>
-                          <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                            <input id="MUR2" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews"
+                          <div class="multiple-choice multiple-radio" data-target="checkTen">
+                            <input id="MUR2" name="incomesingle" value="earned-income" type="checkbox" aria-controls="checkTen"
                               aria-expanded="false">
                             <label for="MUR2">Onward referral</label>
                           </div>
-                          <div class="multiple-choice multiple-radio" data-target="checkTen">
-                            <input id="aaa" name="aaa" value="earned-income" type="checkbox" aria-controls="checkTen" aria-expanded="false">
+
+                          <div class="js-hidden" id="checkTen" aria-hidden="true">
+                          <div class="panel panel-border-narrow" style="margin-top:25px; padding-top:0; margin-bottom:40px;">
+                          <div class="question3">
+                            <h1 class="heading-medium">
+                              Where was the patient referred?
+                            </h1>
+                            <p>Select all that apply</p>
+                            <div class="form-group">
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews"
+                                  aria-expanded="false">
+                                <label for="MUR">GP Practice</label>
+                              </div>
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                <input id="MUR2" name="incomesingle" value="earned-income" type="checkbox"
+                                  aria-controls="medicineusereviews" aria-expanded="false">
+                                <label for="MUR2">Community Pharmacy</label>
+                              </div>
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                <input id="MUR3" name="incomesingle" value="earned-income" type="checkbox"
+                                  aria-controls="medicineusereviews" aria-expanded="false">
+                                <label for="MUR3">PCN clinical pharmacist/practice pharmacist
+                                </label>
+                              </div>
+                              <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
+                                <input id="MUR3" name="incomesingle" value="earned-income" type="checkbox"
+                                  aria-controls="medicineusereviews" aria-expanded="false">
+                                <label for="MUR3">Hospital
+                                </label>
+                              </div>
+                              <div class="multiple-choice multiple-radio" data-target="wages-reveal-six">
+                                <input id="other2" name="other2" value="earned-income" type="checkbox" aria-controls="wages-reveal-five"
+                                  aria-expanded="false">
+                                <label for="other2">Other</label>
+                              </div>
+                    
+                              <div class="panel panel-border-narrow js-hidden" id="wages-reveal-five" style="margin-top:25px; padding-top:0"
+                                aria-hidden="true">
+                                <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                                <div class="nhsuk-form-group">
+                                  <div class="nhsuk-form-group">
+                                    <textarea class="govuk-textarea" id="more-detail2" name="more-detail2" rows="5"
+                                      aria-describedby="more-detail-hint2" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br><br>
+
+                          <div>
+                          <h2 class="task-list-section">Details of where patient has been signposted to</h2><br>
+                              <span class="form-hint" id="dob-hint">This needs to be the precise name of the trust. If you are not sure what 
+                                    this is, <a href="#">check the correct name in the NHS Trusts etr file on the NHS Digital website.</a>
+                              </span>
+                              <br>
+                          <div class="test-case" style="overflow: visible">
+                            <div>
+                              <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
+                              <option value="Find a trust"></option>
+                              <option value="Newcastle upon Tyne NHS Foundation Trust">Newcastle upon Tyne NHS Foundation Trust</option>
+                              <option value="Gateshead Health NHS Foundation Trust">Gateshead Health NHS Foundation Trust</option>
+                              <option value="Sunderland Teaching NHS Foundation Trust">Sunderland Teaching NHS Foundation Trust</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <br><br><br>
+
+                          <h2 class="task-list-section">Date referred out</h2><br>
+
+                            <div class="form-date">
+                              <div class="form-group form-group-day">
+                                <label class="form-label" for="dob-day">Day</label>
+                                <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                              </div>
+                              <div class="form-group form-group-month">
+                                <label class="form-label" for="dob-month">Month</label>
+                                <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                              </div>
+                              <div class="form-group form-group-year">
+                                <label class="form-label" for="dob-year">Year</label>
+                                <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                              </div>
+                            </div>
+    <br><br><br><br>
+                        </div>
+                        <br><br>
+                      </div>
+
+                          <div class="multiple-choice multiple-radio" data-target="checkEleven">
+                            <input id="aaa" name="aaa" value="earned-income" type="checkbox" aria-controls="checkEleven" aria-expanded="false">
                             <label for="MUR3">Other CPCF service provided</label>
                           </div>
                           <!-- <div class="multiple-choice multiple-radio" data-target="wages-reveal-six">
@@ -442,92 +533,44 @@
                                                         </div>
                                                     </div> -->
                       
-                          <div class="panel panel-border-narrow js-hidden" id="checkTen" style="margin-top:25px; padding-top:0"
-                            aria-hidden="true">
-                            <div class="question3">
-                              <h1 class="heading-medium">
-                                Where was the patient referred?
-                              </h1>
-                              <p>Select all that apply</p>
+                          
+
+                          <div class="panel panel-border-narrow js-hidden" id="checkEleven" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                            <div class="question5">
+                                <h1 class="heading-medium">
+                                  Which service?
+                                </h1>
+                                <p>Select all that apply</p>
                               <div class="form-group">
+
                                 <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                  <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews"
-                                    aria-expanded="false">
-                                  <label for="MUR">GP Practice</label>
-                                </div>
-                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                  <input id="MUR2" name="incomesingle" value="earned-income" type="checkbox"
-                                    aria-controls="medicineusereviews" aria-expanded="false">
-                                  <label for="MUR2">Community Pharmacy</label>
+                                    <input id="MSR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                    <label for="MSR">Disposal of unwanted medicines</label>
                                 </div>
                                 <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                  <input id="MUR3" name="incomesingle" value="earned-income" type="checkbox"
-                                    aria-controls="medicineusereviews" aria-expanded="false">
-                                  <label for="MUR3">PCN clinical pharmacist/practice pharmacist
-                                  </label>
+                                    <input id="MSR2" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                    <label for="MSR2">New Medicine Service</label>
                                 </div>
                                 <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                  <input id="MUR3" name="incomesingle" value="earned-income" type="checkbox"
-                                    aria-controls="medicineusereviews" aria-expanded="false">
-                                  <label for="MUR3">Hospital
-                                  </label>
+                                    <input id="MSR3" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
+                                    <label for="MSR3">Healthy lifestyle advice</label>
                                 </div>
-                                <div class="multiple-choice multiple-radio" data-target="wages-reveal-six">
-                                  <input id="other2" name="other2" value="earned-income" type="checkbox" aria-controls="wages-reveal-five"
-                                    aria-expanded="false">
-                                  <label for="other2">Other</label>
+
+                                <div class="multiple-choice multiple-radio" data-target="wages-reveal-four">
+                                    <input id="ASR6" name="incomesingle2" value="earned-income" type="checkbox" aria-controls="wages-reveal-four" aria-expanded="false">
+                                    <label for="ASR6">Other</label>
                                 </div>
-                      
-                                <div class="panel panel-border-narrow js-hidden" id="wages-reveal-five" style="margin-top:25px; padding-top:0"
-                                  aria-hidden="true">
-                                  <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
-                                  <div class="nhsuk-form-group">
-                                    <div class="nhsuk-form-group">
-                                      <textarea class="govuk-textarea" id="more-detail2" name="more-detail2" rows="5"
-                                        aria-describedby="more-detail-hint2" style="width: 100%; margin-bottom: 40px;"></textarea>
+
+                                    <div class="panel panel-border-narrow js-hidden" id="wages-reveal-four" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                                      <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
+                                        <div class="nhsuk-form-group">
+                                          <div class="nhsuk-form-group">
+                                            <textarea class="govuk-textarea" id="more-detail2" name="more-detail2" rows="5" aria-describedby="more-detail-hint2" style="width: 100%; margin-bottom: 40px;"></textarea>
+                                          </div>
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
                               </div>
                             </div>
-                            <br><br>
-
-                            <div>
-                            <h2 class="task-list-section">Details of where patient has been signposted to</h2><br>
-                                <span class="form-hint" id="dob-hint">This needs to be the precise name of the trust. If you are not sure what 
-                                      this is, <a href="#">check the correct name in the NHS Trusts etr file on the NHS Digital website.</a>
-                                </span>
-                                <br>
-                            <div class="test-case" style="overflow: visible">
-                              <div>
-                                <select id="council" class="typeahead js-hidden" name="council" aria-required="true">
-                                <option value="Find a trust"></option>
-                                <option value="Newcastle upon Tyne NHS Foundation Trust">Newcastle upon Tyne NHS Foundation Trust</option>
-                                <option value="Gateshead Health NHS Foundation Trust">Gateshead Health NHS Foundation Trust</option>
-                                <option value="Sunderland Teaching NHS Foundation Trust">Sunderland Teaching NHS Foundation Trust</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                          <br><br><br>
-
-                            <h2 class="task-list-section">Date referred out</h2><br>
-
-                              <div class="form-date">
-                                <div class="form-group form-group-day">
-                                  <label class="form-label" for="dob-day">Day</label>
-                                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
-                                </div>
-                                <div class="form-group form-group-month">
-                                  <label class="form-label" for="dob-month">Month</label>
-                                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                                </div>
-                                <div class="form-group form-group-year">
-                                  <label class="form-label" for="dob-year">Year</label>
-                                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
-                                </div>
-                              </div>
-      <br><br><br><br>
                           </div>
                         </div>
                       </div>
@@ -568,7 +611,6 @@
                                   </div>                           
                             </div>
                         </div> -->
-<br><br><br>
                             <!-- <h2 class="task-list-section">Which trust did the referral come from?</h2><br>
                                 <span class="form-hint" id="dob-hint">This needs to be the precise name of the trust. If you are not sure what 
                                       this is, <a href="#">check the correct name in the NHS Trusts etr file on the NHS Digital website.</a>
@@ -604,24 +646,24 @@
       
                       </div>
 
-                      <div class="question5">
+                      <!-- <div class="question5">
                         <h1 class="heading-medium">
                           Was another Community Pharmacy Contractual Framework service provided?
                         </h1>
                           <fieldset class="inline">
                             <legend class="visually-hidden"></legend>
                               <div class="multiple-choice" data-target="wages-reveal-six">
-                                <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupFive" value="Yes"> <!-- unique name per question block -->
+                                <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupFive" value="Yes">
                                 <label for="radio-inline-q5-yes">Yes</label>
                               </div>
                               <div class="multiple-choice">
-                                <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupFive" value="No"> <!-- both options here need same name -->
+                                <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupFive" value="No">
                                 <label for="radio-inline-q5-no">No</label>
                               </div>
                           </fieldset>
-                        </div>
+                        </div> -->
 
-                          <div class="panel panel-border-narrow js-hidden" id="wages-reveal-six" style="margin-top:25px; padding-top:0" aria-hidden="true">
+                          <!-- <div class="panel panel-border-narrow js-hidden" id="wages-reveal-six" style="margin-top:25px; padding-top:0" aria-hidden="true">
                             <div class="question5">
                                 <h1 class="heading-medium">
                                   Which service?
@@ -657,7 +699,7 @@
                                     </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
 
                     <div style="margin-top: 3em">
                         <a href="dms-cya"><input class="button" type="submit" value="Continue"></a>
