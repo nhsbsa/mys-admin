@@ -439,6 +439,35 @@
           </select>
         </div>
       </div>
+<br><br>
+        <h2 class="task-list-section">What date was the patient discharged from hospital?</h2><br>
+
+                <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+        </div>
+      </div>
+      <br><br><br><br><br>
+
+      <div class="form-group form-group-year">
+        <label for="ods-code">
+        <span h2 class="task-list-section">What is the patient's GP's ODS Code?</span>
+        <span class="form-hint" id="ods-code">For example, FAAAA</span></label>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <input class="form-control" id="full-name-f1" type="text" name="full-name-f1" style="width:100px;">
+        </fieldset>
+      </div>
 
                 <div style="margin-top: 3em">
                     <a href="dms-s1-provided"><input class="button" type="submit" value="Continue"></a>
