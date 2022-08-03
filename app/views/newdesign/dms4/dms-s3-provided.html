@@ -421,34 +421,28 @@
                   <h1 class="heading-medium">
                     Why not?
                   </h1>
-                  <p>Select only one option</p>
+                  <!-- <p>Select only one option</p> -->
 
                   <div class="form-group">
-
-
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Patient declined</label>
-                                                </div>
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Onward referral to another pharmacy</label>
-                                                </div>
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Did not attend</label>
-                                                </div>
-
-                                                      <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0" aria-hidden="true">
-                                                        <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
-                                                        <div class="nhsuk-form-group">
-                                                          <div class="nhsuk-form-group">
-                                                            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-
-                                                    </div>
+                    <div class="multiple-choice" data-target="medicineusereviews">
+                      <input id="MURa" name="incomesingle" value="earned-income" type="radio" aria-controls="medicineusereviews"
+                        aria-expanded="false">
+                      <label for="MUR">Patient declined</label>
+                    </div>
+                  
+                    <div class="multiple-choice" data-target="wages-reveal-2">
+                      <input id="AUR5b" name="incomesingle" value="earned-income" type="radio" aria-controls="wages-reveal-2"
+                        aria-expanded="false">
+                      <label for="AUR5">Onward referral to another pharmacy</label>
+                    </div>
+                  
+                    <div class="multiple-choice" data-target="wages-reveal-2">
+                      <input id="AUR5c" name="incomesingle" value="earned-income" type="radio" aria-controls="wages-reveal-2"
+                        aria-expanded="false">
+                      <label for="AUR5">Did not attend</label>
+                    </div>
+                  
+                  </div>
                   </div>
               </div>
               <div class="panel panel-border-narrow js-hidden"" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
@@ -471,7 +465,7 @@
                   </div>
                 </div>
                 <br><br><br><br><br>
-                
+
                         <div class="question5">
                           <h1 class="heading-medium">
                             Who completed it?
