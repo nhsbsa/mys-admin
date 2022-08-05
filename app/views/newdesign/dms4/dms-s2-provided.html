@@ -394,7 +394,7 @@
 
                       <header class="page-header" style="clear: none; display: block;">
                         <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
-                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 2</h1>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 2 provision  - Discharge medicines service - NHSBSA</h1>
                       </header>
 
 <form class="form" action="dmsEight" method="GET">
@@ -417,24 +417,28 @@
             <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
                   <div class="question2">
                   <h1 class="heading-medium">
-                    Why not?
+                    Why was Stage 2 not provided?
                   </h1>
-                  <p>Select only one option</p>
 
                   <div class="form-group">
-                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                          <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                          <label for="MUR">Patient declined</label>
-                      </div>
-                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                          <input id="MUR2" name="incomesingle2" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                          <label for="MUR2">Onward referral to another pharmacy</label>
-                      </div>
-                      <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                            <input id="MUR3" name="incomesingle2" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                            <label for="MUR3">Did not attend</label>
-                      </div>
-                      
+                      <fieldset>
+                        <legend class="visually-hidden"></legend>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupThree" value="Yes">
+                          <!-- unique name per question block -->
+                          <label for="radio-inline-q5-yes">Patient declined</label>
+                        </div>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No">
+                          <!-- both options here need same name -->
+                          <label for="radio-inline-q5-no">Onward referral to another pharmacy</label>
+                        </div>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No">
+                          <!-- both options here need same name -->
+                          <label for="radio-inline-q5-no">Did not attend</label>
+                        </div>
+                      </fieldset>
                   </div>
 
                   </div>
@@ -443,6 +447,7 @@
                 
                 <div class="question5">
                   <h2 class="task-list-section">What date was the service provided?</h2>
+                    <span class="form-hint" id="dob-hint">For example, 31 3 2022</span>
                   <div class="form-date">
                     <div class="form-group form-group-day">
                       <label class="form-label" for="dob-day">Day</label>
@@ -463,7 +468,7 @@
 
                 <div class="question5">
                   <h1 class="heading-medium">
-                    Who completed it?
+                    Who completed the service?
                   </h1>
                   <fieldset>
                     <legend class="visually-hidden"></legend>

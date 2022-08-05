@@ -381,7 +381,6 @@
       </div>
       <div class="main-content">
 
-
                 <div class="phase-banner">
                     <p>
                     <strong class="phase-tag">BETA</strong>
@@ -396,7 +395,7 @@
 
                       <header class="page-header" style="clear: none; display: block;">
                         <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
-                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 3</h1>
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">October 2020 submission - Stage 3  provision - Discharge medicines service - NHSBSA</h1>
                       </header>
 
 <form class="form" action="dmsNine" method="GET">
@@ -419,41 +418,36 @@
             <div class="panel panel-border-narrow js-hidden" id="wages-reveal" style="margin-top:25px; padding-top:0" aria-hidden="true">
                   <div class="question2">
                   <h1 class="heading-medium">
-                    Why not?
+                    Why was Stage 3 not provided?
                   </h1>
-                  <p>Select only one option</p>
+                
+                    <div class="form-group">
+                      <fieldset>
+                        <legend class="visually-hidden"></legend>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-yes" type="radio" name="radioInlineGroupThree" value="Yes">
+                          <!-- unique name per question block -->
+                          <label for="radio-inline-q5-yes">Patient declined</label>
+                        </div>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No">
+                          <!-- both options here need same name -->
+                          <label for="radio-inline-q5-no">Onward referral to another pharmacy</label>
+                        </div>
+                        <div class="multiple-choice" data-target="wages-reveal-three">
+                          <input id="radio-inline-q5-no" type="radio" name="radioInlineGroupThree" value="No">
+                          <!-- both options here need same name -->
+                          <label for="radio-inline-q5-no">Did not attend</label>
+                        </div>
+                      </fieldset>
+                    </div>
 
-                  <div class="form-group">
-
-
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Patient declined</label>
-                                                </div>
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Onward referral to another pharmacy</label>
-                                                </div>
-                                                <div class="multiple-choice multiple-radio" data-target="medicineusereviews">
-                                                    <input id="MUR" name="incomesingle" value="earned-income" type="checkbox" aria-controls="medicineusereviews" aria-expanded="false">
-                                                    <label for="MUR">Did not attend</label>
-                                                </div>
-
-                                                      <div class="panel panel-border-narrow js-hidden" id="wages-reveal-2" style="margin-top:25px; padding-top:0" aria-hidden="true">
-                                                        <h2 class="heading-medium" style="margin-top:0; margin-bottom: 20px;">Please specify</h2>
-                                                        <div class="nhsuk-form-group">
-                                                          <div class="nhsuk-form-group">
-                                                            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="width: 100%; margin-bottom: 40px;"></textarea>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-
-                                                    </div>
                   </div>
               </div>
               <div class="panel panel-border-narrow js-hidden"" id="wages-reveal-two" style="margin-top:25px; padding-top:0" aria-hidden="true">
                 <div class="question5">
                   <h2 class="task-list-section">What date was the service provided?</h2>
+                    <span class="form-hint" id="dob-hint">For example, 31 3 2022</span>
                   <div class="form-date">
                     <div class="form-group form-group-day">
                       <label class="form-label" for="dob-day">Day</label>
@@ -474,7 +468,7 @@
                 
                         <div class="question5">
                           <h1 class="heading-medium">
-                            Who completed it?
+                            Who completed the service?
                             </h1>
                             <fieldset>
                             <legend class="visually-hidden"></legend>
@@ -492,7 +486,7 @@
 
                               <div class="question5">
                                 <h1 class="heading-medium">
-                                  Select the method of consultation
+                                  What was the method of consultation?
                                   </h1>
                                   <fieldset>
                                   <legend class="visually-hidden"></legend>
