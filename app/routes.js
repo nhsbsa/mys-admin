@@ -665,3 +665,12 @@ router.get(/pqsAddpharm/, function (req, res) {
     res.redirect('pqs-non-pcn-lead-journey-cya'); // if both input values are "Yes" - redirect to 'page-name' //
   }
 });
+
+// FP34C //
+router.get(/noPaper/, function (req, res) {
+  if (req.query.radioInlineGroup === "Yes" ) {
+    res.redirect('total-warning-p25'); // if both input values are "Yes" - redirect to 'page-name' //
+  } else {
+    res.redirect('enter-fields-e05'); // if both input values are "Yes" - redirect to 'page-name' //
+  }
+});
