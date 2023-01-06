@@ -35,21 +35,6 @@ NHSBSA Prototype
     padding-bottom: 15px;
     padding-left: 15px;
   }
-
-  .declaration:before {
-    content: "DECLARATION";
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    text-transform: none;
-    font-size: 16px;
-    line-height: 1.25;
-    background: #bfc1c3;
-    color: white;
-  }
 </style>
 
 
@@ -118,7 +103,8 @@ NHSBSA Prototype
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
               <strong class="govuk-warning-text__text">
-                <span class="govuk-warning-text__assistive">Warning</span>Edited claims must be resubmitted by 11:59pm on
+                <span class="govuk-warning-text__assistive">Warning</span>Edited claims must be resubmitted by 11:59pm
+                on
                 the 5th of the month in order to receive your early advance. Amended figures will only be accepted when
                 they have been submitted.
                 If you do no resubmit, the previous submission will stand.
@@ -344,6 +330,36 @@ NHSBSA Prototype
                               </div>
                         -->
 
+              <fieldset>
+                <legend class="visually-hidden">New Submission</legend>
+                <div class="form-group">
+                  <label class="form-label" for="firstname">First name</label>
+
+
+                  <input class="form-control" id="firstname" type="text" name="firstname" value="">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="surname">Surname</label>
+
+
+                  <input class="form-control" id="surname" type="text" name="surname" value="">
+                </div>
+                <div class="form-group">
+                  <span id="emailHint" class="panel panel-border-narrow">
+                    A confirmation email will be sent to <span class="strong">dynamic email</span>.
+                    If you would like a copy sent to another email address, please enter it below.
+                  </span>
+                  <label class="form-label" for="email">Email address (optional)</label>
+
+
+                  <input class="form-control" id="email" type="text" name="email" value="">
+                </div>
+                <div class="form-group">
+
+
+
+
+              </fieldset>
 
               <div class="multiple-choice multiple-radio">
                 <input id="benefits" name="incomesingle" value="benefits-income" type="checkbox">
