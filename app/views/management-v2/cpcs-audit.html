@@ -407,31 +407,68 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
-              <h2 class="heading-large">CPCS amendments</h2>
+        
+<div class="column-full">
+<header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">CPCS Amendments</h1>
+                          <p class="page-header--sub heading-secondary">Audit</p>
+                          <hr>
 
-              <h2 class="heading-medium">Iterations 1 and 2</h2>
-
-                        <p>Users need to be able to select a manageable amount of records to input prices in one go.
-                          This is achieved by an f-code list select, which allows the user to see how many records need amendments for each f-code that month.</p>
-
-                        <ul style="list-style: disc; margin-left: 30px;">
-                                    <li><a href="cpcs4.html">F-code filter - list select</a></li>
-                                  </ul>
-
-                                  <h2 class="heading-medium">Iteration 3</h2>
-
-                                  <ul style="list-style: disc; margin-left: 30px;">
-                                              <li><a href="cpcs5.html">Item name - list select</a></li>
-                                            </ul>
+                      </header>
 
 
+                      <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-one-third">
+                      <br>
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="searchfirstname"><strong class="bold"> Name of staff member</strong>
+                        </label>
+                        <select class="form-control" id="select-box">
+    <option>Pepper Potts</option>
+    <option>Steve Rogers</option>
+    <option>Tony Stark</option>
+    <option>Natasha Romanoff</option>
+    <option>Stephen Strange</option>
+  </select>
+                      </div>
 
-        </div>
+                    </div>
 
+                    <div class="nhsuk-grid-column-one-third">
+                      <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="nhsnumber"><strong class="bold">
+                            Check amount</strong>
+                        </label>
+                <fieldset class="inline">
 
-      </div>
-    </div>
+                    <legend class="visually-hidden"></legend>
+
+                    <div class="multiple-choice">
+                      <input id="radio-inline-q1-yes" type="radio" name="radioInlineGroup" value="Yes"> <!-- unique name per question block -->
+                      <label for="radio-inline-q1-yes">10%</label>
+                      </div>
+                      <div class="multiple-choice">
+                      <input id="radio-inline-q1-no" type="radio" name="radioInlineGroup" value="No"> <!-- both options here need same name -->
+                      <label for="radio-inline-q1-no">100%</label>
+                      </div>
+
+                </fieldset>
+                      </div>
+                      
+                      
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-third" style="padding-top:20px;">
+                      <br>
+                      <a class="button" href="cpcs-audit-results" role="button">Show results</a>
+                    </div>
+
+                    <div class="nhsuk-grid-column-one-third">
+                      
+                      
+                    </div>
+                  </div>
+
 
     <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>

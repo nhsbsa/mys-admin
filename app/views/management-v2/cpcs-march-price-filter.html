@@ -407,23 +407,23 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
-              <h2 class="heading-large">CPCS amendments</h2>
+        <div class="column-full">
+<header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">CPCS Amendments</h1>
+                          <p class="page-header--sub heading-secondary">March 2022</p>
+                          <hr>
 
-              <h2 class="heading-medium">Iterations 1 and 2</h2>
+                      </header>
 
-                        <p>Users need to be able to select a manageable amount of records to input prices in one go.
-                          This is achieved by an f-code list select, which allows the user to see how many records need amendments for each f-code that month.</p>
+                      <h2 class="heading-medium">Select a list to start correcting price information</h2>
 
-                        <ul style="list-style: disc; margin-left: 30px;">
-                                    <li><a href="cpcs4.html">F-code filter - list select</a></li>
-                                  </ul>
+              <ul>
+                <li><a href="cpcs-march-price">All</li>
+                <li><a href="cpcs-march-price">A-F</a></li>
+                <li><a href="march-gl">G-L</a></li>
+                <li><a href="march-mr">M-R</a></li>
+                <li><a href="march-sz">S-Z</a></li></ul>
 
-                                  <h2 class="heading-medium">Iteration 3</h2>
-
-                                  <ul style="list-style: disc; margin-left: 30px;">
-                                              <li><a href="cpcs5.html">Item name - list select</a></li>
-                                            </ul>
 
 
 
@@ -433,7 +433,6 @@ NHSBSA Prototype
       </div>
     </div>
 
-    <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>
     <script src="/public/javascripts/jquery-1.11.3.js"></script>
     <script src="/public/javascripts/application.js"></script>
@@ -443,6 +442,12 @@ NHSBSA Prototype
     <script src="/public/javascripts/typeahead-aria.js"></script>
     <script src="/public/javascripts/init-autocomplete.js"></script>
 
+    <script>
+        sessionStorage.removeItem("q1");
+        sessionStorage.removeItem("q2");
+        sessionStorage.removeItem("q3");
+        sessionStorage.removeItem("q4");
+    </script>
 </main>
 
 {% endblock %}

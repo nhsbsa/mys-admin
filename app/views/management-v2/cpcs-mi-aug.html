@@ -407,31 +407,93 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
-              <h2 class="heading-large">CPCS amendments</h2>
+        
+<div class="column-full">
+<header class="page-header" style="clear: none; display: block;">
+                          <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">CPCS Amendments</h1>
+                          <p class="page-header--sub heading-secondary">MI info</p>
+                          <hr>
 
-              <h2 class="heading-medium">Iterations 1 and 2</h2>
+                      </header>
 
-                        <p>Users need to be able to select a manageable amount of records to input prices in one go.
-                          This is achieved by an f-code list select, which allows the user to see how many records need amendments for each f-code that month.</p>
 
-                        <ul style="list-style: disc; margin-left: 30px;">
-                                    <li><a href="cpcs4.html">F-code filter - list select</a></li>
-                                  </ul>
+                      <div class="nhsuk-grid-row">
 
-                                  <h2 class="heading-medium">Iteration 3</h2>
+                                        <div class="column-full">
 
-                                  <ul style="list-style: disc; margin-left: 30px;">
-                                              <li><a href="cpcs5.html">Item name - list select</a></li>
+                                            <div style="float: left" class="nhsuk-form-group">
+                  <label class="nhsuk-label" for="select-1">
+                  Showing report for
+                  </label>
+                  <select onchange="window.document.location.href=this.options[this.selectedIndex].value;" class="form-control" id="select-1" name="select-1" style="width: 100%;">
+                    <option value="cpcs-mi">September 2022</option>
+                    <option value="cpcs-mi-aug" selected="">August 2022 </option>
+                    
+                    
+
+
+                  </select>
+
+              </div>
+
+                                <table class="table-form">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Staff member</th>
+                                        <th scope="col">Quantity processed</th>
+                                        <th scope="col">Month</th>
+                                    </tr>
+                                  </thead>
+                                  <tfoot>
+                                  </tfoot>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">Pepper Potts</th>
+                                        <td>80</td>
+                                        <td>August 2022</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Steve Rogers</th>
+                                        <td>74</td>
+                                        <td>August 2022</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Tony Stark</th>
+                                        <td>60</td>
+                                        <td>August 2022</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Natasha Romanoff</th>
+                                        <td>97</td>
+                                        <td>August 2022</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Stephen Strange</th>
+                                        <td>35</td>
+                                        <td>August 2022</td>
+                                    </tr>
+                                  </tbody>
+                                </table><br><br>
+
+                                      </div>
+
+
+<nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+                                            <ul class="nhsuk-list nhsuk-pagination__list">
+                                              <li class="nhsuk-pagination-item--next">
+                                                <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="cpcs-september-faaaa-page2.html">
+                                                  <span class="nhsuk-pagination__title">Next</span>
+                                                  <span class="nhsuk-u-visually-hidden">:</span>
+                                                  <span class="nhsuk-pagination__page">Page <b>2</b> of <b>14</b></span>
+                                                  <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                                                  </svg>
+                                                </a>
+                                              </li>
                                             </ul>
+                                          </nav>
+                  </div>
 
-
-
-        </div>
-
-
-      </div>
-    </div>
 
     <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>

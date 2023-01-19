@@ -407,24 +407,64 @@ NHSBSA Prototype
       <a href="javascript:history.back()" class="link-back">Back</a>
 
       <div class="grid-row">
-        <div class="column-two-thirds">
-              <h2 class="heading-large">CPCS amendments</h2>
+        <div class="column-full">
+              <h2 class="heading-large">CPCS item amendments - September 2020</h2>
 
-              <h2 class="heading-medium">Iterations 1 and 2</h2>
+              <p>17 items  - page  1 of 2</p>
 
-                        <p>Users need to be able to select a manageable amount of records to input prices in one go.
-                          This is achieved by an f-code list select, which allows the user to see how many records need amendments for each f-code that month.</p>
+              <div class="grid-row">
+                                        <div class="column-full" style="margin-bottom: 25px;">
+<hr>
+                                          <div class="grid-row">
+                                                              <div class="column-third">
+                                                                 <h2 class="heading-medium" style="margin-top:0px;">Clenil Modulite 50micrograms/dose inhaler</h2>
+                                                                 <p>200</P>
+                                                              </div>
+                                                              <div id="hideme" class="column-two-thirds">
+                                                                  <table>
+                                                                    <thead>
+                                                                    </thead>
+                                                                    <tbody>
 
-                        <ul style="list-style: disc; margin-left: 30px;">
-                                    <li><a href="cpcs4.html">F-code filter - list select</a></li>
-                                  </ul>
+                                                                    </tbody>
+                                                                 </table>
 
-                                  <h2 class="heading-medium">Iteration 3</h2>
+                                                                 <table>
+                                                                    <thead>
+                                                                       <tr>
+                                                                          <td><span class="strong">SNOMED code</span></td>
+                                                                          <td><span class="strong">F-codes</span></td>
+                                                                          <th scope="col" style="text-align:right; padding-right:10px;">Price</th>
+                                                                       </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                       <tr>
+                                                                          <td>1234567890123456</td>
+                                                                          <td><a href="#">21 f-codes</a></td>
+                                                                          <td class="numeric last">
+                                                                            <div class="column-two-thirds">
+                                                                                <label class="form-label-bold" for="claimAmountPounds">Pounds (£)</label>
+                                                                                <input class="form-control" type="text" maxlength="5" aria-describedby="claimAmountlegend-hints" id="claimAmountPounds" name="claimAmountPounds" value="">
+                                                                            </div>
+                                                                            <div class="column-one-third">
+                                                                                <label class="form-label-bold pp-currency-combo-pence-label" for="claimAmountPence">Pence</label>
+                                                                                <b>.</b>
+                                                                                <input class="form-control" type="text" maxlength="2" aria-describedby="claimAmountlegend-hints" id="claimAmountPence" name="claimAmountPence" value="">
+                                                                            </div>
+                                                                          </td>
+                                                                       </tr>
+                                                                    </tbody>
+                                                                 </table>
 
-                                  <ul style="list-style: disc; margin-left: 30px;">
-                                              <li><a href="cpcs5.html">Item name - list select</a></li>
-                                            </ul>
+                                                              </div>
+                                                           </div>
+                                                         <hr>
+                                                       </div>
+                                      </div>
 
+                   <br><br>
+                   <a class="button" href="cpcs-september-faaaa2" role="button">Save and continue</a>
+                    <br><br>
 
 
         </div>
@@ -433,7 +473,6 @@ NHSBSA Prototype
       </div>
     </div>
 
-    <!-- Javascript -->
     <script src="/public/javascripts/details.polyfill.js"></script>
     <script src="/public/javascripts/jquery-1.11.3.js"></script>
     <script src="/public/javascripts/application.js"></script>
@@ -443,6 +482,12 @@ NHSBSA Prototype
     <script src="/public/javascripts/typeahead-aria.js"></script>
     <script src="/public/javascripts/init-autocomplete.js"></script>
 
+    <script>
+        sessionStorage.removeItem("q1");
+        sessionStorage.removeItem("q2");
+        sessionStorage.removeItem("q3");
+        sessionStorage.removeItem("q4");
+    </script>
 </main>
 
 {% endblock %}
