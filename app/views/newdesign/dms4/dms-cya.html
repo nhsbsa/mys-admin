@@ -1,0 +1,543 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../pharmacy-services" class="active">Pharmacy services</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+
+    </div>      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Discharge medicines service (DMS) - October 2020 submission</p>
+                  <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">Check your answers</h1>
+                <hr>
+            </header>
+
+
+<h1 class="heading-medium">Referral details</h1>
+
+<dl class="govuk-check-your-answers cya-questions-short">
+  <div>
+    <dt class="cya-question">
+      Patient's NHS number
+    </dt>
+    <dd class="cya-answer">
+      485 777 3456
+    </dd>
+    <dd class="cya-change">
+      <a href="#">
+        Change<span class="visually-hidden"> answer</span>
+      </a>
+    </dd>
+  </div>
+    <div>
+      <dt class="cya-question">
+        Date referral received
+      </dt>
+      <dd class="cya-answer">
+        1 October 2020
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Trust referral came from
+      </dt>
+      <dd class="cya-answer">
+        Newcastle Hospital Trust
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        Date patient discharged
+      </dt>
+      <dd class="cya-answer">
+        30 September 2022
+
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+    <div>
+      <dt class="cya-question">
+        GP's ODS code
+      </dt>
+      <dd class="cya-answer">
+        FAAAA
+
+      </dd>
+      <dd class="cya-change">
+        <a href="#">
+          Change<span class="visually-hidden"> answer</span>
+        </a>
+      </dd>
+    </div>
+
+  </dl>
+
+  <h1 class="heading-medium">Stage 1 details</h1>
+
+  <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          Was stage 1 provided?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+      <br>
+<p class="cya-question" style="color:red">Only if Stage 1 was provide (next 3 questions)</p>
+      <div>
+        <dt class="cya-question">
+          Date provided
+        </dt>
+        <dd class="cya-answer">
+          1 December 2020
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Service completed by
+        </dt>
+        <dd class="cya-answer">
+          Pharmacist / Pharmacy trechnician
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt class="cya-question">
+          Prescriptions in supply system intercepted?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+      <br>
+<p class="cya-question" style="color:red">Only if Stage 1 was not provide (next 1 question)</p>
+      <div>
+        <dt class="cya-question">
+          Reason Stage 1 not provided?
+        </dt>
+        <dd class="cya-answer">
+          Patient declined / Onward referral to other pharmacy / Did not attend
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+       <div>
+        <dt class="cya-question">
+          Were clinical actions identified?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Clinical actions identified
+        </dt>
+        <dd class="cya-answer">
+          Discrepancy with medication identified / Specific request included in the referral / Other
+
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+       <div>
+        <dt class="cya-question">
+          Were professional discussions undertaken? 
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Discussions held with
+        </dt>
+        <dd class="cya-answer">
+          GP / PCN clinical pharmacist or practice pharmacist / Hospital / Other
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+  <h1 class="heading-medium">Stage 2 details</h1>
+
+  <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          Was stage 2 provided?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+ <br>
+<p class="cya-question" style="color:red">Only if Stage 2 was provide (next 2 questions)</p>
+      <div>   
+        <dt class="cya-question">
+          Date provided
+        </dt>
+        <dd class="cya-answer">
+          23 November 2020
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>   
+        <dt class="cya-question">
+          Service completed by 
+        </dt>
+        <dd class="cya-answer">
+          Pharmacist / Pharmacy technician
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+ <br>
+<p class="cya-question" style="color:red">Only if Stage 2 was not provide (next 1 question)</p>
+      <div>   
+        <dt class="cya-question">
+          Reason Stage 2 not provided
+        </dt>
+        <dd class="cya-answer">
+          Patient declined / Onward referral to other pharmacy / Did not attend
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>   
+        <dt class="cya-question">
+          Were clinical actions identified?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>   
+        <dt class="cya-question">
+          Issues identified
+        </dt>
+        <dd class="cya-answer">
+          Wrong medicine issued on first prescription / <p style="color:red">See screenshot of 'Stage 2 clinical issues' for full list of other issues</p>
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>   
+        <dt class="cya-question">
+          Discussions held with
+        </dt>
+        <dd class="cya-answer">
+          GP / PCN clinical pharmacist or practice pharmacist / Hospital / Other
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+
+
+
+
+    </dl>
+
+  <h1 class="heading-medium">Stage 3 details</h1>
+
+  <dl class="govuk-check-your-answers cya-questions-short">
+      <div>
+        <dt class="cya-question">
+          Was stage 3 provided?
+        </dt>
+        <dd class="cya-answer">
+          Yes / No
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+<br>
+<p class="cya-question" style="color:red">Only if Stage 3 was provide (next 3 questions)</p>
+      <div>
+        <dt class="cya-question">
+          Date provided 
+        </dt>
+        <dd class="cya-answer">
+          03 January 2020
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Service completed by
+        </dt>
+        <dd class="cya-answer">
+          Pharmacist / Pharmacy technician
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Method of consultation
+        </dt>
+        <dd class="cya-answer">
+          Face to face (pharmacy) / Face to face (patient's home) / Telephone / Telemedicine
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+<br>
+<p class="cya-question" style="color:red">Only if Stage 3 was not provide (next 1 question)</p>
+      <div>
+        <dt class="cya-question">
+          Reason Stage 3 not provided
+        </dt>
+        <dd class="cya-answer">
+          Patient declined / Onward referral to other pharmacy / Did not attend
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Consultation outcomes
+        </dt>
+        <dd class="cya-answer">
+          Advice provided on medicines regimen and questions answered / Onward referral / Other CPCF service provided 
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+<br>
+<p class="cya-question" style="color:red">Only if Onward referral selected (next 3 questions)</p>
+      <div>
+        <dt class="cya-question">
+          Where was the patient referred?
+        </dt>
+        <dd class="cya-answer">
+          GP Practice / Community Pharmacy / PCN clinical pharmacist or practice pharmacist / Hospital / Other
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt class="cya-question">
+          Trust patient signposted to
+        </dt>
+        <dd class="cya-answer">
+          NHS Trust, Newcastle
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+       <div>
+        <dt class="cya-question">
+          Date patient referred out
+        </dt>
+        <dd class="cya-answer">
+          31 February 2020
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+<br>
+      <p class="cya-question" style="color:red">Only if Other CPCF services provided</p>
+      <div>
+        <dt class="cya-question">
+          Other CPCF services provided
+        </dt>
+        <dd class="cya-answer">
+          Disposal of unwanted medicines / New Medicines Service / Healthy lifestyle advice / Other
+        </dd>
+        <dd class="cya-change">
+          <a href="#">
+            Change<span class="visually-hidden"> answer</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+  <div style="margin-top: 3em">
+    <a href="dms-add-another"><input class="button" type="submit" value="Continue"></a>
+  </div>
+            </div>
+
+          </div>
+
+
+
+</main>
+
+{% endblock %}

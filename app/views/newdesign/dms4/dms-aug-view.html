@@ -1,0 +1,157 @@
+{% extends "layout_bsa.html" %}
+
+{% block page_title %}
+  NHSBSA Prototype
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="sidebar-layout">
+    <div class="sidebar-content">
+
+      <div class="side-nav">
+        <ul>
+          <li>
+            <a href="../index">Dashboard</a>
+          </li>
+          <li>
+            <a href="../pharmacy-services" class="active">Pharmacy services</a>
+          </li>
+          <li>
+            <a href="../advanced-services">Advanced Services</a>
+          </li>
+          <li>
+            <a href="../audits-questionnaires" class="active">Audits and questionnaires</a>
+          </li>
+          </ul>
+        </div>
+
+    </div>      <div class="main-content">
+
+
+          <div class="phase-banner">
+              <p>
+              <strong class="phase-tag">BETA</strong>
+              This is a new service - your <a target="" href="#">feedback</a> will help us to improve it.
+              </p>
+            </div>
+
+            <a href="javascript:history.back()" class="link-back">Back</a>
+
+          <div class="grid-row">
+            <div class="column-two-thirds">
+
+              <header class="page-header" style="clear: none; display: block;">
+                <p class="page-header--sub heading-secondary">Discharge medicines service (DMS)</p>
+                  <h1 class="page-header--lede heading-large" style="margin-bottom: 5px;">August 2020 submission</h1>
+                <hr>
+            </header>
+
+
+<h1 class="heading-medium">These are the patients you submitted in August.</h1>
+
+                <table class="data-table assets-summary check-your-answers">
+                  <tbody>
+                    <tr>
+                      <th scope="col" width="40%"><span class="strong">Referral details</span></th>
+                      <th scope="col" width="15%"><span class="strong">Stage 1 provided?</span></th>
+                      <th scope="col" width="15%"><span class="strong">Stage 2 provided?</span></th>
+                      <th scope="col" width="15%"><span class="strong">Stage 3 provided?</span></th>
+                      <td><span class="strong"></span></td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 7643<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 8764<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 6535<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 7647<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 6535<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>No</td>
+                      <td>No</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya2">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 4325<br>1 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>No</td>
+                      <td>No</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="dms-cya2">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 6532<br>3 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>No</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="#">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>XXX XXX 7654<br>6 August 2020<br>Newcastle Hospitals Trust</td>
+                      <td>Yes</td>
+                      <td>Yes</td>
+                      <td>No</td>
+                      <td style="text-align:right; padding-right:0;">
+                      <a href="#">View details<span class="visually-hidden"> answer</span></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                                  <br>
+
+
+        </div>
+
+      </div>
+
+
+
+</main>
+
+{% endblock %}
